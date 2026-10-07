@@ -1,0 +1,33 @@
+{
+  "total_images": 1800,
+  "n_classes": 6,
+  "classes": [
+    "crazing",
+    "inclusion",
+    "patches",
+    "pitted_surface",
+    "rolled-in_scale",
+    "scratches"
+  ],
+  "train": {
+    "crazing": 240,
+    "inclusion": 240,
+    "patches": 240,
+    "pitted_surface": 240,
+    "rolled-in_scale": 240,
+    "scratches": 240
+  },
+  "validation": {
+    "crazing": 60,
+    "inclusion": 60,
+    "patches": 60,
+    "pitted_surface": 60,
+    "rolled-in_scale": 60,
+    "scratches": 60
+  },
+  "image_type": "grayscale JPEG",
+  "original_dimensions": "200x200",
+  "generated_at": "2026-09-28T13:24:07.875011",
+  "train_total": 1440,
+  "validation_total": 360
+}

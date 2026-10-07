@@ -1,0 +1,1508 @@
+# Q-ImageLab: Interactive Quantum Image Processing & Surface Defect Analytics Dashboard
+========================================================================================
+COMPLETE VIVA DEFENSE GUIDE & SYSTEM EXPLANATION
+========================================================================================
+
+----------------------------------------------------------------------------------------
+1. PROJECT OVERVIEW
+----------------------------------------------------------------------------------------
+
+### Real-Life Analogy First
+Imagine an ultra-modern steel manufacturing plant. A conveyor belt rolls out hot, shiny steel strips at high speed. If there is a microscopic crack (crazing) or a sharp groove (scratch), putting that steel into an automobile or an aircraft wing could cause a catastrophic accident.
+
+In traditional factories, human inspectors or classical computer vision systems take photos of the steel, run image filters, and classify defects. But classical digital images are just massive grids of numbers (matrices of pixels). As cameras reach 4K, 8K, and microscopic resolutions, the data volume explodes exponentially. Classical computers must process every pixel one by one or in parallel hardware threads that consume heavy power and memory.
+
+Enter Quantum Computing. Instead of storing 16 separate pixels across 16 memory addresses, a quantum state can use the principle of superposition to represent all 16 pixel positions simultaneously inside just 4 quantum bits (qubits). 
+
+Q-ImageLab is an end-to-end laboratory and interactive analytics dashboard that bridges classical industrial defect detection with cutting-edge Quantum Image Processing (QIP). It takes real-world industrial steel defect images, classifies them using classical Machine Learning benchmarks, encodes them into quantum circuits using two foundational quantum image representations (FRQI and NEQR), simulates these circuits using Qiskit, measures and reconstructs the images back to classical reality, and provides a web dashboard to analyze performance, circuit depth, gate costs, and image reconstruction quality.
+
+
+### Key Questions Answered
+
+* What is the project?
+  Q-ImageLab is a dual-paradigm research and analytics platform combining:
+  1. Classical Machine Learning Pipeline: Automates industrial defect classification on the NEU Surface Defect Database using Support Vector Machines (SVM), Random Forests (RF), K-Nearest Neighbors (KNN), and Decision Trees (DT).
+  2. Quantum Image Processing (QIP) Engine: Encodes grayscale images into quantum states using two major quantum representations—FRQI (Flexible Representation of Quantum Images) and NEQR (Novel Enhanced Quantum Representation)—built from scratch using Qiskit.
+  3. Quantum Simulator & Reconstructor: Simulates the circuits via statevector (exact analytical) and shot-based sampling methods (realistic quantum measurement noise), then reconstructs the images and calculates quantitative fidelity metrics (MSE, PSNR, SSIM).
+  4. Interactive 8-Page Analytics Dashboard: A Streamlit-based graphical workstation allowing users, researchers, and viva examiners to explore dataset distributions, inspect classical ML models, trigger live quantum simulations, view circuit diagrams, and analyze quantum resource scaling.
+
+* What problem are we solving?
+  In manufacturing, surface defects on hot-rolled steel strips degrade structural integrity and cause product failure. Inspecting them requires high-speed, high-resolution image analysis. Classical image processing faces the curse of dimensionality as resolutions grow. Quantum computing theoretically offers exponential state-space compression: an image of N = 2^n pixels can be indexed with only n position qubits. 
+  However, an open research challenge remains: How do we actually put an image into a quantum computer, what does the quantum circuit look like, how many gates does it cost, and can we recover the original image accurately? Q-ImageLab answers these questions quantitatively by comparing FRQI and NEQR on real-world industrial defect images.
+
+* Why are we using Quantum Image Processing (QIP)?
+  1. Exponential Indexing Storage: An N-pixel image requires O(N) classical memory locations. In quantum computing, n = log2(N) qubits can represent all N pixel coordinates simultaneously through quantum superposition.
+  2. Quantum Parallelism: Once an image is in a quantum state, applying a single quantum operation (a quantum gate) acts on all pixel positions simultaneously.
+  3. Future Industrial Readiness: As quantum hardware matures (Fault-Tolerant Quantum Computing), hybrid classical-quantum pipelines will process high-dimensional sensing data faster and with lower energetic footprints.
+
+* Why are we using the NEU Surface Defect Database?
+  Rather than using synthetic toy patterns or standard handwriting digits (like MNIST), we evaluate our methods on the NEU Surface Defect Database (Northeastern University, China). It is a recognized industrial benchmark containing real hot-rolled steel strip surface defects with varying textures, non-uniform illumination, and complex geometric patterns.
+
+* What is the role of the dashboard?
+  Quantum circuits and machine learning metrics can feel abstract when presented as raw matrices or terminal outputs. The Streamlit dashboard acts as a visual laboratory where users can:
+  - Visually browse real defect images and pixel intensity histograms.
+  - View classical ML confusion matrices, ROC curves, and classification reports.
+  - Select any defect image, choose a quantum representation (FRQI or NEQR), adjust resolution (2x2, 4x4, 8x8) and shots, and watch the circuit generate and execute in real-time.
+  - Visually inspect the reconstructed image side-by-side with the original image, alongside difference heatmaps, gate breakdowns, and circuit depth metrics.
+
+* What is the role of classical ML?
+  Classical ML serves two critical roles:
+  1. Practical Baseline: It solves the immediate engineering problem of identifying which of the 6 surface defect classes an image belongs to (achieving up to 76.62% test accuracy and 81.05% cross-validation accuracy with an RBF SVM).
+  2. Benchmarking & Pipeline Verification: It establishes a standard against which future Quantum Machine Learning (QML) and Quantum Convolutional Neural Networks (QCNN) can be compared.
+
+* What is the role of FRQI and NEQR?
+  They are the two primary mathematical and algorithmic frameworks for translating classical pixel grids into quantum states:
+  - FRQI (Flexible Representation of Quantum Images) stores pixel brightness as a continuous rotation angle (theta) on a single color qubit. It is extremely qubit-efficient (needs only log2(N) + 1 qubits), but requires probabilistic sampling over thousands of shots to estimate intensity.
+  - NEQR (Novel Enhanced Quantum Representation) stores pixel brightness as a discrete binary bitstring across q dedicated intensity qubits (computational basis states). It requires more qubits (log2(N) + q), but produces dramatically shallower circuits and allows exact, deterministic retrieval of pixel values via majority voting.
+
+* What is the final output of the system?
+  1. For Classical ML: A classified defect label (e.g., "Patches", "Inclusion"), class probabilities, confusion matrices, and performance metrics (Precision, Recall, F1-score).
+  2. For Quantum Image Processing: A synthesized Qiskit quantum circuit, quantum resource metrics (total qubits, circuit depth, gate counts), simulated measurement counts, a reconstructed classical image, and image reconstruction metrics (MSE, PSNR, and SSIM).
+  3. For the User: Interactive visualizations and persistent CSV/JSON experiment logs.
+
+
+----------------------------------------------------------------------------------------
+2. DOMAIN: UNDERSTANDING THE FOUNDATIONS
+----------------------------------------------------------------------------------------
+
+* What is Quantum Computing?
+  Classical computers use bits that exist strictly as either 0 (switch OFF) or 1 (switch ON). All software, video games, and images are long sequences of zeros and ones processed sequentially by transistors.
+  A Quantum Computer exploits the laws of quantum mechanics—the physics governing subatomic particles. Instead of classical bits, it uses quantum bits or qubits. A qubit can be in state |0>, in state |1>, or in a superposition of both states at the same time. This allows a quantum computer to hold and manipulate an astronomical number of possibilities simultaneously.
+
+* What is Quantum Image Processing (QIP)?
+  Quantum Image Processing (QIP) is a subfield of quantum information science that studies:
+  1. How to encode classical 2D visual information (images) into quantum mechanical states.
+  2. How to design quantum algorithms to manipulate those quantum images (e.g., edge detection, filtering, watermarking, image segmentation).
+  3. How to extract (reconstruct) the processed visual information back into classical digital form via quantum measurement.
+
+* What is a Classical Image?
+  To a computer, a digital black-and-white (grayscale) image is not a picture; it is a 2D matrix (a grid) of numbers. If an image has a height of H pixels and a width of W pixels, it has H x W total cells:
+       Column 0   Column 1
+  Row 0 [   0,        255   ]
+  Row 1 [  128,        64   ]
+
+* What is a Pixel?
+  A pixel (short for "picture element") is the smallest individual dot of color or brightness that makes up an image on a screen.
+
+* Pixel Position vs. Pixel Intensity
+  Every pixel has two fundamental properties:
+  1. Position (Coordinate / Index): Where is the pixel located on the grid?
+     Denoted by (x, y) or by a flattened 1D index i in {0, 1, 2, ..., N-1}. In a 2x2 image, there are 4 positions: index 0 (top-left), index 1 (top-right), index 2 (bottom-left), and index 3 (bottom-right).
+  2. Intensity (Brightness / Color Value): How bright or dark is that pixel?
+     In standard 8-bit grayscale, brightness is represented by an integer from 0 to 255:
+     0 = Completely Black, 255 = Completely White, and values in between (like 128) are shades of gray.
+
+* Why is representing an image on a quantum computer different?
+  In a classical computer:
+  - Position is simply the memory address in RAM.
+  - Intensity is an 8-bit byte stored at that address.
+  In a quantum computer, memory does not work like a classical RAM chip:
+  - You cannot write a byte to a physical hard drive location inside a quantum state.
+  - Quantum states exist as vectors in an abstract mathematical Hilbert space.
+  - The entire image must be translated into the wavefunction (quantum state vector) of a group of qubits.
+  - You must decide: Do we encode brightness into the continuous probability amplitudes of the qubits (FRQI), or into discrete computational basis states of multiple qubits (NEQR)?
+
+* Why do we need quantum image representation techniques?
+  Without a formal mathematical representation scheme, a quantum computer cannot understand an image. The representation determines:
+  1. How many physical qubits are needed (hardware footprint).
+  2. How complex the quantum circuit will be (gate count and circuit depth).
+  3. How fast and accurately the image can be read back via quantum measurement.
+  4. What quantum image processing operations can be mathematically applied to the image.
+
+
+----------------------------------------------------------------------------------------
+3. DATASET: NEU SURFACE DEFECT DATABASE
+----------------------------------------------------------------------------------------
+
+* What is NEU?
+  The NEU Surface Defect Database was collected and released by researchers at Northeastern University (NEU), Shenyang, China. It is widely considered the gold standard benchmark dataset for automated optical inspection of hot-rolled steel strip surface defects.
+
+* What type of images are present?
+  - All images are grayscale JPEG images.
+  - Original dimensions: 200 x 200 pixels.
+  - Total images: 1,800 images.
+  - Classes: Exactly 6 distinct defect categories.
+
+* The Six Defect Classes Explained:
+  1. Crazing: A network of delicate, interconnected surface micro-cracks resembling fine spiderwebs or shattered safety glass. Caused by thermal fatigue or severe temperature stress during rapid cooling on the hot-rolling line.
+  2. Inclusion: Dark, irregular, non-metallic particles or specks embedded directly into the steel surface. Caused by impurities (such as slag, oxides, or sulfides) trapped during the steel casting and solidification process.
+  3. Patches: Large, localized, irregular dark or light plate-like shapes with distinct surface texture variations. Caused by uneven contact with heavy industrial rollers, localized oxidation, or mechanical surface damage.
+  4. Pitted Surface: Rough, crater-like cavities, pinholes, or speckled depressions scattered over the metal sheet. Caused by severe localized rust, corrosion, or scale pressed into the sheet and subsequently ripped out.
+  5. Rolled-in Scale: Dark, fish-scale or wavy strip-like patterns embedded tightly into the metal skin. Caused by mill scale (iron oxide layer) that was not properly descaled before high-pressure rolling passes.
+  6. Scratches: Long, straight or curved continuous thin lines running across the rolling direction. Caused by mechanical friction when the steel strip rubs against guides, worn-out rollers, or sharp machinery.
+
+* Dataset Dimensions & Class Distribution:
+  As recorded in results/dataset/dataset_summary.json:
+  - Total images: 1,800
+  - Exactly 300 images per class across the entire dataset.
+  - In original directory layout:
+    * train/images/: 1,440 images (240 images x 6 classes)
+    * validation/images/: 360 images (60 images x 6 classes)
+
+* Why is this dataset suitable for this project?
+  1. Real-world Engineering Relevance: Demonstrates QIP on genuine industrial defect data rather than abstract toy benchmarks.
+  2. Grayscale Alignment: QIP algorithms focus on single-channel luminance encoding; the dataset is natively grayscale.
+  3. Complex Spatial Textures: Distinguishing between crazing and rolled-in scale tests spatial pattern retention through quantum downscaling and reconstruction.
+
+* Train / Validation / Test Splitting:
+  In src/ml/trainer.py, we implement a rigorous 3-way split:
+  Total Dataset: 1,800 Images (300 per class)
+   |
+   +-- Existing validation/ folder ---------> VALIDATION SET: 360 images (60 / class, 20.0%)
+   |
+   +-- Existing train/ folder (1,440 images)
+        |
+        +-- Stratified Split (70%) ----------> TRAINING SET:   1,008 images (168 / class, 56.0%)
+        +-- Stratified Split (30%) ----------> TEST SET:         432 images ( 72 / class, 24.0%)
+
+* Why do we need all three splits?
+  - Training Set (1,008 images): The "textbook." The ML models look at these images and their labels to learn feature weights and decision boundaries.
+  - Validation Set (360 images): The "practice exam." Used during model development to tune hyperparameters without touching the test data.
+  - Test Set (432 images): The "final board exam." Locked away in a vault during model tuning. It is evaluated only once to provide an unbiased estimate of real-world generalization performance.
+
+* What happens in each split?
+  1. Stratification: Every split maintains the exact same proportion: precisely 16.67% per class, ensuring no class is over- or under-represented.
+  2. Zero Data Leakage: In src/ml/trainer.py, the StandardScaler is fit only on the training set (scaler.fit_transform(X_train)). The validation and test sets are transformed using the training scaler's stored mean and variance (scaler.transform(X_val)).
+
+
+----------------------------------------------------------------------------------------
+4. COMPLETE SYSTEM WORKFLOW
+----------------------------------------------------------------------------------------
+
+                  +----------------------------------------+
+                  |       NEU SURFACE DEFECT DATASET       |
+                  | (1,800 grayscale JPEG images, 200x200) |
+                  +-------------------┬--------------------+
+                                      |
+                                      v
+                  +----------------------------------------+
+                  |            DATA EXPLORATION            |
+                  |  (Class counts, histograms, metadata)  |
+                  +-------------------┬--------------------+
+                                      |
+                                      v
+                  +----------------------------------------+
+                  |        PREPROCESSING PIPELINE          |
+                  | * Grayscale conversion                 |
+                  | * Resizing (64x64 for ML; 2x2, 4x4 QIP)|
+                  | * Quantization (2, 4, 8 bits)          |
+                  | * Normalization ([0,1] or integers)    |
+                  +---------┬--------------------┬---------+
+                            |                    |
+              +-------------+                    +-------------+
+              v                                                v
++---------------------------+                    +---------------------------+
+|     CLASSICAL ML TRACK    |                    |     QUANTUM PROCESSING    |
+|  (1008 Train / 360 Val /  |                    | * Image to angles (FRQI)  |
+|         432 Test)         |                    | * Image to binary (NEQR)  |
++---------------------------+                    +---------------------------+
+| * StandardScaler (Train)  |                    | * Build Qiskit Circuits   |
+| * Model Training & Tuning │                    |   (H, X, RY, CX, MCX)     |
+|   - SVM (RBF kernel)      |                    | * Qiskit Aer Simulation   |
+|   - Random Forest (200 tr)|                    |   - Statevector (exact)   |
+|   - K-Nearest Neighbors   |                    |   - Shots (100 to 10,000) |
+|   - Decision Tree         |                    | * Measurement & Decoding  |
++---------------------------+                    | * Image Reconstruction    |
+| * 5-Fold Cross Validation |                    | * Image Quality Metrics   |
+| * Evaluation: Acc, F1, CM |                    |   (MSE, PSNR, SSIM)       |
++-------------┬-------------+                    +-------------┬-------------+
+              |                                                |
+              +---------------------+--------------------------+
+                                    |
+                                    v
+                  +----------------------------------------+
+                  |             RESULT STORAGE             |
+                  | * CSV files (model_comparison.csv,     |
+                  |   all_results.csv, per_class.csv)      |
+                  | * JSON dumps (split_info.json, etc.)   |
+                  | * Serialized models (.joblib)          |
+                  +-----------------┬----------------------+
+                                    |
+                                    v
+                  +----------------------------------------+
+                  |      INTERACTIVE STREAMLIT DASHBOARD   |
+                  |  (8 Dedicated Pages + Home Overview)   |
+                  | Subprocess worker isolation for Qiskit |
+                  +----------------------------------------+
+
+
+----------------------------------------------------------------------------------------
+5. CLASSICAL IMAGE PREPROCESSING
+----------------------------------------------------------------------------------------
+
+Implemented in src/preprocessing/image_processor.py:
+
+1. Grayscale Conversion:
+   - WHAT it does: Loads image files from disk via PIL and forces single-channel luminance conversion using .convert("L").
+   - WHY we do it: Raw images may be stored with redundant 3-channel RGB structures. Quantum image processing requires a single scalar intensity per pixel.
+   - WHAT happens to the image: An image of shape (H, W, 3) becomes an integer array of shape (H, W) where every cell is in range [0, 255].
+
+2. Resizing:
+   - WHAT it does: Downscales the image using high-quality anti-aliasing interpolation (Image.LANCZOS).
+     * For Classical ML: resized to 64 x 64 (producing 4,096 flattened features).
+     * For Quantum Image Processing: resized to powers of 2, specifically 2 x 2, 4 x 4, or 8 x 8.
+   - WHY we do it: 
+     * For ML: 200 x 200 = 40,000 features would cause severe dimensionality issues and slow training. 64 x 64 preserves defect structure while running in seconds.
+     * For Quantum: A quantum system with n position qubits can index exactly 2^n pixels. The total number of pixels must strictly be a power of 2 (2x2 = 4 = 2^2; 4x4 = 16 = 2^4; 8x8 = 64 = 2^6). Simulating circuits beyond 14–16 qubits on classical RAM hits exponential simulation limits.
+   - WHAT happens to the image: High-frequency spatial noise is smoothed out, creating a compact matrix that fits into quantum registers.
+
+3. Intensity Quantization:
+   - WHAT it does: Reduces the brightness scale from standard 8-bit (256 discrete levels: 0–255) down to a specified precision q in {2, 4, 8} bits:
+     quantized = round( (pixel / 255.0) * (2^q - 1) )
+   - WHY we do it: In NEQR, every bit of intensity requires a dedicated physical qubit. Quantizing to 2 bits (0, 1, 2, 3) or 4 bits (0–15) allows researchers to observe how bit precision affects quantum circuit depth and reconstruction fidelity.
+   - WHAT happens to the image: Pixel values are constrained to [0, 2^q - 1].
+
+4. Normalization for FRQI vs. NEQR:
+   - For FRQI (normalize_for_frqi):
+     * WHAT: Divides quantized integers by (2^q - 1) to map every pixel to a floating-point number in [0.0, 1.0].
+     * WHY: FRQI encodes intensity into a quantum rotation angle theta in [0, pi/2]. A normalized float I in [0, 1] maps directly to theta = I * (pi/2).
+   - For NEQR (normalize_for_neqr):
+     * WHAT: Keeps the values as integers in [0, 2^q - 1] and converts them to binary bitstrings.
+     * WHY: NEQR flips intensity qubits using Pauli-X gates to represent binary numbers (e.g., 150 -> 10010110_2).
+
+5. Feature Flattening and Scaling for Classical ML:
+   In src/ml/trainer.py, the 64 x 64 image is flattened into a 1D vector of length 4,096, divided by 255.0, and passed to StandardScaler().
+   The scaler subtracts the mean and divides by standard deviation (mean = 0, std = 1), ensuring that high-contrast pixels do not dominate distance calculations in SVM and KNN.
+
+
+----------------------------------------------------------------------------------------
+6. CLASSICAL MACHINE LEARNING PART
+----------------------------------------------------------------------------------------
+
+### Why is Classical ML Included?
+Classical ML provides an established, industrial-grade baseline. Before migrating visual inspection to quantum algorithms, we must understand how classical models perform on flattened defect textures, identify which defect classes are easily distinguishable, and establish benchmarks for future Quantum Machine Learning (QML) models.
+
+### The Four Implemented Models (src/ml/trainer.py):
+
+1. Support Vector Machine (SVM):
+   - What it is: A maximum-margin supervised classification algorithm.
+   - How it works: Maps the 4,096-dimensional feature vectors into an infinite-dimensional feature space using a Radial Basis Function (RBF) kernel (K(x, x') = exp(-gamma * ||x - x'||^2)) and identifies optimal separating hyperplanes that maximize the geometric margin between defect classes.
+   - Configuration in Code: SVC(C=10, kernel="rbf", gamma="scale", probability=True).
+   - Why used: SVMs excel in high-dimensional spaces where the number of features (4,096) exceeds or is comparable to the number of samples (1,008).
+   - Performance: Best overall model. Achieves 76.62% Test Accuracy, 81.05% Cross-Validation Accuracy, and an F1-Macro of 0.7647.
+
+2. Random Forest Classifier (RF):
+   - What it is: An ensemble learning method composed of multiple de-correlated decision trees.
+   - How it works: Constructs 200 independent decision trees using bootstrap aggregation (bagging). Each split considers a random subset of features (sqrt(4096) = 64 features). The final classification is determined by majority vote across all 200 trees.
+   - Configuration in Code: RandomForestClassifier(n_estimators=200, random_state=42, n_jobs=-1).
+   - Why used: Highly resistant to overfitting compared to single trees, handles non-linear interactions, and requires minimal feature scaling.
+   - Performance: Achieves 100% Training Accuracy (memorizes tree leaves), 70.60% Test Accuracy, 76.20% CV Accuracy, and an F1-Macro of 0.7056.
+
+3. K-Nearest Neighbors (KNN):
+   - What it is: An instance-based, non-parametric "lazy learner."
+   - How it works: Stores all 1,008 training feature vectors. When a test image arrives, it calculates the Euclidean distance between the test vector and all stored training vectors, identifies the k=5 closest training images, and assigns the majority class.
+   - Configuration in Code: KNeighborsClassifier(n_neighbors=5, metric="euclidean", n_jobs=-1).
+   - Why used: Serves as a pure geometric distance baseline.
+   - Performance: 49.77% Test Accuracy and 44.34% F1-Macro. It suffers from the curse of dimensionality because pairwise Euclidean distances become uniform in 4,096-dimensional space.
+
+4. Decision Tree (DT):
+   - What it is: A single hierarchical tree-structured rule learner.
+   - How it works: Recursively splits the training data by selecting individual pixel threshold rules that maximize Gini impurity reduction.
+   - Configuration in Code: DecisionTreeClassifier(max_depth=20, min_samples_split=2, random_state=42).
+   - Why used: Provides an interpretable, white-box rule baseline.
+   - Performance: Exhibits extreme overfitting: 100% Training Accuracy, but drops to 41.11% Validation Accuracy and 50.69% Test Accuracy.
+
+What about CNN? (Convolutional Neural Networks):
+- Status: PLANNED (Not implemented in code).
+- While standard deep learning uses 2D CNNs (e.g., ResNet, VGG), this project intentionally benchmarked classical flat-feature classifiers to match the pixel-vectorized input structures used by quantum image circuits. Integration with Quantum Convolutional Neural Networks (QCNNs) is documented as planned future work in paper/manuscript.md.
+
+### Experimental ML Results Summary (results/models/model_comparison.csv):
+-------------------------------------------------------------------------------------------------------
+Model             Train Acc   Val Acc   Test Acc   F1 Macro   5-Fold CV Score     Train Time   Infer/Sample
+-------------------------------------------------------------------------------------------------------
+SVM (RBF, C=10)     93.95%    65.00%     76.62%     0.7647    81.05% +/- 1.38%      1.34 s       1.14 ms
+Random Forest (200)100.0%     60.83%     70.60%     0.7056    76.20% +/- 3.77%      0.39 s       0.07 ms
+Decision Tree (d=20)100.0%    41.11%     50.69%     0.5054    53.18% +/- 3.62%      1.12 s       0.001 ms
+KNN (k=5)           58.93%    42.22%     49.77%     0.4434    50.20% +/- 2.49%      0.001 s      0.08 ms
+-------------------------------------------------------------------------------------------------------
+
+### Evaluation Metrics Explained:
+1. Accuracy: Total correct predictions divided by total predictions: (TP + TN) / (TP + TN + FP + FN).
+2. Precision: Of all samples the model flagged as defect X, how many actually were defect X? TP / (TP + FP).
+3. Recall (Sensitivity): Of all true defect X images in the factory, how many did the model catch? TP / (TP + FN).
+4. F1-Score: Harmonic mean of Precision and Recall: 2 * (Precision * Recall) / (Precision + Recall).
+5. Confusion Matrix: A 6 x 6 table where row i represents actual ground truth classes and column j represents predicted classes. Diagonal cells represent correct classifications; off-diagonal cells represent misclassifications.
+6. Per-Class Breakdown (Why some defects perform better):
+   For SVM (results/models/per_class_metrics.csv):
+   - Patches: F1 = 0.9718 (Precision 98.6%, Recall 95.8%). Patches have broad, high-contrast contiguous areas that flattened feature vectors capture clearly.
+   - Pitted Surface: F1 = 0.9032 (Precision 84.3%, Recall 97.2%). High-frequency speckled contrast provides distinct mathematical variance.
+   - Inclusion (F1 = 0.6627) and Rolled-in Scale (F1 = 0.6471): These defects exhibit subtle, localized marks that resemble scratches and crazing, leading to off-diagonal confusion.
+
+Why Must We NOT Use the Test Set During Tuning?
+Data Snooping & Test Set Contamination: If you adjust hyperparameters based on test set scores, your model parameters will inadvertently memorize patterns specific to those test images. In this project, the test set was locked away. Hyperparameter selection and model selection were performed using 5-fold cross-validation on the training set and evaluated against the validation set. The test set was touched only once at the very end.
+
+
+----------------------------------------------------------------------------------------
+7. QUANTUM COMPUTING FROM ZERO
+----------------------------------------------------------------------------------------
+
+* Classical Bit vs. Qubit:
+  - Classical Bit: A switch that is either 0 or 1.
+  - Qubit: A two-level quantum system that can be in state |0>, state |1>, or in a simultaneous linear combination (superposition) of both.
+
+* The Dirac Ket Notation: |0> and |1>:
+  In quantum physics, the bracket symbol |> is called a ket. It represents a column vector in linear algebra:
+  |0> = [1, 0]^T,  |1> = [0, 1]^T
+
+* Superposition:
+  A qubit can exist in a linear combination of states:
+  |psi> = alpha |0> + beta |1>
+  where alpha and beta are complex numbers called probability amplitudes.
+
+* Amplitudes vs. Probabilities (The Born Rule):
+  We cannot directly see the amplitudes alpha and beta. When you measure a qubit, it collapses into either classical state 0 or classical state 1:
+  - The probability of measuring 0 is |alpha|^2.
+  - The probability of measuring 1 is |beta|^2.
+  - Total probability equals 100%: |alpha|^2 + |beta|^2 = 1.
+
+* Quantum Gates:
+  Operations represented mathematically by unitary matrices (U^dagger U = I):
+  - Hadamard Gate (H): Creates an equal superposition:
+    H |0> = (|0> + |1>) / sqrt(2),  H |1> = (|0> - |1>) / sqrt(2)
+  - Pauli-X Gate (X): Quantum NOT gate:
+    X |0> = |1>,  X |1> = |0>
+  - Rotation-Y Gate (Ry(theta)): Rotates the state around the Y-axis of the Bloch sphere by angle theta:
+    Ry(theta) = [ [cos(theta/2), -sin(theta/2)], [sin(theta/2), cos(theta/2)] ]
+
+* Quantum Circuit:
+  A chronological diagram of quantum operations. Horizontal lines represent individual qubits; boxes along the lines represent quantum gates applied at discrete time steps.
+
+* Measurement, Shots, and Simulators:
+  - Measurement: Irreversible physical operation collapsing a fragile superposition into a classical bit (0 or 1).
+  - Shots: Because quantum measurement is probabilistic, running a circuit once yields only a single random outcome. We must repeat the experiment thousands of times (e.g., 1,000 or 10,000 shots) to build a statistical histogram of outcomes.
+  - Simulator: Software running on classical hardware (like Qiskit Aer) that computes matrix multiplications to simulate how an ideal or noisy quantum computer behaves.
+
+* Why are Qubits Useful for Image Representation?
+  Exponential state capacity:
+  - 1 qubit holds 2^1 = 2 states.
+  - 2 qubits hold 2^2 = 4 states simultaneously: alpha_00|00> + alpha_01|01> + alpha_10|10> + alpha_11|11>.
+  - n qubits hold 2^n simultaneous states.
+  To index every pixel in a 256 x 256 = 65,536 pixel image, a classical computer needs 65,536 distinct memory addresses. A quantum computer needs only 16 position qubits (2^16 = 65,536) in superposition.
+
+
+----------------------------------------------------------------------------------------
+8. QUANTUM IMAGE PROCESSING (QIP)
+----------------------------------------------------------------------------------------
+
+* Normal Image vs. Quantum Image:
+  - Normal Classical Image:
+    Pixel Position (x, y) ---> Array Lookup A[x, y] = Intensity Value (0–255)
+  - Quantum Image:
+    Quantum State |I> = SUM_{i=0}^{N-1} |Intensity Information> (x) |Position State i>
+
+* Why can we not put a normal image directly into a quantum computer?
+  A quantum computer does not have a display port, an image buffer, or a classical memory bus. Qubits are manipulated by electromagnetic pulses, microwave resonators, or laser beams that execute unitary matrix transformations. To process an image quantum-mechanically, the visual information must be converted into:
+  1. Angles that parameterize rotation gates (FRQI), OR
+  2. Computational basis states flipped by NOT gates (NEQR).
+
+* The Complete Conceptual Flow:
+  Classical Image ---> Resize & Quantize ---> Pixel Matrix ---> Gate Synthesis ---> Quantum Circuit ---> Qiskit Aer ---> Measurement Counts ---> Decoding ---> Reconstructed Image
+
+
+----------------------------------------------------------------------------------------
+9. FRQI IN EXTREME DETAIL
+----------------------------------------------------------------------------------------
+
+* Full Form: Flexible Representation of Quantum Images (Le, Dong, Hirota, 2011).
+
+* Core Architecture:
+  - Position Qubits: n = log2(N) qubits to index N pixel coordinates.
+  - Color/Intensity Qubit: Exactly 1 single qubit representing the brightness of the pixel.
+  - Total Qubits Required: Total Qubits = n + 1.
+  - Why only ONE color qubit? Because FRQI does not store intensity as binary digits. It encodes intensity continuously into the probability amplitude of that single qubit via rotation angle theta.
+
+* Mathematical Definition of the FRQI State:
+  |I> = (1 / sqrt(N)) * SUM_{i=0}^{N-1} ( cos(theta_i)|0> + sin(theta_i)|1> ) (x) |i>
+
+  Meaning of Every Mathematical Symbol:
+  - |I>: The total quantum state vector representing the entire image.
+  - N: Total number of pixels in the image (N = 2^n).
+  - 1 / sqrt(N): Normalization factor ensuring total probability across all N positions equals 1.
+  - SUM_{i=0}^{N-1}: Summation over all pixel positions in quantum superposition.
+  - |i>: The n-qubit computational basis state representing the coordinate of pixel i.
+  - (x): The tensor product combining the intensity qubit with the position register.
+  - |0>, |1>: The two basis states of the single color qubit.
+  - theta_i: The rotation angle encoding the brightness of pixel i, where theta_i in [0, pi/2].
+    * If pixel i is completely black (intensity = 0): theta_i = 0 ==> cos(0)|0> + sin(0)|1> = 1|0> + 0|1> = |0>.
+    * If pixel i is completely white (intensity = 1): theta_i = pi/2 ==> cos(pi/2)|0> + sin(pi/2)|1> = 0|0> + 1|1> = |1>.
+    * If pixel i is medium gray (intensity = 0.5): theta_i = pi/4 ==> (1/sqrt(2))|0> + (1/sqrt(2))|1>.
+
+* Step-by-Step Numerical Example: 2 x 2 Image
+  Consider the image matrix:
+  [   0,  255 ]
+  [ 128,   64 ]
+  Here, N = 4 pixels.
+  - Position qubits: n = log2(4) = 2 qubits (q0, q1).
+  - Color qubits: 1 qubit (q2).
+  - Total qubits: 2 + 1 = 3 qubits.
+
+  Step 1: Normalize Pixel Intensities to [0, 1]
+  - Pixel 0 (index 0, binary 00, top-left):     I_0 = 0 / 255 = 0.0
+  - Pixel 1 (index 1, binary 01, top-right):    I_1 = 255 / 255 = 1.0
+  - Pixel 2 (index 2, binary 10, bottom-left):  I_2 = 128 / 255 = 0.50196
+  - Pixel 3 (index 3, binary 11, bottom-right): I_3 = 64 / 255 = 0.25098
+
+  Step 2: Convert Intensities to FRQI Angles theta_i (theta_i = I_i * (pi/2))
+  - theta_0 = 0.0 * (pi/2) = 0.0 rad
+  - theta_1 = 1.0 * (pi/2) = pi/2 = 1.5708 rad
+  - theta_2 = 0.50196 * (pi/2) = 0.7885 rad
+  - theta_3 = 0.25098 * (pi/2) = 0.3942 rad
+
+  Step 3: Compute Qiskit Ry Rotation Angles
+  In Qiskit, Ry(phi) rotates by phi/2. To make phi/2 = theta_i, the angle passed to Qiskit's Ry gate must be:
+  phi_i = 2 * theta_i = I_i * pi  (as in src/frqi/encoder.py: self.angles = self.pixel_values * np.pi)
+  - phi_0 = 0.0 * pi = 0.0
+  - phi_1 = 1.0 * pi = 3.1416
+  - phi_2 = 0.50196 * pi = 1.5769
+  - phi_3 = 0.25098 * pi = 0.7885
+
+  Step 4: Write the Final FRQI State
+  |I> = 0.5 * [ |0>|00> + |1>|01> + (cos(0.7885)|0> + sin(0.7885)|1>)|10> + (cos(0.3942)|0> + sin(0.3942)|1>)|11> ]
+
+  Step 5: Reconstructing the Image
+  - From Exact Statevector:
+    amp_0 = amplitude(|0> (x) |i>) = cos(theta_i) / sqrt(N)
+    amp_1 = amplitude(|1> (x) |i>) = sin(theta_i) / sqrt(N)
+    theta_i = arctan2(|amp_1|, |amp_0|)
+    reconstructed_intensity = theta_i / (pi/2)
+  - From Measurement Counts (Shots):
+    Suppose we run 10,000 shots. We observe counts where color qubit is 1 (C_1) and color qubit is 0 (C_0) for position i:
+    P(color = 1 | position = i) = C_1 / (C_0 + C_1) approx sin^2(theta_i)
+    theta_i = arcsin(sqrt( C_1 / (C_0 + C_1) ))
+    intensity = (theta_i / (pi/2)) * 255
+
+
+----------------------------------------------------------------------------------------
+10. NEQR IN EXTREME DETAIL
+----------------------------------------------------------------------------------------
+
+* Full Form: Novel Enhanced Quantum Representation (Zhang, Lu, Gao, Wang, 2013).
+
+* Core Architecture:
+  - Position Qubits: n = log2(N) qubits to index N pixel coordinates.
+  - Intensity Qubits: q qubits to store the pixel value directly as a binary number (e.g., q = 8 for standard 256 gray levels).
+  - Total Qubits Required: Total Qubits = n + q.
+
+* Mathematical Definition of the NEQR State:
+  |I> = (1 / sqrt(N)) * SUM_{i=0}^{N-1} |C_i> (x) |i>
+  where |C_i> = |c_i^{q-1} c_i^{q-2} ... c_i^1 c_i^0>,  c_i^j in {0, 1}
+
+  Meaning of Every Mathematical Symbol:
+  - |C_i>: A multi-qubit computational basis state holding the exact binary bitstring of the intensity at pixel i.
+  - c_i^{q-1} ... c_i^0: The individual binary digits (bits) of the intensity value.
+  - |i>: The n-qubit computational basis state representing position coordinate i.
+  - Unlike FRQI, intensity is NOT stored in probability amplitudes. Intensity is stored directly in the basis state labels |0> and |1> of the intensity register!
+
+* Step-by-Step Numerical Example: Same 2 x 2 Image
+  [   0,  255 ]
+  [ 128,   64 ]
+  - Position qubits: n = log2(4) = 2 qubits (q0, q1).
+  - Intensity precision: q = 8 bits (q2, q3, q4, q5, q6, q7, q8, q9).
+  - Total qubits: 2 + 8 = 10 qubits.
+
+  Step 1: Convert Each Pixel Intensity to an 8-bit Binary String
+  - Pixel 0 (index 0, position |00>): Intensity 0   = 00000000_2
+  - Pixel 1 (index 1, position |01>): Intensity 255 = 11111111_2
+  - Pixel 2 (index 2, position |10>): Intensity 128 = 10000000_2
+  - Pixel 3 (index 3, position |11>): Intensity 64  = 01000000_2
+
+  Step 2: Write the Final NEQR Quantum State
+  |I> = 0.5 * [ |00000000>|00> + |11111111>|01> + |10000000>|10> + |01000000>|11> ]
+
+  Step 3: Circuit Implementation (src/neqr/encoder.py):
+  1. Position qubits are put in uniform superposition: H^(x2)|00> = 0.5*(|00> + |01> + |10> + |11>).
+  2. For each pixel, X gates wrap the position controls to select that coordinate. For Pixel 2 (binary 10: q0=0, q1=1), apply X to q0 so 10 becomes 11.
+  3. For every intensity bit that equals 1, apply a Multi-Controlled X (MCX) gate targeting that specific intensity qubit.
+  4. Re-apply the X gate on q0 to uncompute and restore the position register back to state 10.
+
+  Step 4: Reconstruction via Majority Voting:
+  When the circuit is measured:
+  - Every shot produces a 10-bit bitstring: [8 intensity bits] [2 position bits].
+  - The lower 2 bits identify the pixel coordinate; the upper 8 bits form the integer intensity.
+  - Across all shots, we take the majority vote (the most frequently measured integer) for each coordinate (src/reconstruction/reconstructor.py).
+  - Reconstructed intensity is 100% exact and deterministic!
+
+
+----------------------------------------------------------------------------------------
+11. FRQI VS. NEQR: COMPREHENSIVE COMPARISON
+----------------------------------------------------------------------------------------
+
+Feature / Dimension                 FRQI (Flexible Representation)            NEQR (Novel Enhanced Representation)
+--------------------------------------------------------------------------------------------------------------------
+Intensity Representation            Continuous probability amplitude (theta)  Discrete computational basis states (|0>, |1>)
+Qubits Needed (2^n pix, q bits)     n + 1 qubits                              n + q qubits
+Qubits for 2x2 (8-bit)              2 + 1 = 3 qubits                          2 + 8 = 10 qubits
+Qubits for 4x4 (8-bit)              4 + 1 = 5 qubits                          4 + 8 = 12 qubits
+Qubits for 8x8 (8-bit)              6 + 1 = 7 qubits                          6 + 8 = 14 qubits
+Encoding Gates                      Multi-controlled Ry(2theta) rotation      Multi-controlled Pauli-X (MCX / CNOT) gates
+Circuit Depth at 4x4                705 layers                                88 layers
+Circuit Depth at 8x8                4,267 layers                              346 layers (over 12x shallower!)
+Gate Count at 8x8                   7,486 gates                               558 gates
+Measurement Behavior                Probabilistic (statistical shot noise)    Deterministic basis states (eigenstate readout)
+Reconstruction Method               Statistical estimation: theta = arcsin(VP)Majority voting across measured bitstrings
+Shots Needed for Quality            Requires >10,000 shots for 256 levels     Requires modest shots (~500–1000) for majority
+Post-Processing Complexity          Floating-point trigonometric inversions   Simple bit-shift parsing and integer casting
+
+Critical Viva Takeaway: Why qubit count alone is misleading!
+A naive observer would look at the table and say: "FRQI uses only 7 qubits for an 8x8 image while NEQR uses 14 qubits. Therefore, FRQI is better!"
+This is completely wrong in practice. FRQI saves qubits at the expense of an explosive circuit depth (4,267 vs. 346). On real physical quantum computers, qubits suffer from decoherence within microseconds. A circuit with thousands of arbitrary rotation gates will degrade into complete noise long before execution finishes. NEQR's linear addition of auxiliary qubits is a modest price to pay for its vastly shallower circuit depth and noise-resilient binary readout.
+
+
+----------------------------------------------------------------------------------------
+12. QUANTUM CIRCUITS & GATES
+----------------------------------------------------------------------------------------
+
+        +---+                 +---+
+pos_0: -| H |--*--------------| X |--*--------------
+        +---+  |              +---+  |
+pos_1: -| H |--*---------------------*--------------
+        +---+  |                     |
+int_0: --------+---------------------+--------------
+             +-+---------+         +-+-+
+color: ------| RY(2theta)|---------| X |------------
+             +-----------+         +---+
+               [ FRQI ]               [ NEQR ]
+
+1. Hadamard Gate (H):
+   - What it does: Creates an equal superposition of |0> and |1>.
+   - Why we use it: Applied to all n position qubits at time t=0 to place the coordinate register into a uniform superposition of all N pixel coordinates simultaneously.
+   - Before and After: |0> ---> (|0> + |1>) / sqrt(2).
+
+2. Pauli-X Gate (X):
+   - What it does: Flips |0> <--> |1> (Quantum NOT gate).
+   - Why we use it:
+     * Position Selection: Applied to any position qubit where the binary address bit is 0, transforming the target state into |11...1> so multi-controlled gates fire exclusively on that pixel.
+     * Restoration (Uncomputing): Applied again immediately after the controlled operation to return the position qubits to their original state.
+   - Before and After: |0> ---> |1>, |1> ---> |0>.
+
+3. Rotation-Y Gate (Ry):
+   - What it does: Performs a continuous unitary rotation around the Y-axis of the Bloch sphere by angle phi = 2*theta.
+   - Why we use it: In FRQI, to encode the analog pixel intensity into the color qubit (q_n).
+   - Before and After: |0> ---> cos(theta)|0> + sin(theta)|1>.
+
+4. Controlled-NOT Gate (CX / CNOT):
+   - What it does: Flips target qubit if and only if control qubit is in state |1>.
+   - Why we use it: When n=1 (a 2-pixel image), connects single position control qubit directly to target qubit.
+
+5. Multi-Controlled X Gate (MCX):
+   - What it does: A generalized Toffoli gate. Flips target qubit if and only if all n control qubits are in state |1>.
+   - Why we use it: In NEQR, all n position qubits act as controls; when they match pixel coordinate i, the MCX gate flips intensity qubit j from |0> to |1>.
+
+6. Multi-Controlled Ry Gate (MCRY):
+   - What it does: Rotates target color qubit by angle 2*theta_i if and only if all n position qubits are in state |1>.
+   - Why we use it: The foundational gate of FRQI.
+
+7. Measurement Gate:
+   - What it does: Couples the quantum state to a classical measurement apparatus, collapsing the qubit onto the computational Z-basis (0 or 1) and storing the result in a classical bit register.
+
+
+----------------------------------------------------------------------------------------
+13. FRQI CIRCUIT WORKFLOW
+----------------------------------------------------------------------------------------
+
+1. INPUT IMAGE (e.g., NEU Crazing, 200x200)
+   |
+2. PREPROCESSING: Resize to 4x4, Quantize to 8-bit, Normalize to [0.0, 1.0]
+   |
+3. INITIALIZE QUANTUM CIRCUIT: 4 position qubits (pos_0..pos_3), 1 color qubit (color_0)
+   |
+4. UNIFORM SUPERPOSITION: Apply Hadamard (H) to pos_0, pos_1, pos_2, pos_3
+   |
+5. PIXEL LOOP (For pixel_idx = 0 to 15):
+   a. Compute Ry angle: phi = intensity[pixel_idx] * pi
+   b. If phi approx 0 (black pixel), skip to save gate depth
+   c. Determine binary position bits: e.g., index 6 = "0110"
+   d. Apply X gates to position qubits where bit is 0 (pos_0 and pos_3)
+   e. Apply MCRY(phi) with controls=[pos_0..pos_3] and target=color_0
+   f. Undo X gates on pos_0 and pos_3 (restores position register)
+   |
+6. MEASUREMENT: Append measurement gates to all 5 qubits (measuring into 5 classical bits)
+   |
+7. SIMULATE: Run on Qiskit AerSimulator with N shots (e.g., 1000 shots)
+   |
+8. GET COUNTS: Dictionary of { "c p3 p2 p1 p0": count }
+   |
+9. DECODE INTENSITY:
+   For each position i (0..15):
+     total_counts = count(color=0, pos=i) + count(color=1, pos=i)
+     P(1|i) = count(color=1, pos=i) / total_counts
+     theta_i = arcsin(sqrt(P(1|i)))
+     reconstructed_intensity = theta_i / (pi/2)
+   |
+10. RECONSTRUCT: Reshape 16 pixels back to 4x4 image matrix
+
+
+----------------------------------------------------------------------------------------
+14. NEQR CIRCUIT WORKFLOW
+----------------------------------------------------------------------------------------
+
+1. INPUT IMAGE (e.g., NEU Crazing, 200x200)
+   |
+2. PREPROCESSING: Resize to 4x4, Quantize to 8-bit integers [0..255]
+   |
+3. INITIALIZE QUANTUM CIRCUIT: 4 position qubits (pos_0..pos_3), 8 intensity qubits (int_0..int_7)
+   |
+4. UNIFORM SUPERPOSITION: Apply Hadamard (H) to pos_0, pos_1, pos_2, pos_3
+   |
+5. PIXEL LOOP (For pixel_idx = 0 to 15):
+   a. Get 8-bit binary string: e.g., intensity 150 = [0, 1, 1, 0, 1, 0, 0, 1]
+   b. If all bits are 0 (black pixel), skip
+   c. Determine binary position bits: e.g., index 6 = "0110"
+   d. Apply X gates to position qubits where bit is 0
+   e. For each intensity bit j where bit == 1:
+        Apply MCX with controls=[pos_0..pos_3] and target=int_j
+   f. Undo X gates on position qubits
+   |
+6. MEASUREMENT: Append measurement gates to all 12 qubits
+   |
+7. SIMULATE: Run on Qiskit AerSimulator with N shots
+   |
+8. GET COUNTS: Dictionary of { "int_7..int_0 pos_3..pos_0": count }
+   |
+9. DECODE BINARY INTENSITIES:
+   For each measurement outcome:
+     Separate upper 8 bits (intensity integer) from lower 4 bits (position index)
+     Accumulate votes: position_votes[pos_idx][intensity_val] += count
+   |
+10. MAJORITY VOTE:
+    For each position i:
+      reconstructed_pixel[i] = argmax(position_votes[i])
+   |
+11. RECONSTRUCT: Reshape 16 integer pixels back to 4x4 image matrix
+
+
+----------------------------------------------------------------------------------------
+15. SUPERPOSITION IN THIS PROJECT
+----------------------------------------------------------------------------------------
+
+* Where Exactly is Superposition Used?
+  Superposition is created in Step 1 of both FRQI and NEQR circuit generation:
+  for i in range(self.n_position_qubits):
+      circuit.h(pos_reg[i])
+
+* What Happens to the Position Qubits?
+  Before Hadamard gates, position register is in classical ground state |00...0>.
+  Applying H to each of the n position qubits transforms the state into a uniform, equal superposition:
+  H^(xn) |0...0> = (1 / sqrt(2^n)) * SUM_{i=0}^{2^n-1} |i>
+  In our 2x2 image (n=2 qubits):
+  H^(x2) |00> = 0.5 * ( |00> + |01> + |10> + |11> )
+  All 4 coordinates exist simultaneously in a single quantum register.
+
+* What Does Measurement Do to This Superposition?
+  When measurement occurs, the wave function collapses. The quantum system is forced to randomly pick one single coordinate |i> according to its probability amplitude (|0.5|^2 = 0.25 = 25%).
+  This is why a single shot is useless—it gives you only one pixel coordinate! Running 1,000 or 10,000 shots samples the superposition repeatedly, allowing us to reconstruct every pixel across the entire grid.
+
+
+----------------------------------------------------------------------------------------
+16. MEASUREMENT AND SHOTS
+----------------------------------------------------------------------------------------
+
+* Why Can We Not Directly Read a Quantum State?
+  Heisenberg's Uncertainty Principle and the No-Cloning Theorem prevent us from reading the internal complex amplitudes directly. Looking at a quantum state collapses the superposition into a classical basis state.
+
+* What Does a Raw Measurement Result Look Like?
+  In Qiskit, measurement outputs a dictionary of bitstrings and their occurrence frequencies (counts):
+  counts = {
+      "10010110 0110": 74,   # Intensity 150 at Position 6 measured 74 times
+      "00000000 0000": 68,   # Intensity 0 at Position 0 measured 68 times
+  }
+
+* Numerical Example: 1,000 Shots
+  Suppose in an FRQI circuit at position coordinate |10>, we set up 1,000 shots that hit position |10>:
+  - 700 shots measured color qubit as 0.
+  - 300 shots measured color qubit as 1.
+
+  What does this mean?
+  The estimated probability of finding the color qubit in state |1> is:
+  P(color = 1) = 300 / (700 + 300) = 0.30
+  Since in FRQI P(color = 1) = sin^2(theta):
+  sin(theta) = sqrt(0.30) = 0.5477 ==> theta = arcsin(0.5477) = 0.5796 rad
+  Normalized Intensity = theta / (pi/2) = 0.5796 / 1.5708 = 0.369
+  8-bit Reconstructed Pixel = 0.369 * 255 approx 94
+
+
+----------------------------------------------------------------------------------------
+17. QUANTUM SIMULATION
+----------------------------------------------------------------------------------------
+
+* Why Use a Simulator?
+  1. Resource Availability: Physical quantum hardware has queue times and daily job limits.
+  2. Noise Control: Current physical quantum computers are NISQ devices plagued by gate infidelity and decoherence. A simulator lets us study algorithmic properties without hardware artifacts.
+  3. Reproducibility: Simulations can be seeded (random_seed=42) to produce identical results across research runs.
+
+* The Two Backends Used in This Project (src/simulation/simulator.py):
+  1. StatevectorSimulator (method="statevector"): Computes exact analytical state vector (2^total_qubits complex numbers). Zero sampling noise. Ground-truth baseline.
+  2. AerSimulator (method="automatic"): Emulates true physical measurement by running discrete measurement shots (100 to 10,000 shots) with sampling noise.
+
+* Hardware Limitations: Why Not Run Full 200 x 200 on Real Quantum Hardware?
+  - A 200 x 200 image has 40,000 pixels.
+  - In NEQR, this would require approx 16 position qubits + 8 intensity qubits = 24 qubits.
+  - Encoding 40,000 pixels requires hundreds of thousands of multi-controlled gates. On physical QPUs, gate error rates compound rapidly; after ~100 gates, the quantum state completely decoheres into white noise.
+
+
+----------------------------------------------------------------------------------------
+18. IMAGE RECONSTRUCTION
+----------------------------------------------------------------------------------------
+
+      FRQI RECONSTRUCTION (STATISTICAL)              NEQR RECONSTRUCTION (DETERMINISTIC)
+      +-------------------------------+              +---------------------------------+
+      |   Counts: { "color pos": N }  |              |  Counts: { "intensity pos": N } |
+      +--------------┬----------------+              +----------------┬----------------+
+                     |                                                |
+                     v                                                v
+      +-------------------------------+              +---------------------------------+
+      | Group by position coordinate  |              | Group by position coordinate    |
+      | Count C_0 and C_1             |              | Parse 8-bit integer values      |
+      +--------------┬----------------+              +----------------┬----------------+
+                     |                                                |
+                     v                                                v
+      +-------------------------------+              +---------------------------------+
+      | P(1) = C_1 / (C_0 + C_1)      |              | Majority Vote:                  |
+      | theta = arcsin(sqrt(P))       |              | Intensity = argmax(votes[pos])  |
+      | Intensity = theta / (pi/2)    |              | (Exact integer recovered)       |
+      +--------------┬----------------+              +----------------┬----------------+
+                     |                                                |
+                     v                                                v
+      +-------------------------------+              +---------------------------------+
+      | Reconstructed Floating Image  |              | Reconstructed Integer Image     |
+      +-------------------------------+              +---------------------------------+
+
+
+----------------------------------------------------------------------------------------
+19. RECONSTRUCTION METRICS
+----------------------------------------------------------------------------------------
+
+Implemented in src/metrics/evaluator.py:
+
+1. MSE (Mean Squared Error):
+   - Formula: MSE = (1 / (H * W)) * SUM_{x,y} ( I_orig(x,y) - I_recon(x,y) )^2
+   - What it measures: The average squared difference between original and reconstructed pixel values.
+   - Interpretation: Lower is better. A value of 0.0 indicates an exact, lossless reconstruction.
+
+2. PSNR (Peak Signal-to-Noise Ratio):
+   - Formula: PSNR = 10 * log10( MAX_I^2 / MSE )  (expressed in decibels, dB)
+   - What it measures: Ratio between maximum possible pixel power and corrupting reconstruction noise.
+   - Interpretation: Higher is better.
+     * > 30 dB: High quality; human eye can barely spot defects.
+     * > 40 dB: Excellent reconstruction.
+     * Infinity (100 dB in code): Mathematically identical image (MSE = 0).
+
+3. SSIM (Structural Similarity Index):
+   - Formula: SSIM(x, y) = [ (2*mu_x*mu_y + C1)(2*sigma_xy + C2) ] / [ (mu_x^2 + mu_y^2 + C1)(sigma_x^2 + sigma_y^2 + C2) ]
+   - What it measures: Human visual system perception—evaluating whether structural edges, textures, and luminance patterns are preserved.
+   - Interpretation: Range is [-1, 1]. 1.0 indicates perfect structural fidelity.
+
+
+----------------------------------------------------------------------------------------
+20. CIRCUIT ANALYSIS PARAMETERS
+----------------------------------------------------------------------------------------
+
+In src/metrics/evaluator.py, we measure:
+1. Number of Qubits: Total physical hardware resources required.
+2. Number of Classical Bits: Storage allocated for measurement collapse.
+3. Total Gate Count: Total number of individual quantum gates in the circuit.
+4. Circuit Depth: The longest path of dependent quantum operations from input to output.
+   Analogy: Gate count is the total number of bricks used. Circuit depth is the number of workdays required if multiple workers lay independent bricks at the same time. Lower depth means faster execution before qubits decohere.
+5. Single-Qubit vs. Multi-Qubit Gates: Multi-qubit gates (CX, MCX, MCRY) are significantly more prone to hardware error than single-qubit gates (H, X, Ry).
+6. Execution Timers:
+   - encoding_time: Time taken by classical CPU to synthesize the Qiskit circuit.
+   - simulation_time: Time taken by Qiskit Aer to run quantum matrix operations.
+   - reconstruction_time: Time taken to parse measurement counts into an image.
+   - total_time: End-to-end execution latency.
+
+
+----------------------------------------------------------------------------------------
+21. DASHBOARD PARAMETERS
+----------------------------------------------------------------------------------------
+
+Parameter             Options / Range               What It Controls                  What Happens When Increased
+--------------------------------------------------------------------------------------------------------------------------
+Representation        FRQI / NEQR / Both            Mathematical encoding framework   FRQI reduces qubits, explodes depth. NEQR adds qubits, optimizes depth.
+Resolution            2x2, 4x4, 8x8 (up to 32x32)   Spatial dimension of image        Qubits grow logarithmically (log2 N); gates & time grow exponentially.
+Intensity Precision   2, 4, 8 bits                  Discrete grayscale levels         In NEQR: adds physical qubits (n+q). In FRQI: finer angle resolution.
+Measurement Shots     100, 500, 1000, 5000, 10000   Number of circuit executions      Reduces statistical noise, raising FRQI PSNR/SSIM; increases runtime.
+Simulator Backend     Aer (Shots) vs. Statevector   Simulation engine                 Statevector provides exact math; Aer simulates real measurement noise.
+Defect Category       6 NEU categories              Input defect pattern              Tests how textures (crazing vs. patches) survive downscaling/reconstruction.
+
+
+----------------------------------------------------------------------------------------
+22. RESOLUTION SCALING
+----------------------------------------------------------------------------------------
+
+Resolution   Pixels (N)   Pos Qubits (n)   FRQI Qubits   NEQR Qubits   FRQI Gates   NEQR Gates   FRQI Depth   NEQR Depth
+--------------------------------------------------------------------------------------------------------------------
+2 x 2            4              2               3             10            26           26           18           22
+4 x 4           16              4               5             12         1,092          128          705           88
+8 x 8           64              6               7             14         7,486          558        4,267          346
+
+Mathematical Scaling Laws:
+- Position Qubits: Scales logarithmically: n = log2(W * H).
+- FRQI Gate Decomposition: Each multi-controlled Ry gate with n controls decomposes into O(2^n) elementary gates. Across all N = 2^n pixels, total elementary gate count scales as O(N * 2^n) = O(N^2).
+- NEQR Gate Decomposition: Each set bit triggers an MCX gate decomposing into O(n) gates. Across N pixels and q bits, total gates scale as O(q * N * n) = O(q * N log2 N). NEQR scales dramatically better in circuit depth!
+
+
+----------------------------------------------------------------------------------------
+23. INTENSITY PRECISION
+----------------------------------------------------------------------------------------
+
+- 8-bit Grayscale: Traditional imaging standard (2^8 = 256 gray levels from 0 to 255).
+- In NEQR: Every bit requires an actual physical qubit (q).
+  * At 2-bit precision: 4 gray levels (0, 85, 170, 255) ==> 2 intensity qubits.
+  * At 4-bit precision: 16 gray levels ==> 4 intensity qubits.
+  * At 8-bit precision: 256 gray levels ==> 8 intensity qubits.
+- In FRQI: Always uses exactly 1 color qubit regardless of intensity precision. Finer precision simply means the angle theta in [0, pi/2] is divided into smaller increments. However, resolving smaller angle increments in FRQI requires exponentially more measurement shots!
+
+
+----------------------------------------------------------------------------------------
+24. EXPERIMENT WORKFLOW: STEP-BY-STEP
+----------------------------------------------------------------------------------------
+
+1. Select NEU Image (e.g., "crazing_1.jpg")
+   |
+2. Load & Preprocess: Resize to 4x4, Quantize to 8 bits
+   |
+3. Branch 1: Run FRQI
+   - Normalize to [0.0, 1.0]
+   - Build FRQI circuit (5 qubits)
+   - Measure execution time
+   - Simulate on Aer (1024 shots)
+   - Estimate probabilities & decode angles
+   - Compute MSE, PSNR, SSIM against original 4x4
+   |
+4. Branch 2: Run NEQR
+   - Keep 8-bit integer values [0..255]
+   - Build NEQR circuit (12 qubits)
+   - Measure execution time
+   - Simulate on Aer (1024 shots)
+   - Parse bitstrings & run majority voting
+   - Compute MSE, PSNR, SSIM against original 4x4
+   |
+5. Collate Results: Store side-by-side in ExperimentResult dataclass
+   |
+6. Save: Append row to results/experiments/all_results.csv and JSON dump
+
+
+----------------------------------------------------------------------------------------
+25. EXPERIMENT RESULT STORAGE
+----------------------------------------------------------------------------------------
+
+Why Save Results to Disk?
+Running quantum simulations on hundreds of images with high shot counts takes significant CPU time. Pre-computing and serializing experiments to disk enables instant dashboard startup and strict reproducibility.
+
+Storage Locations in This Repository:
+- results/experiments/all_results.csv: 843 KB file containing individual quantum simulation runs with columns for qubits, depth, gate counts, execution times, MSE, PSNR, and SSIM.
+- results/models/model_comparison.csv: Classical ML performance benchmarks.
+- results/models/per_class_metrics.csv: Precision, recall, and F1-score for each of the 6 defect classes.
+- results/models/confusion_matrices/: Raw JSON predictions for all 4 models.
+- results/models/saved_models/: Serialized scikit-learn models (.joblib files) for zero-latency inference.
+- results/dataset/dataset_summary.json: Dataset metadata and class counts.
+
+
+----------------------------------------------------------------------------------------
+26. THE 9 DASHBOARD PAGES IN DETAIL
+----------------------------------------------------------------------------------------
+
+Q-ImageLab Dashboard (Streamlit)
++-- Home (app/dashboard.py)
++-- 1_Dataset_Explorer.py
++-- 2_Model_Analytics.py
++-- 3_Confusion_Matrix.py
++-- 4_Quantum_Lab.py
++-- 5_Circuit_Analyzer.py
++-- 6_Reconstruction_Studio.py
++-- 7_FRQI_vs_NEQR.py
++-- 8_Experiment_Results.py
+
+1. Home Page (app/dashboard.py):
+   - User Sees: High-level KPI summary cards (1,800 Images, 6 Defect Classes, Best Model: SVM at 76.62%, Best CV Score: 81.05%, Quantum Encodings: FRQI & NEQR).
+   - Internals: Loads summary statistics from disk and renders dark glassmorphic UI components.
+
+2. Dataset Explorer (app/pages/1_Dataset_Explorer.py):
+   - User Sees: Class distribution bar charts, sample image gallery for all 6 defect categories, and pixel intensity histograms.
+   - User Selects: Defect class dropdown, sample image slider.
+   - Output: Visual comparison of surface defect appearances and brightness distributions.
+
+3. Model Analytics (app/pages/2_Model_Analytics.py):
+   - User Sees: Model comparison table (Train, Val, Test Accuracies, F1-macro, CV scores), per-class radar/bar charts, and training time vs. accuracy tradeoffs.
+   - Internals: Reads model_comparison.csv and generates interactive Plotly figures.
+
+4. Confusion Matrix (app/pages/3_Confusion_Matrix.py):
+   - User Sees: Interactive confusion matrix heatmaps for SVM, Random Forest, KNN, and Decision Tree.
+   - User Selects: Model selector radio buttons, display mode (Raw Counts vs. Normalized Percentages).
+   - Internals: Highlights diagonal elements (true positives) and identifies which classes are confused.
+
+5. Quantum Image Lab (app/pages/4_Quantum_Lab.py):
+   - User Sees: Interactive quantum workbench displaying Original Image, Resized Image, Reconstructed Quantum Image, Difference Heatmap, and live KPIs.
+   - User Selects: NEU-DET image or upload custom image, representation (FRQI or NEQR), resolution (2x2, 4x4, 8x8), precision (2, 4, 8 bits), shots (100 to 10,000).
+   - Internals: Spawns an isolated Python subprocess running app/_quantum_worker.py to execute Qiskit simulation safely without risking Streamlit server crashes.
+
+6. Circuit Analyzer (app/pages/5_Circuit_Analyzer.py):
+   - User Sees: ASCII and Matplotlib quantum circuit diagrams, gate breakdown charts (H, X, Ry, CX, MCX), circuit depth KPIs, and theoretical scaling formulas.
+   - User Selects: Resolution (2x2 to 32x32), precision, representation.
+   - Internals: Spawns app/_analyzer_worker.py to build circuits and extract layer-by-layer DAG depth metrics.
+
+7. Reconstruction Studio (app/pages/6_Reconstruction_Studio.py):
+   - User Sees: Quality distributions across saved experiments, PSNR vs. SSIM scatter plots, and defect-category-specific reconstruction quality.
+   - Internals: Parses all_results.csv to analyze how different defect textures survive quantum reconstruction.
+
+8. FRQI vs. NEQR (app/pages/7_FRQI_vs_NEQR.py):
+   - User Sees: Side-by-side comparative dashboard displaying dual cards for Qubits, Gates, Depth, Time, PSNR, and SSIM.
+   - User Selects: Shared resolution, precision, and shot count; clicks "Run Live Comparison".
+   - Internals: Executes both encodings simultaneously under identical conditions and renders comparative bar charts.
+
+9. Experiment Results (app/pages/8_Experiment_Results.py):
+   - User Sees: Full searchable, filterable master data table of all historical quantum experiments.
+   - User Interacts: Filters by representation, resolution, shots; downloads filtered results as a CSV file.
+
+
+----------------------------------------------------------------------------------------
+27. COMPLETE USER JOURNEY
+----------------------------------------------------------------------------------------
+
+Scenario A: Running an FRQI Experiment:
+1. User navigates to Quantum Image Lab.
+2. Selects NEU-DET Dataset ---> Category: Crazing ---> Image: crazing_1.jpg.
+3. Sets Representation: FRQI, Resolution: 4 x 4, Bits: 8-bit, Simulation: Aer Simulator, Shots: 1,000.
+4. Clicks "Run Quantum Experiment".
+5. Behind the scenes:
+   - The image is loaded, downscaled to 4x4, and normalized to [0.0, 1.0].
+   - _quantum_worker.py is launched in an isolated subprocess.
+   - 4 position qubits and 1 color qubit are instantiated (5 qubits).
+   - Hadamard gates create position superposition; 16 controlled Ry gates rotate the color qubit.
+   - Qiskit Aer executes 1,000 shots.
+   - For each coordinate, the ratio of color 1 to total hits yields arcsin(sqrt(P)), estimating intensity.
+6. Dashboard Displays:
+   - Original 200x200 image next to the 4x4 downscaled image and the reconstructed image.
+   - Difference heatmap highlighting small deviations due to 1,000-shot statistical noise.
+   - KPIs: MSE: 0.0042, PSNR: 23.8 dB, SSIM: 0.88, Qubits: 5, Depth: 705, Execution Time: 0.08s.
+
+Scenario B: Repeating with NEQR:
+1. User switches Representation dropdown to NEQR. Leaves resolution at 4 x 4, bits at 8, shots at 1,000.
+2. Clicks "Run Quantum Experiment".
+3. Behind the scenes:
+   - Subprocess allocates 4 position qubits and 8 intensity qubits (12 qubits).
+   - Multi-controlled X (MCX) gates flip intensity qubits to form exact 8-bit binary numbers.
+   - Simulation runs 1,000 shots.
+   - Majority voting extracts the most frequent binary value per pixel.
+4. Dashboard Displays:
+   - Difference heatmap is completely uniform (0 error).
+   - KPIs: MSE: 0.0, PSNR: 100 dB (lossless), SSIM: 1.0, Qubits: 12, Depth: 88 (over 8x shallower than FRQI!), Execution Time: 0.02s.
+
+
+----------------------------------------------------------------------------------------
+28. CODEBASE ARCHITECTURE & INTERNAL MAPPING
+----------------------------------------------------------------------------------------
+
+System Responsibility         Source File Path                        Key Functions / Classes
+-----------------------------------------------------------------------------------------------------------------
+Configuration & Constants     config/settings.py                      DEFECT_CATEGORIES, IMAGE_SIZES, RANDOM_SEED
+Image Preprocessing           src/preprocessing/image_processor.py    ImageProcessor.load_image(), .resize_image()
+FRQI Quantum Encoding         src/frqi/encoder.py                     FRQIEncoder.__init__(), .build_circuit()
+NEQR Quantum Encoding         src/neqr/encoder.py                     NEQREncoder.__init__(), .build_circuit()
+Quantum Simulation            src/simulation/simulator.py             QuantumSimulator.run_statevector(), .run_shots()
+Image Reconstruction          src/reconstruction/reconstructor.py     FRQIReconstructor, NEQRReconstructor
+Metrics & Evaluation          src/metrics/evaluator.py                MetricsEvaluator.mse(), .psnr(), .ssim()
+Experiment Automation         src/experiments/runner.py               ExperimentRunner.run_single_experiment()
+ML Training & Benchmarking    src/ml/trainer.py                       NEUClassificationTrainer.load_and_split()
+Isolated Execution Workers    app/_quantum_worker.py                  run_simulation() (Subprocess execution)
+Streamlit Entry Point         app/dashboard.py                        Main dashboard setup, KPI cards, navigation
+Streamlit Multi-Pages         app/pages/1_*.py to 8_*.py              Individual interactive analytics workstations
+
+
+----------------------------------------------------------------------------------------
+29. COMPLETE SYSTEM ARCHITECTURE DIAGRAM
+----------------------------------------------------------------------------------------
+
+                       +--------------------------------------------------------+
+                       |                     END USER / EXAMINER                |
+                       +---------------------------┬----------------------------+
+                                                   | Interacts via Web UI
+                                                   v
+                       +--------------------------------------------------------+
+                       |          STREAMLIT FRONTEND DASHBOARD (Port 8501)       |
+                       |  (app/dashboard.py + 8 Pages in app/pages/)            |
+                       +-------------┬----------------------------┬-------------+
+                                     |                            |
+             Triggers Classical ML   |                            | Triggers Live Quantum Run
+                                     v                            v
++----------------------------------------------+  +-------------------------------------------+
+|         CLASSICAL ML CLASSIFICATION          |  |       ISOLATED SUBPROCESS WORKER          |
+|          (src/ml/trainer.py)                 |  |       (app/_quantum_worker.py)            |
++----------------------------------------------+  +-------------------------------------------+
+| * Loads 1800 Images (train/val/test)         |  | * Loads Selected NEU Defect Image         |
+| * Downsamples to 64x64 (4096 flat features)  |  | * ImageProcessor (src/preprocessing/)     |
+| * StandardScaler (Fit on train only)         |  |   - Resizes to 2x2, 4x4, 8x8              |
+| * Models: SVM, Random Forest, KNN, DecTree   |  |   - Quantizes intensity (2, 4, 8 bits)    |
+| * Computes: Acc, F1, Confusion Matrices      |  |   - Normalizes ([0,1] or integers)        |
++----------------------┬-----------------------+  +---------------------┬---------------------+
+                       |                                                |
+                       | Saves Artifacts                                v
+                       |                          +-------------------------------------------+
+                       |                          |         QUANTUM CIRCUIT SYNTHESIS         |
+                       |                          | * FRQIEncoder (src/frqi/encoder.py)       |
+                       |                          |   n position qubits + 1 color qubit       |
+                       |                          |   Hadamard + X + Multi-Controlled Ry      |
+                       |                          | * NEQREncoder (src/neqr/encoder.py)       |
+                       |                          |   n position qubits + q intensity qubits  |
+                       |                          |   Hadamard + X + Multi-Controlled X (MCX) |
+                       |                          +---------------------┬---------------------+
+                       |                                                |
+                       |                                                v
+                       |                          +-------------------------------------------+
+                       |                          |         QISKIT SIMULATION ENGINE          |
+                       |                          |        (src/simulation/simulator.py)      |
+                       |                          | * AerSimulator (method="statevector")     |
+                       |                          | * AerSimulator (method="automatic", shots)|
+                       |                          +---------------------┬---------------------+
+                       |                                                |
+                       |                                                v
+                       |                          +-------------------------------------------+
+                       |                          |       MEASUREMENT & RECONSTRUCTION        |
+                       |                          |     (src/reconstruction/reconstructor.py) |
+                       |                          | * FRQI: theta = arcsin(VP), Int = th/(pi/2|
+                       |                          | * NEQR: Bitstring parsing & Majority Vote |
+                       |                          +---------------------┬---------------------+
+                       |                                                |
+                       |                                                v
+                       |                          +-------------------------------------------+
+                       |                          |        IMAGE FIDELITY & METRICS           |
+                       |                          |        (src/metrics/evaluator.py)         |
+                       |                          | * MSE, PSNR, SSIM, Circuit Depth, Gates   |
+                       |                          +---------------------┬---------------------+
+                       |                                                |
+                       v                                                v
++---------------------------------------------------------------------------------------------+
+|                                   PERSISTENT STORAGE                                        |
+| * results/models/ (model_comparison.csv, per_class_metrics.csv, CM JSONs, .joblib models)  |
+| * results/experiments/ (all_results.csv, resolution_results.csv, precision_results.csv)     |
+| * results/dataset/ (dataset_summary.json, class_distribution.csv)                           |
++---------------------------------------------------------------------------------------------+
+
+
+----------------------------------------------------------------------------------------
+30. WHY EACH TECHNOLOGY IS USED
+----------------------------------------------------------------------------------------
+
+1. Python 3.11+: Primary programming language; offers optimal compatibility with Qiskit 2.5, scikit-learn, and Streamlit.
+2. Qiskit 2.5 (qiskit, qiskit-aer): IBM's open-source quantum computing framework. Used to construct quantum circuits, manage registers, synthesize multi-controlled gates, and execute high-performance C++ Aer simulations.
+3. Streamlit (v1.63): Python web framework used to build the interactive 8-page dashboard with zero frontend boilerplate.
+4. scikit-learn (v1.9): Implements classical ML models (SVM, Random Forest, KNN, Decision Tree), feature scaling (StandardScaler), train/val/test splitting (StratifiedShuffleSplit), and cross-validation metrics.
+5. NumPy: High-performance N-dimensional array manipulation for image pixel matrices, statevectors, and trigonometric transformations.
+6. Pandas: Manages tabular experimental results, filtering, and CSV serialization.
+7. Pillow (PIL): Image loading, grayscale conversion (.convert("L")), and LANCZOS anti-aliased resizing.
+8. Plotly (plotly.express, plotly.graph_objects): Generates interactive, zoomable, dark-mode research charts and confusion matrices.
+9. scikit-image (skimage.metrics): Computes structural similarity index (SSIM) between original and reconstructed images.
+10. joblib: Serializes trained scikit-learn ML models to disk (.joblib) for instant reloading.
+11. subprocess: Spawns isolated worker processes (_quantum_worker.py) to isolate Qiskit Aer simulation crashes (such as macOS ARM memory segfaults) from the main Streamlit server.
+
+
+----------------------------------------------------------------------------------------
+31. REALISTIC LIMITATIONS
+----------------------------------------------------------------------------------------
+
+1. Classical Simulation Bottleneck:
+   Because quantum simulation scales exponentially (2^N complex amplitudes), simulating an image larger than 16 x 16 or 32 x 32 pixels on a classical laptop requires gigabytes of RAM and causes severe slowdowns. Full 200 x 200 images cannot be simulated end-to-end on classical hardware.
+2. Loss of High-Frequency Defect Detail:
+   Downscaling an industrial image from 200 x 200 to 4 x 4 or 8 x 8 discards fine micro-cracks (such as subtle crazing lines). Current experiments prove the mathematical correctness of quantum image representation, but physical quantum hardware must mature before industrial-scale resolutions are practical.
+3. Statistical Shot Noise in FRQI:
+   FRQI requires thousands of measurement shots to resolve fine 8-bit intensity gradients. With only 100 or 500 shots, reconstructed images appear grainy and noisy.
+4. NISQ Gate Depth Constraints:
+   While NEQR achieves shallower circuits than FRQI, an 8 x 8 NEQR circuit still has a depth of 346 gates. On current physical NISQ hardware (where coherence times are short and two-qubit gate error rates hover around 0.1%–1%), a depth-346 circuit would accumulate significant phase and bit-flip errors.
+5. Classical I/O Bottleneck:
+   Preparing quantum states from classical data (state preparation) requires O(N) gates on classical computers, meaning the quantum computer does not speed up the initial image loading process itself.
+
+
+----------------------------------------------------------------------------------------
+32. 50 LIKELY VIVA QUESTIONS & ANSWERS
+----------------------------------------------------------------------------------------
+
+=== BASIC ===
+Q1: What is a qubit?
+- Simple: A quantum bit that can be 0, 1, or both at the same time.
+- Detailed: A two-level quantum mechanical system represented mathematically as a state vector |psi> = alpha|0> + beta|1> in a two-dimensional complex Hilbert space, where |alpha|^2 + |beta|^2 = 1.
+- One-Line Viva Answer: A qubit is the fundamental unit of quantum information that can exist in a superposition of basis states |0> and |1>.
+
+Q2: What is the NEU dataset?
+- Simple: A dataset of 1,800 steel surface defect pictures across 6 classes.
+- Detailed: A recognized industrial benchmark containing 1,800 grayscale JPEG images (200 x 200) across six defect categories (crazing, inclusion, patches, pitted surface, rolled-in scale, scratches), evenly balanced with 300 images per class.
+- One-Line Viva Answer: NEU is an industrial surface defect database containing 1,800 hot-rolled steel strip images across six balanced classes.
+
+Q3: What is a pixel?
+- Simple: The smallest dot making up a digital picture.
+- Detailed: The smallest addressable element in a raster image, characterized by its spatial coordinates (x, y) and a numerical intensity value representing luminance.
+- One-Line Viva Answer: A pixel is the smallest individual picture element containing a coordinate and a brightness value.
+
+Q4: Why is an image resized to powers of 2 for quantum processing?
+- Simple: Because quantum computers count in powers of 2 (2, 4, 8, 16).
+- Detailed: A quantum register of n qubits creates an address space of exactly 2^n basis states. To map pixel positions one-to-one to computational basis states without leftover unused states, the total pixel count N = H x W must satisfy N = 2^n.
+- One-Line Viva Answer: Because n position qubits naturally span exactly 2^n orthogonal computational basis states in superposition.
+
+Q5: What is the role of Streamlit in your project?
+- Simple: It runs the interactive web dashboard.
+- Detailed: It serves as the frontend application framework that loads pre-computed results and allows real-time execution and visualization of quantum circuits and ML models.
+- One-Line Viva Answer: Streamlit provides the interactive graphical user interface and analytics dashboard.
+
+=== INTERMEDIATE ===
+Q6: What is circuit depth?
+- Simple: The number of sequential time steps needed to execute all gates.
+- Detailed: The length of the longest path in the directed acyclic graph (DAG) of the quantum circuit, from input to output, representing the minimum execution time assuming parallel operations.
+- One-Line Viva Answer: Circuit depth is the maximum number of sequential gate layers executed along any qubit line.
+
+Q7: What is the Born Rule?
+- Simple: The rule that probability equals amplitude squared.
+- Detailed: A foundational postulate of quantum mechanics stating that the probability of obtaining a given measurement outcome is the square of the absolute value of that state's probability amplitude (P = |psi|^2).
+- One-Line Viva Answer: The Born rule states that measurement probability equals the squared magnitude of the probability amplitude.
+
+Q8: What is the difference between statevector simulation and shot-based simulation?
+- Simple: Statevector is exact math; shot-based simulation acts like real hardware with measurement noise.
+- Detailed: Statevector simulation computes the exact theoretical state vector by multiplying unitary matrices without collapsing the wavefunction. Shot-based simulation applies measurement gates and samples the probability distribution N times, introducing realistic sampling noise.
+- One-Line Viva Answer: Statevector is exact analytical calculation; shot simulation samples probabilistic measurement outcomes across N repetitions.
+
+Q9: What is PSNR and how is it interpreted?
+- Simple: Peak Signal-to-Noise Ratio; higher means better image quality.
+- Detailed: A logarithmic metric expressed in decibels comparing the maximum possible signal power to the mean squared error (10 * log10(MAX^2 / MSE)). Values above 30 dB indicate high reconstruction fidelity.
+- One-Line Viva Answer: PSNR measures reconstruction quality in decibels, where higher values indicate lower error.
+
+Q10: What is SSIM?
+- Simple: Structural Similarity Index; it measures whether the image looks structurally similar to the human eye.
+- Detailed: A perception-based metric evaluating image degradation by analyzing changes in structural information, luminance, and contrast, bounded between -1 and +1 (where 1.0 is perfect similarity).
+- One-Line Viva Answer: SSIM measures perceptual structural fidelity between original and reconstructed images.
+
+=== QUANTUM COMPUTING ===
+Q11: What is a Hadamard gate?
+- Simple: A gate that puts a qubit into a 50/50 superposition.
+- Detailed: A single-qubit unitary gate that transforms computational basis states into equal superpositions: H|0> = (|0>+|1>)/sqrt(2) and H|1> = (|0>-|1>)/sqrt(2).
+- One-Line Viva Answer: A Hadamard gate creates an equal superposition of |0> and |1>.
+
+Q12: What is a Pauli-X gate?
+- Simple: The quantum NOT gate.
+- Detailed: A unitary operation that swaps the amplitudes of |0> and |1>, represented by the matrix [[0, 1], [1, 0]].
+- One-Line Viva Answer: The Pauli-X gate flips |0> to |1> and vice versa.
+
+Q13: What is a quantum register?
+- Simple: A collection of qubits grouped together to perform a function.
+- Detailed: A structured array of qubits indexed collectively (e.g., a position register or intensity register) that act together in a shared Hilbert space.
+- One-Line Viva Answer: A quantum register is a named collection of qubits addressed together in a circuit.
+
+Q14: What is quantum decoherence?
+- Simple: Qubits losing their quantum information due to environmental disturbance.
+- Detailed: The physical collapse of a quantum superposition into classical states caused by thermal fluctuations, electromagnetic radiation, or interaction with the external environment.
+- One-Line Viva Answer: Decoherence is the loss of quantum coherence caused by unwanted environmental interactions.
+
+Q15: What is the No-Cloning Theorem?
+- Simple: You cannot copy an unknown quantum state.
+- Detailed: A fundamental theorem stating that it is impossible to create an identical copy of an arbitrary, unknown quantum state using unitary operations.
+- One-Line Viva Answer: The no-cloning theorem states that an arbitrary unknown quantum state cannot be cloned.
+
+=== FRQI ===
+Q16: What does FRQI stand for?
+- Simple: Flexible Representation of Quantum Images.
+- Detailed: Flexible Representation of Quantum Images, introduced by Le et al. in 2011.
+- One-Line Viva Answer: Flexible Representation of Quantum Images.
+
+Q17: How many qubits does FRQI need for an N-pixel image?
+- Simple: log2(N) + 1.
+- Detailed: It requires n = log2(N) position qubits to index coordinates, plus exactly 1 color qubit to store intensity.
+- One-Line Viva Answer: Exactly n + 1 qubits, where n = log2(N).
+
+Q18: How is pixel brightness encoded in FRQI?
+- Simple: As a rotation angle on a single qubit.
+- Detailed: The normalized intensity I in [0, 1] is mapped to an angle theta = I * (pi/2), applied to the color qubit via a controlled Ry(2*theta) rotation.
+- One-Line Viva Answer: Brightness is encoded as a continuous rotation angle theta on the color qubit.
+
+Q19: Why does FRQI require only one color qubit?
+- Simple: Because it uses analog rotation angles, not digital bits.
+- Detailed: Because intensity is stored in the continuous probability amplitudes cos(theta)|0> + sin(theta)|1> rather than across discrete binary qubits.
+- One-Line Viva Answer: Because intensity is stored continuously in probability amplitudes rather than discrete binary bits.
+
+Q20: How do you recover pixel brightness from an FRQI circuit?
+- Simple: By counting how many times the color qubit measures 1 vs 0.
+- Detailed: By estimating the conditional probability P(color=1 | position=i) = sin^2(theta_i) from measurement shots, then computing theta_i = arcsin(sqrt(P)) and scaling back to intensity.
+- One-Line Viva Answer: By computing the ratio of color=1 measurement shots per position coordinate and calculating arcsin(sqrt(P)).
+
+=== NEQR ===
+Q21: What does NEQR stand for?
+- Simple: Novel Enhanced Quantum Representation.
+- Detailed: Novel Enhanced Quantum Representation of Digital Images, introduced by Zhang et al. in 2013.
+- One-Line Viva Answer: Novel Enhanced Quantum Representation.
+
+Q22: How many qubits does NEQR need for an N-pixel image with q-bit intensity?
+- Simple: log2(N) + q.
+- Detailed: It requires n = log2(N) position qubits and q dedicated intensity qubits (n+q total).
+- One-Line Viva Answer: Exactly n + q qubits, where n = log2(N) and q is the intensity bit precision.
+
+Q23: How is pixel brightness encoded in NEQR?
+- Simple: As binary numbers on separate qubits using NOT gates.
+- Detailed: Each pixel intensity is converted into a q-bit binary string and stored in the computational basis state of q qubits using multi-controlled Pauli-X gates.
+- One-Line Viva Answer: Brightness is encoded as an exact computational basis bitstring across q intensity qubits.
+
+Q24: How does NEQR reconstruct the image from measurement counts?
+- Simple: By taking the majority vote of measured bitstrings.
+- Detailed: Each measurement bitstring is split into intensity bits and position bits; for each position, the most frequently observed binary integer is selected via majority voting.
+- One-Line Viva Answer: By taking the majority vote of measured binary intensity values for each coordinate.
+
+Q25: Why does NEQR achieve higher reconstruction PSNR than FRQI?
+- Simple: Because its readout is deterministic, not probabilistic.
+- Detailed: Because NEQR's intensity values are stored in computational basis eigenstates, eliminating statistical amplitude estimation error.
+- One-Line Viva Answer: Because NEQR encodes intensity into discrete computational basis states, avoiding statistical sampling errors.
+
+=== DATASET ===
+Q26: What are the 6 classes in the NEU database?
+- Simple: Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, Scratches.
+- Detailed: Crazing (micro-cracks), Inclusion (impurities), Patches (plate marks), Pitted Surface (cavities), Rolled-in Scale (oxide patterns), Scratches (friction grooves).
+- One-Line Viva Answer: Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, and Scratches.
+
+Q27: How many images are in each class?
+- Simple: Exactly 300 images per class.
+- Detailed: The dataset is balanced with 300 images per class, totaling 1,800 images.
+- One-Line Viva Answer: Exactly 300 images per class.
+
+Q28: What is the original resolution of NEU images?
+- Simple: 200 x 200 grayscale JPEGs.
+- Detailed: Single-channel grayscale JPEG files with dimensions 200 x 200 pixels.
+- One-Line Viva Answer: 200 x 200 pixels.
+
+Q29: What was your train, validation, and test sample distribution?
+- Simple: 1,008 train, 360 validation, and 432 test.
+- Detailed: 1,008 training samples (56%), 360 validation samples (20%), and 432 test samples (24%), strictly stratified with equal class representation.
+- One-Line Viva Answer: 1,008 training, 360 validation, and 432 testing samples.
+
+Q30: Why was stratification necessary?
+- Simple: To ensure every defect class had an equal number of images in every split.
+- Detailed: Stratification prevents class imbalance in smaller splits, ensuring that every fold and split represents all 6 defects equally.
+- One-Line Viva Answer: Stratification guarantees identical class proportions across training, validation, and testing splits.
+
+=== MACHINE LEARNING ===
+Q31: Which classical ML model performed best?
+- Simple: Support Vector Machine (SVM).
+- Detailed: An RBF-kernel SVM (C=10, gamma=scale) achieved 76.62% test accuracy, 81.05% cross-validation accuracy, and an F1-macro of 0.7647.
+- One-Line Viva Answer: The RBF-kernel SVM with 76.62% test accuracy.
+
+Q32: Why did Decision Tree overfit?
+- Simple: It memorized the training images completely.
+- Detailed: With a maximum depth of 20 and no pruning, it created pure leaves for every training sample, achieving 100% training accuracy but dropping to 50.69% on the test set.
+- One-Line Viva Answer: Unpruned deep branches memorized training noise, causing high variance and a 50% generalization drop.
+
+Q33: Why did KNN perform poorly?
+- Simple: Distance calculations break down in high-dimensional feature spaces.
+- Detailed: In a 4,096-dimensional feature space, pairwise Euclidean distances become nearly uniform due to the curse of dimensionality, reducing KNN's discriminative ability.
+- One-Line Viva Answer: KNN suffered from the curse of dimensionality across 4,096 flattened pixel features.
+
+Q34: What is data leakage, and how did you prevent it?
+- Simple: Training information accidentally leaking into the test set.
+- Detailed: Data leakage occurs when test set statistics influence training (e.g., fitting scalers on the entire dataset). We prevented it by fitting the StandardScaler strictly on training data only.
+- One-Line Viva Answer: We fit the StandardScaler exclusively on training data, preventing test distribution leakage.
+
+Q35: Which defect class was easiest to classify and why?
+- Simple: Patches (F1 = 0.9718).
+- Detailed: Patches exhibit large, contiguous high-contrast regions that produce distinctive signatures in flattened feature vectors.
+- One-Line Viva Answer: Patches, due to high-contrast contiguous textures achieving an F1-score of 0.9718.
+
+=== CIRCUITS & GATES ===
+Q36: What is a multi-controlled gate?
+- Simple: A gate that fires only if several control qubits are all 1.
+- Detailed: A generalized quantum operation that acts on a target qubit if and only if all k control qubits are simultaneously in the |1> state.
+- One-Line Viva Answer: A gate that executes on a target qubit only when all control qubits are in state |1>.
+
+Q37: Why do we wrap position qubits in X gates?
+- Simple: To select coordinates where bits are 0.
+- Detailed: Standard controlled gates fire when controls are |1>. To target a position containing zeros (e.g., index 2 = |10>), an X gate temporarily flips bit 0 to |1> so the gate fires.
+- One-Line Viva Answer: To convert zero-bits in the target coordinate into ones so the multi-controlled gate activates.
+
+Q38: Why must position qubits be uncomputed with X gates afterward?
+- Simple: To restore the position register back to its correct state.
+- Detailed: Because the position register is in superposition; failing to undo the X gates would scramble the coordinate addresses for subsequent pixel operations.
+- One-Line Viva Answer: To restore the position register's superposition state so subsequent pixel operations remain valid.
+
+Q39: Why are multi-controlled gates computationally expensive?
+- Simple: They decompose into dozens of basic 1-qubit and 2-qubit gates.
+- Detailed: Physical quantum hardware only executes 1-qubit and 2-qubit native gates. An n-controlled gate must be decomposed into a cascade of O(2^n) or O(n) CNOT and single-qubit gates, increasing circuit depth.
+- One-Line Viva Answer: Because they decompose into large cascades of native two-qubit CNOT gates, dramatically increasing circuit depth.
+
+Q40: What is gate count?
+- Simple: The total number of individual gates in a circuit.
+- Detailed: The scalar sum of all unitary operations and measurement gates present in the compiled quantum circuit.
+- One-Line Viva Answer: The total number of quantum operations in the circuit.
+
+=== DASHBOARD & IMPLEMENTATION ===
+Q41: Why do you run quantum simulations in a subprocess worker?
+- Simple: So that a simulation crash doesn't kill the dashboard website.
+- Detailed: Large Qiskit Aer simulations on macOS ARM can occasionally trigger C++/Rust segmentation faults; running them in an isolated subprocess (_quantum_worker.py) protects the Streamlit web server.
+- One-Line Viva Answer: To isolate potential Qiskit C++ memory segfaults from terminating the main Streamlit server process.
+
+Q42: What happens if an image pixel has zero intensity (black)?
+- Simple: The circuit skips that pixel to save gates.
+- Detailed: If an intensity angle is zero (FRQI) or all bits are zero (NEQR), no gate is needed because the qubit is already initialized in state |0>, reducing circuit depth.
+- One-Line Viva Answer: The encoder skips gate execution for that pixel, reducing total circuit depth.
+
+Q43: How is hyperparameter tuning performed in your ML pipeline?
+- Simple: Using 5-fold cross-validation on the training set.
+- Detailed: We evaluate parameter grids using GridSearchCV and stratified 5-fold cross-validation exclusively within the training partition.
+- One-Line Viva Answer: Through 5-fold cross-validation on the training partition using scikit-learn.
+
+Q44: Where are the trained ML models stored?
+- Simple: In results/models/saved_models/ as .joblib files.
+- Detailed: They are serialized to disk using joblib.dump() inside results/models/saved_models/.
+- One-Line Viva Answer: As serialized .joblib files in results/models/saved_models/.
+
+Q45: What format are experimental results saved in?
+- Simple: CSV and JSON files.
+- Detailed: Structured CSV tables (all_results.csv) and JSON dumps containing complete runtime metadata and image metrics.
+- One-Line Viva Answer: Both structured CSV files and serialized JSON files.
+
+=== WHY / WHY NOT & TRICK QUESTIONS ===
+Q46: Can FRQI represent color (RGB) images?
+- Simple: Yes, but it requires two more color qubits or three angle rotations.
+- Detailed: Standard FRQI handles grayscale. Extended frameworks (such as MCQI) use 2 qubits to index the 3 color channels (R, G, B) or encode 3 separate angles.
+- One-Line Viva Answer: Yes, via color-extended variants like MCQI that add channel-indexing qubits.
+
+Q47: If NEQR has a shallower depth, why would anyone ever use FRQI?
+- Simple: When physical qubits are extremely limited.
+- Detailed: In early quantum hardware where qubit capacity is constrained, FRQI's O(log2 N) qubit requirement allows encoding images when there are not enough physical qubits for NEQR.
+- One-Line Viva Answer: FRQI is preferred when physical qubit count is strictly constrained.
+
+Q48: Does Quantum Image Processing provide an end-to-end exponential speedup today?
+- Simple: No, because loading the classical image into the circuit is still a bottleneck.
+- Detailed: No. State preparation requires O(N) classical steps to construct the circuit. The speedup occurs in downstream quantum processing algorithms (such as quantum Fourier transforms or quantum filtering).
+- One-Line Viva Answer: No, state preparation remains an O(N) classical bottleneck; speedups occur during downstream processing.
+
+Q49: Why does increasing shots improve FRQI reconstruction quality?
+- Simple: More samples give a more accurate probability estimate.
+- Detailed: By the Law of Large Numbers, the empirical measurement frequency converges to the true quantum probability sin^2(theta) as N -> infinity, reducing statistical reconstruction noise.
+- One-Line Viva Answer: Higher shot counts reduce binomial sampling variance, yielding more accurate probability estimates.
+
+Q50: If you double the image width and height, how many more position qubits do you need?
+- Simple: Exactly 2 more qubits.
+- Detailed: Doubling both dimensions quadruples the total pixel count (4N). Since n = log2(4N) = log2(N) + 2, exactly 2 additional position qubits are required.
+- One-Line Viva Answer: Exactly 2 additional qubits, because quadrupling pixel count adds log2(4) = 2 qubits.
+
+
+----------------------------------------------------------------------------------------
+33. HARD PROFESSOR QUESTIONS & DEFENSIVE ANSWERS
+----------------------------------------------------------------------------------------
+
+1. "Why do you need quantum image processing if classical image processing already works fine?"
+   Your Answer: 
+   "Professor, classical image processing works well for today's resolutions, but it faces fundamental scaling limits as sensory data volumes explode. Every classical image operation on an N-pixel image requires O(N) memory reads and processor operations. In contrast, quantum image processing represents N pixels across only log2(N) qubits via quantum superposition. 
+   Once an image is encoded into a quantum state, operations such as quantum spatial filtering, edge detection, and geometric transformations can theoretically execute in O(poly(log N)) time using quantum parallelism. Our project investigates the practical foundation of this field—evaluating how images are actually encoded and reconstructed, and quantifying the circuit depth and error tradeoffs."
+
+2. "Why did you resize the NEU images down to 4x4 and 8x8 instead of processing the original 200x200 images?"
+   Your Answer: 
+   "We resized the images for two reasons: mathematical necessity and classical simulation limits.
+   First, quantum coordinate registers require total pixel counts to be exact powers of 2 (2^n). A 200 x 200 image has 40,000 pixels, which is not a power of 2.
+   Second, simulating quantum circuits on classical computers requires tracking state vectors that grow as 2^qubits. An 8 x 8 NEQR circuit uses 14 qubits, requiring statevectors of size 2^14 = 16,384 complex amplitudes. A full 200 x 200 image would require 24 qubits, and encoding 40,000 pixels would require hundreds of thousands of multi-controlled gates, which would take hours to simulate on classical RAM and trigger memory bottlenecks. Resizing allows us to benchmark the exact mathematical properties of FRQI and NEQR within the computational limits of classical simulation."
+
+3. "Why are FRQI and NEQR not directly comparable by qubit count alone?"
+   Your Answer: 
+   "Judging these encodings solely by qubit count is a common misconception. FRQI appears superior on paper because it needs only 7 qubits for an 8 x 8 image, whereas NEQR needs 14 qubits. 
+   However, FRQI achieves this compact qubit footprint by compressing brightness into continuous probability amplitudes using multi-controlled Ry rotation gates. Decomposing these arbitrary analog rotations into native gates causes FRQI's circuit depth to explode to 4,267 layers at 8 x 8, compared to only 346 layers for NEQR. Furthermore, FRQI requires thousands of measurement shots to probabilistically estimate intensity, whereas NEQR retrieves values deterministically via majority voting. Therefore, NEQR is significantly more practical for actual implementation despite using more qubits."
+
+4. "Why did you include classical machine learning in a quantum project?"
+   Your Answer: 
+   "Classical ML serves two critical functions in this project:
+   First, it provides an industrial baseline on the NEU dataset, demonstrating that an RBF SVM achieves 76.62% test accuracy on flattened pixel textures.
+   Second, in current literature, researchers often propose Quantum Machine Learning (QML) or Quantum Convolutional Neural Networks (QCNN) without comparing them against rigorously tuned classical baselines. By establishing an empirical classical benchmark with strict train/val/test separation and zero data leakage, our platform creates a solid foundation for future QML benchmarking."
+
+5. "Where exactly is quantum superposition used in your implementation?"
+   Your Answer: 
+   "Superposition is established at the very beginning of circuit construction. We apply single-qubit Hadamard (H) gates to all n position qubits simultaneously (circuit.h(pos_reg[i])). This transforms the coordinate register from the classical ground state |00...0> into an equal superposition of all 2^n pixel coordinates: (1 / sqrt(2^n)) * SUM_{i=0}^{2^n-1} |i>. Because all pixel coordinates exist simultaneously in this register, subsequent controlled operations act across the entire image space."
+
+6. "What does measurement actually do to your quantum image, and how do you recover the picture?"
+   Your Answer: 
+   "Measurement collapses the fragile superposition. In FRQI, measuring once gives only a single coordinate and a single color bit (0 or 1). To recover the image, we must execute repeated shots (e.g., 1,000 shots). Across those shots, we estimate the conditional probability P(color=1 | position=i) as the ratio of 1s to total measurements at that coordinate. Since P(1) = sin^2(theta_i), we calculate theta_i = arcsin(sqrt(P)) and scale it back to intensity.
+   In NEQR, measurement collapses the register into a computational basis state holding the coordinate and binary intensity digits. We group measurements by coordinate and take the majority vote across shots to reconstruct the pixel value deterministically."
+
+7. "Why can PSNR be high even when visual quality differs?"
+   Your Answer: 
+   "PSNR is calculated directly from Mean Squared Error (MSE), which measures numerical pixel-by-pixel differences. However, the human visual system perceives images based on structural edges, contours, and local contrast. A reconstructed image with minor, evenly distributed background noise can yield a relatively low MSE and high PSNR (e.g., 35 dB), while fine edge details like crack lines are blurred out. This is why we also calculate SSIM (Structural Similarity Index), which evaluates structural information preservation."
+
+8. "How does circuit depth impact physical quantum execution?"
+   Your Answer: 
+   "Circuit depth dictates the physical execution duration of the circuit. Qubits have finite coherence times (T1 relaxation time and T2 dephasing time). If a circuit's depth is too large, the time required to execute the sequential gate layers exceeds the qubits' coherence window, and the quantum state degrades into noise before measurement. This is why FRQI's depth of 4,267 at 8 x 8 is unviable on NISQ hardware, whereas NEQR's depth of 346 is significantly more feasible."
+
+
+----------------------------------------------------------------------------------------
+34. ONE COMPLETE STORY: 5–7 MINUTE VIVA PRESENTATION
+----------------------------------------------------------------------------------------
+
+"Good morning, respected professors.
+
+Today I am presenting my project: Q-ImageLab: An Interactive Quantum Image Processing & Surface Defect Analytics Dashboard.
+
+The problem we are addressing originates in industrial manufacturing. During the production of hot-rolled steel strips, surface defects like cracks, oxide scale, and scratches compromise product quality. Detecting these defects requires high-speed optical inspection. However, as camera resolutions increase, classical computer vision systems face growing computational and memory burdens because classical computers must process images as massive grids of independent numbers.
+
+Quantum computing offers an alternative paradigm. Through quantum superposition, a quantum system can index N pixel coordinates using only log2(N) qubits. But this raises foundational questions: How do we actually put an image into a quantum computer? What do the circuits look like? How many gates do they require? And can we recover the original image accurately?
+
+To answer these questions, we developed Q-ImageLab, an end-to-end framework combining industrial defect classification with quantum image encoding, simulation, reconstruction, and an interactive analytics dashboard.
+
+We evaluated our system on the NEU Surface Defect Database, an established benchmark of 1,800 grayscale images across six balanced classes: Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, and Scratches.
+
+Our project consists of three main pillars:
+
+First, we built a classical Machine Learning pipeline to establish an empirical baseline. Using a strict stratified split—1,008 training, 360 validation, and 432 testing images—and fitting our standardizers on training data only to prevent data leakage, we trained and evaluated SVM, Random Forest, KNN, and Decision Trees. Our RBF-kernel SVM achieved a strong test accuracy of 76.62% and a cross-validation score of 81.05%, with distinctive texture classes like Patches achieving an F1-score of 97.2%.
+
+Second, we implemented the two foundational Quantum Image Processing frameworks from scratch using Qiskit: FRQI and NEQR.
+- FRQI encodes pixel brightness continuously into the probability amplitude of a single color qubit via rotation angles. It is very efficient in qubit count, requiring only n + 1 qubits.
+- NEQR encodes pixel brightness as discrete binary bitstrings across q intensity qubits using Pauli-X and multi-controlled NOT gates, requiring n + q qubits.
+
+We simulated both representations using Qiskit Aer across multiple resolutions, bit precisions, and shot configurations, and reconstructed the images back to classical matrices.
+
+Our comparative findings revealed a critical insight: Qubit count alone is a misleading metric. While FRQI requires fewer qubits, decomposing its arbitrary rotation gates causes circuit depth to explode to 4,267 layers at 8 x 8 resolution. Furthermore, FRQI requires thousands of measurement shots to probabilistically estimate intensities. In contrast, NEQR uses more qubits but produces circuits that are over twelve times shallower, and its computational basis encoding enables deterministic, lossless reconstruction via majority voting.
+
+Finally, we brought this entire pipeline together in an interactive 8-page Streamlit dashboard. The dashboard allows users to explore dataset distributions, inspect confusion matrices, trigger live quantum simulations safely using isolated subprocess workers, inspect circuit diagrams, and analyze reconstruction fidelity metrics like MSE, PSNR, and SSIM.
+
+In conclusion, Q-ImageLab provides a transparent, reproducible benchmark bridging classical industrial defect classification and quantum image processing. Thank you, and I look forward to your questions."
+
+
+----------------------------------------------------------------------------------------
+35. FINAL ONE-PAGE CHEAT SHEET
+----------------------------------------------------------------------------------------
+
+- Project: Q-ImageLab — An interactive platform combining industrial steel defect classification with FRQI and NEQR quantum image processing.
+- Dataset: NEU Surface Defect Database — 1,800 grayscale JPEG images (200 x 200) with 300 images across 6 classes.
+- 6 Classes: Crazing (cracks), Inclusion (impurities), Patches (plate marks), Pitted Surface (pinholes), Rolled-in Scale (oxide scale), Scratches (grooves).
+- Train / Val / Test: 1,008 train (56%), 360 validation (20%), 432 test (24%); stratified split with zero data leakage.
+- ML Models: SVM (Best: 76.62% Test Acc, 81.05% CV), Random Forest (70.60%), Decision Tree (50.69%, overfit), KNN (49.77%).
+- Quantum Representations: FRQI (amplitude-based angle encoding) vs. NEQR (basis-state binary encoding).
+- Position Qubits: n = log2(N) qubits used to index N spatial pixel coordinates in superposition.
+- Intensity Qubits: Exactly 1 qubit for FRQI; exactly q qubits (e.g., 8 qubits) for NEQR.
+- Superposition: Created by applying Hadamard (H) gates to all position qubits, enabling simultaneous coordinate evaluation.
+- Quantum Gates Used: H (superposition), X (position selection & NOT), Ry (FRQI rotation), CX (2-qubit control), MCX (multi-controlled X), Measurement.
+- Measurement: Collapses quantum superposition into classical bits; requires multiple shots to sample probability distributions.
+- Shots: Repeated circuit execution count (100 to 10,000) to build statistical measurement histograms.
+- Simulator: Qiskit Aer backend simulating exact statevectors or shot-based sampling with measurement noise.
+- Circuit Depth: The length of the longest sequential gate path; dictates execution time before decoherence.
+- Gate Count: Total number of quantum gates in the circuit (8 x 8: 7,486 in FRQI vs. 558 in NEQR).
+- Reconstruction: FRQI recovers intensity from shot probabilities (arcsin(sqrt(P))); NEQR recovers intensity by majority vote.
+- MSE (Mean Squared Error): Average squared pixel error between original and reconstructed images (lower is better; 0 is exact).
+- PSNR (Peak Signal-to-Noise Ratio): Logarithmic signal-to-noise ratio in decibels (higher is better; >30 dB is high quality).
+- SSIM (Structural Similarity): Perceptual structural similarity metric between -1 and +1 (1.0 is perfect fidelity).
+- Dashboard: 8-page Streamlit web app with custom dark glassmorphic styling and subprocess isolation for crash-resilient simulation.
+- Final Output: Classified defect labels with ML metrics and reconstructed quantum images with quantum resource and fidelity statistics.
+
+
+----------------------------------------------------------------------------------------
+IF MY PROFESSOR ASKS ME TO EXPLAIN THE PROJECT FROM SCRATCH
+----------------------------------------------------------------------------------------
+
+"Professor, in steel manufacturing, high-speed rollers produce surface defects like micro-cracks, oxide scales, and scratches that degrade structural integrity. Classical computer vision systems can inspect these sheets, but as image resolution increases, processing millions of pixels sequentially creates memory and computational bottlenecks.
+
+My project, Q-ImageLab, explores how Quantum Image Processing can address this challenge by encoding images into quantum states using quantum superposition, where an N-pixel image can be indexed using only log2(N) qubits.
+
+To investigate this systematically, I built a complete end-to-end framework on the industrial NEU Surface Defect Database, which contains 1,800 images across six defect categories.
+
+My project has three main components:
+
+First, a Classical Machine Learning pipeline that establishes a rigorous performance baseline. Using a strict stratified split—1,008 training, 360 validation, and 432 testing images—and scaling features strictly on training data to avoid data leakage, I benchmarked SVM, Random Forest, KNN, and Decision Trees. My RBF-kernel SVM achieved 76.62% test accuracy and an 81.05% cross-validation score, with distinctive defect textures like Patches reaching an F1-score of 97.2%.
+
+Second, a Quantum Image Processing engine implemented from scratch in Qiskit. I implemented and compared the two foundational quantum image representations:
+1. FRQI (Flexible Representation of Quantum Images), which stores brightness continuously into the rotation angle of a single color qubit, requiring only n + 1 qubits.
+2. NEQR (Novel Enhanced Quantum Representation), which stores brightness as discrete binary bitstrings across q intensity qubits, requiring n + q qubits.
+
+I simulated these circuits using Qiskit Aer, reconstructed the images from measurement outcomes, and evaluated their fidelity using MSE, PSNR, and SSIM.
+
+A key finding from my research is that qubit count alone is a misleading metric. While FRQI uses fewer qubits, decomposing its continuous rotation gates causes its circuit depth to explode to 4,267 layers at 8x8 resolution, and it requires thousands of shots to probabilistically estimate brightness. In contrast, NEQR requires a few more qubits, but its circuit depth is over twelve times shallower, and its computational basis encoding enables deterministic, lossless reconstruction via majority voting.
+
+Third, I integrated this entire pipeline into an interactive 8-page Streamlit dashboard that visualizes dataset distributions, displays interactive confusion matrices, generates quantum circuits, and lets users run live quantum simulations safely using isolated background workers.
+
+In short, Q-ImageLab provides a complete, reproducible laboratory comparing classical defect classification with quantum image representation tradeoffs."
