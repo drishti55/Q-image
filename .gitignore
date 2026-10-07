@@ -27,6 +27,3 @@ htmlcov/
 # Project specific caches/temp
 *.log
 scratch/
-NEU-DET/
-results/experiments/
-Final_Publication_Assets/
