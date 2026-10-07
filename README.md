@@ -2,8 +2,10 @@
 ### Interactive Quantum Image Processing & NEU Surface Defect Analytics Dashboard
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.103+-teal)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-18.2+-blue)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-4.4+-purple)](https://vitejs.dev/)
 [![Qiskit](https://img.shields.io/badge/Qiskit-2.5-purple)](https://qiskit.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.63-red)](https://streamlit.io)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.9-orange)](https://scikit-learn.org)
 
 ---
@@ -14,7 +16,7 @@ Q-ImageLab is a complete interactive analytics platform combining:
 
 - **ML Classification** of NEU Surface Defect images (SVM, RF, KNN, Decision Tree)
 - **Quantum Image Encoding** (FRQI and NEQR) using Qiskit Aer simulation
-- **Interactive Dashboard** with 8 pages connecting dataset → ML → quantum analysis
+- **Interactive Dashboard** with a fully decoupled **React/Vite Frontend** and **FastAPI Backend**
 
 ---
 
@@ -32,7 +34,7 @@ All images are 200×200 grayscale JPEGs.
 
 ---
 
-## ML Results (actual experimental results)
+## ML Results
 
 | Model | Train Acc | Val Acc | Test Acc | F1 Macro | CV Score |
 |-------|----------:|--------:|----------:|---------:|----------:|
@@ -71,7 +73,7 @@ Two quantum image representations implemented with Qiskit:
 ## Dashboard Pages
 
 ```
-Q-ImageLab (http://localhost:8501)
+Q-ImageLab (http://localhost:5173 -> API at http://localhost:8000)
 │
 ├── 🏠 Home               — Overview KPIs for dataset, ML, and quantum
 ├── 🗂️ Dataset Explorer   — Class distribution, sample images, intensity analysis
@@ -80,8 +82,8 @@ Q-ImageLab (http://localhost:8501)
 ├── ⚛️ Quantum Lab        — Interactive FRQI/NEQR experiment runner
 ├── 🔬 Circuit Analyzer   — Gate breakdown, resource scaling, circuit diagrams
 ├── 🖼️ Reconstruction     — Quality distributions and defect category analysis
-├── ⚖️ FRQI vs NEQR       — Side-by-side comparison with live experiments
-└── 📋 Experiment Results — Filterable table, scatter plots, CSV export
+├── 📋 Experiment Results — Filterable table, scatter plots
+└── ⚖️ Quantum Compare Lab— Custom module for direct FRQI vs NEQR side-by-side analysis
 ```
 
 ---
@@ -91,10 +93,7 @@ Q-ImageLab (http://localhost:8501)
 ```
 QIP/
 ├── NEU-DET/                    # Dataset (1800 images, 6 classes)
-│   ├── train/images/
-│   └── validation/images/
-│
-├── src/                        # Core modules
+├── src/                        # Core Python modules
 │   ├── frqi/encoder.py         # FRQI quantum encoding
 │   ├── neqr/encoder.py         # NEQR quantum encoding
 │   ├── preprocessing/          # Image loading, resize, normalize
@@ -103,53 +102,54 @@ QIP/
 │   ├── metrics/                # MSE, PSNR, SSIM, ExperimentResult
 │   ├── experiments/            # Experiment runner (A-D + NEU-DET)
 │   ├── visualization/          # Matplotlib research plots
-│   └── ml/                     # NEW: ML classification pipeline
-│       └── trainer.py
+│   └── ml/                     # ML classification pipeline
 │
-├── results/
-│   ├── experiments/            # Quantum experiment CSVs (843KB+)
-│   ├── models/                 # ML results: comparison, per-class, CM, HP
-│   │   ├── model_comparison.csv
-│   │   ├── per_class_metrics.csv
-│   │   ├── confusion_matrices/
-│   │   ├── hyperparameter_results.csv
-│   │   └── saved_models/       # joblib-saved trained models
-│   └── dataset/                # Dataset summary JSON
+├── results/                    # Dataset JSONs, ML Results, and Plot Images
+├── frontend/                   # React + Vite Frontend App
+│   ├── src/pages/              # React Page Components
+│   └── vite.config.ts          # Vite Configuration with API proxy
 │
-├── app/
-│   ├── dashboard.py            # Main entry point (Home page)
-│   └── pages/                  # 8 Streamlit pages
-│
-├── config/settings.py          # All configuration
-├── main.py                     # CLI: demo / experiment / all / dashboard
-└── requirements.txt
+├── api_main.py                 # FastAPI Application Server (Replacing Streamlit)
+├── config/settings.py          # Backend configuration
+├── main.py                     # CLI: demo / experiment / all
+└── requirements.txt            # Python Dependencies
 ```
 
 ---
 
-## Setup
+## Setup & Usage
 
+### 1. Backend Setup (FastAPI)
 ```bash
+# Install Python dependencies
 pip install -r requirements.txt
+
+# Start the FastAPI server on port 8000
+python api_main.py
 ```
+*The backend API will be available at `http://localhost:8000`*
 
-## Usage
-
-### Start Dashboard
+### 2. Frontend Setup (React/Vite)
+Open a new terminal window:
 ```bash
-streamlit run app/dashboard.py
+# Navigate to the frontend directory
+cd frontend
+
+# Install Node dependencies
+npm install
+
+# Start the Vite development server
+npm run dev
 ```
+*The frontend application will be available at `http://localhost:5173`*
 
-### Run ML Pipeline (generates ML results)
+### 3. CLI Scripts
 ```bash
+# Run ML Pipeline (generates ML results)
 python3 -c "from src.ml.trainer import run_full_ml_pipeline; run_full_ml_pipeline()"
-```
 
-### Run Quantum Experiments
-```bash
+# Run Quantum Experiments manually
 python main.py demo --size 4 --bits 8 --shots 1000 --sv
-python main.py experiment --type neu
-python main.py all
 ```
 
 ---
