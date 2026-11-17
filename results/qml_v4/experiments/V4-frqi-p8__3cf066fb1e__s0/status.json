@@ -1,0 +1,49 @@
+{
+ "experiment_id": "V4-frqi-p8__3cf066fb1e__s0",
+ "status": "completed",
+ "updated_at": "2026-11-17T05:03:50.941034",
+ "summary": {
+  "record_type": "classification",
+  "experiment_code": "V4E",
+  "group": "V4-frqi-p8",
+  "model_name": "FRQI patch-ensemble kernel (8x8 patches)",
+  "family": "quantum_kernel",
+  "compute_type": "hybrid",
+  "feature_extraction": "64x64 grayscale, 8x8 patches stride 4, per-image contrast stretch",
+  "encoding": "FRQI",
+  "n_qubits": 7,
+  "circuit_depth": 4875,
+  "circuit_depth_compiled": 4878,
+  "n_layers": null,
+  "optimizer": null,
+  "learning_rate": null,
+  "shots": 0,
+  "seed": 0,
+  "n_train": 1080,
+  "n_val": 360,
+  "n_test": null,
+  "dataset_manifest_id": "neu-5625b937479b",
+  "split_id": "split-s0-2a1d15648e",
+  "params": {
+   "representation": "FRQI",
+   "image_size": 64,
+   "patch": 8,
+   "stride": 4,
+   "norm": "stretch",
+   "C": 10.0,
+   "angle_scale": 2.0
+  },
+  "val": {
+   "accuracy": 0.6638888888888889,
+   "precision_macro": 0.6767155506344255,
+   "recall_macro": 0.6638888888888889,
+   "f1_macro": 0.6394954157326845,
+   "f1_weighted": 0.6394954157326845
+  },
+  "test": null,
+  "train_time_s": 0.6443217079504393,
+  "val_inference_time_s": 0.18870170798618346,
+  "inference_ms_per_image": 0.5241714110727318,
+  "selected": false
+ }
+}

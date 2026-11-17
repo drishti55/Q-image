@@ -1,0 +1,1479 @@
+{
+ "group": "V3-frqi16",
+ "selected_at": "2026-11-16T08:17:31.265939",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 48,
+ "n_eligible": 48,
+ "selected": {
+  "config_key": "V3-frqi16__8c9a047afd",
+  "params": {
+   "representation": "FRQI",
+   "C": 100.0,
+   "kernel": "fidelity",
+   "norm": "none",
+   "shots": 0,
+   "angle_scale": 2.0,
+   "bits": 8
+  },
+  "quantum": {
+   "n_qubits": 9,
+   "n_layers": null,
+   "optimizer": null,
+   "learning_rate": null,
+   "shots": 0,
+   "representation": "FRQI",
+   "intensity_bits": null,
+   "kernel": "fidelity"
+  },
+  "eligible": true,
+  "val_mean": 0.6915242638419691,
+  "val_std": 0.05398305266673947,
+  "experiment_ids": [
+   "V3-frqi16__8c9a047afd__s0",
+   "V3-frqi16__8c9a047afd__s1",
+   "V3-frqi16__8c9a047afd__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-frqi16__20a8f2bdb0",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.46934449619547264,
+   "val_std": 0.06570426161006972,
+   "experiment_ids": [
+    "V3-frqi16__20a8f2bdb0__s0",
+    "V3-frqi16__20a8f2bdb0__s1",
+    "V3-frqi16__20a8f2bdb0__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__1296761bdf",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.5846385397059355,
+   "val_std": 0.05813775700001575,
+   "experiment_ids": [
+    "V3-frqi16__1296761bdf__s0",
+    "V3-frqi16__1296761bdf__s1",
+    "V3-frqi16__1296761bdf__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__703769a565",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6254302285804018,
+   "val_std": 0.018652572600000753,
+   "experiment_ids": [
+    "V3-frqi16__703769a565__s0",
+    "V3-frqi16__703769a565__s1",
+    "V3-frqi16__703769a565__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__7824b58d90",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.585604349626564,
+   "val_std": 0.055657286804628774,
+   "experiment_ids": [
+    "V3-frqi16__7824b58d90__s0",
+    "V3-frqi16__7824b58d90__s1",
+    "V3-frqi16__7824b58d90__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__aa8fb8519d",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6654394678959817,
+   "val_std": 0.049337850379825084,
+   "experiment_ids": [
+    "V3-frqi16__aa8fb8519d__s0",
+    "V3-frqi16__aa8fb8519d__s1",
+    "V3-frqi16__aa8fb8519d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__02727c6279",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6569613317326427,
+   "val_std": 0.0429028768702234,
+   "experiment_ids": [
+    "V3-frqi16__02727c6279__s0",
+    "V3-frqi16__02727c6279__s1",
+    "V3-frqi16__02727c6279__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__ee4405edfc",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6438524671413659,
+   "val_std": 0.0510623621277552,
+   "experiment_ids": [
+    "V3-frqi16__ee4405edfc__s0",
+    "V3-frqi16__ee4405edfc__s1",
+    "V3-frqi16__ee4405edfc__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__8c9a047afd",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6915242638419691,
+   "val_std": 0.05398305266673947,
+   "experiment_ids": [
+    "V3-frqi16__8c9a047afd__s0",
+    "V3-frqi16__8c9a047afd__s1",
+    "V3-frqi16__8c9a047afd__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__8eaa0fd5a1",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6548944023744602,
+   "val_std": 0.030053490363320317,
+   "experiment_ids": [
+    "V3-frqi16__8eaa0fd5a1__s0",
+    "V3-frqi16__8eaa0fd5a1__s1",
+    "V3-frqi16__8eaa0fd5a1__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__f14e8d2e0c",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6567258598854228,
+   "val_std": 0.0550206637338789,
+   "experiment_ids": [
+    "V3-frqi16__f14e8d2e0c__s0",
+    "V3-frqi16__f14e8d2e0c__s1",
+    "V3-frqi16__f14e8d2e0c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__b36f565f2d",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6854843222125545,
+   "val_std": 0.05675289807413423,
+   "experiment_ids": [
+    "V3-frqi16__b36f565f2d__s0",
+    "V3-frqi16__b36f565f2d__s1",
+    "V3-frqi16__b36f565f2d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__7cd25695ff",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "fidelity",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6506697513502516,
+   "val_std": 0.04359621219502518,
+   "experiment_ids": [
+    "V3-frqi16__7cd25695ff__s0",
+    "V3-frqi16__7cd25695ff__s1",
+    "V3-frqi16__7cd25695ff__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__96a9bf6ad8",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.4062761737732246,
+   "val_std": 0.028204660858202814,
+   "experiment_ids": [
+    "V3-frqi16__96a9bf6ad8__s0",
+    "V3-frqi16__96a9bf6ad8__s1",
+    "V3-frqi16__96a9bf6ad8__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__596a2dcd59",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5109967830637959,
+   "val_std": 0.05262012954315708,
+   "experiment_ids": [
+    "V3-frqi16__596a2dcd59__s0",
+    "V3-frqi16__596a2dcd59__s1",
+    "V3-frqi16__596a2dcd59__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__ff9ceb2094",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5635069549172119,
+   "val_std": 0.035821905765398405,
+   "experiment_ids": [
+    "V3-frqi16__ff9ceb2094__s0",
+    "V3-frqi16__ff9ceb2094__s1",
+    "V3-frqi16__ff9ceb2094__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__c3f95fe7a7",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5407468023729428,
+   "val_std": 0.05395755700130483,
+   "experiment_ids": [
+    "V3-frqi16__c3f95fe7a7__s0",
+    "V3-frqi16__c3f95fe7a7__s1",
+    "V3-frqi16__c3f95fe7a7__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__e1d8deb439",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5714567979871689,
+   "val_std": 0.04887036727438165,
+   "experiment_ids": [
+    "V3-frqi16__e1d8deb439__s0",
+    "V3-frqi16__e1d8deb439__s1",
+    "V3-frqi16__e1d8deb439__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__09b778ab74",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5905286185448831,
+   "val_std": 0.037692680256941426,
+   "experiment_ids": [
+    "V3-frqi16__09b778ab74__s0",
+    "V3-frqi16__09b778ab74__s1",
+    "V3-frqi16__09b778ab74__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__02b8464eee",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5740774389359872,
+   "val_std": 0.03992761538030042,
+   "experiment_ids": [
+    "V3-frqi16__02b8464eee__s0",
+    "V3-frqi16__02b8464eee__s1",
+    "V3-frqi16__02b8464eee__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__d97ed294e9",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5997956490422632,
+   "val_std": 0.05377492868746402,
+   "experiment_ids": [
+    "V3-frqi16__d97ed294e9__s0",
+    "V3-frqi16__d97ed294e9__s1",
+    "V3-frqi16__d97ed294e9__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__5e5b4c2795",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5643204661404385,
+   "val_std": 0.04773015314351222,
+   "experiment_ids": [
+    "V3-frqi16__5e5b4c2795__s0",
+    "V3-frqi16__5e5b4c2795__s1",
+    "V3-frqi16__5e5b4c2795__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__edc3b47698",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5801178285393243,
+   "val_std": 0.05580220178784425,
+   "experiment_ids": [
+    "V3-frqi16__edc3b47698__s0",
+    "V3-frqi16__edc3b47698__s1",
+    "V3-frqi16__edc3b47698__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__b1768f6c24",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5700693981819726,
+   "val_std": 0.0549137771313704,
+   "experiment_ids": [
+    "V3-frqi16__b1768f6c24__s0",
+    "V3-frqi16__b1768f6c24__s1",
+    "V3-frqi16__b1768f6c24__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__9326e8317c",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "overlap",
+    "norm": "none",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5353497002433757,
+   "val_std": 0.05004751046234921,
+   "experiment_ids": [
+    "V3-frqi16__9326e8317c__s0",
+    "V3-frqi16__9326e8317c__s1",
+    "V3-frqi16__9326e8317c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__abb3877b88",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.5191297704051546,
+   "val_std": 0.0028307714255868584,
+   "experiment_ids": [
+    "V3-frqi16__abb3877b88__s0",
+    "V3-frqi16__abb3877b88__s1",
+    "V3-frqi16__abb3877b88__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__7b84fe0a94",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6154446709401762,
+   "val_std": 0.022515736871871708,
+   "experiment_ids": [
+    "V3-frqi16__7b84fe0a94__s0",
+    "V3-frqi16__7b84fe0a94__s1",
+    "V3-frqi16__7b84fe0a94__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__c1ffc00c38",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6115030463785518,
+   "val_std": 0.0169660868361624,
+   "experiment_ids": [
+    "V3-frqi16__c1ffc00c38__s0",
+    "V3-frqi16__c1ffc00c38__s1",
+    "V3-frqi16__c1ffc00c38__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__9673a90414",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.5966764052767763,
+   "val_std": 0.022760137039574288,
+   "experiment_ids": [
+    "V3-frqi16__9673a90414__s0",
+    "V3-frqi16__9673a90414__s1",
+    "V3-frqi16__9673a90414__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__38e7c62a9a",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6360017168671844,
+   "val_std": 0.02527791049649659,
+   "experiment_ids": [
+    "V3-frqi16__38e7c62a9a__s0",
+    "V3-frqi16__38e7c62a9a__s1",
+    "V3-frqi16__38e7c62a9a__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__03ee8f3680",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6310831373250553,
+   "val_std": 0.03551189176782906,
+   "experiment_ids": [
+    "V3-frqi16__03ee8f3680__s0",
+    "V3-frqi16__03ee8f3680__s1",
+    "V3-frqi16__03ee8f3680__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__23ca1063a1",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.5866375640457613,
+   "val_std": 0.016497781934070376,
+   "experiment_ids": [
+    "V3-frqi16__23ca1063a1__s0",
+    "V3-frqi16__23ca1063a1__s1",
+    "V3-frqi16__23ca1063a1__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__909942eed9",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6327533790079043,
+   "val_std": 0.024200643328471477,
+   "experiment_ids": [
+    "V3-frqi16__909942eed9__s0",
+    "V3-frqi16__909942eed9__s1",
+    "V3-frqi16__909942eed9__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__6e61e33093",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6276321014302524,
+   "val_std": 0.02942651762368184,
+   "experiment_ids": [
+    "V3-frqi16__6e61e33093__s0",
+    "V3-frqi16__6e61e33093__s1",
+    "V3-frqi16__6e61e33093__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__9cc0187f53",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.58545748623553,
+   "val_std": 0.027022430941536085,
+   "experiment_ids": [
+    "V3-frqi16__9cc0187f53__s0",
+    "V3-frqi16__9cc0187f53__s1",
+    "V3-frqi16__9cc0187f53__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__e85e6258b6",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6300818323447911,
+   "val_std": 0.01917463748983335,
+   "experiment_ids": [
+    "V3-frqi16__e85e6258b6__s0",
+    "V3-frqi16__e85e6258b6__s1",
+    "V3-frqi16__e85e6258b6__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__daea27848b",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "fidelity",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.6276321014302524,
+   "val_std": 0.02942651762368184,
+   "experiment_ids": [
+    "V3-frqi16__daea27848b__s0",
+    "V3-frqi16__daea27848b__s1",
+    "V3-frqi16__daea27848b__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__8256e9d0ca",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.4422156305823645,
+   "val_std": 0.019030889306077627,
+   "experiment_ids": [
+    "V3-frqi16__8256e9d0ca__s0",
+    "V3-frqi16__8256e9d0ca__s1",
+    "V3-frqi16__8256e9d0ca__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__7f9cdc2eee",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5287402487200917,
+   "val_std": 0.017973007984121474,
+   "experiment_ids": [
+    "V3-frqi16__7f9cdc2eee__s0",
+    "V3-frqi16__7f9cdc2eee__s1",
+    "V3-frqi16__7f9cdc2eee__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__20a214263a",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5465556614780575,
+   "val_std": 0.034894794568482636,
+   "experiment_ids": [
+    "V3-frqi16__20a214263a__s0",
+    "V3-frqi16__20a214263a__s1",
+    "V3-frqi16__20a214263a__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__78efbb67c2",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5252635118382903,
+   "val_std": 0.02017458245778459,
+   "experiment_ids": [
+    "V3-frqi16__78efbb67c2__s0",
+    "V3-frqi16__78efbb67c2__s1",
+    "V3-frqi16__78efbb67c2__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__b456e6b320",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5609454815017881,
+   "val_std": 0.024389072853196508,
+   "experiment_ids": [
+    "V3-frqi16__b456e6b320__s0",
+    "V3-frqi16__b456e6b320__s1",
+    "V3-frqi16__b456e6b320__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__7676c8c275",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5104015824193237,
+   "val_std": 0.031066380950043836,
+   "experiment_ids": [
+    "V3-frqi16__7676c8c275__s0",
+    "V3-frqi16__7676c8c275__s1",
+    "V3-frqi16__7676c8c275__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__f3f2c8180c",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5199054604280584,
+   "val_std": 0.013566461139772052,
+   "experiment_ids": [
+    "V3-frqi16__f3f2c8180c__s0",
+    "V3-frqi16__f3f2c8180c__s1",
+    "V3-frqi16__f3f2c8180c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__77e3818953",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5106856875484415,
+   "val_std": 0.03074155774811023,
+   "experiment_ids": [
+    "V3-frqi16__77e3818953__s0",
+    "V3-frqi16__77e3818953__s1",
+    "V3-frqi16__77e3818953__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__d420db0b18",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.48492240287508465,
+   "val_std": 0.00965804928251276,
+   "experiment_ids": [
+    "V3-frqi16__d420db0b18__s0",
+    "V3-frqi16__d420db0b18__s1",
+    "V3-frqi16__d420db0b18__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__28c89f6c0e",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 1.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.49067035414221305,
+   "val_std": 0.023201672669383396,
+   "experiment_ids": [
+    "V3-frqi16__28c89f6c0e__s0",
+    "V3-frqi16__28c89f6c0e__s1",
+    "V3-frqi16__28c89f6c0e__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__40ae2af918",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 2.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.5014406787691286,
+   "val_std": 0.035745010663023574,
+   "experiment_ids": [
+    "V3-frqi16__40ae2af918__s0",
+    "V3-frqi16__40ae2af918__s1",
+    "V3-frqi16__40ae2af918__s2"
+   ]
+  },
+  {
+   "config_key": "V3-frqi16__4691d39f71",
+   "params": {
+    "representation": "FRQI",
+    "C": 1000.0,
+    "kernel": "overlap",
+    "norm": "stretch",
+    "shots": 0,
+    "angle_scale": 4.0,
+    "bits": 8
+   },
+   "quantum": {
+    "n_qubits": 9,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "overlap"
+   },
+   "eligible": true,
+   "val_mean": 0.4842709570996994,
+   "val_std": 0.012641327807883934,
+   "experiment_ids": [
+    "V3-frqi16__4691d39f71__s0",
+    "V3-frqi16__4691d39f71__s1",
+    "V3-frqi16__4691d39f71__s2"
+   ]
+  }
+ ]
+}

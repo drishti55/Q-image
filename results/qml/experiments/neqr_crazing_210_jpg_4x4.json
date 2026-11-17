@@ -1,0 +1,140 @@
+{
+  "experiment_id": "neqr_crazing_210_jpg_4x4",
+  "comparison_id": "paired_crazing_210_jpg_4x4",
+  "dataset": "NEU-DET",
+  "image_name": "crazing_210.jpg",
+  "ground_truth": "crazing",
+  "predicted_class": "inclusion",
+  "correct": false,
+  "representation": "NEQR",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "4x4",
+  "intensity_bits": 4,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 8,
+  "gate_count": 102,
+  "circuit_depth": 62,
+  "controlled_gates": 34,
+  "gate_types": {
+    "h": 4,
+    "x": 64,
+    "mcx": 34
+  },
+  "classification_metrics": {
+    "accuracy": 0.0,
+    "f1_macro": 0.0,
+    "heldout_accuracy": 0.24722222222222223,
+    "heldout_f1_macro": 0.23925956495642423,
+    "precision_macro": 0.24037109864574654,
+    "recall_macro": 0.24722222222222223,
+    "f1_weighted": 0.23925956495642425,
+    "confusion_matrix": [
+      [
+        17,
+        2,
+        34,
+        3,
+        3,
+        1
+      ],
+      [
+        12,
+        14,
+        5,
+        13,
+        7,
+        9
+      ],
+      [
+        6,
+        1,
+        9,
+        21,
+        6,
+        17
+      ],
+      [
+        8,
+        1,
+        7,
+        32,
+        2,
+        10
+      ],
+      [
+        0,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        30,
+        1,
+        2,
+        9,
+        17
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 0.38636363636363635,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.3269230769230769,
+        "support": 60
+      },
+      "inclusion": {
+        "precision": 0.12962962962962962,
+        "recall": 0.23333333333333334,
+        "f1_score": 0.16666666666666666,
+        "support": 60
+      },
+      "patches": {
+        "precision": 0.16071428571428573,
+        "recall": 0.15,
+        "f1_score": 0.15517241379310345,
+        "support": 60
+      },
+      "pitted_surface": {
+        "precision": 0.4507042253521127,
+        "recall": 0.5333333333333333,
+        "f1_score": 0.48854961832061067,
+        "support": 60
+      },
+      "rolled-in_scale": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 60
+      },
+      "scratches": {
+        "precision": 0.3148148148148148,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.2982456140350877,
+        "support": 60
+      }
+    }
+  },
+  "reconstruction_metrics": {
+    "mse": 0.00027681660899653954,
+    "psnr": 35.578078557646045,
+    "ssim": 0.9303022233275754,
+    "reconstruction_time": 3.804099833359942e-05,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAuElEQVR4nO2asW0DMQDE6POXHsB7ef9JjCDZICq+YEO2p4IAKwl6fPif92H/HvbXYR8yS4ASyCwBSiCzBCiBzBKgBDJLgBLILAFKIHM9Dgd+D/vPTYEhswQogcwSoAQyS4ASyCwBSiCzBCiBzBKgBDLX6f5/ej94Hvb+D5wYMkuAEsgsAUogswQogcwSoAQyS4ASyCwBZK67htfNfcgsAUogswQogcwSoAQyS4ASyCwBSiCzBCgBLn/L2AWOr1LuCQAAAABJRU5ErkJggg==",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAnUlEQVR4nO2bwQnDAAzEFJEFMlz3X6UbJI9SrlDpbyyQvz5e3HPxGU/zMsYEKMEYE6AEY0yAEowxAUowxgQowRgToARjTIASjDEBSjDGBCjBGBOgBGNMgBKMMQFKMMYEKMEYE6AEY0yAEowxAUowxgQowRgToARjTIB/T3B+e0H/BT9/AyZACcaYACUYYwKUYIwJUIIxJkAJxpgAY96iqQGKJZcbLAAAAABJRU5ErkJggg==",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAtElEQVR4nO2aMWoEQRDEdPKC//9fH/YP3MEFlUhpQSNQNszrxf98HfvPsT/HLmNMgBKMMQFKMMYEKMEYE6AEY0yAEowxAUow5vn98MD1fnAhY0yAEowxAUowxgQowRgToARjTIASjDEBSjDmuf4PXLyP/fvYZYwJUIIxJkAJxpgAJRhjApRgjAlQgjEmQAnGPJ82ug5c/xNkjAlQgjEmQAnGmAAlGGMClGCMCVCCMSZACdjyB/mdBRZ+gadYAAAAAElFTkSuQmCC"
+  },
+  "timings": {
+    "encoding_time_s": 0.0010489170017535798,
+    "train_time_s": 7.482178083002509,
+    "predict_time_s": 0.05127779100439511,
+    "reconstruction_time_s": 3.804099833359942e-05,
+    "total_time_s": 0.05590291599946795
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:09:19.646554"
+}

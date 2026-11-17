@@ -1,0 +1,20 @@
+{
+ "id": "P-NEQR-64-p4-b4",
+ "kind": "quantum_patch",
+ "representation": "NEQR",
+ "resolution": 64,
+ "patch": 4,
+ "bits": 4,
+ "shots": [
+  100,
+  1000,
+  10000
+ ],
+ "n_images": 1800,
+ "execution": "classical CPU simulation",
+ "simulator": "qiskit-aer statevector + multinomial sampling",
+ "encoder": "src/neqr/encoder.py::NEQREncoder",
+ "decoder": "src/reconstruction/reconstructor.py",
+ "shots_note": "shots per patch (total per image = shots x number of patches)",
+ "compute_seconds": 2178.3681381649803
+}

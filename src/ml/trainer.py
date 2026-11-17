@@ -13,6 +13,7 @@ No results are hard-coded. All metrics come from actual model runs.
 """
 
 import numpy as np
+from src.v2.paths import assert_writable as _assert_writable  # historical-results guard
 import json
 import csv
 import time
@@ -148,11 +149,13 @@ def generate_dataset_summary() -> Dict[str, Any]:
 
     # Save JSON
     json_path = RESULTS_DATASET_PATH / "dataset_summary.json"
+    _assert_writable(json_path)
     with open(json_path, "w") as f:
         json.dump(summary, f, indent=2)
 
     # Save CSV
     csv_path = RESULTS_DATASET_PATH / "class_distribution.csv"
+    _assert_writable(csv_path)
     with open(csv_path, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["split", "class", "count"])
         writer.writeheader()
@@ -260,6 +263,7 @@ class NEUClassificationTrainer:
                 for c in range(len(self.CLASS_NAMES))
             },
         }
+        _assert_writable(RESULTS_MODELS_PATH / "split_info.json")
         with open(RESULTS_MODELS_PATH / "split_info.json", "w") as f:
             json.dump(split_info, f, indent=2)
 
@@ -464,6 +468,7 @@ class NEUClassificationTrainer:
         hp_path = RESULTS_MODELS_PATH / "hyperparameter_results.csv"
         if hp_results:
             all_keys = list(dict.fromkeys(k for row in hp_results for k in row.keys()))
+            _assert_writable(hp_path)
             with open(hp_path, "w", newline="") as f:
                 writer = csv.DictWriter(f, fieldnames=all_keys, extrasaction="ignore")
                 writer.writeheader()
@@ -500,6 +505,7 @@ class NEUClassificationTrainer:
                 "inference_time_per_sample_ms": r["inference_time_per_sample_ms"],
             })
         csv_path = RESULTS_MODELS_PATH / "model_comparison.csv"
+        _assert_writable(csv_path)
         with open(csv_path, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=comparison_rows[0].keys())
             writer.writeheader()
@@ -515,6 +521,7 @@ class NEUClassificationTrainer:
                     **metrics
                 })
         per_class_path = RESULTS_MODELS_PATH / "per_class_metrics.csv"
+        _assert_writable(per_class_path)
         with open(per_class_path, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=per_class_rows[0].keys())
             writer.writeheader()
@@ -523,6 +530,7 @@ class NEUClassificationTrainer:
 
         # Full results JSON
         results_json_path = RESULTS_MODELS_PATH / "all_model_results.json"
+        _assert_writable(results_json_path)
         with open(results_json_path, "w") as f:
             json.dump(self.results, f, indent=2, default=str)
         print(f"  Saved: {results_json_path}")
@@ -530,8 +538,10 @@ class NEUClassificationTrainer:
         # Save trained models
         for name, model in self.models.items():
             model_path = RESULTS_MODELS_PATH / "saved_models" / f"{name.replace(' ', '_')}.joblib"
+            _assert_writable(model_path)
             joblib.dump(model, model_path)
         # Save scaler
+        _assert_writable(RESULTS_MODELS_PATH / "saved_models" / "scaler.joblib")
         joblib.dump(self.scaler, RESULTS_MODELS_PATH / "saved_models" / "scaler.joblib")
         print(f"  Saved trained models to results/models/saved_models/")
 
@@ -539,6 +549,7 @@ class NEUClassificationTrainer:
         """Save confusion matrix as JSON."""
         cm_path = (RESULTS_MODELS_PATH / "confusion_matrices" /
                    f"{model_name.replace(' ', '_')}_cm.json")
+        _assert_writable(cm_path)
         with open(cm_path, "w") as f:
             json.dump({
                 "model": model_name,

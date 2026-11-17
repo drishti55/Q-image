@@ -1,0 +1,156 @@
+{
+ "created_at": "2026-11-16T08:49:49",
+ "checks": [
+  {
+   "check": "historical V0 results (results/qml, results/models): 0 changed, 0 missing",
+   "ok": true,
+   "detail": "original files 3690; changed 0; missing 0"
+  },
+  {
+   "check": "no new files under historical folders (added files are all in qml_v2/qml_v3)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "53 copied V2 manifests / splits / caches identical in qml_v2 and qml_v3 (SHA-256)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "split verification at copy time: no path / hash / group overlap; test = whole NEU validation folder",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "no Protocol V2 experiment, aggregate, manifest or cache file modified since V3 setup",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "V2 files touched since V3 setup are only report screenshots / verification log (disclosed in notes)",
+   "ok": true,
+   "detail": "18 files"
+  },
+  {
+   "check": "70 selection files unchanged since freeze (SHA-256)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "frozen_selection.json hash matches v3_results.json",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "every locked-test access happened after the freeze",
+   "ok": true,
+   "detail": "first 2026-11-16T08:19:15.471484 > frozen 2026-11-16T08:19:14.500799"
+  },
+  {
+   "check": "exactly one locked-test stage per frozen group",
+   "ok": true,
+   "detail": "70 groups"
+  },
+  {
+   "check": "test predictions exist only for the 3 seeds of each frozen configuration",
+   "ok": true,
+   "detail": "210 dirs with test predictions; 210 frozen; extra []"
+  },
+  {
+   "check": "no selection file contains a test metric",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "no failed or missing candidate runs",
+   "ok": true,
+   "detail": "{'completed': 5316}"
+  },
+  {
+   "check": "test accuracy recomputed from predictions.csv for all 70 groups (210 runs, 360 locked images each)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "headline 'vqc' is the max-validation group in its category",
+   "ok": true,
+   "detail": "V3-tex8c-vqc"
+  },
+  {
+   "check": "headline 'hybrid_quantum' is the max-validation group in its category",
+   "ok": true,
+   "detail": "V3-mnv8c-qkc-product_ry"
+  },
+  {
+   "check": "headline 'classical_control_best' is the max-validation group in its category",
+   "ok": true,
+   "detail": "V3-mnv8c-rbfsvm"
+  },
+  {
+   "check": "headline 'pure_quantum' is the max-validation group in its category",
+   "ok": true,
+   "detail": "V3-tex12c-qkc-product_ry"
+  },
+  {
+   "check": "every VQC group has trainable quantum parameters (> 0) and an entangling circuit",
+   "ok": true,
+   "detail": "5 groups"
+  },
+  {
+   "check": "encoding-only controls have 0 trainable quantum parameters (labelled as controls)",
+   "ok": true,
+   "detail": "3 groups"
+  },
+  {
+   "check": "every quantum-labelled group records a simulated circuit (statevector, no hardware)",
+   "ok": true,
+   "detail": "43 groups"
+  },
+  {
+   "check": "no classical model is categorised as quantum",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "Holm-adjusted p-values are >= raw and monotone",
+   "ok": true,
+   "detail": "24 comparisons"
+  },
+  {
+   "check": "pytest: tests/ (incl. test_v3_models, test_v3_api)",
+   "ok": true,
+   "detail": "184 passed"
+  },
+  {
+   "check": "vitest: frontend unit tests (playground walkthroughs vs V3 JSON)",
+   "ok": true,
+   "detail": "26 passed"
+  },
+  {
+   "check": "TypeScript (tsc -b) and production build (vite build)",
+   "ok": true,
+   "detail": "no errors"
+  },
+  {
+   "check": "browser e2e: 3x3 playground (scripts/v2/playground_e2e.py)",
+   "ok": true,
+   "detail": "65 passed, 0 failed"
+  },
+  {
+   "check": "browser e2e: dashboard (scripts/v2/dashboard_e2e.py)",
+   "ok": true,
+   "detail": "49 passed, 0 failed"
+  },
+  {
+   "check": "browser e2e: V3 results page (scripts/v3/v3_results_e2e.py)",
+   "ok": true,
+   "detail": "10 passed, 0 failed"
+  }
+ ],
+ "notes": [
+  "The V2 report screenshots in results/qml_v2/reports/algorithm_screenshots/ were re-captured by scripts/v2/playground_e2e.py while the V3 UI was being tested, before its default output was moved to results/qml_v3/reports/screenshots/. They are report images, not results; no V2 experiment, aggregate, manifest or cache file changed.",
+  "results/qml_v2/logs/historical_verification.jsonl is an append-only log written by the verification script itself.",
+  "verify_historical.py reports all_ok=False only because new files exist (results/qml_v3); mandatory checks (changed = missing = 0) pass.",
+  "The like-for-like V3-vs-V2 comparisons were added to analyze_v3.py after the locked test was opened; they are reported as a separate post-hoc family and change no selection."
+ ]
+}

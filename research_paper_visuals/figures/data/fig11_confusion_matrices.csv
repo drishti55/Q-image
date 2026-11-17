@@ -1,0 +1,217 @@
+family,group,true,predicted,count_sum_3_seeds,row_fraction
+Classical: pixel PCA,E6-pca8-rbfsvm,crazing,crazing,144,0.8
+Classical: pixel PCA,E6-pca8-rbfsvm,crazing,inclusion,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,crazing,patches,2,0.011111111111111112
+Classical: pixel PCA,E6-pca8-rbfsvm,crazing,pitted_surface,26,0.14444444444444443
+Classical: pixel PCA,E6-pca8-rbfsvm,crazing,rolled-in_scale,5,0.027777777777777776
+Classical: pixel PCA,E6-pca8-rbfsvm,crazing,scratches,3,0.016666666666666666
+Classical: pixel PCA,E6-pca8-rbfsvm,inclusion,crazing,6,0.03333333333333333
+Classical: pixel PCA,E6-pca8-rbfsvm,inclusion,inclusion,68,0.37777777777777777
+Classical: pixel PCA,E6-pca8-rbfsvm,inclusion,patches,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,inclusion,pitted_surface,46,0.25555555555555554
+Classical: pixel PCA,E6-pca8-rbfsvm,inclusion,rolled-in_scale,20,0.1111111111111111
+Classical: pixel PCA,E6-pca8-rbfsvm,inclusion,scratches,40,0.2222222222222222
+Classical: pixel PCA,E6-pca8-rbfsvm,patches,crazing,6,0.03333333333333333
+Classical: pixel PCA,E6-pca8-rbfsvm,patches,inclusion,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,patches,patches,174,0.9666666666666667
+Classical: pixel PCA,E6-pca8-rbfsvm,patches,pitted_surface,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,patches,rolled-in_scale,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,patches,scratches,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,pitted_surface,crazing,20,0.1111111111111111
+Classical: pixel PCA,E6-pca8-rbfsvm,pitted_surface,inclusion,5,0.027777777777777776
+Classical: pixel PCA,E6-pca8-rbfsvm,pitted_surface,patches,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,pitted_surface,pitted_surface,152,0.8444444444444444
+Classical: pixel PCA,E6-pca8-rbfsvm,pitted_surface,rolled-in_scale,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,pitted_surface,scratches,3,0.016666666666666666
+Classical: pixel PCA,E6-pca8-rbfsvm,rolled-in_scale,crazing,1,0.005555555555555556
+Classical: pixel PCA,E6-pca8-rbfsvm,rolled-in_scale,inclusion,116,0.6444444444444445
+Classical: pixel PCA,E6-pca8-rbfsvm,rolled-in_scale,patches,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,rolled-in_scale,pitted_surface,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,rolled-in_scale,rolled-in_scale,42,0.23333333333333334
+Classical: pixel PCA,E6-pca8-rbfsvm,rolled-in_scale,scratches,21,0.11666666666666667
+Classical: pixel PCA,E6-pca8-rbfsvm,scratches,crazing,3,0.016666666666666666
+Classical: pixel PCA,E6-pca8-rbfsvm,scratches,inclusion,49,0.2722222222222222
+Classical: pixel PCA,E6-pca8-rbfsvm,scratches,patches,5,0.027777777777777776
+Classical: pixel PCA,E6-pca8-rbfsvm,scratches,pitted_surface,3,0.016666666666666666
+Classical: pixel PCA,E6-pca8-rbfsvm,scratches,rolled-in_scale,0,0.0
+Classical: pixel PCA,E6-pca8-rbfsvm,scratches,scratches,120,0.6666666666666666
+Classical: CNN features,E7-mnv3-rbfsvm,crazing,crazing,180,1.0
+Classical: CNN features,E7-mnv3-rbfsvm,crazing,inclusion,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,crazing,patches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,crazing,pitted_surface,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,crazing,rolled-in_scale,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,crazing,scratches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,inclusion,crazing,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,inclusion,inclusion,142,0.7888888888888889
+Classical: CNN features,E7-mnv3-rbfsvm,inclusion,patches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,inclusion,pitted_surface,8,0.044444444444444446
+Classical: CNN features,E7-mnv3-rbfsvm,inclusion,rolled-in_scale,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,inclusion,scratches,30,0.16666666666666666
+Classical: CNN features,E7-mnv3-rbfsvm,patches,crazing,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,patches,inclusion,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,patches,patches,180,1.0
+Classical: CNN features,E7-mnv3-rbfsvm,patches,pitted_surface,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,patches,rolled-in_scale,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,patches,scratches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,pitted_surface,crazing,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,pitted_surface,inclusion,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,pitted_surface,patches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,pitted_surface,pitted_surface,180,1.0
+Classical: CNN features,E7-mnv3-rbfsvm,pitted_surface,rolled-in_scale,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,pitted_surface,scratches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,rolled-in_scale,crazing,1,0.005555555555555556
+Classical: CNN features,E7-mnv3-rbfsvm,rolled-in_scale,inclusion,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,rolled-in_scale,patches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,rolled-in_scale,pitted_surface,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,rolled-in_scale,rolled-in_scale,179,0.9944444444444445
+Classical: CNN features,E7-mnv3-rbfsvm,rolled-in_scale,scratches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,scratches,crazing,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,scratches,inclusion,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,scratches,patches,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,scratches,pitted_surface,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,scratches,rolled-in_scale,0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,scratches,scratches,180,1.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,crazing,crazing,158,0.8777777777777778
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,crazing,inclusion,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,crazing,patches,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,crazing,pitted_surface,12,0.06666666666666667
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,crazing,rolled-in_scale,10,0.05555555555555555
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,crazing,scratches,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,inclusion,crazing,2,0.011111111111111112
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,inclusion,inclusion,73,0.40555555555555556
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,inclusion,patches,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,inclusion,pitted_surface,54,0.3
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,inclusion,rolled-in_scale,30,0.16666666666666666
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,inclusion,scratches,21,0.11666666666666667
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,patches,crazing,9,0.05
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,patches,inclusion,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,patches,patches,170,0.9444444444444444
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,patches,pitted_surface,1,0.005555555555555556
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,patches,rolled-in_scale,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,patches,scratches,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,pitted_surface,crazing,27,0.15
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,pitted_surface,inclusion,1,0.005555555555555556
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,pitted_surface,patches,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,pitted_surface,pitted_surface,141,0.7833333333333333
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,pitted_surface,rolled-in_scale,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,pitted_surface,scratches,11,0.06111111111111111
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,rolled-in_scale,crazing,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,rolled-in_scale,inclusion,168,0.9333333333333333
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,rolled-in_scale,patches,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,rolled-in_scale,pitted_surface,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,rolled-in_scale,rolled-in_scale,0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,rolled-in_scale,scratches,12,0.06666666666666667
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,scratches,crazing,8,0.044444444444444446
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,scratches,inclusion,46,0.25555555555555554
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,scratches,patches,2,0.011111111111111112
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,scratches,pitted_surface,1,0.005555555555555556
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,scratches,rolled-in_scale,10,0.05555555555555555
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,scratches,scratches,113,0.6277777777777778
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,crazing,crazing,134,0.7444444444444445
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,crazing,inclusion,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,crazing,patches,7,0.03888888888888889
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,crazing,pitted_surface,34,0.18888888888888888
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,crazing,rolled-in_scale,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,crazing,scratches,5,0.027777777777777776
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,inclusion,crazing,7,0.03888888888888889
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,inclusion,inclusion,67,0.37222222222222223
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,inclusion,patches,1,0.005555555555555556
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,inclusion,pitted_surface,50,0.2777777777777778
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,inclusion,rolled-in_scale,23,0.12777777777777777
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,inclusion,scratches,32,0.17777777777777778
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,patches,crazing,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,patches,inclusion,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,patches,patches,174,0.9666666666666667
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,patches,pitted_surface,3,0.016666666666666666
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,patches,rolled-in_scale,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,patches,scratches,3,0.016666666666666666
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,pitted_surface,crazing,25,0.1388888888888889
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,pitted_surface,inclusion,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,pitted_surface,patches,5,0.027777777777777776
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,pitted_surface,pitted_surface,143,0.7944444444444444
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,pitted_surface,rolled-in_scale,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,pitted_surface,scratches,7,0.03888888888888889
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,rolled-in_scale,crazing,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,rolled-in_scale,inclusion,147,0.8166666666666667
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,rolled-in_scale,patches,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,rolled-in_scale,pitted_surface,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,rolled-in_scale,rolled-in_scale,0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,rolled-in_scale,scratches,33,0.18333333333333332
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,scratches,crazing,2,0.011111111111111112
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,scratches,inclusion,38,0.2111111111111111
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,scratches,patches,2,0.011111111111111112
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,scratches,pitted_surface,1,0.005555555555555556
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,scratches,rolled-in_scale,5,0.027777777777777776
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,scratches,scratches,132,0.7333333333333333
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,crazing,crazing,150,0.8333333333333334
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,crazing,inclusion,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,crazing,patches,6,0.03333333333333333
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,crazing,pitted_surface,19,0.10555555555555556
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,crazing,rolled-in_scale,4,0.022222222222222223
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,crazing,scratches,1,0.005555555555555556
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,inclusion,crazing,3,0.016666666666666666
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,inclusion,inclusion,64,0.35555555555555557
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,inclusion,patches,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,inclusion,pitted_surface,48,0.26666666666666666
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,inclusion,rolled-in_scale,25,0.1388888888888889
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,inclusion,scratches,40,0.2222222222222222
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,patches,crazing,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,patches,inclusion,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,patches,patches,180,1.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,patches,pitted_surface,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,patches,rolled-in_scale,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,patches,scratches,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,pitted_surface,crazing,12,0.06666666666666667
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,pitted_surface,inclusion,1,0.005555555555555556
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,pitted_surface,patches,2,0.011111111111111112
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,pitted_surface,pitted_surface,151,0.8388888888888889
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,pitted_surface,rolled-in_scale,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,pitted_surface,scratches,14,0.07777777777777778
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,rolled-in_scale,crazing,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,rolled-in_scale,inclusion,108,0.6
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,rolled-in_scale,patches,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,rolled-in_scale,pitted_surface,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,rolled-in_scale,rolled-in_scale,31,0.17222222222222222
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,rolled-in_scale,scratches,41,0.22777777777777777
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,scratches,crazing,3,0.016666666666666666
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,scratches,inclusion,56,0.3111111111111111
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,scratches,patches,4,0.022222222222222223
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,scratches,pitted_surface,2,0.011111111111111112
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,scratches,rolled-in_scale,0,0.0
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,scratches,scratches,115,0.6388888888888888
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,crazing,crazing,180,1.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,crazing,inclusion,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,crazing,patches,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,crazing,pitted_surface,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,crazing,rolled-in_scale,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,crazing,scratches,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,inclusion,crazing,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,inclusion,inclusion,120,0.6666666666666666
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,inclusion,patches,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,inclusion,pitted_surface,4,0.022222222222222223
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,inclusion,rolled-in_scale,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,inclusion,scratches,56,0.3111111111111111
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,patches,crazing,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,patches,inclusion,1,0.005555555555555556
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,patches,patches,178,0.9888888888888889
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,patches,pitted_surface,1,0.005555555555555556
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,patches,rolled-in_scale,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,patches,scratches,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,pitted_surface,crazing,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,pitted_surface,inclusion,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,pitted_surface,patches,1,0.005555555555555556
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,pitted_surface,pitted_surface,179,0.9944444444444445
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,pitted_surface,rolled-in_scale,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,pitted_surface,scratches,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,rolled-in_scale,crazing,3,0.016666666666666666
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,rolled-in_scale,inclusion,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,rolled-in_scale,patches,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,rolled-in_scale,pitted_surface,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,rolled-in_scale,rolled-in_scale,177,0.9833333333333333
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,rolled-in_scale,scratches,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,scratches,crazing,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,scratches,inclusion,4,0.022222222222222223
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,scratches,patches,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,scratches,pitted_surface,0,0.0
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,scratches,rolled-in_scale,3,0.016666666666666666
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,scratches,scratches,173,0.9611111111111111

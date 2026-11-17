@@ -1,0 +1,11 @@
+model,v2_group,v2_acc,v3_group,v3_acc,diff_pp
+ZZ-full QKC (V2: pixel PCA-8),E3-pca8-qkc-zz_full,63.98,V3-tex8c-qkc-zz_full,92.96,28.98
+ZZ-linear QKC (V2: pixel PCA-8),E3-pca8-qkc-zz_linear,60.93,V3-tex8c-qkc-zz_linear,91.39,30.46
+product-RY QKC (V2: pixel PCA-8),E3-pca8-qkc-product_ry,58.06,V3-tex12c-qkc-product_ry,95.28,37.22
+FRQI angle-scaled 8×8,E1b-frqi8-qkc-scaled,60.65,V3-frqi8,57.50,-3.15
+NEQR 4-bit 16×16,E2-neqr16-b4-qkc,60.19,V3-neqr16,60.19,0.00
+Genuine VQC (V2: pixel PCA-8),E4-pca8-vqc,48.06,V3-tex8c-vqc,73.43,25.37
+CNN + product-RY QKC,E5-mnv3pca8-qkc-product_ry,93.24,V3-mnv8c-qkc-product_ry,91.30,-1.94
+CNN + ZZ-full QKC,E5-mnv3pca8-qkc-zz_full,92.69,V3-mnv8c-qkc-zz_full,91.30,-1.39
+CNN + ZZ-linear QKC,E5-mnv3pca8-qkc-zz_linear,91.85,V3-mnv8c-qkc-zz_linear,91.30,-0.56
+CNN + VQC,E5-mnv3pca8-vqc,81.30,V3-mnv8c-vqc,72.41,-8.89

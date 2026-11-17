@@ -1,0 +1,143 @@
+# start phase5_grid_ablation: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+== group E4-pca4-vqc: 11 configs x 3 seeds
+  [ok] E4-pca4-vqc__93975d136f__s0  val acc=0.350 F1=0.296  fit 0.9s
+  [ok] E4-pca4-vqc__93975d136f__s1  val acc=0.353 F1=0.308  fit 0.8s
+  [ok] E4-pca4-vqc__93975d136f__s2  val acc=0.411 F1=0.368  fit 3.1s
+  [ok] E4-pca4-vqc__5a6f1f38fc__s0  val acc=0.525 F1=0.532  fit 3.8s
+  [ok] E4-pca4-vqc__5a6f1f38fc__s1  val acc=0.464 F1=0.463  fit 5.0s
+  [ok] E4-pca4-vqc__5a6f1f38fc__s2  val acc=0.528 F1=0.532  fit 4.1s
+  [ok] E4-pca4-vqc__36480b0fcb__s0  val acc=0.397 F1=0.401  fit 6.0s
+  [ok] E4-pca4-vqc__36480b0fcb__s1  val acc=0.431 F1=0.429  fit 5.8s
+  [ok] E4-pca4-vqc__36480b0fcb__s2  val acc=0.475 F1=0.461  fit 9.4s
+  [ok] E4-pca4-vqc__61965c0ade__s0  val acc=0.406 F1=0.381  fit 4.8s
+  [ok] E4-pca4-vqc__61965c0ade__s1  val acc=0.317 F1=0.252  fit 4.0s
+  [ok] E4-pca4-vqc__61965c0ade__s2  val acc=0.375 F1=0.323  fit 5.4s
+  [ok] E4-pca4-vqc__a16c84bfa8__s0  val acc=0.511 F1=0.518  fit 5.3s
+  [ok] E4-pca4-vqc__a16c84bfa8__s1  val acc=0.361 F1=0.332  fit 5.7s
+  [ok] E4-pca4-vqc__a16c84bfa8__s2  val acc=0.497 F1=0.496  fit 4.9s
+  [ok] E4-pca4-vqc__0d75ac3463__s0  val acc=0.428 F1=0.385  fit 7.9s
+  [ok] E4-pca4-vqc__0d75ac3463__s1  val acc=0.358 F1=0.352  fit 6.6s
+  [ok] E4-pca4-vqc__0d75ac3463__s2  val acc=0.481 F1=0.457  fit 4.9s
+  [ok] E4-pca4-vqc__0471ee5d04__s0  val acc=0.208 F1=0.160  fit 1.8s
+  [ok] E4-pca4-vqc__0471ee5d04__s1  val acc=0.178 F1=0.118  fit 1.1s
+  [ok] E4-pca4-vqc__0471ee5d04__s2  val acc=0.225 F1=0.170  fit 0.6s
+  [ok] E4-pca4-vqc__b0cd5eeaee__s0  val acc=0.319 F1=0.278  fit 0.8s
+  [ok] E4-pca4-vqc__b0cd5eeaee__s1  val acc=0.286 F1=0.224  fit 0.7s
+  [ok] E4-pca4-vqc__b0cd5eeaee__s2  val acc=0.336 F1=0.305  fit 0.8s
+  [ok] E4-pca4-vqc__c6d1bb2e2a__s0  val acc=0.342 F1=0.330  fit 2.7s
+  [ok] E4-pca4-vqc__c6d1bb2e2a__s1  val acc=0.361 F1=0.341  fit 1.5s
+  [ok] E4-pca4-vqc__c6d1bb2e2a__s2  val acc=0.344 F1=0.346  fit 1.1s
+  [ok] E4-pca4-vqc__af3e2b8aa7__s0  val acc=0.428 F1=0.402  fit 3.9s
+  [ok] E4-pca4-vqc__af3e2b8aa7__s1  val acc=0.322 F1=0.245  fit 3.6s
+  [ok] E4-pca4-vqc__af3e2b8aa7__s2  val acc=0.436 F1=0.440  fit 10.0s
+  [ok] E4-pca4-vqc__e467b73b6a__s0  val acc=0.422 F1=0.427  fit 5.6s
+  [ok] E4-pca4-vqc__e467b73b6a__s1  val acc=0.481 F1=0.473  fit 9.5s
+  [ok] E4-pca4-vqc__e467b73b6a__s2  val acc=0.425 F1=0.396  fit 6.0s
+  [TEST] E4-pca4-vqc__5a6f1f38fc__s0  acc=0.328 F1=0.327
+  [TEST] E4-pca4-vqc__5a6f1f38fc__s1  acc=0.347 F1=0.313
+  [TEST] E4-pca4-vqc__5a6f1f38fc__s2  acc=0.347 F1=0.344
+== group E4-pca6-vqc: 11 configs x 3 seeds
+  [ok] E4-pca6-vqc__d2cf90ca10__s0  val acc=0.481 F1=0.482  fit 4.4s
+  [ok] E4-pca6-vqc__d2cf90ca10__s1  val acc=0.406 F1=0.407  fit 3.0s
+  [ok] E4-pca6-vqc__d2cf90ca10__s2  val acc=0.456 F1=0.452  fit 8.7s
+  [ok] E4-pca6-vqc__f2891725c9__s0  val acc=0.472 F1=0.452  fit 13.5s
+  [ok] E4-pca6-vqc__f2891725c9__s1  val acc=0.442 F1=0.415  fit 9.1s
+  [ok] E4-pca6-vqc__f2891725c9__s2  val acc=0.486 F1=0.485  fit 16.8s
+  [ok] E4-pca6-vqc__80e7831f18__s0  val acc=0.492 F1=0.467  fit 36.0s
+  [ok] E4-pca6-vqc__80e7831f18__s1  val acc=0.475 F1=0.471  fit 36.3s
+  [ok] E4-pca6-vqc__80e7831f18__s2  val acc=0.556 F1=0.558  fit 38.6s
+  [ok] E4-pca6-vqc__523611d685__s0  val acc=0.475 F1=0.478  fit 19.7s
+  [ok] E4-pca6-vqc__523611d685__s1  val acc=0.383 F1=0.381  fit 17.0s
+  [ok] E4-pca6-vqc__523611d685__s2  val acc=0.458 F1=0.459  fit 18.2s
+  [ok] E4-pca6-vqc__9850517cae__s0  val acc=0.447 F1=0.427  fit 22.5s
+  [ok] E4-pca6-vqc__9850517cae__s1  val acc=0.425 F1=0.397  fit 23.0s
+  [ok] E4-pca6-vqc__9850517cae__s2  val acc=0.347 F1=0.351  fit 20.7s
+  [ok] E4-pca6-vqc__800bbdf02d__s0  val acc=0.433 F1=0.418  fit 28.3s
+  [ok] E4-pca6-vqc__800bbdf02d__s1  val acc=0.394 F1=0.384  fit 27.7s
+  [ok] E4-pca6-vqc__800bbdf02d__s2  val acc=0.472 F1=0.472  fit 28.3s
+  [ok] E4-pca6-vqc__b8827b7ac7__s0  val acc=0.194 F1=0.139  fit 3.7s
+  [ok] E4-pca6-vqc__b8827b7ac7__s1  val acc=0.247 F1=0.192  fit 4.8s
+  [ok] E4-pca6-vqc__b8827b7ac7__s2  val acc=0.267 F1=0.187  fit 2.8s
+  [ok] E4-pca6-vqc__5576e35e6c__s0  val acc=0.269 F1=0.211  fit 8.2s
+  [ok] E4-pca6-vqc__5576e35e6c__s1  val acc=0.122 F1=0.111  fit 4.2s
+  [ok] E4-pca6-vqc__5576e35e6c__s2  val acc=0.231 F1=0.177  fit 6.0s
+  [ok] E4-pca6-vqc__43c73143b0__s0  val acc=0.328 F1=0.301  fit 6.9s
+  [ok] E4-pca6-vqc__43c73143b0__s1  val acc=0.192 F1=0.180  fit 6.9s
+  [ok] E4-pca6-vqc__43c73143b0__s2  val acc=0.208 F1=0.177  fit 6.6s
+  [ok] E4-pca6-vqc__11acc6f837__s0  val acc=0.497 F1=0.503  fit 15.6s
+  [ok] E4-pca6-vqc__11acc6f837__s1  val acc=0.367 F1=0.349  fit 13.1s
+  [ok] E4-pca6-vqc__11acc6f837__s2  val acc=0.508 F1=0.498  fit 30.1s
+  [ok] E4-pca6-vqc__0a97b80507__s0  val acc=0.542 F1=0.544  fit 42.7s
+  [ok] E4-pca6-vqc__0a97b80507__s1  val acc=0.528 F1=0.525  fit 27.7s
+  [ok] E4-pca6-vqc__0a97b80507__s2  val acc=0.556 F1=0.550  fit 34.5s
+  [TEST] E4-pca6-vqc__0a97b80507__s0  acc=0.458 F1=0.440
+  [TEST] E4-pca6-vqc__0a97b80507__s1  acc=0.414 F1=0.371
+  [TEST] E4-pca6-vqc__0a97b80507__s2  acc=0.464 F1=0.446
+== group E4-pca8-vqc: 11 configs x 3 seeds
+  [ok] E4-pca8-vqc__e7e90816a6__s0  val acc=0.481 F1=0.475  fit 24.3s
+  [ok] E4-pca8-vqc__e7e90816a6__s1  val acc=0.397 F1=0.396  fit 21.3s
+  [ok] E4-pca8-vqc__e7e90816a6__s2  val acc=0.458 F1=0.455  fit 47.8s
+  [ok] E4-pca8-vqc__363664c2f6__s0  val acc=0.400 F1=0.367  fit 43.6s
+  [ok] E4-pca8-vqc__363664c2f6__s1  val acc=0.472 F1=0.467  fit 98.4s
+  [ok] E4-pca8-vqc__363664c2f6__s2  val acc=0.569 F1=0.573  fit 113.4s
+  [ok] E4-pca8-vqc__1d5d1bb8a8__s0  val acc=0.517 F1=0.482  fit 183.8s
+  [ok] E4-pca8-vqc__1d5d1bb8a8__s1  val acc=0.489 F1=0.477  fit 169.8s
+  [ok] E4-pca8-vqc__1d5d1bb8a8__s2  val acc=0.558 F1=0.536  fit 215.6s
+  [ok] E4-pca8-vqc__ec42d94025__s0  val acc=0.458 F1=0.459  fit 94.7s
+  [ok] E4-pca8-vqc__ec42d94025__s1  val acc=0.383 F1=0.374  fit 93.4s
+  [ok] E4-pca8-vqc__ec42d94025__s2  val acc=0.456 F1=0.455  fit 92.6s
+  [ok] E4-pca8-vqc__2bac4c83e2__s0  val acc=0.458 F1=0.455  fit 130.4s
+  [ok] E4-pca8-vqc__2bac4c83e2__s1  val acc=0.458 F1=0.449  fit 130.5s
+  [ok] E4-pca8-vqc__2bac4c83e2__s2  val acc=0.531 F1=0.526  fit 133.1s
+  [ok] E4-pca8-vqc__306ca139bd__s0  val acc=0.461 F1=0.427  fit 166.1s
+  [ok] E4-pca8-vqc__306ca139bd__s1  val acc=0.406 F1=0.399  fit 166.0s
+  [ok] E4-pca8-vqc__306ca139bd__s2  val acc=0.522 F1=0.509  fit 170.4s
+  [ok] E4-pca8-vqc__4190bc82f9__s0  val acc=0.192 F1=0.134  fit 53.0s
+  [ok] E4-pca8-vqc__4190bc82f9__s1  val acc=0.267 F1=0.202  fit 19.1s
+  [ok] E4-pca8-vqc__4190bc82f9__s2  val acc=0.275 F1=0.177  fit 20.0s
+  [ok] E4-pca8-vqc__2f5617f251__s0  val acc=0.097 F1=0.053  fit 27.7s
+  [ok] E4-pca8-vqc__2f5617f251__s1  val acc=0.161 F1=0.096  fit 26.8s
+  [ok] E4-pca8-vqc__2f5617f251__s2  val acc=0.197 F1=0.158  fit 25.5s
+  [ok] E4-pca8-vqc__dd9eb8590a__s0  val acc=0.236 F1=0.209  fit 18.7s
+  [ok] E4-pca8-vqc__dd9eb8590a__s1  val acc=0.244 F1=0.199  fit 18.7s
+  [ok] E4-pca8-vqc__dd9eb8590a__s2  val acc=0.172 F1=0.145  fit 19.0s
+  [ok] E4-pca8-vqc__907f62311f__s0  val acc=0.525 F1=0.517  fit 86.5s
+  [ok] E4-pca8-vqc__907f62311f__s1  val acc=0.425 F1=0.381  fit 52.4s
+# start phase5_grid_ablation: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+== group E4-pca4-vqc: 11 configs x 3 seeds
+  [TEST] E4-pca4-vqc__5a6f1f38fc__s0  acc=0.328 F1=0.327
+  [TEST] E4-pca4-vqc__5a6f1f38fc__s1  acc=0.347 F1=0.313
+  [TEST] E4-pca4-vqc__5a6f1f38fc__s2  acc=0.347 F1=0.344
+== group E4-pca6-vqc: 11 configs x 3 seeds
+  [TEST] E4-pca6-vqc__0a97b80507__s0  acc=0.458 F1=0.440
+  [TEST] E4-pca6-vqc__0a97b80507__s1  acc=0.414 F1=0.371
+  [TEST] E4-pca6-vqc__0a97b80507__s2  acc=0.464 F1=0.446
+== group E4-pca8-vqc: 11 configs x 3 seeds
+  [ok] E4-pca8-vqc__907f62311f__s2  val acc=0.517 F1=0.504  fit 76.1s
+  [ok] E4-pca8-vqc__9afcc95871__s0  val acc=0.536 F1=0.536  fit 165.1s
+  [ok] E4-pca8-vqc__9afcc95871__s1  val acc=0.556 F1=0.554  fit 167.4s
+  [ok] E4-pca8-vqc__9afcc95871__s2  val acc=0.592 F1=0.586  fit 254.0s
+  [TEST] E4-pca8-vqc__9afcc95871__s0  acc=0.472 F1=0.454
+  [TEST] E4-pca8-vqc__9afcc95871__s1  acc=0.503 F1=0.457
+  [TEST] E4-pca8-vqc__9afcc95871__s2  acc=0.467 F1=0.439
+== group E4-pca4-vqc-ablation-frozen: 1 configs x 3 seeds
+  [ok] E4-pca4-vqc-ablation-frozen__b116225bf4__s0  val acc=0.161 F1=0.122  fit 0.2s
+  [ok] E4-pca4-vqc-ablation-frozen__b116225bf4__s1  val acc=0.072 F1=0.066  fit 0.7s
+  [ok] E4-pca4-vqc-ablation-frozen__b116225bf4__s2  val acc=0.181 F1=0.129  fit 0.7s
+  [TEST] E4-pca4-vqc-ablation-frozen__b116225bf4__s0  acc=0.208 F1=0.152
+  [TEST] E4-pca4-vqc-ablation-frozen__b116225bf4__s1  acc=0.106 F1=0.116
+  [TEST] E4-pca4-vqc-ablation-frozen__b116225bf4__s2  acc=0.178 F1=0.130
+== group E4-pca6-vqc-ablation-frozen: 1 configs x 3 seeds
+  [ok] E4-pca6-vqc-ablation-frozen__88ad57cc6d__s0  val acc=0.267 F1=0.246  fit 1.5s
+  [ok] E4-pca6-vqc-ablation-frozen__88ad57cc6d__s1  val acc=0.169 F1=0.154  fit 2.1s
+  [ok] E4-pca6-vqc-ablation-frozen__88ad57cc6d__s2  val acc=0.272 F1=0.234  fit 3.5s
+  [TEST] E4-pca6-vqc-ablation-frozen__88ad57cc6d__s0  acc=0.314 F1=0.255
+  [TEST] E4-pca6-vqc-ablation-frozen__88ad57cc6d__s1  acc=0.261 F1=0.212
+  [TEST] E4-pca6-vqc-ablation-frozen__88ad57cc6d__s2  acc=0.275 F1=0.215
+== group E4-pca8-vqc-ablation-frozen: 1 configs x 3 seeds
+  [ok] E4-pca8-vqc-ablation-frozen__7a2ebcac32__s0  val acc=0.200 F1=0.166  fit 7.1s
+  [ok] E4-pca8-vqc-ablation-frozen__7a2ebcac32__s1  val acc=0.222 F1=0.173  fit 25.5s
+  [ok] E4-pca8-vqc-ablation-frozen__7a2ebcac32__s2  val acc=0.219 F1=0.189  fit 20.7s
+  [TEST] E4-pca8-vqc-ablation-frozen__7a2ebcac32__s0  acc=0.339 F1=0.239
+  [TEST] E4-pca8-vqc-ablation-frozen__7a2ebcac32__s1  acc=0.339 F1=0.251
+  [TEST] E4-pca8-vqc-ablation-frozen__7a2ebcac32__s2  acc=0.181 F1=0.164

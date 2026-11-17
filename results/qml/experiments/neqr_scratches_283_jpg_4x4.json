@@ -1,0 +1,140 @@
+{
+  "experiment_id": "neqr_scratches_283_jpg_4x4",
+  "comparison_id": "paired_scratches_283_jpg_4x4",
+  "dataset": "NEU-DET",
+  "image_name": "scratches_283.jpg",
+  "ground_truth": "scratches",
+  "predicted_class": "scratches",
+  "correct": true,
+  "representation": "NEQR",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "4x4",
+  "intensity_bits": 4,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 8,
+  "gate_count": 91,
+  "circuit_depth": 51,
+  "controlled_gates": 23,
+  "gate_types": {
+    "h": 4,
+    "x": 64,
+    "mcx": 23
+  },
+  "classification_metrics": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "heldout_accuracy": 0.24722222222222223,
+    "heldout_f1_macro": 0.23925956495642423,
+    "precision_macro": 0.24037109864574654,
+    "recall_macro": 0.24722222222222223,
+    "f1_weighted": 0.23925956495642425,
+    "confusion_matrix": [
+      [
+        17,
+        2,
+        34,
+        3,
+        3,
+        1
+      ],
+      [
+        12,
+        14,
+        5,
+        13,
+        7,
+        9
+      ],
+      [
+        6,
+        1,
+        9,
+        21,
+        6,
+        17
+      ],
+      [
+        8,
+        1,
+        7,
+        32,
+        2,
+        10
+      ],
+      [
+        0,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        30,
+        1,
+        2,
+        9,
+        17
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 0.38636363636363635,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.3269230769230769,
+        "support": 60
+      },
+      "inclusion": {
+        "precision": 0.12962962962962962,
+        "recall": 0.23333333333333334,
+        "f1_score": 0.16666666666666666,
+        "support": 60
+      },
+      "patches": {
+        "precision": 0.16071428571428573,
+        "recall": 0.15,
+        "f1_score": 0.15517241379310345,
+        "support": 60
+      },
+      "pitted_surface": {
+        "precision": 0.4507042253521127,
+        "recall": 0.5333333333333333,
+        "f1_score": 0.48854961832061067,
+        "support": 60
+      },
+      "rolled-in_scale": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 60
+      },
+      "scratches": {
+        "precision": 0.3148148148148148,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.2982456140350877,
+        "support": 60
+      }
+    }
+  },
+  "reconstruction_metrics": {
+    "mse": 0.000404652056901192,
+    "psnr": 33.929182476881664,
+    "ssim": 0.8612766577770183,
+    "reconstruction_time": 5.2374998631421477e-05,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAvElEQVR4nO2XyQ3DMBDE6IEbS/+1pII4Rwf2YyFMAJPfFVaE+NL24Jww47V4/5jMVygwI5SJApigTBTABGWiACYoEwUwQZkogAnunmB/XhzYhvO/f4EogAnKRAFMUCYKYIIyUQATlIkCmKBMFMAEZfb3sNHnYn4M9y8n669Q4JxQJgpggjJRABOUiQKYoEwUwARlogAmuHuCffp//w7noUwUwARlogAmKBMFMEGZKIAJykQBTFAmCmACuvwA9TIJKBQoGnMAAAAASUVORK5CYII=",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAnklEQVR4nO2asQ0DMQzEmINHy/6rZIWM8NWDhckFRJiqBH++uEyeTwIrAS2hzBKgBDJLgBLILAFKILMEKIHMEkDm/G5/gSVACWSWACWQWQKUQGYJUAKZJUAJZJYAJZA5bw94uj8MmSVACWSWACWQWQKUQGYJUAKZJUAJZJYAJZA5/R9AZglQApklQAlklgAlkFkClEBmCVACmSXA7Qn+YsMEF4wqoKsAAAAASUVORK5CYII=",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAsElEQVR4nO2asW0DMBDEaMbJ/gvb8QZWoeIasn0VBFgJuMcP33lxx9/hLmNMgBKMMQFKMMYEKMEYE6AEY0yAEowxAUow5vF7ePB/eT8hY0yAEowxAUowxgQowRgToARjTIASjDEBSjDmedoPvC8bnvYHMsYEKMEYE6AEY0yAEowxAUowxgQowRgToARjnrf/9/flvkDGmAAlGGMClGCMCVCCMSZACcaYACUYYwKUgC0fDngJCGZQXWMAAAAASUVORK5CYII="
+  },
+  "timings": {
+    "encoding_time_s": 0.0010865419972105883,
+    "train_time_s": 7.482178083002509,
+    "predict_time_s": 0.047847292000369634,
+    "reconstruction_time_s": 5.2374998631421477e-05,
+    "total_time_s": 0.0542840830021305
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:12:50.609933"
+}

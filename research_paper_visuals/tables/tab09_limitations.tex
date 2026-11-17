@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Experimental limitations.}
+\label{tab:limitations}
+\begin{tabular}{lp{0.62\linewidth}}
+\toprule
+\textbf{Limitation} & \textbf{Description} \\
+\midrule
+Simulation only & All quantum circuits were simulated exactly on a CPU; no noise model and no quantum hardware. \\
+Shot noise only for subsets & Finite-shot kernels were evaluated only for the validation-selected 8$\times$8 FRQI/NEQR and ZZ-full QKC configurations. \\
+Small image sizes & FRQI/NEQR were limited to 16$\times$16 because simulated circuit depth grows to \textasciitilde{}10$^5$ compiled gates. \\
+Distribution shift & Locked test = NEU validation folder; validation (train-folder) scores exceed test scores for all models. \\
+Gate counts depend on data & NEQR gate counts vary with pixel values; means over 5 sample images are reported. \\
+Reconstruction subset & Reconstruction metrics use 30 training images (5 per class). \\
+Multiple comparisons & Per-seed McNemar p-values are not corrected for multiple comparisons. \\
+Classical features in hybrids & Hybrid gains come from classical MobileNetV3 features; quantum and classical classifiers on the same features perform similarly. \\
+Product-RY control & The product-RY kernel is classically computable in closed form. \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,64 @@
+{
+ "n_qubits": 10,
+ "gates_logical": 2313.0,
+ "depth_logical": 760.0,
+ "gate_counts_logical": {
+  "x": 2048,
+  "mcx": 256,
+  "h": 8,
+  "barrier": 1
+ },
+ "two_qubit_gates_logical": 0,
+ "gates_compiled": 55352.0,
+ "depth_compiled": 38402.4,
+ "gate_counts_compiled": {
+  "rz": 18967,
+  "cx": 10496,
+  "sx": 5644,
+  "x": 510,
+  "barrier": 1
+ },
+ "single_qubit_gates_compiled": 39215.8,
+ "two_qubit_gates_compiled": 16135.2,
+ "cx_compiled": 16135.2,
+ "transpilation": {
+  "basis_gates": [
+   "cx",
+   "rz",
+   "sx",
+   "x"
+  ],
+  "optimization_level": 1,
+  "seed_transpiler": 0,
+  "coupling_map": "none (all-to-all)"
+ },
+ "gates_logical_range": [
+  2313,
+  2313
+ ],
+ "depth_logical_range": [
+  760,
+  760
+ ],
+ "gates_compiled_range": [
+  35618,
+  68121
+ ],
+ "depth_compiled_range": [
+  24840,
+  47178
+ ],
+ "cx_compiled_range": [
+  10496,
+  19784
+ ],
+ "two_qubit_gates_compiled_range": [
+  10496,
+  19784
+ ],
+ "single_qubit_gates_compiled_range": [
+  25121,
+  48336
+ ],
+ "n_sample_images": 5
+}

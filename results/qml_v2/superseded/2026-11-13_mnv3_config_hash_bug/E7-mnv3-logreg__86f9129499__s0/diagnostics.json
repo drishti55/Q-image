@@ -1,0 +1,10 @@
+{
+ "n_iter": 32,
+ "features": {
+  "method": "StandardScaler",
+  "k": null,
+  "fitted_on_n_train": 1080,
+  "view": "standard",
+  "source_dim": 576
+ }
+}

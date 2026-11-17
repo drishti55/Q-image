@@ -1,0 +1,6 @@
+[{"check":"pytest: tests/ (incl. test_v3_models, test_v3_api)","ok":true,"detail":"184 passed"},
+ {"check":"vitest: frontend unit tests (playground walkthroughs vs V3 JSON)","ok":true,"detail":"26 passed"},
+ {"check":"TypeScript (tsc -b) and production build (vite build)","ok":true,"detail":"no errors"},
+ {"check":"browser e2e: 3x3 playground (scripts/v2/playground_e2e.py)","ok":true,"detail":"65 passed, 0 failed"},
+ {"check":"browser e2e: dashboard (scripts/v2/dashboard_e2e.py)","ok":true,"detail":"49 passed, 0 failed"},
+ {"check":"browser e2e: V3 results page (scripts/v3/v3_results_e2e.py)","ok":true,"detail":"10 passed, 0 failed"}]

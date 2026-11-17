@@ -105,7 +105,7 @@ export function Comparison() {
             Not enough paired FRQI/NEQR experiments for this configuration. 
             Please run missing experiments in the Quantum Lab.
           </p>
-          <Link to="/quantum" className="mt-4 inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded">
+          <Link to="/historical-v0/quantum" className="mt-4 inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded">
             Go to Quantum Lab
           </Link>
         </div>
@@ -254,7 +254,7 @@ export function Comparison() {
                 </div>
               </div>
               <div className="pt-2 text-left">
-                <Link to={`/reconstruction?image=${selectedPair.image_name}`} className="text-xs text-cyan-400 hover:underline flex items-center gap-1">
+                <Link to={`/historical-v0/qml-lab?tab=reconstruction&image=${selectedPair.image_name}`} className="text-xs text-cyan-400 hover:underline flex items-center gap-1">
                   <LinkIcon size={12}/> View in Studio
                 </Link>
               </div>
@@ -291,7 +291,7 @@ export function Comparison() {
                 </div>
               </div>
               <div className="pt-2 text-left">
-                <Link to={`/reconstruction?image=${selectedPair.image_name}`} className="text-xs text-purple-400 hover:underline flex items-center gap-1">
+                <Link to={`/historical-v0/qml-lab?tab=reconstruction&image=${selectedPair.image_name}`} className="text-xs text-purple-400 hover:underline flex items-center gap-1">
                   <LinkIcon size={12}/> View in Studio
                 </Link>
               </div>

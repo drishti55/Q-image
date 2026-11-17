@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Best model per paradigm and per encoding, selected by validation macro-F1 (locked test reported).}
+\label{tab:best}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrrrr}
+\toprule
+\textbf{Category} & \textbf{Model} & \textbf{Val. F1 (\%)} & \textbf{Test accuracy (\%)} & \textbf{Test macro-F1 (\%)} & \textbf{Qubits} \\
+\midrule
+Classical & MobileNetV3 + RBF-SVM & 97.7 & 96.4 $\pm$ 1.7 & 96.3 $\pm$ 1.8 & -- \\
+Quantum (simulated) & QKC ZZ-full, 8 qubits & 76.7 & 64.0 $\pm$ 3.5 & 62.2 $\pm$ 5.0 & 8 \\
+Hybrid & MobileNetV3-PCA8 + QKC product-RY & 97.0 & 93.2 $\pm$ 1.1 & 93.0 $\pm$ 1.4 & 8 \\
+FRQI & FRQI 8$\times$8 (angle $\times$2) & 69.3 & 60.6 $\pm$ 1.2 & 58.3 $\pm$ 1.3 & 7 \\
+NEQR & NEQR 16$\times$16, 4-bit & 72.7 & 60.2 $\pm$ 0.4 & 56.5 $\pm$ 0.4 & 12 \\
+\bottomrule
+\end{tabular}}
+\end{table}

@@ -1,0 +1,9 @@
+protocol,encoding,seed0,seed1,seed2,mean
+V2 pixel-level kernel,FRQI,61.94,60.28,59.72,60.65
+"V3 pixel-level kernel, wider search",FRQI,59.44,55.28,57.78,57.50
+V4 patch-ensemble mixed-state kernel,FRQI,86.67,87.22,89.44,87.78
+V2 pixel-level kernel,NEQR,60.56,59.72,60.28,60.19
+"V3 pixel-level kernel, wider search",NEQR,60.56,59.72,60.28,60.19
+V4 patch-ensemble mixed-state kernel,NEQR,87.50,71.11,89.44,82.69
+reference,"classical RBF-SVM, same patches",83.61
+reference,"classical RBF-SVM, texture features",95.56

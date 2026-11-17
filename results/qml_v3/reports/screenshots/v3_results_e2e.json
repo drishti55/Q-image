@@ -1,0 +1,52 @@
+[
+ {
+  "check": "before/after table has one row per V2 baseline",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "statistics table has one row per planned comparison",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "group table lists every frozen group",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "pure-quantum tile shows the validation-selected model and its test accuracy",
+  "ok": true,
+  "detail": "PURE QUANTUM (V3) | 58.1% | 95.3% | Texture PCA-12 + QKC product-RY | selected on validation (F1 0.951) \u00b7 V2 baseline: pixel PCA-8 product-RY | Classical RBF-SVM on the same features: 95.6% | Product-RY kernels are classically computable in closed form."
+ },
+ {
+  "check": "headline tiles show the matched classical control",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "product-RY headline carries the classically-computable note",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "protocol banner shows the frozen-selection hash",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "before/after chart has a table view",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no horizontal page scroll at 390 px",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no console or page errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

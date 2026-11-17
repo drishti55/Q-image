@@ -18,6 +18,7 @@ All metrics are computed consistently to enable fair FRQI vs NEQR comparison.
 """
 
 import numpy as np
+from src.v2.paths import assert_writable as _assert_writable  # historical-results guard
 import time
 from typing import Dict, Any, Optional, Tuple
 from dataclasses import dataclass, field, asdict
@@ -138,8 +139,8 @@ class MetricsEvaluator:
         """
         mse_val = MetricsEvaluator.mse(original, reconstructed)
 
-        if mse_val < 1e-10:
-            return 100.0  # Cap PSNR at 100 dB for plotting
+        if mse_val < 1e-12:
+            return float("inf")
 
         if max_val is None:
             # Infer max value from data
@@ -307,6 +308,7 @@ class ResultsManager:
 
         fieldnames = list(rows[0].keys())
 
+        _assert_writable(filepath)
         with open(filepath, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
@@ -333,6 +335,7 @@ class ResultsManager:
             else:
                 rows.append(r)
 
+        _assert_writable(filepath)
         with open(filepath, "w") as f:
             json.dump(rows, f, indent=2, default=str)
 

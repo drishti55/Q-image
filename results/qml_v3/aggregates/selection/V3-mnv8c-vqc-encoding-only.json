@@ -1,0 +1,75 @@
+{
+ "group": "V3-mnv8c-vqc-encoding-only",
+ "selected_at": "2026-11-16T08:19:13.303231",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 1,
+ "n_eligible": 1,
+ "selected": {
+  "config_key": "V3-mnv8c-vqc-encoding-only__2532ac52d9",
+  "params": {
+   "layers": 0,
+   "optimizer": "adam",
+   "entangler": "ring",
+   "reupload": false,
+   "readout": "zall",
+   "train_quantum": true,
+   "lr": 0.05,
+   "epochs": 120,
+   "patience": 15
+  },
+  "quantum": {
+   "n_qubits": 8,
+   "n_layers": 0,
+   "optimizer": "adam",
+   "learning_rate": 0.05,
+   "shots": 0,
+   "entangler": "ring",
+   "data_reuploading": false,
+   "readout": "zall",
+   "train_quantum": true
+  },
+  "eligible": true,
+  "val_mean": 0.9404602062460122,
+  "val_std": 0.03653226259730262,
+  "experiment_ids": [
+   "V3-mnv8c-vqc-encoding-only__2532ac52d9__s0",
+   "V3-mnv8c-vqc-encoding-only__2532ac52d9__s1",
+   "V3-mnv8c-vqc-encoding-only__2532ac52d9__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-mnv8c-vqc-encoding-only__2532ac52d9",
+   "params": {
+    "layers": 0,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": false,
+    "readout": "zall",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 0,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": false,
+    "readout": "zall",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.9404602062460122,
+   "val_std": 0.03653226259730262,
+   "experiment_ids": [
+    "V3-mnv8c-vqc-encoding-only__2532ac52d9__s0",
+    "V3-mnv8c-vqc-encoding-only__2532ac52d9__s1",
+    "V3-mnv8c-vqc-encoding-only__2532ac52d9__s2"
+   ]
+  }
+ ]
+}

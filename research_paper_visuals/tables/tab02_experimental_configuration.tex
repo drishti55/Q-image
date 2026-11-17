@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Experimental configurations (Protocol V2). Grids are listed for one representative group of each experiment; the number of candidate configurations refers to that group.}
+\label{tab:config}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llllr}
+\toprule
+\textbf{Exp.} & \textbf{Model} & \textbf{Input} & \textbf{Hyper-parameter grid} & \textbf{Configs} \\
+\midrule
+E1 & FRQI state-overlap kernel + SVM & 2$\times$2--16$\times$16; $\theta$=$\pi$I/2 & C$\in$\{0.1, 1, 10, 100\} & 4 \\
+E1b & FRQI kernel, angle-scaled & 4$\times$4--16$\times$16 & angle\_scale$\in$\{2, 4, 8\}; C$\in$\{0.1, 1, 10, 100\} & 12 \\
+E2 & NEQR state-overlap kernel + SVM & 2$\times$2--16$\times$16; 2/4/8-bit & C$\in$\{0.1, 1, 10, 100\} & 4 \\
+E3 & PCA + quantum kernel (product-RY / ZZ) & 64$\times$64 $\rightarrow$ PCA k=4/6/8 & reps$\in$\{1, 2\}; bandwidth$\in$\{0.05, 0.1, 0.2, 0.5, 1\}; C$\in$\{0.1, 1, 10, 100\} & 40 \\
+E4 & PCA + variational quantum classifier & 64$\times$64 $\rightarrow$ PCA k=4/6/8 & layers$\in$\{1, 2, 3\}; optimizer$\in$\{adam, cobyla, spsa\}; reupload$\in$\{no, yes\} & 11 \\
+E5 & MobileNetV3 + PCA + QKC / VQC / classical & 576-d $\rightarrow$ PCA k=4/6/8 & bandwidth$\in$\{0.05, 0.1, 0.2, 0.5, 1\}; C$\in$\{0.1, 1, 10, 100\} & 20 \\
+E6 & PCA + RBF-SVM / LogReg (classical) & 64$\times$64 $\rightarrow$ PCA k=4/6/8 & C$\in$\{0.1, 1, 10, 100\}; gamma$\in$\{0.03, 0.1, 0.3, 1\} & 16 \\
+E7 & Small CNN (trained from scratch) & 128$\times$128 & lr$\in$\{0.0003, 0.001\} & 2 \\
+E7 & Frozen MobileNetV3 + LogReg & 224$\times$224 $\rightarrow$ 576-d & C$\in$\{0.001, 0.01, 0.1, 1, 10, 100\} & 6 \\
+E7 & Frozen MobileNetV3 + RBF-SVM & 224$\times$224 $\rightarrow$ 576-d & C$\in$\{0.1, 1, 10, 100\}; gamma$\in$\{0.0005, 0.002, 0.008\} & 12 \\
+Shots & Finite-shot kernel estimates (selected E1/E2 at 8$\times$8, E3 ZZ-full) &  & FRQI/NEQR \{100, 1,000, 10,000\}; QKC \{100, 500, 1,000, 5,000\} &  \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\footnotesize All quantum circuits are simulated exactly (statevector) on a CPU unless a shot count is stated; no quantum hardware was used.
+\end{table}

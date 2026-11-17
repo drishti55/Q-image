@@ -1,0 +1,43 @@
+{
+ "by_validation": [
+  [
+   "Classical: pixel PCA",
+   "E6-pca8-rbfsvm"
+  ],
+  [
+   "Classical: CNN features",
+   "E7-mnv3-rbfsvm"
+  ],
+  [
+   "Quantum: FRQI kernel",
+   "E1b-frqi8-qkc-scaled"
+  ],
+  [
+   "Quantum: NEQR kernel",
+   "E2-neqr16-b4-qkc"
+  ],
+  [
+   "Quantum: QKC (PCA)",
+   "E3-pca8-qkc-zz_full"
+  ],
+  [
+   "Quantum: VQC",
+   "E4-pca8-vqc"
+  ],
+  [
+   "Hybrid: CNN + QKC",
+   "E5-mnv3pca8-qkc-product_ry"
+  ],
+  [
+   "Hybrid: CNN + VQC",
+   "E5-mnv3pca6-vqc"
+  ]
+ ],
+ "best_per_category": {
+  "Classical": "E7-mnv3-rbfsvm",
+  "Quantum (simulated)": "E3-pca8-qkc-zz_full",
+  "Hybrid": "E5-mnv3pca8-qkc-product_ry",
+  "FRQI": "E1b-frqi8-qkc-scaled",
+  "NEQR": "E2-neqr16-b4-qkc"
+ }
+}

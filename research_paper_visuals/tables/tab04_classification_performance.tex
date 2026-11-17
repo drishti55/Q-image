@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Classification performance on the 360-image locked test set (mean $\pm$ s.d. over seeds 0--2). One representative per family, chosen by validation macro-F1.}
+\label{tab:performance}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrrrrrr}
+\toprule
+\textbf{Family} & \textbf{Model} & \textbf{Qubits} & \textbf{Val. F1} & \textbf{Accuracy} & \textbf{Macro-F1} & \textbf{Precision} & \textbf{Recall} \\
+\midrule
+Classical: pixel PCA & Pixel PCA-8 + RBF-SVM & -- & 76.4 & 64.8 $\pm$ 3.3 & 63.3 $\pm$ 5.5 & 64.0 $\pm$ 8.7 & 64.8 $\pm$ 3.3 \\
+Classical: CNN features & MobileNetV3 + RBF-SVM & -- & 97.7 & 96.4 $\pm$ 1.7 & 96.3 $\pm$ 1.8 & 96.9 $\pm$ 1.4 & 96.4 $\pm$ 1.7 \\
+Quantum: FRQI kernel & FRQI 8$\times$8 (angle $\times$2) & 7 & 69.3 & 60.6 $\pm$ 1.2 & 58.3 $\pm$ 1.3 & 56.9 $\pm$ 1.4 & 60.6 $\pm$ 1.2 \\
+Quantum: NEQR kernel & NEQR 16$\times$16, 4-bit & 12 & 72.7 & 60.2 $\pm$ 0.4 & 56.5 $\pm$ 0.4 & 53.8 $\pm$ 0.6 & 60.2 $\pm$ 0.4 \\
+Quantum: QKC (PCA) & QKC ZZ-full, 8 qubits & 8 & 76.7 & 64.0 $\pm$ 3.5 & 62.2 $\pm$ 5.0 & 62.8 $\pm$ 8.0 & 64.0 $\pm$ 3.5 \\
+Quantum: VQC & VQC, 8 qubits & 8 & 55.8 & 48.1 $\pm$ 1.9 & 45.0 $\pm$ 0.9 & 44.4 $\pm$ 1.2 & 48.1 $\pm$ 1.9 \\
+Hybrid: CNN + QKC & MobileNetV3-PCA8 + QKC product-RY & 8 & 97.0 & 93.2 $\pm$ 1.1 & 93.0 $\pm$ 1.4 & 94.3 $\pm$ 0.4 & 93.2 $\pm$ 1.1 \\
+Hybrid: CNN + VQC & MobileNetV3-PCA6 + VQC & 6 & 91.2 & 85.6 $\pm$ 1.3 & 84.6 $\pm$ 1.5 & 87.1 $\pm$ 0.9 & 85.6 $\pm$ 1.3 \\
+\bottomrule
+\end{tabular}}
+\end{table}

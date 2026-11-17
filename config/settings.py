@@ -13,7 +13,11 @@ from pathlib import Path
 # =============================================================================
 
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
-DATASET_PATH = PROJECT_ROOT / "NEU-DET"
+# Dataset location: explicit env override, otherwise the repository copy. No silent fallback
+# to any other machine-specific location (previously ~/Downloads/NEU-DET-2 was preferred when
+# present; that copy was verified byte-identical to ./NEU-DET on 2026-11-13).
+DATASET_PATH = Path(os.environ["QIL_DATASET_PATH"]).expanduser() if os.environ.get("QIL_DATASET_PATH") \
+    else (PROJECT_ROOT / "NEU-DET")
 TRAIN_IMAGES_PATH = DATASET_PATH / "train" / "images"
 VALIDATION_IMAGES_PATH = DATASET_PATH / "validation" / "images"
 
@@ -22,6 +26,7 @@ RESULTS_IMAGES_PATH = RESULTS_PATH / "images"
 RESULTS_CIRCUITS_PATH = RESULTS_PATH / "circuits"
 RESULTS_TABLES_PATH = RESULTS_PATH / "tables"
 RESULTS_EXPERIMENTS_PATH = RESULTS_PATH / "experiments"
+RESULTS_QML_PATH = RESULTS_PATH / "qml"
 
 DATA_SAMPLE_PATH = PROJECT_ROOT / "data" / "sample"
 

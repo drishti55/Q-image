@@ -1,0 +1,140 @@
+{
+  "experiment_id": "neqr_crazing_281_jpg_4x4",
+  "comparison_id": "paired_crazing_281_jpg_4x4",
+  "dataset": "NEU-DET",
+  "image_name": "crazing_281.jpg",
+  "ground_truth": "crazing",
+  "predicted_class": "patches",
+  "correct": false,
+  "representation": "NEQR",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "4x4",
+  "intensity_bits": 4,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 8,
+  "gate_count": 111,
+  "circuit_depth": 71,
+  "controlled_gates": 43,
+  "gate_types": {
+    "h": 4,
+    "x": 64,
+    "mcx": 43
+  },
+  "classification_metrics": {
+    "accuracy": 0.0,
+    "f1_macro": 0.0,
+    "heldout_accuracy": 0.24722222222222223,
+    "heldout_f1_macro": 0.23925956495642423,
+    "precision_macro": 0.24037109864574654,
+    "recall_macro": 0.24722222222222223,
+    "f1_weighted": 0.23925956495642425,
+    "confusion_matrix": [
+      [
+        17,
+        2,
+        34,
+        3,
+        3,
+        1
+      ],
+      [
+        12,
+        14,
+        5,
+        13,
+        7,
+        9
+      ],
+      [
+        6,
+        1,
+        9,
+        21,
+        6,
+        17
+      ],
+      [
+        8,
+        1,
+        7,
+        32,
+        2,
+        10
+      ],
+      [
+        0,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        30,
+        1,
+        2,
+        9,
+        17
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 0.38636363636363635,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.3269230769230769,
+        "support": 60
+      },
+      "inclusion": {
+        "precision": 0.12962962962962962,
+        "recall": 0.23333333333333334,
+        "f1_score": 0.16666666666666666,
+        "support": 60
+      },
+      "patches": {
+        "precision": 0.16071428571428573,
+        "recall": 0.15,
+        "f1_score": 0.15517241379310345,
+        "support": 60
+      },
+      "pitted_surface": {
+        "precision": 0.4507042253521127,
+        "recall": 0.5333333333333333,
+        "f1_score": 0.48854961832061067,
+        "support": 60
+      },
+      "rolled-in_scale": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 60
+      },
+      "scratches": {
+        "precision": 0.3148148148148148,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.2982456140350877,
+        "support": 60
+      }
+    }
+  },
+  "reconstruction_metrics": {
+    "mse": 0.00026047673971549425,
+    "psnr": 35.842310526494295,
+    "ssim": 0.9006904566248577,
+    "reconstruction_time": 3.191599535057321e-05,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAw0lEQVR4nO2aQQrCUBTEprG48wKe3XMKgqg38C8eZQST7Xweodl2u+U718V+XuyXxU7KoEBMUAYFYoIyKBATlEGBmKAMCsQEZVAgJiizc3Cjx8H3xzA/ocAMUgYFYoIyKBATlEGBmKAMCsQEZVAgJvj3BPu2ePAe7vdf/wIoEBOUQYGYoAwKxARlUCAmKIMCMUEZFIgJyuyvxYPnYj8t9qP/TxjD/IQCM0gZFIgJyqBATFAGBWKCMigQE5RBgZigTD3BBwbEB8DkY9GyAAAAAElFTkSuQmCC",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAnklEQVR4nO2RsQ3CAADDjMUDfYGvubIv8EE7IJQBe80QS368uebFdxw3u4wxAUowxgQowRgToARjTIASjDEBSjDGBCjBmOevD86bXcaYACUYYwKUYIwJUIIxJkAJxpgAJRhjApRgjAlQgjEmQAnGmAAlGGMClGCMCVCCMSZACcaYACUYYwKUYIwJUIIxJkAJxpgAJRhjApRgjAnw7wk+EnQCvYJOSzAAAAAASUVORK5CYII=",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAvElEQVR4nO2aQQrDMBDEJqr7/weXlvwgezBhCpGuA7GITgYfr1xzDPt32Nncb4f7j1DgGlIGBWKCMigQE5RBgZigDArEBGVQICZ4eoLF5v1/PODf/wAKxARlUCAmKIMCMUEZFIgJyqBATFAGBWKCMmt6HzDtv2H/DDspgwIxQRkUiAnKoEBMUAYFYoIyKBATlEGBmKDMmu737833BdP3SRkUiAnKoEBMUAYFYoIyKBATlEGBmKAMCsQE6XIC/RAIBeP1JiEAAAAASUVORK5CYII="
+  },
+  "timings": {
+    "encoding_time_s": 0.0010901669957092963,
+    "train_time_s": 7.482178083002509,
+    "predict_time_s": 0.05515908399684122,
+    "reconstruction_time_s": 3.191599535057321e-05,
+    "total_time_s": 0.060007459003827535
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:12:15.275623"
+}

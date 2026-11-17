@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{Characteristics of the NEU-DET steel-surface defect dataset and the evaluation protocol.}
+\label{tab:dataset}
+\begin{tabular}{lp{0.66\linewidth}}
+\toprule
+\textbf{Property} & \textbf{Value} \\
+\midrule
+Classes & 6 (crazing, inclusion, patches, pitted surface, rolled-in scale, scratches) \\
+Images & 1800 grayscale, 200$\times$200 px \\
+Train-folder pool & 1440 (240 per class) \\
+Locked test set & 360 (NEU validation folder, 60 per class) \\
+Internal split (per seed) & 1080 train / 360 validation (group-blocked, 3 blocks of 20 per class) \\
+Seeds & 0, 1, 2 \\
+Preprocessing & grayscale $\rightarrow$ bilinear resize to s$\times$s $\rightarrow$ /255 \\
+Model selection & mean validation macro-F1 over 3 seeds; test evaluated once per selected configuration \\
+\bottomrule
+\end{tabular}
+\end{table}

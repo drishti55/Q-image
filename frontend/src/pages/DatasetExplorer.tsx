@@ -148,7 +148,7 @@ export default function DatasetExplorer() {
             </div>
             <div className="flex justify-between items-center mt-4">
               <span className="text-sm text-slate-400">200 × 200 px • {selectedImage.split} split</span>
-              <a href={`/quantum?image=${selectedImage.name}&class=${selectedImage.defect_class}`}
+              <a href={`/historical-v0/quantum?image=${selectedImage.name}&class=${selectedImage.defect_class}`}
                 className="px-4 py-2 bg-blue-600/20 text-blue-400 border border-blue-500/50 rounded-lg text-sm font-medium hover:bg-blue-600/30 transition-colors">
                 Open in Quantum Lab →
               </a>

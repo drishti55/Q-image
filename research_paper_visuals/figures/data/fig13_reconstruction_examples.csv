@@ -1,0 +1,16 @@
+image,record,mode,mse_vs_original_png
+train/images/crazing/crazing_12.jpg,R-FRQI-16x16,statevector,1.88331903325716e-27
+train/images/crazing/crazing_12.jpg,R-FRQI-16x16,shots10000,0.0030677146651420504
+train/images/crazing/crazing_12.jpg,R-FRQI-16x16,shots100000,0.0002769388105643994
+train/images/crazing/crazing_12.jpg,R-NEQR-16x16-b4,statevector,0.00039257737408688936
+train/images/crazing/crazing_12.jpg,R-NEQR-16x16-b2,statevector,0.003208141099577084
+train/images/patches/patches_108.jpg,R-FRQI-16x16,statevector,3.630467440727043e-27
+train/images/patches/patches_108.jpg,R-FRQI-16x16,shots10000,0.003186766732839949
+train/images/patches/patches_108.jpg,R-FRQI-16x16,shots100000,0.0002759254129851831
+train/images/patches/patches_108.jpg,R-NEQR-16x16-b4,statevector,0.0004053128604382929
+train/images/patches/patches_108.jpg,R-NEQR-16x16-b2,statevector,0.009410623317954631
+train/images/rolled-in_scale/rolled-in_scale_204.jpg,R-FRQI-16x16,statevector,3.051852218629019e-27
+train/images/rolled-in_scale/rolled-in_scale_204.jpg,R-FRQI-16x16,shots10000,0.0026065255167287043
+train/images/rolled-in_scale/rolled-in_scale_204.jpg,R-FRQI-16x16,shots100000,0.0002710691282634311
+train/images/rolled-in_scale/rolled-in_scale_204.jpg,R-NEQR-16x16-b4,statevector,0.0003373702422145328
+train/images/rolled-in_scale/rolled-in_scale_204.jpg,R-NEQR-16x16-b2,statevector,0.015186226451364863

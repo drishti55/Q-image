@@ -1,0 +1,140 @@
+{
+  "experiment_id": "neqr_scratches_211_jpg_4x4",
+  "comparison_id": "paired_scratches_211_jpg_4x4",
+  "dataset": "NEU-DET",
+  "image_name": "scratches_211.jpg",
+  "ground_truth": "scratches",
+  "predicted_class": "inclusion",
+  "correct": false,
+  "representation": "NEQR",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "4x4",
+  "intensity_bits": 4,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 8,
+  "gate_count": 97,
+  "circuit_depth": 57,
+  "controlled_gates": 29,
+  "gate_types": {
+    "h": 4,
+    "x": 64,
+    "mcx": 29
+  },
+  "classification_metrics": {
+    "accuracy": 0.0,
+    "f1_macro": 0.0,
+    "heldout_accuracy": 0.24722222222222223,
+    "heldout_f1_macro": 0.23925956495642423,
+    "precision_macro": 0.24037109864574654,
+    "recall_macro": 0.24722222222222223,
+    "f1_weighted": 0.23925956495642425,
+    "confusion_matrix": [
+      [
+        17,
+        2,
+        34,
+        3,
+        3,
+        1
+      ],
+      [
+        12,
+        14,
+        5,
+        13,
+        7,
+        9
+      ],
+      [
+        6,
+        1,
+        9,
+        21,
+        6,
+        17
+      ],
+      [
+        8,
+        1,
+        7,
+        32,
+        2,
+        10
+      ],
+      [
+        0,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        30,
+        1,
+        2,
+        9,
+        17
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 0.38636363636363635,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.3269230769230769,
+        "support": 60
+      },
+      "inclusion": {
+        "precision": 0.12962962962962962,
+        "recall": 0.23333333333333334,
+        "f1_score": 0.16666666666666666,
+        "support": 60
+      },
+      "patches": {
+        "precision": 0.16071428571428573,
+        "recall": 0.15,
+        "f1_score": 0.15517241379310345,
+        "support": 60
+      },
+      "pitted_surface": {
+        "precision": 0.4507042253521127,
+        "recall": 0.5333333333333333,
+        "f1_score": 0.48854961832061067,
+        "support": 60
+      },
+      "rolled-in_scale": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 60
+      },
+      "scratches": {
+        "precision": 0.3148148148148148,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.2982456140350877,
+        "support": 60
+      }
+    }
+  },
+  "reconstruction_metrics": {
+    "mse": 0.00043925413302575917,
+    "psnr": 33.57284143453985,
+    "ssim": 0.7536308105657608,
+    "reconstruction_time": 4.679099947679788e-05,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAu0lEQVR4nO2auxGDUADDhMMIGSr7r5I2vw3iIoVTSK2B06HqcRw3vnMt+73sR9nDmCiACcZEAUwwJgpggjFRABOMiQKYYEwUwARjzku54PXj+b89P4yJAphgTBTABGOiACYYEwUwwZgogAnGRAFMMOZsDd5lb/f7faARxkQBTDAmCmCCMVEAE4yJAphgTBTABGOiAGPO9n9A259lf/z7G4gCmGBMFMAEY6IAJhgTBTDBmCiACcZEAUzAlg/USghW4vgwKgAAAABJRU5ErkJggg==",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAqElEQVR4nO2bwQ0CMRDEjHUN0BP9t0ILdMC9okHCfkeJtf5uHi++8+QsHr4/gVtkjAlQgjEmQAnGmAAlGGMClGCMCVCCMSZACcaYACUYYwKUYIwJUIIxJkAJxpgAJRhjAvx7guv0fsDPT8AEKMEYE6AEY0yAEowxAUowxgQowRgToARjrvfNgf4XnMbjLyRwg4wxAUowxgQowRgToARjTIASjDEBSsCWD46SAmrhN0GWAAAAAElFTkSuQmCC",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAsUlEQVR4nO2aOw4DMRSE2Mne/8b53CAuoogG2mmQqJ7l6+Y7j8P+Ouzvwz5klgAlkFkClEBmCVACmSVACWSWACWQWQKUQOb+9/3/POxDZglQApklQAlklgAlkFkClEBmCVACmSVACWTu68f7//R+cGLILAFKILMEKIHMEqAEMkuAEsgsAUogswQogcz96/1/+n9wen8YMkuAEsgsAUogswQogcwSoAQyS4ASyCwBSoDLB5LuCgapIf1XAAAAAElFTkSuQmCC"
+  },
+  "timings": {
+    "encoding_time_s": 0.0012065840055583976,
+    "train_time_s": 7.482178083002509,
+    "predict_time_s": 0.050667374998738524,
+    "reconstruction_time_s": 4.679099947679788e-05,
+    "total_time_s": 0.05738737500360003
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:11:56.201293"
+}

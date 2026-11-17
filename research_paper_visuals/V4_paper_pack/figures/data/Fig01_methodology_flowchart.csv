@@ -1,0 +1,7 @@
+step,text
+1,"Grayscale, resize to S×S (+ optional contrast stretch)"
+2,"Cut into p×p patches, stride s (P patches)"
+3,Encode each patch as FRQI or NEQR state |ψk⟩ (Qiskit circuit)
+4,Mixed state ρ = (1/P) Σk |ψk⟩⟨ψk|
+5,"Kernel K(A,B) = Tr(ρA ρB) (swap test)"
+6,SVM on K → defect class

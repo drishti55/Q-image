@@ -1,0 +1,20 @@
+{
+ "id": "R-NEQR-4x4-b2",
+ "kind": "quantum_whole",
+ "representation": "NEQR",
+ "resolution": 4,
+ "bits": 2,
+ "shots": [
+  100,
+  1000,
+  10000,
+  100000
+ ],
+ "n_images": 1800,
+ "execution": "classical CPU simulation",
+ "simulator": "qiskit-aer statevector + multinomial sampling",
+ "encoder": "src/neqr/encoder.py::NEQREncoder",
+ "decoder": "src/reconstruction/reconstructor.py",
+ "shots_note": "shots per image",
+ "compute_seconds": 9.349416790995747
+}

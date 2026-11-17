@@ -27,3 +27,16 @@ htmlcov/
 # Project specific caches/temp
 *.log
 scratch/
+
+# Large / regenerable research artefacts (kept locally, not in git)
+results/qml_v*/cache/
+results/qml_v*/experiments/*/model/
+*.npz
+*.joblib
+*.zip
+results/qml_v2/logs/historical_verification.jsonl
+# NEU-DET images: download from the original source (see README)
+NEU-DET/
+# V2 / V3 per-run folders are summarised in results/qml_v{2,3}/aggregates and reports (regenerable with scripts/)
+results/qml_v2/experiments/
+results/qml_v3/experiments/

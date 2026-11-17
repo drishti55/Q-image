@@ -1,0 +1,47 @@
+{
+  "experiment_id": "neqr_crazing_103_jpg_4x4",
+  "comparison_id": "paired_crazing_103_jpg_4x4",
+  "dataset": "NEU-DET",
+  "image_name": "crazing_103.jpg",
+  "ground_truth": "crazing",
+  "predicted_class": "crazing",
+  "correct": true,
+  "representation": "NEQR",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "4x4",
+  "intensity_bits": 4,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 8,
+  "gate_count": 103,
+  "circuit_depth": 63,
+  "controlled_gates": 35,
+  "gate_types": {
+    "h": 4,
+    "x": 64,
+    "mcx": 35
+  },
+  "classification_metrics": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0
+  },
+  "reconstruction_metrics": {
+    "mse": 0.0003344867358708188,
+    "psnr": 34.75621099577254,
+    "ssim": 0.932586065581094,
+    "reconstruction_time": 3.962500341003761e-05,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAw0lEQVR4nO2bMQoCQRTFso/pvT94Mm8haKEieIP9xbK8wqR9M0wg9WxX9rkM+2vYb8MeykQBTFAmCmCCMlEAE5SJApigTBTABGWiACYos6YG72H/DPtj2EOZKIAJykQBTFAmCmCCMlEAE5SJApigTBTABGXWczjwPdhwHbx/Ojn/CQX2CWWiACYoEwUwQZkogAnKRAFMUCYKYIJ/T7Du04Fh3w7+PwhlogAmKBMFMEGZKIAJykQBTFAmCmCCMlEAE9DlBxmkClb0XOrsAAAAAElFTkSuQmCC",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAsklEQVR4nO3bwYnDQADFUEWkgZSforYWt5AO4oMxfyF6VzOD4N8G/Hjz3Ytr/k6+y5gF0ARjFkATjFkATTBmATTBmAXQBGMWQBOMPa9ecFw8L2MWQBOMWQBNMGYBNMGYBdAEYxZAE4xZAE3w398HjpsDvPn+Ak7JmAXQBGMWQBOMWQBNMGYBNMGYBdAEY/58wPO4+f+CJjgjYxZAE4xZAE0wZgE0wZgF0ARjFkATjFkAYx+AkQVb9MvJEAAAAABJRU5ErkJggg==",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAvUlEQVR4nO2bMQrDQBDE5hQH8v/32kl+4C2MmUCkdjhOnCoXXo+ccwz7c9i5uN8O91+hwDmkDArEBGVQICYogwIxQRkUiAnKoEBM8O8JtslgXdyPX38BFIgJyqBATFAGBWKCMigQE5RBgZigDArEBGW26ft+v3jBdJ6UQYGYoAwKxARlUCAmKIMCMUEZFIgJyqBATFBmTf8XvIf9M+yvYSdlUCAmKIMCMUEZFIgJyqBATFAGBWKCMigQE6TLF+uFBwzs8t27AAAAAElFTkSuQmCC"
+  },
+  "timings": {
+    "encoding_time_s": 0.0009537919977447018,
+    "train_time_s": 5.77306483299617,
+    "predict_time_s": 0.04953974999807542,
+    "reconstruction_time_s": 3.962500341003761e-05,
+    "total_time_s": 0.054174624994629994
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:00:11.610725"
+}

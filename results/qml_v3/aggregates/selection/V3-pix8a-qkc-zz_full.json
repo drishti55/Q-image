@@ -1,0 +1,457 @@
+{
+ "group": "V3-pix8a-qkc-zz_full",
+ "selected_at": "2026-11-16T08:17:28.951972",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 15,
+ "n_eligible": 15,
+ "selected": {
+  "config_key": "V3-pix8a-qkc-zz_full__279dd3ac1d",
+  "params": {
+   "feature_map": "zz_full",
+   "reps": 1,
+   "bandwidth": 1.0,
+   "C": 100.0,
+   "shots": 0
+  },
+  "quantum": {
+   "n_qubits": 8,
+   "n_layers": 1,
+   "shots": 0,
+   "optimizer": null,
+   "learning_rate": null,
+   "feature_map": "zz_full",
+   "bandwidth": 1.0,
+   "kernel": "fidelity"
+  },
+  "eligible": true,
+  "val_mean": 0.7673286128206298,
+  "val_std": 0.06343958442626435,
+  "experiment_ids": [
+   "V3-pix8a-qkc-zz_full__279dd3ac1d__s0",
+   "V3-pix8a-qkc-zz_full__279dd3ac1d__s1",
+   "V3-pix8a-qkc-zz_full__279dd3ac1d__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__39d49d6920",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "C": 10.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7536150001512754,
+   "val_std": 0.04919800888422279,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__39d49d6920__s0",
+    "V3-pix8a-qkc-zz_full__39d49d6920__s1",
+    "V3-pix8a-qkc-zz_full__39d49d6920__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__016fd0660c",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "C": 100.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7582153687609686,
+   "val_std": 0.043170446241937034,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__016fd0660c__s0",
+    "V3-pix8a-qkc-zz_full__016fd0660c__s1",
+    "V3-pix8a-qkc-zz_full__016fd0660c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__733e2a6e90",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "C": 1000.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7582153687609686,
+   "val_std": 0.043170446241937034,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__733e2a6e90__s0",
+    "V3-pix8a-qkc-zz_full__733e2a6e90__s1",
+    "V3-pix8a-qkc-zz_full__733e2a6e90__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__234449da79",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "C": 10.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7673066816760247,
+   "val_std": 0.06344766180052243,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__234449da79__s0",
+    "V3-pix8a-qkc-zz_full__234449da79__s1",
+    "V3-pix8a-qkc-zz_full__234449da79__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__279dd3ac1d",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "C": 100.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7673286128206298,
+   "val_std": 0.06343958442626435,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__279dd3ac1d__s0",
+    "V3-pix8a-qkc-zz_full__279dd3ac1d__s1",
+    "V3-pix8a-qkc-zz_full__279dd3ac1d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__e35f541832",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "C": 1000.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7673286128206298,
+   "val_std": 0.06343958442626435,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__e35f541832__s0",
+    "V3-pix8a-qkc-zz_full__e35f541832__s1",
+    "V3-pix8a-qkc-zz_full__e35f541832__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__0510d79f88",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.5,
+    "C": 10.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.5,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7505190810070094,
+   "val_std": 0.04986686646944573,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__0510d79f88__s0",
+    "V3-pix8a-qkc-zz_full__0510d79f88__s1",
+    "V3-pix8a-qkc-zz_full__0510d79f88__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__a61d8f9fec",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.5,
+    "C": 100.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.5,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7503361076038386,
+   "val_std": 0.05006295397774058,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__a61d8f9fec__s0",
+    "V3-pix8a-qkc-zz_full__a61d8f9fec__s1",
+    "V3-pix8a-qkc-zz_full__a61d8f9fec__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__ff82c6322e",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.5,
+    "C": 1000.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.5,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7503361076038386,
+   "val_std": 0.05006295397774058,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__ff82c6322e__s0",
+    "V3-pix8a-qkc-zz_full__ff82c6322e__s1",
+    "V3-pix8a-qkc-zz_full__ff82c6322e__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__b2c9cb37eb",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "C": 10.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7160879941605205,
+   "val_std": 0.040187742642576366,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__b2c9cb37eb__s0",
+    "V3-pix8a-qkc-zz_full__b2c9cb37eb__s1",
+    "V3-pix8a-qkc-zz_full__b2c9cb37eb__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__4a5c48fdcd",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "C": 100.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7159562045552582,
+   "val_std": 0.04340002983067869,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__4a5c48fdcd__s0",
+    "V3-pix8a-qkc-zz_full__4a5c48fdcd__s1",
+    "V3-pix8a-qkc-zz_full__4a5c48fdcd__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__e7aa4a1005",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "C": 1000.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.7159562045552582,
+   "val_std": 0.04340002983067869,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__e7aa4a1005__s0",
+    "V3-pix8a-qkc-zz_full__e7aa4a1005__s1",
+    "V3-pix8a-qkc-zz_full__e7aa4a1005__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__1efa81e10d",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 3.0,
+    "C": 10.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 3.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.5780975082738128,
+   "val_std": 0.01914437700835383,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__1efa81e10d__s0",
+    "V3-pix8a-qkc-zz_full__1efa81e10d__s1",
+    "V3-pix8a-qkc-zz_full__1efa81e10d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__6c4926079f",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 3.0,
+    "C": 100.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 3.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.5780975082738128,
+   "val_std": 0.01914437700835383,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__6c4926079f__s0",
+    "V3-pix8a-qkc-zz_full__6c4926079f__s1",
+    "V3-pix8a-qkc-zz_full__6c4926079f__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pix8a-qkc-zz_full__eb027bc4ba",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 3.0,
+    "C": 1000.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 3.0,
+    "kernel": "fidelity"
+   },
+   "eligible": true,
+   "val_mean": 0.5780975082738128,
+   "val_std": 0.01914437700835383,
+   "experiment_ids": [
+    "V3-pix8a-qkc-zz_full__eb027bc4ba__s0",
+    "V3-pix8a-qkc-zz_full__eb027bc4ba__s1",
+    "V3-pix8a-qkc-zz_full__eb027bc4ba__s2"
+   ]
+  }
+ ]
+}

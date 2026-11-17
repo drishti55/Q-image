@@ -1,0 +1,39 @@
+{
+ "experiment_code": "E4",
+ "group": "E4-pca8-vqc",
+ "model_name": "VQC (adam, L=2, re-upload)",
+ "family": "variational_quantum",
+ "family_label": "Variational quantum (simulated)",
+ "compute_type": "hybrid",
+ "feature_extraction": "64x64 pixels -> PCA(8) -> MinMax[0,pi] (train-fitted)",
+ "encoding": "RY angle encoding",
+ "params": {
+  "layers": 2,
+  "optimizer": "adam",
+  "entangler": "ring",
+  "reupload": true,
+  "train_quantum": true
+ },
+ "quantum": {
+  "n_qubits": 8,
+  "n_layers": 2,
+  "optimizer": "adam",
+  "learning_rate": 0.05,
+  "shots": 0,
+  "entangler": "ring",
+  "data_reuploading": true,
+  "train_quantum": true
+ },
+ "provider": {
+  "name": "pixels64-pca8-angle",
+  "input": "64x64 grayscale pixels",
+  "pca_k": 8,
+  "view": "angle",
+  "fit": "train split only"
+ },
+ "seed": 2,
+ "split_id": "split-s2-cbd05190d5",
+ "dataset_manifest_id": "neu-5625b937479b",
+ "protocol": "V2 locked-test (validation folder) + group-blocked train/val",
+ "notes": "Quantum: RY encoding + trainable RY/RZ layers + CNOT ring, exact expectation values (simulated). Classical: 6 per-class scales + 6 biases on the 6 expectation values."
+}

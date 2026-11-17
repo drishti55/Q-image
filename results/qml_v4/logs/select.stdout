@@ -1,0 +1,6 @@
+# start v4_select: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+== group V4-frqi-p4: 48 configs x 3 seeds
+== group V4-frqi-p8: 72 configs x 3 seeds
+== group V4-neqr-p2: 48 configs x 3 seeds
+== group V4-neqr-p4: 48 configs x 3 seeds
+== group V4-patchmom-rbfsvm: 72 configs x 3 seeds

@@ -1,0 +1,121 @@
+{
+ "group": "E5-mnv3pca6-vqc",
+ "selected_at": "2026-11-14T20:16:35.397455",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 3,
+ "n_eligible": 3,
+ "selected": {
+  "config_key": "E5-mnv3pca6-vqc__283b6918c7",
+  "params": {
+   "layers": 3,
+   "optimizer": "adam",
+   "entangler": "ring",
+   "reupload": false,
+   "train_quantum": true
+  },
+  "quantum": {
+   "n_qubits": 6,
+   "n_layers": 3,
+   "optimizer": "adam",
+   "learning_rate": 0.05,
+   "shots": 0,
+   "entangler": "ring",
+   "data_reuploading": false,
+   "train_quantum": true
+  },
+  "eligible": true,
+  "val_mean": 0.9115970188829751,
+  "val_std": 0.04291151880478451,
+  "experiment_ids": [
+   "E5-mnv3pca6-vqc__283b6918c7__s0",
+   "E5-mnv3pca6-vqc__283b6918c7__s1",
+   "E5-mnv3pca6-vqc__283b6918c7__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E5-mnv3pca6-vqc__26f7b58b7b",
+   "params": {
+    "layers": 1,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": false,
+    "train_quantum": true
+   },
+   "quantum": {
+    "n_qubits": 6,
+    "n_layers": 1,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": false,
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.7634936403394494,
+   "val_std": 0.06790039280804203,
+   "experiment_ids": [
+    "E5-mnv3pca6-vqc__26f7b58b7b__s0",
+    "E5-mnv3pca6-vqc__26f7b58b7b__s1",
+    "E5-mnv3pca6-vqc__26f7b58b7b__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca6-vqc__f5a8df54cd",
+   "params": {
+    "layers": 2,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": false,
+    "train_quantum": true
+   },
+   "quantum": {
+    "n_qubits": 6,
+    "n_layers": 2,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": false,
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.857700370786371,
+   "val_std": 0.06382473502861599,
+   "experiment_ids": [
+    "E5-mnv3pca6-vqc__f5a8df54cd__s0",
+    "E5-mnv3pca6-vqc__f5a8df54cd__s1",
+    "E5-mnv3pca6-vqc__f5a8df54cd__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca6-vqc__283b6918c7",
+   "params": {
+    "layers": 3,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": false,
+    "train_quantum": true
+   },
+   "quantum": {
+    "n_qubits": 6,
+    "n_layers": 3,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": false,
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.9115970188829751,
+   "val_std": 0.04291151880478451,
+   "experiment_ids": [
+    "E5-mnv3pca6-vqc__283b6918c7__s0",
+    "E5-mnv3pca6-vqc__283b6918c7__s1",
+    "E5-mnv3pca6-vqc__283b6918c7__s2"
+   ]
+  }
+ ]
+}

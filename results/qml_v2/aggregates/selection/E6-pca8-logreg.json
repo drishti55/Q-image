@@ -1,0 +1,114 @@
+{
+ "group": "E6-pca8-logreg",
+ "selected_at": "2026-11-13T16:04:53.636009",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 6,
+ "n_eligible": 6,
+ "selected": {
+  "config_key": "E6-pca8-logreg__671aa6f5f9",
+  "params": {
+   "C": 10.0
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.4611120640514623,
+  "val_std": 0.047215897835441965,
+  "experiment_ids": [
+   "E6-pca8-logreg__671aa6f5f9__s0",
+   "E6-pca8-logreg__671aa6f5f9__s1",
+   "E6-pca8-logreg__671aa6f5f9__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E6-pca8-logreg__dda683dc36",
+   "params": {
+    "C": 0.001
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.31769674027122474,
+   "val_std": 0.020510771886868576,
+   "experiment_ids": [
+    "E6-pca8-logreg__dda683dc36__s0",
+    "E6-pca8-logreg__dda683dc36__s1",
+    "E6-pca8-logreg__dda683dc36__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca8-logreg__6196dcb00f",
+   "params": {
+    "C": 0.01
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.4021950845617921,
+   "val_std": 0.04264094606011429,
+   "experiment_ids": [
+    "E6-pca8-logreg__6196dcb00f__s0",
+    "E6-pca8-logreg__6196dcb00f__s1",
+    "E6-pca8-logreg__6196dcb00f__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca8-logreg__43b93d7b4b",
+   "params": {
+    "C": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.44311257356989464,
+   "val_std": 0.039224694243565145,
+   "experiment_ids": [
+    "E6-pca8-logreg__43b93d7b4b__s0",
+    "E6-pca8-logreg__43b93d7b4b__s1",
+    "E6-pca8-logreg__43b93d7b4b__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca8-logreg__0644e01c65",
+   "params": {
+    "C": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.4593811078985519,
+   "val_std": 0.04680475604260676,
+   "experiment_ids": [
+    "E6-pca8-logreg__0644e01c65__s0",
+    "E6-pca8-logreg__0644e01c65__s1",
+    "E6-pca8-logreg__0644e01c65__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca8-logreg__671aa6f5f9",
+   "params": {
+    "C": 10.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.4611120640514623,
+   "val_std": 0.047215897835441965,
+   "experiment_ids": [
+    "E6-pca8-logreg__671aa6f5f9__s0",
+    "E6-pca8-logreg__671aa6f5f9__s1",
+    "E6-pca8-logreg__671aa6f5f9__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca8-logreg__6cdc7e9903",
+   "params": {
+    "C": 100.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.4611120640514623,
+   "val_std": 0.047215897835441965,
+   "experiment_ids": [
+    "E6-pca8-logreg__6cdc7e9903__s0",
+    "E6-pca8-logreg__6cdc7e9903__s1",
+    "E6-pca8-logreg__6cdc7e9903__s2"
+   ]
+  }
+ ]
+}

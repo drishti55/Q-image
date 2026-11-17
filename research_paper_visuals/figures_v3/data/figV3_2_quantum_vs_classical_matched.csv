@@ -1,0 +1,9 @@
+features,quantum_group,quantum_acc,classical_group,classical_acc,diff_pp,p_holm
+pix8a,V3-pix8a-qkc-zz_full,63.98,V3-pix8a-rbfsvm,60.93,3.06,0.2540
+pix8c,V3-pix8c-qkc-product_ry,56.39,V3-pix8c-rbfsvm,60.74,-4.35,0.0949
+pix12c,V3-pix12c-qkc-product_ry,63.70,V3-pix12c-rbfsvm,66.11,-2.41,0.0196
+pixn8c,V3-pixn8c-qkc-product_ry,47.96,V3-pixn8c-rbfsvm,49.07,-1.11,1.0000
+tex8c,V3-tex8c-qkc-product_ry,93.06,V3-tex8c-rbfsvm,93.24,-0.19,1.0000
+tex12c,V3-tex12c-qkc-product_ry,95.28,V3-tex12c-rbfsvm,95.56,-0.28,1.0000
+mnv8c,V3-mnv8c-qkc-product_ry,91.30,V3-mnv8c-rbfsvm,90.65,0.65,1.0000
+mnv12c,V3-mnv12c-qkc-product_ry,91.20,V3-mnv12c-rbfsvm,92.22,-1.02,1.0000

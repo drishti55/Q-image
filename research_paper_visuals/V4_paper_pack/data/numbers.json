@@ -1,0 +1,313 @@
+{
+ "dataset": {
+  "n": 1800,
+  "train": 1080,
+  "val": 360,
+  "test": 360,
+  "classes": 6,
+  "strategy": "group-blocked (blocks of 20 indices), 3 val blocks/class"
+ },
+ "search": {
+  "configs": 288,
+  "runs": 864,
+  "failed": 0
+ },
+ "illustration": {
+  "diag_mean": 0.9324602882067362,
+  "offdiag_mean": 0.8339288194974264,
+  "diag_is_row_max": 5
+ },
+ "per_image": {
+  "n_models": 163,
+  "never_correct": 0,
+  "always_correct": 0,
+  "median_pct": 66.87116564417178,
+  "hardest_class": "rolled-in_scale",
+  "easiest_class": "patches"
+ },
+ "frqi": {
+  "group": "V4-frqi-p8",
+  "acc": "87.8 \u00b1 1.5",
+  "f1": "87.5 \u00b1 1.6",
+  "val": "88.0",
+  "seeds": [
+   "86.7",
+   "87.2",
+   "89.4"
+  ],
+  "qubits": 7,
+  "params": {
+   "representation": "FRQI",
+   "image_size": 64,
+   "patch": 8,
+   "stride": 4,
+   "norm": "stretch",
+   "C": 1000.0,
+   "angle_scale": 4.0
+  },
+  "patches": 225
+ },
+ "neqr": {
+  "group": "V4-neqr-p4",
+  "acc": "82.7 \u00b1 10.1",
+  "f1": "80.4 \u00b1 13.5",
+  "val": "89.2",
+  "seeds": [
+   "87.5",
+   "71.1",
+   "89.4"
+  ],
+  "qubits": 8,
+  "params": {
+   "representation": "NEQR",
+   "image_size": 128,
+   "patch": 4,
+   "stride": 4,
+   "norm": "none",
+   "C": 1000.0,
+   "bits": 4
+  },
+  "patches": 1024,
+  "rolled_correct": 118,
+  "rolled_correct_frqi": 178
+ },
+ "others": {
+  "V4-frqi-p4": "85.3 \u00b1 1.7",
+  "V4-frqi-p8": "87.8 \u00b1 1.5",
+  "V4-neqr-p2": "81.5 \u00b1 10.6",
+  "V4-neqr-p4": "82.7 \u00b1 10.1",
+  "V4-patchmom-rbfsvm": "83.6 \u00b1 0.3"
+ },
+ "refs": {
+  "E1b-frqi8-qkc-scaled": "60.6 \u00b1 1.2",
+  "E2-neqr16-b4-qkc": "60.2 \u00b1 0.4",
+  "V3-frqi8": "57.5 \u00b1 2.1",
+  "V3-neqr16": "60.2 \u00b1 0.4",
+  "V3-tex12c-rbfsvm": "95.6 \u00b1 2.2"
+ },
+ "xp": {
+  "V2|FRQI, whole image (pixel kernel)": "60.6 \u00b1 1.2",
+  "V2|NEQR, whole image (pixel kernel)": "60.2 \u00b1 0.4",
+  "V2|ZZ-feature-map kernel on pixel PCA-8": "64.0 \u00b1 3.5",
+  "V2|Variational classifier (VQC) on pixel PCA-8": "48.1 \u00b1 1.9",
+  "V2|Classical RBF-SVM on pixel PCA-8": "64.8 \u00b1 3.3",
+  "V3|ZZ-feature-map kernel on texture PCA-8": "93.0 \u00b1 3.0",
+  "V3|VQC on texture PCA-8": "73.4 \u00b1 3.8",
+  "V3|Classical RBF-SVM on texture PCA-12": "95.6 \u00b1 2.2",
+  "V4|FRQI patch-ensemble kernel (8\u00d78)": "87.8 \u00b1 1.5",
+  "V4|NEQR patch-ensemble kernel (4\u00d74)": "82.7 \u00b1 10.1",
+  "V4|Classical RBF-SVM on the same patches": "83.6 \u00b1 0.3"
+ },
+ "cmp": [
+  {
+   "name": "V4 FRQI vs V2 FRQI (E1b-frqi8-qkc-scaled)",
+   "diff": "+27.1",
+   "ci": "[+21.7, +32.7]",
+   "p": "< 0.001",
+   "sig": true
+  },
+  {
+   "name": "V4 FRQI vs V3 FRQI (V3-frqi8)",
+   "diff": "+30.3",
+   "ci": "[+25.1, +35.4]",
+   "p": "< 0.001",
+   "sig": true
+  },
+  {
+   "name": "V4 NEQR vs V2 NEQR (E2-neqr16-b4-qkc)",
+   "diff": "+22.5",
+   "ci": "[+18.5, +26.7]",
+   "p": "< 0.001",
+   "sig": true
+  },
+  {
+   "name": "V4 FRQI vs V4 NEQR",
+   "diff": "+5.1",
+   "ci": "[+1.1, +9.0]",
+   "p": "= 0.045",
+   "sig": true
+  },
+  {
+   "name": "V4 FRQI vs classical patch-moment RBF-SVM",
+   "diff": "+4.2",
+   "ci": "[+0.5, +7.7]",
+   "p": "= 0.060",
+   "sig": false
+  },
+  {
+   "name": "V4 NEQR vs classical patch-moment RBF-SVM",
+   "diff": "-0.9",
+   "ci": "[-4.9, +3.1]",
+   "p": "= 0.678",
+   "sig": false
+  },
+  {
+   "name": "V4 FRQI vs classical texture RBF-SVM (V3-tex12c-rbfsvm)",
+   "diff": "-7.8",
+   "ci": "[-10.9, -4.7]",
+   "p": "< 0.001",
+   "sig": true
+  },
+  {
+   "name": "V4 NEQR vs classical texture RBF-SVM (V3-tex12c-rbfsvm)",
+   "diff": "-12.9",
+   "ci": "[-15.8, -10.0]",
+   "p": "< 0.001",
+   "sig": true
+  }
+ ],
+ "recon": {
+  "n": 1800,
+  "methods": 20,
+  "frqi_exact_all": true,
+  "R-FRQI-2x2|statevector": 5.6750468204340495e-33,
+  "R-FRQI-2x2|shots100": 0.004683032610773351,
+  "R-FRQI-2x2|shots1000": 0.0004240212965742549,
+  "R-FRQI-2x2|shots10000": 3.898263144209395e-05,
+  "R-FRQI-2x2|shots100000": 4.090682737288611e-06,
+  "R-FRQI-4x4|statevector": 1.6344538368640583e-30,
+  "R-FRQI-4x4|shots100": 0.03259032941060027,
+  "R-FRQI-4x4|shots1000": 0.0017283941607128986,
+  "R-FRQI-4x4|shots10000": 0.00016582877665296218,
+  "R-FRQI-4x4|shots100000": 1.6411950447024194e-05,
+  "R-FRQI-8x8|statevector": 2.8999833031291836e-30,
+  "R-FRQI-8x8|shots100": 0.1569891481023393,
+  "R-FRQI-8x8|shots1000": 0.008663223683836608,
+  "R-FRQI-8x8|shots10000": 0.0006759701465892012,
+  "R-FRQI-8x8|shots100000": 6.572935510566402e-05,
+  "R-FRQI-16x16|statevector": 3.1075397565978193e-27,
+  "R-FRQI-16x16|shots100": 0.2527857716905428,
+  "R-FRQI-16x16|shots1000": 0.06398957873730711,
+  "R-FRQI-16x16|shots10000": 0.002921213375915681,
+  "R-FRQI-16x16|shots100000": 0.0002639551431997025,
+  "R-NEQR-2x2-b2|statevector": 0.009013311119654832,
+  "R-NEQR-2x2-b2|shots100": 0.009013311119654832,
+  "R-NEQR-2x2-b2|shots1000": 0.009013311119654832,
+  "R-NEQR-2x2-b2|shots10000": 0.009013311119654832,
+  "R-NEQR-2x2-b2|shots100000": 0.009013311119654832,
+  "R-NEQR-2x2-b4|statevector": 0.0003677410397710282,
+  "R-NEQR-2x2-b4|shots100": 0.0003677410397710282,
+  "R-NEQR-2x2-b4|shots1000": 0.0003677410397710282,
+  "R-NEQR-2x2-b4|shots10000": 0.0003677410397710282,
+  "R-NEQR-2x2-b4|shots100000": 0.0003677410397710282,
+  "R-NEQR-2x2-b8|statevector": 0.0,
+  "R-NEQR-2x2-b8|shots100": 0.0,
+  "R-NEQR-2x2-b8|shots1000": 0.0,
+  "R-NEQR-2x2-b8|shots10000": 0.0,
+  "R-NEQR-2x2-b8|shots100000": 0.0,
+  "R-NEQR-4x4-b2|statevector": 0.008971768336964414,
+  "R-NEQR-4x4-b2|shots100": 0.009409631445170659,
+  "R-NEQR-4x4-b2|shots1000": 0.008971768336964414,
+  "R-NEQR-4x4-b2|shots10000": 0.008971768336964414,
+  "R-NEQR-4x4-b2|shots100000": 0.008971768336964414,
+  "R-NEQR-4x4-b4|statevector": 0.0003677196804647784,
+  "R-NEQR-4x4-b4|shots100": 0.0007150508351488743,
+  "R-NEQR-4x4-b4|shots1000": 0.0003677196804647784,
+  "R-NEQR-4x4-b4|shots10000": 0.0003677196804647784,
+  "R-NEQR-4x4-b4|shots100000": 0.0003677196804647784,
+  "R-NEQR-4x4-b8|statevector": 0.0,
+  "R-NEQR-4x4-b8|shots100": 0.0004667088512965098,
+  "R-NEQR-4x4-b8|shots1000": 0.0,
+  "R-NEQR-4x4-b8|shots10000": 0.0,
+  "R-NEQR-4x4-b8|shots100000": 0.0,
+  "R-NEQR-8x8-b2|statevector": 0.008939129715066853,
+  "R-NEQR-8x8-b2|shots100": 0.06763200825537187,
+  "R-NEQR-8x8-b2|shots1000": 0.008939129715066853,
+  "R-NEQR-8x8-b2|shots10000": 0.008939129715066853,
+  "R-NEQR-8x8-b2|shots100000": 0.008939129715066853,
+  "R-NEQR-8x8-b4|statevector": 0.00036886600773206887,
+  "R-NEQR-8x8-b4|shots100": 0.060916950611944125,
+  "R-NEQR-8x8-b4|shots1000": 0.00036886600773206887,
+  "R-NEQR-8x8-b4|shots10000": 0.00036886600773206887,
+  "R-NEQR-8x8-b4|shots100000": 0.00036886600773206887,
+  "R-NEQR-8x8-b8|statevector": 0.0,
+  "R-NEQR-8x8-b8|shots100": 0.06074814988359178,
+  "R-NEQR-8x8-b8|shots1000": 0.0,
+  "R-NEQR-8x8-b8|shots10000": 0.0,
+  "R-NEQR-8x8-b8|shots100000": 0.0,
+  "R-NEQR-16x16-b2|statevector": 0.008934280752061171,
+  "R-NEQR-16x16-b2|shots100": 0.2020927491162587,
+  "R-NEQR-16x16-b2|shots1000": 0.014765268065968217,
+  "R-NEQR-16x16-b2|shots10000": 0.008934280752061171,
+  "R-NEQR-16x16-b2|shots100000": 0.008934280752061171,
+  "R-NEQR-16x16-b4|statevector": 0.00036816839276560296,
+  "R-NEQR-16x16-b4|shots100": 0.1993975983128818,
+  "R-NEQR-16x16-b4|shots1000": 0.00612459597537272,
+  "R-NEQR-16x16-b4|shots10000": 0.00036816839276560296,
+  "R-NEQR-16x16-b4|shots100000": 0.00036816839276560296,
+  "R-NEQR-16x16-b8|statevector": 0.0,
+  "R-NEQR-16x16-b8|shots100": 0.19924511002045153,
+  "R-NEQR-16x16-b8|shots1000": 0.005754631198203683,
+  "R-NEQR-16x16-b8|shots10000": 0.0,
+  "R-NEQR-16x16-b8|shots100000": 0.0,
+  "P-FRQI-64-p8|statevector": 2.9349100645527243e-30,
+  "P-FRQI-64-p8|shots100": 0.15548777193330982,
+  "P-FRQI-64-p8|shots1000": 0.008666798607172815,
+  "P-FRQI-64-p8|shots10000": 0.0006698088543389236,
+  "P-NEQR-64-p4-b4|statevector": 0.00036673706685663097,
+  "P-NEQR-64-p4-b4|shots100": 0.000838271014637132,
+  "P-NEQR-64-p4-b4|shots1000": 0.00036673706685663097,
+  "P-NEQR-64-p4-b4|shots10000": 0.00036673706685663097,
+  "C-PCA8-64|reconstruction": 0.004662070609654268,
+  "C-PCA12-64|reconstruction": 0.003850778540847668,
+  "pca8_ssim": 0.5900940715396695,
+  "pca12_ssim": 0.6034298413881491,
+  "neqr_q4": 0.00036816839276560296
+ },
+ "verify": {
+  "pass": 17,
+  "total": 17
+ },
+ "frozen": {
+  "at": "2026-11-17T05:06:51.858617",
+  "sha": "b1735fdcfb035a696b84deb8d54438fce0dbc0583b074e00b034a206f21ef8c5",
+  "test_events": 5
+ },
+ "circuit_frqi": {
+  "gates_compiled": 8339,
+  "depth_compiled": 4878,
+  "cx_compiled": 3584
+ },
+ "tables": [
+  [
+   "Tab01_dataset_splits",
+   "Table 1. NEU-DET dataset and splits (per class; identical counts for seeds 0, 1, 2)"
+  ],
+  [
+   "Tab02_search_space",
+   "Table 2. Hyper-parameter grid searched on the validation split (test never used)"
+  ],
+  [
+   "Tab03_selected_configs",
+   "Table 3. Configurations selected by validation macro-F1"
+  ],
+  [
+   "Tab04_main_results",
+   "Table 4. Main results on the locked test set (360 images; mean \u00b1 s.d. over seeds 0\u20132)"
+  ],
+  [
+   "Tab05_statistical_comparisons",
+   "Table 5. The 8 pre-declared paired comparisons (Holm-corrected)"
+  ],
+  [
+   "Tab06_per_class_f1",
+   "Table 6. Per-class F1 % on the locked test set (mean over seeds 0\u20132)"
+  ],
+  [
+   "Tab07_circuit_resources",
+   "Table 7. Encoder circuit resources for ONE patch state (Qiskit, transpiled)"
+  ],
+  [
+   "Tab08_reconstruction",
+   "Table 8. Reconstruction of all 1,800 NEU-DET images by every method (mean MSE / SSIM)"
+  ],
+  [
+   "Tab09_cross_protocol",
+   "Table 9. Key models across protocols V2 \u2192 V3 \u2192 V4 (locked test accuracy %)"
+  ],
+  [
+   "Tab10_integrity_checks",
+   "Table 10. Automated integrity checks (17/17 pass)"
+  ]
+ ]
+}

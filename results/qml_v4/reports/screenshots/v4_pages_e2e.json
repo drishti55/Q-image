@@ -1,0 +1,82 @@
+[
+ {
+  "check": "how-it-works: image list shows the 60 test images of the chosen class",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "breadcrumb names Protocol V4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "play advances the animation",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "SVM step shows a verdict identical to the saved locked-test prediction",
+  "ok": true,
+  "detail": "Predicted Scratches \u00b7 true class Scratches \u2014 correct\nidentical to the saved locked-test prediction"
+ },
+ {
+  "check": "verdict grid has one cell per model (163)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "measurement step shows real shot reconstructions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "hardest-image button loads a new image",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "reconstruction table lists all 20 methods",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "banner reports 1,800 images",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "browser shows original + 5 measured modes",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "V4 comparisons table has the 8 pre-declared rows",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "FRQI tile shows the frozen FRQI test accuracy",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "/how-it-works: no horizontal scroll at 390 px",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "/reconstruction-full: no horizontal scroll at 390 px",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "/quantum-v4: no horizontal scroll at 390 px",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "check": "no console or page errors",
+  "ok": true,
+  "detail": "[]"
+ }
+]

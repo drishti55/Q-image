@@ -1,0 +1,144 @@
+{
+ "group": "E1-frqi8-qkc",
+ "selected_at": "2026-11-14T20:05:49.128888",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 4,
+ "n_eligible": 4,
+ "selected": {
+  "config_key": "E1-frqi8-qkc__1414bdd0a2",
+  "params": {
+   "representation": "FRQI",
+   "C": 100.0,
+   "bits": 8,
+   "angle_scale": 1.0,
+   "shots": 0
+  },
+  "quantum": {
+   "n_qubits": 7,
+   "n_layers": null,
+   "optimizer": null,
+   "learning_rate": null,
+   "shots": 0,
+   "representation": "FRQI",
+   "intensity_bits": null
+  },
+  "eligible": true,
+  "val_mean": 0.6442447966906174,
+  "val_std": 0.047600908099163154,
+  "experiment_ids": [
+   "E1-frqi8-qkc__1414bdd0a2__s0",
+   "E1-frqi8-qkc__1414bdd0a2__s1",
+   "E1-frqi8-qkc__1414bdd0a2__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E1-frqi8-qkc__03a20531aa",
+   "params": {
+    "representation": "FRQI",
+    "C": 0.1,
+    "bits": 8,
+    "angle_scale": 1.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.3215620818571614,
+   "val_std": 0.024324934314228035,
+   "experiment_ids": [
+    "E1-frqi8-qkc__03a20531aa__s0",
+    "E1-frqi8-qkc__03a20531aa__s1",
+    "E1-frqi8-qkc__03a20531aa__s2"
+   ]
+  },
+  {
+   "config_key": "E1-frqi8-qkc__f94932ffa0",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "bits": 8,
+    "angle_scale": 1.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.44112917757773257,
+   "val_std": 0.04880207365845427,
+   "experiment_ids": [
+    "E1-frqi8-qkc__f94932ffa0__s0",
+    "E1-frqi8-qkc__f94932ffa0__s1",
+    "E1-frqi8-qkc__f94932ffa0__s2"
+   ]
+  },
+  {
+   "config_key": "E1-frqi8-qkc__323e66cd6a",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "bits": 8,
+    "angle_scale": 1.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.5642492784915359,
+   "val_std": 0.05425503105392632,
+   "experiment_ids": [
+    "E1-frqi8-qkc__323e66cd6a__s0",
+    "E1-frqi8-qkc__323e66cd6a__s1",
+    "E1-frqi8-qkc__323e66cd6a__s2"
+   ]
+  },
+  {
+   "config_key": "E1-frqi8-qkc__1414bdd0a2",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "bits": 8,
+    "angle_scale": 1.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.6442447966906174,
+   "val_std": 0.047600908099163154,
+   "experiment_ids": [
+    "E1-frqi8-qkc__1414bdd0a2__s0",
+    "E1-frqi8-qkc__1414bdd0a2__s1",
+    "E1-frqi8-qkc__1414bdd0a2__s2"
+   ]
+  }
+ ]
+}

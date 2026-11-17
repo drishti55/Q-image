@@ -1,0 +1,360 @@
+{
+ "group": "E1b-frqi8-qkc-scaled",
+ "selected_at": "2026-11-14T20:06:04.381950",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 12,
+ "n_eligible": 12,
+ "selected": {
+  "config_key": "E1b-frqi8-qkc-scaled__cc07cabfa9",
+  "params": {
+   "representation": "FRQI",
+   "C": 100.0,
+   "bits": 8,
+   "angle_scale": 2.0,
+   "shots": 0
+  },
+  "quantum": {
+   "n_qubits": 7,
+   "n_layers": null,
+   "optimizer": null,
+   "learning_rate": null,
+   "shots": 0,
+   "representation": "FRQI",
+   "intensity_bits": null
+  },
+  "eligible": true,
+  "val_mean": 0.6933275108826215,
+  "val_std": 0.039734187457260026,
+  "experiment_ids": [
+   "E1b-frqi8-qkc-scaled__cc07cabfa9__s0",
+   "E1b-frqi8-qkc-scaled__cc07cabfa9__s1",
+   "E1b-frqi8-qkc-scaled__cc07cabfa9__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__64dc361e53",
+   "params": {
+    "representation": "FRQI",
+    "C": 0.1,
+    "bits": 8,
+    "angle_scale": 2.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.410026448085201,
+   "val_std": 0.0510294323429759,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__64dc361e53__s0",
+    "E1b-frqi8-qkc-scaled__64dc361e53__s1",
+    "E1b-frqi8-qkc-scaled__64dc361e53__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__211f6c57bf",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "bits": 8,
+    "angle_scale": 2.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.5726027299623394,
+   "val_std": 0.051761507209091354,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__211f6c57bf__s0",
+    "E1b-frqi8-qkc-scaled__211f6c57bf__s1",
+    "E1b-frqi8-qkc-scaled__211f6c57bf__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__cc57aac41a",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "bits": 8,
+    "angle_scale": 2.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.6548438150318678,
+   "val_std": 0.052265774799543016,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__cc57aac41a__s0",
+    "E1b-frqi8-qkc-scaled__cc57aac41a__s1",
+    "E1b-frqi8-qkc-scaled__cc57aac41a__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__cc07cabfa9",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "bits": 8,
+    "angle_scale": 2.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.6933275108826215,
+   "val_std": 0.039734187457260026,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__cc07cabfa9__s0",
+    "E1b-frqi8-qkc-scaled__cc07cabfa9__s1",
+    "E1b-frqi8-qkc-scaled__cc07cabfa9__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__1d4731a9a0",
+   "params": {
+    "representation": "FRQI",
+    "C": 0.1,
+    "bits": 8,
+    "angle_scale": 4.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.4520866464563884,
+   "val_std": 0.026068697712999443,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__1d4731a9a0__s0",
+    "E1b-frqi8-qkc-scaled__1d4731a9a0__s1",
+    "E1b-frqi8-qkc-scaled__1d4731a9a0__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__8c69fc48a8",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "bits": 8,
+    "angle_scale": 4.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.6005296740221038,
+   "val_std": 0.015253755270551596,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__8c69fc48a8__s0",
+    "E1b-frqi8-qkc-scaled__8c69fc48a8__s1",
+    "E1b-frqi8-qkc-scaled__8c69fc48a8__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__c37451a0a4",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "bits": 8,
+    "angle_scale": 4.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.6532425749219675,
+   "val_std": 0.027038812606906777,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__c37451a0a4__s0",
+    "E1b-frqi8-qkc-scaled__c37451a0a4__s1",
+    "E1b-frqi8-qkc-scaled__c37451a0a4__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__91c1ce559b",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "bits": 8,
+    "angle_scale": 4.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.6560066610665028,
+   "val_std": 0.015174226610812757,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__91c1ce559b__s0",
+    "E1b-frqi8-qkc-scaled__91c1ce559b__s1",
+    "E1b-frqi8-qkc-scaled__91c1ce559b__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__4cc59f0883",
+   "params": {
+    "representation": "FRQI",
+    "C": 0.1,
+    "bits": 8,
+    "angle_scale": 8.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.4778020770418687,
+   "val_std": 0.0106632723024277,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__4cc59f0883__s0",
+    "E1b-frqi8-qkc-scaled__4cc59f0883__s1",
+    "E1b-frqi8-qkc-scaled__4cc59f0883__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__45e2f1a555",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "bits": 8,
+    "angle_scale": 8.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.5910228371146983,
+   "val_std": 0.03334911596668381,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__45e2f1a555__s0",
+    "E1b-frqi8-qkc-scaled__45e2f1a555__s1",
+    "E1b-frqi8-qkc-scaled__45e2f1a555__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__9ba507ec19",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "bits": 8,
+    "angle_scale": 8.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.6395796547602365,
+   "val_std": 0.032133486592775394,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__9ba507ec19__s0",
+    "E1b-frqi8-qkc-scaled__9ba507ec19__s1",
+    "E1b-frqi8-qkc-scaled__9ba507ec19__s2"
+   ]
+  },
+  {
+   "config_key": "E1b-frqi8-qkc-scaled__506b4d6904",
+   "params": {
+    "representation": "FRQI",
+    "C": 100.0,
+    "bits": 8,
+    "angle_scale": 8.0,
+    "shots": 0
+   },
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null
+   },
+   "eligible": true,
+   "val_mean": 0.6258817610044285,
+   "val_std": 0.03765037712878442,
+   "experiment_ids": [
+    "E1b-frqi8-qkc-scaled__506b4d6904__s0",
+    "E1b-frqi8-qkc-scaled__506b4d6904__s1",
+    "E1b-frqi8-qkc-scaled__506b4d6904__s2"
+   ]
+  }
+ ]
+}

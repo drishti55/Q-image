@@ -1,0 +1,104 @@
+{
+ "n": 360,
+ "accuracy": 0.4722222222222222,
+ "precision_macro": 0.5306165494269498,
+ "recall_macro": 0.47222222222222227,
+ "f1_macro": 0.4723366981453638,
+ "f1_weighted": 0.4723366981453638,
+ "per_class": {
+  "crazing": {
+   "precision": 0.4,
+   "recall": 0.2,
+   "f1": 0.26666666666666666,
+   "support": 60
+  },
+  "inclusion": {
+   "precision": 0.33962264150943394,
+   "recall": 0.6,
+   "f1": 0.43373493975903615,
+   "support": 60
+  },
+  "patches": {
+   "precision": 0.9512195121951219,
+   "recall": 0.65,
+   "f1": 0.7722772277227723,
+   "support": 60
+  },
+  "pitted_surface": {
+   "precision": 0.7142857142857143,
+   "recall": 0.5,
+   "f1": 0.5882352941176471,
+   "support": 60
+  },
+  "rolled-in_scale": {
+   "precision": 0.3619047619047619,
+   "recall": 0.6333333333333333,
+   "f1": 0.46060606060606063,
+   "support": 60
+  },
+  "scratches": {
+   "precision": 0.4166666666666667,
+   "recall": 0.25,
+   "f1": 0.3125,
+   "support": 60
+  }
+ },
+ "confusion_matrix": [
+  [
+   12,
+   10,
+   0,
+   0,
+   36,
+   2
+  ],
+  [
+   1,
+   36,
+   0,
+   11,
+   10,
+   2
+  ],
+  [
+   1,
+   8,
+   39,
+   1,
+   1,
+   10
+  ],
+  [
+   14,
+   10,
+   0,
+   30,
+   3,
+   3
+  ],
+  [
+   2,
+   16,
+   0,
+   0,
+   38,
+   4
+  ],
+  [
+   0,
+   26,
+   2,
+   0,
+   17,
+   15
+  ]
+ ],
+ "labels": [
+  "crazing",
+  "inclusion",
+  "patches",
+  "pitted_surface",
+  "rolled-in_scale",
+  "scratches"
+ ]
+}
