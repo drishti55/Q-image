@@ -14,3 +14,7 @@ uvicorn>=0.23
 plotly>=5.0
 seaborn>=0.12
 joblib>=1.3
+# --- Protocol V2 additions (2026-11-13) ---
+torch==2.15.0        # CPU; small CNN + frozen MobileNetV3 (Phase 3/7)
+torchvision==0.29.2  # MobileNetV3-small IMAGENET1K_V1 weights
+httpx==0.28.1           # FastAPI TestClient (API integration tests)

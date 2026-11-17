@@ -1,0 +1,174 @@
+{
+ "group": "V3-mnv8c-vqc",
+ "selected_at": "2026-11-16T08:17:31.148141",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 4,
+ "n_eligible": 4,
+ "selected": {
+  "config_key": "V3-mnv8c-vqc__f2f1716157",
+  "params": {
+   "layers": 2,
+   "optimizer": "adam",
+   "entangler": "ring",
+   "reupload": true,
+   "readout": "zall",
+   "train_quantum": true,
+   "lr": 0.05,
+   "epochs": 120,
+   "patience": 15
+  },
+  "quantum": {
+   "n_qubits": 8,
+   "n_layers": 2,
+   "optimizer": "adam",
+   "learning_rate": 0.05,
+   "shots": 0,
+   "entangler": "ring",
+   "data_reuploading": true,
+   "readout": "zall",
+   "train_quantum": true
+  },
+  "eligible": true,
+  "val_mean": 0.8773399244908079,
+  "val_std": 0.051226729602702345,
+  "experiment_ids": [
+   "V3-mnv8c-vqc__f2f1716157__s0",
+   "V3-mnv8c-vqc__f2f1716157__s1",
+   "V3-mnv8c-vqc__f2f1716157__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-mnv8c-vqc__905903439c",
+   "params": {
+    "layers": 2,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "readout": "diag6",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 2,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "readout": "diag6",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.8070064729590407,
+   "val_std": 0.047235973877784124,
+   "experiment_ids": [
+    "V3-mnv8c-vqc__905903439c__s0",
+    "V3-mnv8c-vqc__905903439c__s1",
+    "V3-mnv8c-vqc__905903439c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv8c-vqc__5ab150bef9",
+   "params": {
+    "layers": 4,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "readout": "diag6",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 4,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "readout": "diag6",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.7703956767845406,
+   "val_std": 0.040446522197491876,
+   "experiment_ids": [
+    "V3-mnv8c-vqc__5ab150bef9__s0",
+    "V3-mnv8c-vqc__5ab150bef9__s1",
+    "V3-mnv8c-vqc__5ab150bef9__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv8c-vqc__f2f1716157",
+   "params": {
+    "layers": 2,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "readout": "zall",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 2,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "readout": "zall",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.8773399244908079,
+   "val_std": 0.051226729602702345,
+   "experiment_ids": [
+    "V3-mnv8c-vqc__f2f1716157__s0",
+    "V3-mnv8c-vqc__f2f1716157__s1",
+    "V3-mnv8c-vqc__f2f1716157__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv8c-vqc__129da4d706",
+   "params": {
+    "layers": 4,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "readout": "zall",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 4,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "readout": "zall",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.7838953283944724,
+   "val_std": 0.07396472926560888,
+   "experiment_ids": [
+    "V3-mnv8c-vqc__129da4d706__s0",
+    "V3-mnv8c-vqc__129da4d706__s1",
+    "V3-mnv8c-vqc__129da4d706__s2"
+   ]
+  }
+ ]
+}

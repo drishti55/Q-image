@@ -1,0 +1,9 @@
+model,test_acc_mean,test_acc_sd
+V3 classical texture RBF-SVM,95.56,2.17
+V2 NEQR whole image (baseline),60.19,0.42
+V2 FRQI whole image (baseline),60.65,1.16
+"Classical RBF-SVM, same patches",83.61,0.28
+NEQR patches 4×4 ★,82.69,10.07
+NEQR patches 2×2,81.48,10.60
+FRQI patches 8×8 ★,87.78,1.47
+FRQI patches 4×4,85.28,1.67

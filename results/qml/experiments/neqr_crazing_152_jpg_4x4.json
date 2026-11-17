@@ -1,0 +1,140 @@
+{
+  "experiment_id": "neqr_crazing_152_jpg_4x4",
+  "comparison_id": "paired_crazing_152_jpg_4x4",
+  "dataset": "NEU-DET",
+  "image_name": "crazing_152.jpg",
+  "ground_truth": "crazing",
+  "predicted_class": "crazing",
+  "correct": true,
+  "representation": "NEQR",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "4x4",
+  "intensity_bits": 4,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 8,
+  "gate_count": 104,
+  "circuit_depth": 64,
+  "controlled_gates": 36,
+  "gate_types": {
+    "h": 4,
+    "x": 64,
+    "mcx": 36
+  },
+  "classification_metrics": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "heldout_accuracy": 0.24722222222222223,
+    "heldout_f1_macro": 0.23925956495642423,
+    "precision_macro": 0.24037109864574654,
+    "recall_macro": 0.24722222222222223,
+    "f1_weighted": 0.23925956495642425,
+    "confusion_matrix": [
+      [
+        17,
+        2,
+        34,
+        3,
+        3,
+        1
+      ],
+      [
+        12,
+        14,
+        5,
+        13,
+        7,
+        9
+      ],
+      [
+        6,
+        1,
+        9,
+        21,
+        6,
+        17
+      ],
+      [
+        8,
+        1,
+        7,
+        32,
+        2,
+        10
+      ],
+      [
+        0,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        30,
+        1,
+        2,
+        9,
+        17
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 0.38636363636363635,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.3269230769230769,
+        "support": 60
+      },
+      "inclusion": {
+        "precision": 0.12962962962962962,
+        "recall": 0.23333333333333334,
+        "f1_score": 0.16666666666666666,
+        "support": 60
+      },
+      "patches": {
+        "precision": 0.16071428571428573,
+        "recall": 0.15,
+        "f1_score": 0.15517241379310345,
+        "support": 60
+      },
+      "pitted_surface": {
+        "precision": 0.4507042253521127,
+        "recall": 0.5333333333333333,
+        "f1_score": 0.48854961832061067,
+        "support": 60
+      },
+      "rolled-in_scale": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 60
+      },
+      "scratches": {
+        "precision": 0.3148148148148148,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.2982456140350877,
+        "support": 60
+      }
+    }
+  },
+  "reconstruction_metrics": {
+    "mse": 0.0002748942714340635,
+    "psnr": 35.60834310394793,
+    "ssim": 0.9722342354916171,
+    "reconstruction_time": 6.68339998810552e-05,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAv0lEQVR4nO2RQQoCQRDEYrEi+H/YD3ryBQqC/mD7MCx1MLl290wgl51jPsP8McyfwzyUiQKYoEwUwARlogAmKBMFMEGZKIAJykQBTFBmmxpcpwcW70OZKIAJykQBTFAmCmCCMlEAE5SJApigTBTABGW217BwW2y4en86Of8LBY4JZaIAJigTBTBBmSiACcpEAUxQJgpggn9PsN2Hhfcw/y7ehzJRABOUiQKYoEwUwARlogAmKBMFMEGZKIAJ6PIDIf4IekHlOuEAAAAASUVORK5CYII=",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAlUlEQVR4nO2RMRGAUACF8PUvYDkrWMEIf3BggZWFO66bfzwH/x78kFkBtEBmBdACmRVAC2RWAC2QWQG0QGYF0AKZFUALZFYALZBZAbRAZgXQApkVQAtkVgAtkFkBtEBmBdACmRVAC2RWAC2QWQG0QGYF0AKZFUALZFYALZBZAbRAZgXQApkVQAtkVgAtkFkBtEBGX/ABquADZggtLksAAAAASUVORK5CYII=",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAt0lEQVR4nO2aMW7EMBDEKCYB8v/XHoIr7gdR4WIasl3LJsBKxp7D//xc5n8Pz8sYE6AEY0yAEowxAUowxgQowRgToARjTIASjDlPX/B9mb8vcxljApRgjAlQgjEmQAnGmAAlGGMClGCMCVCCMef38sDr4X7A7QeEjDEBSjDGBCjBGBOgBGNMgBKMMQFKMMYEKMGYc7u/fz38QPsDN2SMCVCCMSZACcaYACUYYwKUYIwJUIIxJsCYD0sTBQjIvlhvAAAAAElFTkSuQmCC"
+  },
+  "timings": {
+    "encoding_time_s": 0.001908749996800907,
+    "train_time_s": 7.482178083002509,
+    "predict_time_s": 0.09548458400240634,
+    "reconstruction_time_s": 6.68339998810552e-05,
+    "total_time_s": 0.10496091599634383
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:09:09.217991"
+}

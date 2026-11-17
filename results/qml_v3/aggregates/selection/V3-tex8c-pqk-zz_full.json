@@ -1,0 +1,1381 @@
+{
+ "group": "V3-tex8c-pqk-zz_full",
+ "selected_at": "2026-11-16T08:17:29.388699",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 48,
+ "n_eligible": 48,
+ "selected": {
+  "config_key": "V3-tex8c-pqk-zz_full__2294f913c8",
+  "params": {
+   "feature_map": "zz_full",
+   "reps": 1,
+   "bandwidth": 0.5,
+   "gamma": 3.0,
+   "C": 1000.0
+  },
+  "quantum": {
+   "n_qubits": 8,
+   "n_layers": 1,
+   "shots": 0,
+   "optimizer": null,
+   "learning_rate": null,
+   "feature_map": "zz_full",
+   "bandwidth": 0.5,
+   "kernel": "projected"
+  },
+  "eligible": true,
+  "val_mean": 0.4125142444050032,
+  "val_std": 0.026493236067494434,
+  "experiment_ids": [
+   "V3-tex8c-pqk-zz_full__2294f913c8__s0",
+   "V3-tex8c-pqk-zz_full__2294f913c8__s1",
+   "V3-tex8c-pqk-zz_full__2294f913c8__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__539ffebd78",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.1,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.14773770107307324,
+   "val_std": 0.02805037558541859,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__539ffebd78__s0",
+    "V3-tex8c-pqk-zz_full__539ffebd78__s1",
+    "V3-tex8c-pqk-zz_full__539ffebd78__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__c6ae8a9da3",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.1,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1580868012697284,
+   "val_std": 0.04469471946852174,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__c6ae8a9da3__s0",
+    "V3-tex8c-pqk-zz_full__c6ae8a9da3__s1",
+    "V3-tex8c-pqk-zz_full__c6ae8a9da3__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__2f1d17c1cf",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.1,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1903515630703049,
+   "val_std": 0.04137485463381817,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__2f1d17c1cf__s0",
+    "V3-tex8c-pqk-zz_full__2f1d17c1cf__s1",
+    "V3-tex8c-pqk-zz_full__2f1d17c1cf__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__22ba60488e",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.1,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.23463392171627237,
+   "val_std": 0.038358947664407485,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__22ba60488e__s0",
+    "V3-tex8c-pqk-zz_full__22ba60488e__s1",
+    "V3-tex8c-pqk-zz_full__22ba60488e__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__168a0e7f57",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.3,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.14367479269451858,
+   "val_std": 0.03348966327292135,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__168a0e7f57__s0",
+    "V3-tex8c-pqk-zz_full__168a0e7f57__s1",
+    "V3-tex8c-pqk-zz_full__168a0e7f57__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__af18472e14",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.3,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1702823928558338,
+   "val_std": 0.04371389820773701,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__af18472e14__s0",
+    "V3-tex8c-pqk-zz_full__af18472e14__s1",
+    "V3-tex8c-pqk-zz_full__af18472e14__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__235bfc5074",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.3,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.2290335613074057,
+   "val_std": 0.030054494240332286,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__235bfc5074__s0",
+    "V3-tex8c-pqk-zz_full__235bfc5074__s1",
+    "V3-tex8c-pqk-zz_full__235bfc5074__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__50c3b030c3",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.3,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.2854350354793265,
+   "val_std": 0.043083366487500926,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__50c3b030c3__s0",
+    "V3-tex8c-pqk-zz_full__50c3b030c3__s1",
+    "V3-tex8c-pqk-zz_full__50c3b030c3__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__850fb01e76",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 1.0,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1521269291616408,
+   "val_std": 0.03312908853747609,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__850fb01e76__s0",
+    "V3-tex8c-pqk-zz_full__850fb01e76__s1",
+    "V3-tex8c-pqk-zz_full__850fb01e76__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__9aa71e545c",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 1.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.23706210446488085,
+   "val_std": 0.03806468332539682,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__9aa71e545c__s0",
+    "V3-tex8c-pqk-zz_full__9aa71e545c__s1",
+    "V3-tex8c-pqk-zz_full__9aa71e545c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__c6a9c3de27",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 1.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.28746466460517156,
+   "val_std": 0.034512839933504125,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__c6a9c3de27__s0",
+    "V3-tex8c-pqk-zz_full__c6a9c3de27__s1",
+    "V3-tex8c-pqk-zz_full__c6a9c3de27__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__f14db66d1f",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 1.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.368829258535805,
+   "val_std": 0.029241284129247556,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__f14db66d1f__s0",
+    "V3-tex8c-pqk-zz_full__f14db66d1f__s1",
+    "V3-tex8c-pqk-zz_full__f14db66d1f__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__7ed3c773f1",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 3.0,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.19884663004492634,
+   "val_std": 0.028769731362748203,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__7ed3c773f1__s0",
+    "V3-tex8c-pqk-zz_full__7ed3c773f1__s1",
+    "V3-tex8c-pqk-zz_full__7ed3c773f1__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__fc68918205",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 3.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.2906379322579549,
+   "val_std": 0.029480633442071726,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__fc68918205__s0",
+    "V3-tex8c-pqk-zz_full__fc68918205__s1",
+    "V3-tex8c-pqk-zz_full__fc68918205__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__d2afa4976d",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 3.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.37080442988323364,
+   "val_std": 0.022981880950867523,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__d2afa4976d__s0",
+    "V3-tex8c-pqk-zz_full__d2afa4976d__s1",
+    "V3-tex8c-pqk-zz_full__d2afa4976d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__2294f913c8",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 3.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.4125142444050032,
+   "val_std": 0.026493236067494434,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__2294f913c8__s0",
+    "V3-tex8c-pqk-zz_full__2294f913c8__s1",
+    "V3-tex8c-pqk-zz_full__2294f913c8__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__1e371ac334",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.1,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.26637255918508457,
+   "val_std": 0.00731883491160748,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__1e371ac334__s0",
+    "V3-tex8c-pqk-zz_full__1e371ac334__s1",
+    "V3-tex8c-pqk-zz_full__1e371ac334__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__a78fc90847",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.1,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.3495097935545406,
+   "val_std": 0.00503263163244965,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__a78fc90847__s0",
+    "V3-tex8c-pqk-zz_full__a78fc90847__s1",
+    "V3-tex8c-pqk-zz_full__a78fc90847__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__5dd064e9eb",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.1,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.3734619644956029,
+   "val_std": 0.015335242501858552,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__5dd064e9eb__s0",
+    "V3-tex8c-pqk-zz_full__5dd064e9eb__s1",
+    "V3-tex8c-pqk-zz_full__5dd064e9eb__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__bfea0f90be",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.1,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.40621859528138043,
+   "val_std": 0.021055318050508424,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__bfea0f90be__s0",
+    "V3-tex8c-pqk-zz_full__bfea0f90be__s1",
+    "V3-tex8c-pqk-zz_full__bfea0f90be__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__69a2a6e16c",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.3,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.31522270913762207,
+   "val_std": 0.0024936112644872916,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__69a2a6e16c__s0",
+    "V3-tex8c-pqk-zz_full__69a2a6e16c__s1",
+    "V3-tex8c-pqk-zz_full__69a2a6e16c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__f8dee66e79",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.3,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.37928955144401827,
+   "val_std": 0.007067416287198134,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__f8dee66e79__s0",
+    "V3-tex8c-pqk-zz_full__f8dee66e79__s1",
+    "V3-tex8c-pqk-zz_full__f8dee66e79__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__0bebf4e387",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.3,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.3994579125827759,
+   "val_std": 0.01835068415386118,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__0bebf4e387__s0",
+    "V3-tex8c-pqk-zz_full__0bebf4e387__s1",
+    "V3-tex8c-pqk-zz_full__0bebf4e387__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__ffb10eeb31",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.3,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.3835892424631209,
+   "val_std": 0.03278690924916076,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__ffb10eeb31__s0",
+    "V3-tex8c-pqk-zz_full__ffb10eeb31__s1",
+    "V3-tex8c-pqk-zz_full__ffb10eeb31__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__86ae112e4f",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 1.0,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.3394319016756661,
+   "val_std": 0.002882910486648128,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__86ae112e4f__s0",
+    "V3-tex8c-pqk-zz_full__86ae112e4f__s1",
+    "V3-tex8c-pqk-zz_full__86ae112e4f__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__9eddcd61f0",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 1.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.37881437417087493,
+   "val_std": 0.007906814470148312,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__9eddcd61f0__s0",
+    "V3-tex8c-pqk-zz_full__9eddcd61f0__s1",
+    "V3-tex8c-pqk-zz_full__9eddcd61f0__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__92c71d3a3d",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 1.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.38522930710170117,
+   "val_std": 0.029294893458253243,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__92c71d3a3d__s0",
+    "V3-tex8c-pqk-zz_full__92c71d3a3d__s1",
+    "V3-tex8c-pqk-zz_full__92c71d3a3d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__a083f024e5",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 1.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.3829319483813218,
+   "val_std": 0.0113435685581996,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__a083f024e5__s0",
+    "V3-tex8c-pqk-zz_full__a083f024e5__s1",
+    "V3-tex8c-pqk-zz_full__a083f024e5__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__54c0eeaab4",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 3.0,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.3592863324867774,
+   "val_std": 0.005355039101684165,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__54c0eeaab4__s0",
+    "V3-tex8c-pqk-zz_full__54c0eeaab4__s1",
+    "V3-tex8c-pqk-zz_full__54c0eeaab4__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__5e67ff57a9",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 3.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.38999961505523023,
+   "val_std": 0.020394312046672632,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__5e67ff57a9__s0",
+    "V3-tex8c-pqk-zz_full__5e67ff57a9__s1",
+    "V3-tex8c-pqk-zz_full__5e67ff57a9__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__9d27696b33",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 3.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.3785707332502493,
+   "val_std": 0.013409234725214597,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__9d27696b33__s0",
+    "V3-tex8c-pqk-zz_full__9d27696b33__s1",
+    "V3-tex8c-pqk-zz_full__9d27696b33__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__a6267a9f9d",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 3.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.37531103139506,
+   "val_std": 0.014564023211317693,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__a6267a9f9d__s0",
+    "V3-tex8c-pqk-zz_full__a6267a9f9d__s1",
+    "V3-tex8c-pqk-zz_full__a6267a9f9d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__37d8669a62",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.1,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.15588132360136095,
+   "val_std": 0.018090493429135653,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__37d8669a62__s0",
+    "V3-tex8c-pqk-zz_full__37d8669a62__s1",
+    "V3-tex8c-pqk-zz_full__37d8669a62__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__a3b4ca4153",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.1,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1729186140770866,
+   "val_std": 0.014658188846389867,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__a3b4ca4153__s0",
+    "V3-tex8c-pqk-zz_full__a3b4ca4153__s1",
+    "V3-tex8c-pqk-zz_full__a3b4ca4153__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__6b9c14e791",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.1,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.19885940381260428,
+   "val_std": 0.006763497960740877,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__6b9c14e791__s0",
+    "V3-tex8c-pqk-zz_full__6b9c14e791__s1",
+    "V3-tex8c-pqk-zz_full__6b9c14e791__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__ae483066aa",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.1,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.20017154775427995,
+   "val_std": 0.007664707216890974,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__ae483066aa__s0",
+    "V3-tex8c-pqk-zz_full__ae483066aa__s1",
+    "V3-tex8c-pqk-zz_full__ae483066aa__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__22fdebb58c",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.3,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1648637107741074,
+   "val_std": 0.0030761059299714557,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__22fdebb58c__s0",
+    "V3-tex8c-pqk-zz_full__22fdebb58c__s1",
+    "V3-tex8c-pqk-zz_full__22fdebb58c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__7cc84254c8",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.3,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.18343187059424404,
+   "val_std": 0.012593443102682261,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__7cc84254c8__s0",
+    "V3-tex8c-pqk-zz_full__7cc84254c8__s1",
+    "V3-tex8c-pqk-zz_full__7cc84254c8__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__ba8be5e2c5",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.3,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.20313840362665422,
+   "val_std": 0.0055865162770434625,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__ba8be5e2c5__s0",
+    "V3-tex8c-pqk-zz_full__ba8be5e2c5__s1",
+    "V3-tex8c-pqk-zz_full__ba8be5e2c5__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__9b5ca83cd9",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.3,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.19452801890852292,
+   "val_std": 0.021795677403105552,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__9b5ca83cd9__s0",
+    "V3-tex8c-pqk-zz_full__9b5ca83cd9__s1",
+    "V3-tex8c-pqk-zz_full__9b5ca83cd9__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__3f26068388",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 1.0,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.18102215050296974,
+   "val_std": 0.01640468702784511,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__3f26068388__s0",
+    "V3-tex8c-pqk-zz_full__3f26068388__s1",
+    "V3-tex8c-pqk-zz_full__3f26068388__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__f854889c1c",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 1.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.19230499984340513,
+   "val_std": 0.003024749338549909,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__f854889c1c__s0",
+    "V3-tex8c-pqk-zz_full__f854889c1c__s1",
+    "V3-tex8c-pqk-zz_full__f854889c1c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__200df6a0ca",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 1.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.18785687751615596,
+   "val_std": 0.0187255332956311,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__200df6a0ca__s0",
+    "V3-tex8c-pqk-zz_full__200df6a0ca__s1",
+    "V3-tex8c-pqk-zz_full__200df6a0ca__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__a206c029cc",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 1.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.20505010545860625,
+   "val_std": 0.0016500807031229413,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__a206c029cc__s0",
+    "V3-tex8c-pqk-zz_full__a206c029cc__s1",
+    "V3-tex8c-pqk-zz_full__a206c029cc__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__ecbd20514e",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 3.0,
+    "C": 1.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.19680177317399586,
+   "val_std": 0.02049662482986156,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__ecbd20514e__s0",
+    "V3-tex8c-pqk-zz_full__ecbd20514e__s1",
+    "V3-tex8c-pqk-zz_full__ecbd20514e__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__7c4ca01bd1",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 3.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.19182024207779358,
+   "val_std": 0.02359046814661493,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__7c4ca01bd1__s0",
+    "V3-tex8c-pqk-zz_full__7c4ca01bd1__s1",
+    "V3-tex8c-pqk-zz_full__7c4ca01bd1__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__e1f5a8e646",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 3.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.21490977134544087,
+   "val_std": 0.013381208470957195,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__e1f5a8e646__s0",
+    "V3-tex8c-pqk-zz_full__e1f5a8e646__s1",
+    "V3-tex8c-pqk-zz_full__e1f5a8e646__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-pqk-zz_full__6399676812",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 3.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.21797469799138983,
+   "val_std": 0.015584284659270697,
+   "experiment_ids": [
+    "V3-tex8c-pqk-zz_full__6399676812__s0",
+    "V3-tex8c-pqk-zz_full__6399676812__s1",
+    "V3-tex8c-pqk-zz_full__6399676812__s2"
+   ]
+  }
+ ]
+}

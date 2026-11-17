@@ -1,0 +1,26 @@
+
+
+==============================
+TERMINAL 1 (Python Backend):
+==============================
+source .venv/bin/activate
+python api_main.py
+
+
+==============================
+TERMINAL 2 (React Frontend):
+==============================
+cd frontend
+npm run dev
+
+
+==============================
+OPEN IN BROWSER:
+==============================
+http://localhost:5173
+
+
+
+
+Backend: .venv/bin/python -m uvicorn api_main:app --port 8000
+Frontend: cd frontend && npx vite

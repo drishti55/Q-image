@@ -1,0 +1,1351 @@
+{
+ "protocol": "V4",
+ "created_at": "2026-11-17T05:08:22",
+ "frozen_selection_sha256": "b1735fdcfb035a696b84deb8d54438fce0dbc0583b074e00b034a206f21ef8c5",
+ "frozen_at": "2026-11-17T05:06:51.858617",
+ "plan": {
+  "headline_rule": "FRQI headline = V4 FRQI group (p4 or p8) with the highest mean validation macro-F1; NEQR headline likewise (p2 or p4). Test not consulted.",
+  "comparisons": [
+   "V4 FRQI headline vs V2 E1b-frqi8-qkc-scaled (published FRQI baseline)",
+   "V4 FRQI headline vs V3-frqi8 (best V3 FRQI by validation)",
+   "V4 NEQR headline vs V2 E2-neqr16-b4-qkc (published NEQR baseline; V3-neqr16 re-selected the same configuration)",
+   "V4 FRQI headline vs V4 NEQR headline",
+   "V4 FRQI headline vs V4-patchmom-rbfsvm (classical control, same patches)",
+   "V4 NEQR headline vs V4-patchmom-rbfsvm",
+   "V4 FRQI headline vs V3-tex12c-rbfsvm (best V3 non-CNN classical control by validation)",
+   "V4 NEQR headline vs V3-tex12c-rbfsvm"
+  ],
+  "statistics": "paired sign-flip permutation test on per-image correctness averaged over seeds (10,000), bootstrap 95% CI, per-seed exact McNemar; Holm correction over these 8 comparisons; per-comparison RNG seeded from its name."
+ },
+ "headlines": {
+  "frqi": "V4-frqi-p8",
+  "neqr": "V4-neqr-p4"
+ },
+ "counts": {
+  "groups": 5,
+  "candidate_runs": 864,
+  "failed_runs": 0,
+  "test_access_events": 5
+ },
+ "test_access_log": [
+  {
+   "time": "2026-11-17T05:06:53.282280",
+   "reason": "final test evaluation of selected config for group V4-frqi-p4"
+  },
+  {
+   "time": "2026-11-17T05:06:58.424374",
+   "reason": "final test evaluation of selected config for group V4-frqi-p8"
+  },
+  {
+   "time": "2026-11-17T05:07:04.405150",
+   "reason": "final test evaluation of selected config for group V4-neqr-p2"
+  },
+  {
+   "time": "2026-11-17T05:07:09.746542",
+   "reason": "final test evaluation of selected config for group V4-neqr-p4"
+  },
+  {
+   "time": "2026-11-17T05:07:18.386748",
+   "reason": "final test evaluation of selected config for group V4-patchmom-rbfsvm"
+  }
+ ],
+ "groups": {
+  "V4-frqi-p4": {
+   "group": "V4-frqi-p4",
+   "params": {
+    "representation": "FRQI",
+    "image_size": 64,
+    "patch": 4,
+    "stride": 4,
+    "norm": "stretch",
+    "C": 1000.0,
+    "angle_scale": 4.0
+   },
+   "model_name": "FRQI patch-ensemble kernel (4x4 patches)",
+   "feature_extraction": "64x64 grayscale, 4x4 patches stride 4, per-image contrast stretch",
+   "quantum": {
+    "n_qubits": 5,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "mixed-state Hilbert-Schmidt (swap test)"
+   },
+   "experiment_ids": [
+    "V4-frqi-p4__323bd64cc5__s0",
+    "V4-frqi-p4__323bd64cc5__s1",
+    "V4-frqi-p4__323bd64cc5__s2"
+   ],
+   "val_f1_macro": {
+    "mean": 0.8572301285694613,
+    "std": 0.006036245379045482,
+    "n": 3
+   },
+   "test_accuracy": {
+    "mean": 0.8527777777777779,
+    "std": 0.016666666666666663,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.8501842436938034,
+    "std": 0.016003453718583804,
+    "n": 3
+   },
+   "per_seed_test_accuracy": [
+    0.8694444444444445,
+    0.8527777777777777,
+    0.8361111111111111
+   ],
+   "confusion_matrix_sum": [
+    [
+     166,
+     0,
+     1,
+     13,
+     0,
+     0
+    ],
+    [
+     0,
+     141,
+     1,
+     28,
+     0,
+     10
+    ],
+    [
+     2,
+     0,
+     172,
+     5,
+     1,
+     0
+    ],
+    [
+     33,
+     7,
+     4,
+     135,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     180,
+     0
+    ],
+    [
+     6,
+     2,
+     5,
+     0,
+     40,
+     127
+    ]
+   ],
+   "per_class_f1": {
+    "crazing": {
+     "mean": 0.857958984952599,
+     "std": 0.029626929820529713,
+     "n": 3
+    },
+    "inclusion": {
+     "mean": 0.8546216129549462,
+     "std": 0.01689195489504404,
+     "n": 3
+    },
+    "patches": {
+     "mean": 0.9476553914705926,
+     "std": 0.023866313126392032,
+     "n": 3
+    },
+    "pitted_surface": {
+     "mean": 0.7466098708656803,
+     "std": 0.035751204978916845,
+     "n": 3
+    },
+    "rolled-in_scale": {
+     "mean": 0.8979686211957724,
+     "std": 0.016971538319396035,
+     "n": 3
+    },
+    "scratches": {
+     "mean": 0.7962909807232306,
+     "std": 0.049111006780268356,
+     "n": 3
+    }
+   },
+   "circuit": {
+    "n_qubits": 5,
+    "gates_logical": 1093,
+    "depth_logical": 705,
+    "gate_counts_logical": {
+     "cx": 384,
+     "t": 256,
+     "tdg": 192,
+     "h": 132,
+     "x": 64,
+     "ry": 64,
+     "barrier": 1
+    },
+    "two_qubit_gates_logical": 384,
+    "gates_compiled": 1070,
+    "depth_compiled": 710,
+    "gate_counts_compiled": {
+     "rz": 522,
+     "cx": 384,
+     "sx": 133,
+     "x": 30,
+     "barrier": 1
+    },
+    "single_qubit_gates_compiled": 685,
+    "two_qubit_gates_compiled": 384,
+    "cx_compiled": 384,
+    "transpilation": {
+     "basis_gates": [
+      "cx",
+      "rz",
+      "sx",
+      "x"
+     ],
+     "optimization_level": 1,
+     "seed_transpiler": 0,
+     "coupling_map": "none (all-to-all)"
+    },
+    "gates_logical_range": [
+     1093,
+     1093
+    ],
+    "depth_logical_range": [
+     705,
+     705
+    ],
+    "gates_compiled_range": [
+     1070,
+     1070
+    ],
+    "depth_compiled_range": [
+     710,
+     710
+    ],
+    "cx_compiled_range": [
+     384,
+     384
+    ],
+    "two_qubit_gates_compiled_range": [
+     384,
+     384
+    ],
+    "n_sample_images": 5,
+    "note": "resources are for encoding ONE patch; the mixed state is a uniform random choice of patch",
+    "representation": "FRQI",
+    "patch": 4,
+    "stride": 4,
+    "patches_per_image": 256,
+    "angle_scale": 4.0,
+    "intensity_bits": null,
+    "measurement": "swap test on two 5-qubit patch states (+1 ancilla): estimates Tr(rho_A rho_B)",
+    "execution_mode": "statevector (exact overlaps)",
+    "shots": 0
+   }
+  },
+  "V4-frqi-p8": {
+   "group": "V4-frqi-p8",
+   "params": {
+    "representation": "FRQI",
+    "image_size": 64,
+    "patch": 8,
+    "stride": 4,
+    "norm": "stretch",
+    "C": 1000.0,
+    "angle_scale": 4.0
+   },
+   "model_name": "FRQI patch-ensemble kernel (8x8 patches)",
+   "feature_extraction": "64x64 grayscale, 8x8 patches stride 4, per-image contrast stretch",
+   "quantum": {
+    "n_qubits": 7,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "FRQI",
+    "intensity_bits": null,
+    "kernel": "mixed-state Hilbert-Schmidt (swap test)"
+   },
+   "experiment_ids": [
+    "V4-frqi-p8__09d3a4f853__s0",
+    "V4-frqi-p8__09d3a4f853__s1",
+    "V4-frqi-p8__09d3a4f853__s2"
+   ],
+   "val_f1_macro": {
+    "mean": 0.8795780226864628,
+    "std": 0.013719711528351091,
+    "n": 3
+   },
+   "test_accuracy": {
+    "mean": 0.8777777777777778,
+    "std": 0.014698618394803293,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.8752434267671395,
+    "std": 0.01572934513872038,
+    "n": 3
+   },
+   "per_seed_test_accuracy": [
+    0.8666666666666667,
+    0.8722222222222222,
+    0.8944444444444445
+   ],
+   "confusion_matrix_sum": [
+    [
+     172,
+     0,
+     1,
+     7,
+     0,
+     0
+    ],
+    [
+     0,
+     137,
+     1,
+     38,
+     0,
+     4
+    ],
+    [
+     0,
+     0,
+     179,
+     1,
+     0,
+     0
+    ],
+    [
+     14,
+     8,
+     2,
+     156,
+     0,
+     0
+    ],
+    [
+     2,
+     0,
+     0,
+     0,
+     178,
+     0
+    ],
+    [
+     2,
+     1,
+     11,
+     0,
+     40,
+     126
+    ]
+   ],
+   "per_class_f1": {
+    "crazing": {
+     "mean": 0.9307206162821137,
+     "std": 0.03439822206142107,
+     "n": 3
+    },
+    "inclusion": {
+     "mean": 0.8402230311344604,
+     "std": 0.031838916589261274,
+     "n": 3
+    },
+    "patches": {
+     "mean": 0.9575688705234159,
+     "std": 0.01897050162558505,
+     "n": 3
+    },
+    "pitted_surface": {
+     "mean": 0.8153519932145886,
+     "std": 0.044841748580652686,
+     "n": 3
+    },
+    "rolled-in_scale": {
+     "mean": 0.8947381953282681,
+     "std": 0.017801782680396568,
+     "n": 3
+    },
+    "scratches": {
+     "mean": 0.81285785411999,
+     "std": 0.015576663965327472,
+     "n": 3
+    }
+   },
+   "circuit": {
+    "n_qubits": 7,
+    "gates_logical": 8583,
+    "depth_logical": 4875,
+    "gate_counts_logical": {
+     "p": 3840,
+     "cx": 3584,
+     "h": 518,
+     "x": 384,
+     "ry": 256,
+     "barrier": 1
+    },
+    "two_qubit_gates_logical": 3584,
+    "gates_compiled": 8339,
+    "depth_compiled": 4878,
+    "gate_counts_compiled": {
+     "rz": 4109,
+     "cx": 3584,
+     "sx": 519,
+     "x": 126,
+     "barrier": 1
+    },
+    "single_qubit_gates_compiled": 4754,
+    "two_qubit_gates_compiled": 3584,
+    "cx_compiled": 3584,
+    "transpilation": {
+     "basis_gates": [
+      "cx",
+      "rz",
+      "sx",
+      "x"
+     ],
+     "optimization_level": 1,
+     "seed_transpiler": 0,
+     "coupling_map": "none (all-to-all)"
+    },
+    "gates_logical_range": [
+     8583,
+     8583
+    ],
+    "depth_logical_range": [
+     4875,
+     4875
+    ],
+    "gates_compiled_range": [
+     8339,
+     8339
+    ],
+    "depth_compiled_range": [
+     4878,
+     4878
+    ],
+    "cx_compiled_range": [
+     3584,
+     3584
+    ],
+    "two_qubit_gates_compiled_range": [
+     3584,
+     3584
+    ],
+    "n_sample_images": 5,
+    "note": "resources are for encoding ONE patch; the mixed state is a uniform random choice of patch",
+    "representation": "FRQI",
+    "patch": 8,
+    "stride": 4,
+    "patches_per_image": 225,
+    "angle_scale": 4.0,
+    "intensity_bits": null,
+    "measurement": "swap test on two 7-qubit patch states (+1 ancilla): estimates Tr(rho_A rho_B)",
+    "execution_mode": "statevector (exact overlaps)",
+    "shots": 0
+   }
+  },
+  "V4-neqr-p2": {
+   "group": "V4-neqr-p2",
+   "params": {
+    "representation": "NEQR",
+    "image_size": 64,
+    "patch": 2,
+    "stride": 2,
+    "norm": "none",
+    "C": 1000.0,
+    "bits": 4
+   },
+   "model_name": "NEQR patch-ensemble kernel (2x2 patches)",
+   "feature_extraction": "64x64 grayscale, 2x2 patches stride 2",
+   "quantum": {
+    "n_qubits": 6,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "NEQR",
+    "intensity_bits": 4,
+    "kernel": "mixed-state Hilbert-Schmidt (swap test)"
+   },
+   "experiment_ids": [
+    "V4-neqr-p2__76e0073cb1__s0",
+    "V4-neqr-p2__76e0073cb1__s1",
+    "V4-neqr-p2__76e0073cb1__s2"
+   ],
+   "val_f1_macro": {
+    "mean": 0.8816249792452214,
+    "std": 0.0712766429688871,
+    "n": 3
+   },
+   "test_accuracy": {
+    "mean": 0.8148148148148148,
+    "std": 0.10604176520163267,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.7918970309925014,
+    "std": 0.14148409376382762,
+    "n": 3
+   },
+   "per_seed_test_accuracy": [
+    0.8555555555555555,
+    0.6944444444444444,
+    0.8944444444444445
+   ],
+   "confusion_matrix_sum": [
+    [
+     171,
+     0,
+     9,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     110,
+     1,
+     39,
+     0,
+     30
+    ],
+    [
+     11,
+     0,
+     169,
+     0,
+     0,
+     0
+    ],
+    [
+     2,
+     4,
+     9,
+     159,
+     0,
+     6
+    ],
+    [
+     20,
+     0,
+     0,
+     9,
+     115,
+     36
+    ],
+    [
+     4,
+     5,
+     1,
+     0,
+     14,
+     156
+    ]
+   ],
+   "per_class_f1": {
+    "crazing": {
+     "mean": 0.8862905447288615,
+     "std": 0.06990625932467773,
+     "n": 3
+    },
+    "inclusion": {
+     "mean": 0.7270934693615105,
+     "std": 0.12676569241437402,
+     "n": 3
+    },
+    "patches": {
+     "mean": 0.9162001244112682,
+     "std": 0.02247217789967618,
+     "n": 3
+    },
+    "pitted_surface": {
+     "mean": 0.8277180793344586,
+     "std": 0.09186391419906702,
+     "n": 3
+    },
+    "rolled-in_scale": {
+     "mean": 0.6208087431693989,
+     "std": 0.5376457437784656,
+     "n": 3
+    },
+    "scratches": {
+     "mean": 0.7732712249495105,
+     "std": 0.0960013478497376,
+     "n": 3
+    }
+   },
+   "circuit": {
+    "n_qubits": 6,
+    "gates_logical": 20,
+    "depth_logical": 15,
+    "gate_counts_logical": {
+     "ccx": 10,
+     "x": 8,
+     "h": 2,
+     "barrier": 1
+    },
+    "two_qubit_gates_logical": 0,
+    "gates_compiled": 150,
+    "depth_compiled": 99,
+    "gate_counts_compiled": {
+     "rz": 86,
+     "cx": 60,
+     "sx": 10,
+     "x": 6,
+     "barrier": 1
+    },
+    "single_qubit_gates_compiled": 102,
+    "two_qubit_gates_compiled": 55,
+    "cx_compiled": 55,
+    "transpilation": {
+     "basis_gates": [
+      "cx",
+      "rz",
+      "sx",
+      "x"
+     ],
+     "optimization_level": 1,
+     "seed_transpiler": 0,
+     "coupling_map": "none (all-to-all)"
+    },
+    "gates_logical_range": [
+     19,
+     21
+    ],
+    "depth_logical_range": [
+     14,
+     16
+    ],
+    "gates_compiled_range": [
+     132,
+     163
+    ],
+    "depth_compiled_range": [
+     87,
+     107
+    ],
+    "cx_compiled_range": [
+     48,
+     60
+    ],
+    "two_qubit_gates_compiled_range": [
+     48,
+     60
+    ],
+    "n_sample_images": 5,
+    "note": "resources are for encoding ONE patch; the mixed state is a uniform random choice of patch",
+    "representation": "NEQR",
+    "patch": 2,
+    "stride": 2,
+    "patches_per_image": 1024,
+    "angle_scale": null,
+    "intensity_bits": 4,
+    "measurement": "swap test on two 6-qubit patch states (+1 ancilla): estimates Tr(rho_A rho_B)",
+    "execution_mode": "statevector (exact overlaps)",
+    "shots": 0
+   }
+  },
+  "V4-neqr-p4": {
+   "group": "V4-neqr-p4",
+   "params": {
+    "representation": "NEQR",
+    "image_size": 128,
+    "patch": 4,
+    "stride": 4,
+    "norm": "none",
+    "C": 1000.0,
+    "bits": 4
+   },
+   "model_name": "NEQR patch-ensemble kernel (4x4 patches)",
+   "feature_extraction": "128x128 grayscale, 4x4 patches stride 4",
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "shots": 0,
+    "representation": "NEQR",
+    "intensity_bits": 4,
+    "kernel": "mixed-state Hilbert-Schmidt (swap test)"
+   },
+   "experiment_ids": [
+    "V4-neqr-p4__6f94f19016__s0",
+    "V4-neqr-p4__6f94f19016__s1",
+    "V4-neqr-p4__6f94f19016__s2"
+   ],
+   "val_f1_macro": {
+    "mean": 0.8922156824213029,
+    "std": 0.0722089777596983,
+    "n": 3
+   },
+   "test_accuracy": {
+    "mean": 0.8268518518518518,
+    "std": 0.10070482066589362,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.8043017472765367,
+    "std": 0.13495194112350709,
+    "n": 3
+   },
+   "per_seed_test_accuracy": [
+    0.875,
+    0.7111111111111111,
+    0.8944444444444445
+   ],
+   "confusion_matrix_sum": [
+    [
+     166,
+     0,
+     14,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     109,
+     0,
+     42,
+     0,
+     29
+    ],
+    [
+     11,
+     0,
+     169,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     4,
+     6,
+     165,
+     0,
+     5
+    ],
+    [
+     14,
+     1,
+     0,
+     30,
+     118,
+     17
+    ],
+    [
+     0,
+     4,
+     1,
+     3,
+     6,
+     166
+    ]
+   ],
+   "per_class_f1": {
+    "crazing": {
+     "mean": 0.8952545485673374,
+     "std": 0.026328438550632636,
+     "n": 3
+    },
+    "inclusion": {
+     "mean": 0.7268167651675266,
+     "std": 0.10384140583391144,
+     "n": 3
+    },
+    "patches": {
+     "mean": 0.913796259274068,
+     "std": 0.03551995749402107,
+     "n": 3
+    },
+    "pitted_surface": {
+     "mean": 0.8000709304881216,
+     "std": 0.12828206400743197,
+     "n": 3
+    },
+    "rolled-in_scale": {
+     "mean": 0.650137741046832,
+     "std": 0.5630357997055855,
+     "n": 3
+    },
+    "scratches": {
+     "mean": 0.8397342391153343,
+     "std": 0.06635886390971277,
+     "n": 3
+    }
+   },
+   "circuit": {
+    "n_qubits": 8,
+    "gates_logical": 106,
+    "depth_logical": 65,
+    "gate_counts_logical": {
+     "x": 64,
+     "mcx": 43,
+     "h": 4,
+     "barrier": 1
+    },
+    "two_qubit_gates_logical": 0,
+    "gates_compiled": 1998,
+    "depth_compiled": 1634,
+    "gate_counts_compiled": {
+     "rz": 1338,
+     "cx": 896,
+     "sx": 286,
+     "x": 30,
+     "barrier": 1
+    },
+    "single_qubit_gates_compiled": 1654,
+    "two_qubit_gates_compiled": 694,
+    "cx_compiled": 694,
+    "transpilation": {
+     "basis_gates": [
+      "cx",
+      "rz",
+      "sx",
+      "x"
+     ],
+     "optimization_level": 1,
+     "seed_transpiler": 0,
+     "coupling_map": "none (all-to-all)"
+    },
+    "gates_logical_range": [
+     100,
+     112
+    ],
+    "depth_logical_range": [
+     59,
+     71
+    ],
+    "gates_compiled_range": [
+     1087,
+     2688
+    ],
+    "depth_compiled_range": [
+     847,
+     2164
+    ],
+    "cx_compiled_range": [
+     382,
+     930
+    ],
+    "two_qubit_gates_compiled_range": [
+     382,
+     930
+    ],
+    "n_sample_images": 5,
+    "note": "resources are for encoding ONE patch; the mixed state is a uniform random choice of patch",
+    "representation": "NEQR",
+    "patch": 4,
+    "stride": 4,
+    "patches_per_image": 1024,
+    "angle_scale": null,
+    "intensity_bits": 4,
+    "measurement": "swap test on two 8-qubit patch states (+1 ancilla): estimates Tr(rho_A rho_B)",
+    "execution_mode": "statevector (exact overlaps)",
+    "shots": 0
+   }
+  },
+  "V4-patchmom-rbfsvm": {
+   "group": "V4-patchmom-rbfsvm",
+   "params": {
+    "image_size": 64,
+    "patch": 8,
+    "stride": 4,
+    "norm": "stretch",
+    "gamma": 1.0,
+    "C": 1000.0
+   },
+   "model_name": "RBF-SVM on classical patch moments (matched control)",
+   "feature_extraction": "64x64 grayscale, 8x8 patches stride 4, per-image contrast stretch",
+   "quantum": {},
+   "experiment_ids": [
+    "V4-patchmom-rbfsvm__7d793c468e__s0",
+    "V4-patchmom-rbfsvm__7d793c468e__s1",
+    "V4-patchmom-rbfsvm__7d793c468e__s2"
+   ],
+   "val_f1_macro": {
+    "mean": 0.837859451074762,
+    "std": 0.028311522847888817,
+    "n": 3
+   },
+   "test_accuracy": {
+    "mean": 0.8361111111111111,
+    "std": 0.002777777777777768,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.8330378499252608,
+    "std": 0.002525835475336196,
+    "n": 3
+   },
+   "per_seed_test_accuracy": [
+    0.8333333333333334,
+    0.8388888888888889,
+    0.8361111111111111
+   ],
+   "confusion_matrix_sum": [
+    [
+     152,
+     4,
+     1,
+     10,
+     13,
+     0
+    ],
+    [
+     3,
+     103,
+     3,
+     65,
+     0,
+     6
+    ],
+    [
+     5,
+     0,
+     171,
+     3,
+     1,
+     0
+    ],
+    [
+     19,
+     17,
+     13,
+     129,
+     1,
+     1
+    ],
+    [
+     4,
+     0,
+     0,
+     0,
+     174,
+     2
+    ],
+    [
+     1,
+     0,
+     0,
+     0,
+     5,
+     174
+    ]
+   ],
+   "per_class_f1": {
+    "crazing": {
+     "mean": 0.8354306265294706,
+     "std": 0.026864297082993153,
+     "n": 3
+    },
+    "inclusion": {
+     "mean": 0.6778451178451178,
+     "std": 0.010271954190259058,
+     "n": 3
+    },
+    "patches": {
+     "mean": 0.9290820149212712,
+     "std": 0.01198614839142417,
+     "n": 3
+    },
+    "pitted_surface": {
+     "mean": 0.666693376068376,
+     "std": 0.005168320992916445,
+     "n": 3
+    },
+    "rolled-in_scale": {
+     "mean": 0.9304982782369146,
+     "std": 0.011841803691943535,
+     "n": 3
+    },
+    "scratches": {
+     "mean": 0.9586776859504132,
+     "std": 0.0,
+     "n": 3
+    }
+   },
+   "circuit": null
+  }
+ },
+ "references": {
+  "E1b-frqi8-qkc-scaled": {
+   "test_accuracy": {
+    "mean": 0.6064814814814815,
+    "std": 0.011564811108145202,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.582682072781111,
+    "std": 0.012850552608519052,
+    "n": 3
+   },
+   "val_f1_macro": {
+    "mean": 0.6933275108826215,
+    "std": 0.039734187457260026,
+    "n": 3
+   }
+  },
+  "E2-neqr16-b4-qkc": {
+   "test_accuracy": {
+    "mean": 0.6018518518518517,
+    "std": 0.0042431256434776144,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.5653537101920671,
+    "std": 0.004279409540040252,
+    "n": 3
+   },
+   "val_f1_macro": {
+    "mean": 0.7270151770619853,
+    "std": 0.05649765417743316,
+    "n": 3
+   }
+  },
+  "V3-frqi8": {
+   "test_accuracy": {
+    "mean": 0.575,
+    "std": 0.020971762320196503,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.5531819718404868,
+    "std": 0.024203990943077923,
+    "n": 3
+   },
+   "val_f1_macro": {
+    "mean": 0.6939249861005968,
+    "std": 0.04306827399606086
+   }
+  },
+  "V3-neqr16": {
+   "test_accuracy": {
+    "mean": 0.6018518518518517,
+    "std": 0.0042431256434776144,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.5653537101920671,
+    "std": 0.004279409540040252,
+    "n": 3
+   },
+   "val_f1_macro": {
+    "mean": 0.7270151770619853,
+    "std": 0.05649765417743316
+   }
+  },
+  "V3-tex12c-rbfsvm": {
+   "test_accuracy": {
+    "mean": 0.9555555555555556,
+    "std": 0.021695137988629584,
+    "n": 3
+   },
+   "test_f1_macro": {
+    "mean": 0.954718430137032,
+    "std": 0.02241309927777103,
+    "n": 3
+   },
+   "val_f1_macro": {
+    "mean": 0.9530059305179456,
+    "std": 0.0401874479985906
+   }
+  }
+ },
+ "comparisons": [
+  {
+   "name": "V4 FRQI vs V2 FRQI (E1b-frqi8-qkc-scaled)",
+   "a": "V4-frqi-p8",
+   "b": "E1b-frqi8-qkc-scaled",
+   "acc_a": 0.8777777777777778,
+   "acc_b": 0.6064814814814815,
+   "diff": 0.2712962962962963,
+   "ci95": [
+    0.21666666666666667,
+    0.32685185185185184
+   ],
+   "p_permutation": 9.999000099990002e-05,
+   "mcnemar_per_seed": [
+    {
+     "seed": 0,
+     "a_only_correct": 114,
+     "b_only_correct": 25,
+     "p_exact": 8.905412788391316e-15
+    },
+    {
+     "seed": 1,
+     "a_only_correct": 118,
+     "b_only_correct": 21,
+     "p_exact": 1.3966293565787205e-17
+    },
+    {
+     "seed": 2,
+     "a_only_correct": 123,
+     "b_only_correct": 16,
+     "p_exact": 1.2448774653760878e-21
+    }
+   ],
+   "p_holm": 0.0007999200079992001,
+   "significant_0_05": true
+  },
+  {
+   "name": "V4 FRQI vs V3 FRQI (V3-frqi8)",
+   "a": "V4-frqi-p8",
+   "b": "V3-frqi8",
+   "acc_a": 0.8777777777777778,
+   "acc_b": 0.575,
+   "diff": 0.3027777777777778,
+   "ci95": [
+    0.25092592592592594,
+    0.35370370370370374
+   ],
+   "p_permutation": 9.999000099990002e-05,
+   "mcnemar_per_seed": [
+    {
+     "seed": 0,
+     "a_only_correct": 120,
+     "b_only_correct": 22,
+     "p_exact": 1.5677310787896847e-17
+    },
+    {
+     "seed": 1,
+     "a_only_correct": 134,
+     "b_only_correct": 19,
+     "p_exact": 1.684438433071452e-22
+    },
+    {
+     "seed": 2,
+     "a_only_correct": 131,
+     "b_only_correct": 17,
+     "p_exact": 5.450537402042396e-23
+    }
+   ],
+   "p_holm": 0.0007999200079992001,
+   "significant_0_05": true
+  },
+  {
+   "name": "V4 NEQR vs V2 NEQR (E2-neqr16-b4-qkc)",
+   "a": "V4-neqr-p4",
+   "b": "E2-neqr16-b4-qkc",
+   "acc_a": 0.8268518518518518,
+   "acc_b": 0.6018518518518519,
+   "diff": 0.225,
+   "ci95": [
+    0.18518518518518515,
+    0.26666666666666666
+   ],
+   "p_permutation": 9.999000099990002e-05,
+   "mcnemar_per_seed": [
+    {
+     "seed": 0,
+     "a_only_correct": 108,
+     "b_only_correct": 11,
+     "p_exact": 3.5244459526876745e-21
+    },
+    {
+     "seed": 1,
+     "a_only_correct": 48,
+     "b_only_correct": 7,
+     "p_exact": 1.3087586125948292e-08
+    },
+    {
+     "seed": 2,
+     "a_only_correct": 119,
+     "b_only_correct": 14,
+     "p_exact": 6.354785400836389e-22
+    }
+   ],
+   "p_holm": 0.0007999200079992001,
+   "significant_0_05": true
+  },
+  {
+   "name": "V4 FRQI vs V4 NEQR",
+   "a": "V4-frqi-p8",
+   "b": "V4-neqr-p4",
+   "acc_a": 0.8777777777777778,
+   "acc_b": 0.8268518518518518,
+   "diff": 0.050925925925925944,
+   "ci95": [
+    0.011111111111111117,
+    0.08981481481481485
+   ],
+   "p_permutation": 0.014998500149985002,
+   "mcnemar_per_seed": [
+    {
+     "seed": 0,
+     "a_only_correct": 30,
+     "b_only_correct": 33,
+     "p_exact": 0.8013064925040663
+    },
+    {
+     "seed": 1,
+     "a_only_correct": 87,
+     "b_only_correct": 29,
+     "p_exact": 6.471530404742244e-08
+    },
+    {
+     "seed": 2,
+     "a_only_correct": 32,
+     "b_only_correct": 32,
+     "p_exact": 1.0
+    }
+   ],
+   "p_holm": 0.044995500449955005,
+   "significant_0_05": true
+  },
+  {
+   "name": "V4 FRQI vs classical patch-moment RBF-SVM",
+   "a": "V4-frqi-p8",
+   "b": "V4-patchmom-rbfsvm",
+   "acc_a": 0.8777777777777778,
+   "acc_b": 0.8361111111111111,
+   "diff": 0.041666666666666664,
+   "ci95": [
+    0.004629629629629631,
+    0.07685185185185187
+   ],
+   "p_permutation": 0.029897010298970104,
+   "mcnemar_per_seed": [
+    {
+     "seed": 0,
+     "a_only_correct": 36,
+     "b_only_correct": 24,
+     "p_exact": 0.1550019040032606
+    },
+    {
+     "seed": 1,
+     "a_only_correct": 34,
+     "b_only_correct": 22,
+     "p_exact": 0.1408954235984807
+    },
+    {
+     "seed": 2,
+     "a_only_correct": 42,
+     "b_only_correct": 21,
+     "p_exact": 0.011141407415305074
+    }
+   ],
+   "p_holm": 0.05979402059794021,
+   "significant_0_05": false
+  },
+  {
+   "name": "V4 NEQR vs classical patch-moment RBF-SVM",
+   "a": "V4-neqr-p4",
+   "b": "V4-patchmom-rbfsvm",
+   "acc_a": 0.8268518518518518,
+   "acc_b": 0.8361111111111111,
+   "diff": -0.009259259259259264,
+   "ci95": [
+    -0.04907407407407409,
+    0.03055555555555555
+   ],
+   "p_permutation": 0.678032196780322,
+   "mcnemar_per_seed": [
+    {
+     "seed": 0,
+     "a_only_correct": 40,
+     "b_only_correct": 25,
+     "p_exact": 0.08168153394154003
+    },
+    {
+     "seed": 1,
+     "a_only_correct": 34,
+     "b_only_correct": 80,
+     "p_exact": 1.9596368034800084e-05
+    },
+    {
+     "seed": 2,
+     "a_only_correct": 44,
+     "b_only_correct": 23,
+     "p_exact": 0.013933875024287785
+    }
+   ],
+   "p_holm": 0.678032196780322,
+   "significant_0_05": false
+  },
+  {
+   "name": "V4 FRQI vs classical texture RBF-SVM (V3-tex12c-rbfsvm)",
+   "a": "V4-frqi-p8",
+   "b": "V3-tex12c-rbfsvm",
+   "acc_a": 0.8777777777777778,
+   "acc_b": 0.9555555555555556,
+   "diff": -0.07777777777777777,
+   "ci95": [
+    -0.10925925925925926,
+    -0.04722222222222222
+   ],
+   "p_permutation": 9.999000099990002e-05,
+   "mcnemar_per_seed": [
+    {
+     "seed": 0,
+     "a_only_correct": 12,
+     "b_only_correct": 40,
+     "p_exact": 0.0001275387838557407
+    },
+    {
+     "seed": 1,
+     "a_only_correct": 11,
+     "b_only_correct": 36,
+     "p_exact": 0.00034600114031491097
+    },
+    {
+     "seed": 2,
+     "a_only_correct": 6,
+     "b_only_correct": 37,
+     "p_exact": 1.636124125070637e-06
+    }
+   ],
+   "p_holm": 0.0007999200079992001,
+   "significant_0_05": true
+  },
+  {
+   "name": "V4 NEQR vs classical texture RBF-SVM (V3-tex12c-rbfsvm)",
+   "a": "V4-neqr-p4",
+   "b": "V3-tex12c-rbfsvm",
+   "acc_a": 0.8268518518518518,
+   "acc_b": 0.9555555555555556,
+   "diff": -0.1287037037037037,
+   "ci95": [
+    -0.15833333333333335,
+    -0.10000000000000002
+   ],
+   "p_permutation": 9.999000099990002e-05,
+   "mcnemar_per_seed": [
+    {
+     "seed": 0,
+     "a_only_correct": 7,
+     "b_only_correct": 32,
+     "p_exact": 7.025478407740593e-05
+    },
+    {
+     "seed": 1,
+     "a_only_correct": 3,
+     "b_only_correct": 86,
+     "p_exact": 3.7988915866351353e-22
+    },
+    {
+     "seed": 2,
+     "a_only_correct": 5,
+     "b_only_correct": 36,
+     "p_exact": 7.84157236921601e-07
+    }
+   ],
+   "p_holm": 0.0007999200079992001,
+   "significant_0_05": true
+  }
+ ]
+}

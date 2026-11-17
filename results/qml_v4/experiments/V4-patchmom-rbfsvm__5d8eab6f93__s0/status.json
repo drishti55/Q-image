@@ -1,0 +1,48 @@
+{
+ "experiment_id": "V4-patchmom-rbfsvm__5d8eab6f93__s0",
+ "status": "completed",
+ "updated_at": "2026-11-17T05:05:25.088884",
+ "summary": {
+  "record_type": "classification",
+  "experiment_code": "V4C",
+  "group": "V4-patchmom-rbfsvm",
+  "model_name": "RBF-SVM on classical patch moments (matched control)",
+  "family": "classical",
+  "compute_type": "classical",
+  "feature_extraction": "64x64 grayscale, 8x8 patches stride 4, per-image contrast stretch",
+  "encoding": null,
+  "n_qubits": null,
+  "circuit_depth": null,
+  "circuit_depth_compiled": null,
+  "n_layers": null,
+  "optimizer": null,
+  "learning_rate": null,
+  "shots": null,
+  "seed": 0,
+  "n_train": 1080,
+  "n_val": 360,
+  "n_test": null,
+  "dataset_manifest_id": "neu-5625b937479b",
+  "split_id": "split-s0-2a1d15648e",
+  "params": {
+   "image_size": 64,
+   "patch": 8,
+   "stride": 4,
+   "norm": "stretch",
+   "gamma": 0.3,
+   "C": 10.0
+  },
+  "val": {
+   "accuracy": 0.5722222222222222,
+   "precision_macro": 0.5786081168774931,
+   "recall_macro": 0.5722222222222223,
+   "f1_macro": 0.5532936212841431,
+   "f1_weighted": 0.5532936212841431
+  },
+  "test": null,
+  "train_time_s": 0.6320233750157058,
+  "val_inference_time_s": 0.6559241249924526,
+  "inference_ms_per_image": 1.8220114583123683,
+  "selected": false
+ }
+}

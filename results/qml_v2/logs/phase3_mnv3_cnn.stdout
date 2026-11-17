@@ -1,0 +1,32 @@
+# start phase3_mnv3_cnn: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+== group E7-mnv3-logreg: 6 configs x 3 seeds
+  [ok] E7-mnv3-logreg__1d919daf6d__s0  val acc=0.944 F1=0.943  fit 0.0s
+  [ok] E7-mnv3-logreg__5d92d46034__s1  val acc=0.964 F1=0.964  fit 0.0s
+  [ok] E7-mnv3-logreg__5d92d46034__s2  val acc=0.983 F1=0.983  fit 0.0s
+  [ok] E7-mnv3-logreg__86f9129499__s0  val acc=0.953 F1=0.952  fit 0.0s
+  [ok] E7-mnv3-logreg__86f9129499__s1  val acc=0.961 F1=0.961  fit 0.0s
+  [ok] E7-mnv3-logreg__86f9129499__s2  val acc=0.986 F1=0.986  fit 0.0s
+  [ok] E7-mnv3-logreg__989956839c__s0  val acc=0.956 F1=0.955  fit 0.0s
+  [ok] E7-mnv3-logreg__989956839c__s1  val acc=0.961 F1=0.961  fit 0.0s
+  [ok] E7-mnv3-logreg__989956839c__s2  val acc=0.989 F1=0.989  fit 0.0s
+  [ok] E7-mnv3-logreg__a4ad34f6c5__s0  val acc=0.964 F1=0.963  fit 0.0s
+  [ok] E7-mnv3-logreg__a4ad34f6c5__s1  val acc=0.964 F1=0.964  fit 0.0s
+  [ok] E7-mnv3-logreg__a4ad34f6c5__s2  val acc=0.989 F1=0.989  fit 0.0s
+  [ok] E7-mnv3-logreg__ebd2186099__s0  val acc=0.967 F1=0.966  fit 0.0s
+  [ok] E7-mnv3-logreg__ebd2186099__s1  val acc=0.964 F1=0.964  fit 0.0s
+  [ok] E7-mnv3-logreg__ebd2186099__s2  val acc=0.992 F1=0.992  fit 0.0s
+  [ok] E7-mnv3-logreg__2a0374b7a3__s0  val acc=0.967 F1=0.966  fit 0.0s
+  [ok] E7-mnv3-logreg__2a0374b7a3__s1  val acc=0.961 F1=0.961  fit 0.0s
+  [ok] E7-mnv3-logreg__2a0374b7a3__s2  val acc=0.992 F1=0.992  fit 0.0s
+Traceback (most recent call last):
+  File "/Users/drishti/Library/Mobile Documents/com~apple~CloudDocs/Projects/QIP/scripts/v2/phase3_classical.py", line 56, in <module>
+    mnv3_groups(r)
+  File "/Users/drishti/Library/Mobile Documents/com~apple~CloudDocs/Projects/QIP/scripts/v2/phase3_classical.py", line 41, in mnv3_groups
+    r.run_group("E7-mnv3-logreg", [
+  File "/Users/drishti/Library/Mobile Documents/com~apple~CloudDocs/Projects/QIP/src/v2/runner.py", line 236, in run_group
+    sel = self.select(group, specs, results)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/drishti/Library/Mobile Documents/com~apple~CloudDocs/Projects/QIP/src/v2/runner.py", line 183, in select
+    res = results[spec.config_key()]
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'E7-mnv3-logreg__5d92d46034'

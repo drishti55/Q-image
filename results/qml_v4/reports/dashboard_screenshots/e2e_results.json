@@ -1,0 +1,251 @@
+{
+ "passed": 49,
+ "failed": 0,
+ "checks": [
+  {
+   "check": "/ opens the Protocol V2 overview",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "overview counts come from /api/v2/summary",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "sidebar is short (\u2264 17 links incl. logo; +3 for the V4 pages: How it works, V4 results, Reconstruction all images)",
+   "ok": true,
+   "detail": "17 links"
+  },
+  {
+   "check": "best overall accuracy displayed",
+   "ok": true,
+   "detail": "96.4%"
+  },
+  {
+   "check": "best purely quantum accuracy displayed",
+   "ok": true,
+   "detail": "64.0%"
+  },
+  {
+   "check": "no V0 KPI text on V2 overview",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "simulation disclaimer shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "/experiments-v2 shows V2 runs + split integrity",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "status filter offers only statuses present in the data",
+   "ok": true,
+   "detail": "options=['All', 'completed']"
+  },
+  {
+   "check": "experiments seed filter works",
+   "ok": true,
+   "detail": "seeds shown=['1']"
+  },
+  {
+   "check": "experiment detail page opens from history",
+   "ok": true,
+   "detail": "E1-frqi16-qkc__08c086c77b__s0"
+  },
+  {
+   "check": "browser refresh on deep link /experiments/:id works",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "leaderboard (default) ranks the best model first",
+   "ok": true,
+   "detail": "Frozen MobileNetV3 + Logistic Regression"
+  },
+  {
+   "check": "leaderboard shows top 12 by default",
+   "ok": true,
+   "detail": "12 rows"
+  },
+  {
+   "check": "leaderboard family filter",
+   "ok": true,
+   "detail": "expected 9"
+  },
+  {
+   "check": "model comparison lists all 88 configurations",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "table row count equals API count",
+   "ok": true,
+   "detail": "rows=88"
+  },
+  {
+   "check": "every configuration name rendered",
+   "ok": true,
+   "detail": "missing=[]"
+  },
+  {
+   "check": "default sort = test accuracy descending",
+   "ok": true,
+   "detail": "96.4 \u00b1 1.1%"
+  },
+  {
+   "check": "search filters configurations",
+   "ok": true,
+   "detail": "expected 18"
+  },
+  {
+   "check": "family filter works",
+   "ok": true,
+   "detail": "expected 6"
+  },
+  {
+   "check": "exact vs finite-shot filter works",
+   "ok": true,
+   "detail": "expected 18"
+  },
+  {
+   "check": "qubit filter works",
+   "ok": true,
+   "detail": "expected 15"
+  },
+  {
+   "check": "side-by-side comparison opens",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "row expands to seed-wise results",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "encoding page shows FRQI and NEQR sections + comparison",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "encoding page uses recorded compiled gate counts",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "circuit diagram renders",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "selected circuit matches executed experiment",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "logical gate count of executed circuit displayed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "reconstruction images load (original/reconstructed/diff \u00d7 2 records)",
+   "ok": true,
+   "detail": "6/6"
+  },
+  {
+   "check": "scratches image (index 29) available",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "classification shows confusion matrix, per-class and seed-wise",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "weak-class panel shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "/historical-v0 opens labelled read-only V0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "V0 pages carry the historical banner",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "breadcrumb marks V0 pages",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "old V0 URL redirects into /historical-v0 (query kept)",
+   "ok": true,
+   "detail": "http://127.0.0.1:5173/historical-v0/qml-lab?tab=models"
+  },
+  {
+   "check": "presentation slide 1 shows a real sample image for every class",
+   "ok": true,
+   "detail": "6 images"
+  },
+  {
+   "check": "presentation renders full-screen (no sidebar)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "arrow key advances to slide 2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "results slide shows best accuracies from the API",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "encoding slide shows real reconstructions",
+   "ok": true,
+   "detail": "4 images"
+  },
+  {
+   "check": "Escape exits the presentation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "sidebar navigation works",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile viewport: no horizontal page overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile navigation drawer opens",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "no console errors on any page",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "no failed /api requests",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "experiment_code": "V4E",
+ "group": "V4-frqi-p4",
+ "model_name": "FRQI patch-ensemble kernel (4x4 patches)",
+ "family": "quantum_kernel",
+ "family_label": "Quantum kernel (simulated)",
+ "compute_type": "hybrid",
+ "feature_extraction": "64x64 grayscale, 4x4 patches stride 4",
+ "encoding": "FRQI",
+ "params": {
+  "representation": "FRQI",
+  "image_size": 64,
+  "patch": 4,
+  "stride": 4,
+  "norm": "none",
+  "C": 1000.0,
+  "angle_scale": 2.0
+ },
+ "quantum": {
+  "n_qubits": 5,
+  "n_layers": null,
+  "optimizer": null,
+  "learning_rate": null,
+  "shots": 0,
+  "representation": "FRQI",
+  "intensity_bits": null,
+  "kernel": "mixed-state Hilbert-Schmidt (swap test)"
+ },
+ "provider": {
+  "name": "image64",
+  "input": "64x64 grayscale in [0,1]",
+  "preprocessing": "convert('L') -> BILINEAR resize -> /255 (no learned transform)"
+ },
+ "seed": 2,
+ "split_id": "split-s2-cbd05190d5",
+ "dataset_manifest_id": "neu-5625b937479b",
+ "protocol": "V2 locked-test (validation folder) + group-blocked train/val",
+ "notes": "each patch encoded as an FRQI/NEQR state; image = uniform mixture of its patch states; kernel Tr(rho_A rho_B) (swap test), exact; + SVC"
+}

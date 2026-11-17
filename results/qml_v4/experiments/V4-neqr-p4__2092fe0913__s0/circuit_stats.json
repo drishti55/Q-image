@@ -1,0 +1,70 @@
+{
+ "n_qubits": 8,
+ "gates_logical": 105,
+ "depth_logical": 64,
+ "gate_counts_logical": {
+  "x": 64,
+  "mcx": 40,
+  "h": 4,
+  "barrier": 1
+ },
+ "two_qubit_gates_logical": 0,
+ "gates_compiled": 1867,
+ "depth_compiled": 1522,
+ "gate_counts_compiled": {
+  "rz": 1522,
+  "cx": 1010,
+  "sx": 338,
+  "x": 30,
+  "barrier": 1
+ },
+ "single_qubit_gates_compiled": 1890,
+ "two_qubit_gates_compiled": 648,
+ "cx_compiled": 648,
+ "transpilation": {
+  "basis_gates": [
+   "cx",
+   "rz",
+   "sx",
+   "x"
+  ],
+  "optimization_level": 1,
+  "seed_transpiler": 0,
+  "coupling_map": "none (all-to-all)"
+ },
+ "gates_logical_range": [
+  98,
+  109
+ ],
+ "depth_logical_range": [
+  57,
+  68
+ ],
+ "gates_compiled_range": [
+  1081,
+  2901
+ ],
+ "depth_compiled_range": [
+  851,
+  2500
+ ],
+ "cx_compiled_range": [
+  372,
+  1010
+ ],
+ "two_qubit_gates_compiled_range": [
+  372,
+  1010
+ ],
+ "n_sample_images": 5,
+ "note": "resources are for encoding ONE patch; the mixed state is a uniform random choice of patch",
+ "representation": "NEQR",
+ "patch": 4,
+ "stride": 4,
+ "patches_per_image": 256,
+ "angle_scale": null,
+ "intensity_bits": 4,
+ "measurement": "swap test on two 8-qubit patch states (+1 ancilla): estimates Tr(rho_A rho_B)",
+ "execution_mode": "statevector (exact overlaps)",
+ "shots": 0
+}

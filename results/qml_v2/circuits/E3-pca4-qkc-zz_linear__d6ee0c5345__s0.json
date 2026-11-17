@@ -1,0 +1,255 @@
+{
+ "experiment_id": "E3-pca4-qkc-zz_linear__d6ee0c5345__s0",
+ "group": "E3-pca4-qkc-zz_linear",
+ "kind": "Quantum kernel feature map U(x)",
+ "params": {
+  "feature_map": "zz_linear",
+  "reps": 1,
+  "bandwidth": 0.5,
+  "C": 100.0,
+  "shots": 0
+ },
+ "n_qubits": 4,
+ "registers": [
+  {
+   "name": "q",
+   "size": 4
+  }
+ ],
+ "input": "first training image of split split-s0-2a1d15648e (train/images/crazing/crazing_1.jpg), PCA angles \u00d7 bandwidth 0.5",
+ "logical_counts_displayed_circuit": {
+  "p": 7,
+  "cx": 6,
+  "h": 4
+ },
+ "logical_gates_displayed_circuit": 17,
+ "logical_depth_displayed_circuit": 11,
+ "recorded_resources": {
+  "n_qubits": 4,
+  "gates_logical": 17,
+  "depth_logical": 11,
+  "gate_counts_logical": {
+   "p": 7,
+   "cx": 6,
+   "h": 4
+  },
+  "two_qubit_gates_logical": 6,
+  "gates_compiled": 21,
+  "depth_compiled": 12,
+  "gate_counts_compiled": {
+   "rz": 11,
+   "cx": 6,
+   "sx": 4
+  },
+  "single_qubit_gates_compiled": 15,
+  "two_qubit_gates_compiled": 6,
+  "cx_compiled": 6,
+  "transpilation": {
+   "basis_gates": [
+    "cx",
+    "rz",
+    "sx",
+    "x"
+   ],
+   "optimization_level": 1,
+   "seed_transpiler": 0,
+   "coupling_map": "none (all-to-all)"
+  },
+  "circuit": "feature map U(x) (one encoding; kernel circuit = U(x) then U(y)\u2020 + measurement)",
+  "feature_map": "zz_linear",
+  "reps": 1,
+  "kernel_circuit_note": "compute-uncompute doubles gates/depth; measured once",
+  "shots": 0,
+  "execution_mode": "statevector (exact)"
+ },
+ "entanglement": [
+  [
+   0,
+   1
+  ],
+  [
+   1,
+   2
+  ],
+  [
+   2,
+   3
+  ]
+ ],
+ "measurement": "Kernel circuit U(x) then U(y)\u2020, all qubits measured once; K(x,y) = P(0\u20260). Exact statevector overlap used.",
+ "instructions": [
+  {
+   "i": 0,
+   "name": "h",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 1,
+   "name": "h",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 2,
+   "name": "h",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 3,
+   "name": "h",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 4,
+   "name": "p",
+   "qubits": [
+    0
+   ],
+   "params": [
+    1.8703
+   ]
+  },
+  {
+   "i": 5,
+   "name": "p",
+   "qubits": [
+    1
+   ],
+   "params": [
+    1.2087
+   ]
+  },
+  {
+   "i": 6,
+   "name": "p",
+   "qubits": [
+    2
+   ],
+   "params": [
+    1.3959
+   ]
+  },
+  {
+   "i": 7,
+   "name": "p",
+   "qubits": [
+    3
+   ],
+   "params": [
+    1.4648
+   ]
+  },
+  {
+   "i": 8,
+   "name": "cx",
+   "qubits": [
+    0,
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 9,
+   "name": "p",
+   "qubits": [
+    1
+   ],
+   "params": [
+    11.1964
+   ]
+  },
+  {
+   "i": 10,
+   "name": "cx",
+   "qubits": [
+    0,
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 11,
+   "name": "cx",
+   "qubits": [
+    1,
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 12,
+   "name": "p",
+   "qubits": [
+    2
+   ],
+   "params": [
+    12.4001
+   ]
+  },
+  {
+   "i": 13,
+   "name": "cx",
+   "qubits": [
+    1,
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 14,
+   "name": "cx",
+   "qubits": [
+    2,
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 15,
+   "name": "p",
+   "qubits": [
+    3
+   ],
+   "params": [
+    11.7743
+   ]
+  },
+  {
+   "i": 16,
+   "name": "cx",
+   "qubits": [
+    2,
+    3
+   ],
+   "params": []
+  }
+ ],
+ "instructions_truncated": false,
+ "text_diagram": "     \u250c\u2500\u2500\u2500\u2510\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510                                                                   \nq_0: \u2524 H \u251c\u2524 P(1.8703) \u251c\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u251c\u2500\u2500\u2500\u2524\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\u250c\u2500\u2534\u2500\u2510\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u250c\u2500\u2534\u2500\u2510                                            \nq_1: \u2524 H \u251c\u2524 P(1.2087) \u251c\u2524 X \u251c\u2524 P(11.196) \u251c\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u251c\u2500\u2500\u2500\u2524\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\u2514\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2518\u250c\u2500\u2534\u2500\u2510\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u250c\u2500\u2534\u2500\u2510                       \nq_2: \u2524 H \u251c\u2524 P(1.3959) \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2524 P(12.4) \u251c\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25a0\u2500\u2500\n     \u251c\u2500\u2500\u2500\u2524\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524                       \u2514\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2518\u250c\u2500\u2534\u2500\u2510\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u250c\u2500\u2534\u2500\u2510\nq_3: \u2524 H \u251c\u2524 P(1.4648) \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2524 P(11.774) \u251c\u2524 X \u251c\n     \u2514\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518                                            \u2514\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2518",
+ "status": "completed",
+ "circuit_key": "qkc|zz_linear|reps1|q4",
+ "used_by": [
+  {
+   "group": "E3-pca4-qkc-zz_linear",
+   "display_name": "QKC ZZ-linear \u00b7 4 qubits",
+   "execution": "exact statevector, simulated"
+  },
+  {
+   "group": "E5-mnv3pca4-qkc-zz_linear",
+   "display_name": "MobileNetV3 features \u2192 PCA 4 + QKC ZZ-linear",
+   "execution": "exact statevector, simulated"
+  }
+ ],
+ "built_by": "scripts/v2/build_circuit_artifacts.py"
+}

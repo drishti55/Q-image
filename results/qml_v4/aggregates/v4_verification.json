@@ -1,0 +1,95 @@
+{
+ "created_at": "2026-11-17T20:20:17",
+ "checks": [
+  {
+   "check": "historical V0 results: 0 changed, 0 missing",
+   "ok": true,
+   "detail": "3690 files"
+  },
+  {
+   "check": "V2 manifest/splits/caches unchanged (SHA-256, in qml_v2 and qml_v3)",
+   "ok": true,
+   "detail": "53 files x 2"
+  },
+  {
+   "check": "V4 copies of manifest/splits/image caches identical to the V3/V2 originals",
+   "ok": true,
+   "detail": "51 files"
+  },
+  {
+   "check": "no Protocol V2 result file modified or added since V3 was finalised",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "no Protocol V3 result file modified or added since V3 was finalised",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "all 70 V3 selection files unchanged since the V3 freeze",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "V4 selection files unchanged since the V4 freeze",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "every V4 locked-test access after the freeze, one per frozen group",
+   "ok": true,
+   "detail": "5 events"
+  },
+  {
+   "check": "test predictions exist only for the frozen configurations",
+   "ok": true,
+   "detail": "15 vs 15"
+  },
+  {
+   "check": "no selection file contains a test metric",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "864 candidate runs, 0 failed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "test accuracy recomputed from predictions.csv (360 locked images per run)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "FRQI headline chosen by validation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "NEQR headline chosen by validation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "comparisons are exactly the 8 pre-declared ones",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "every V4 quantum group records a real FRQI/NEQR encoder circuit (Qiskit, transpiled)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "classical control has no circuit and is labelled classical",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "notes": [
+  "Before the V4 grid was written, patch geometries were explored on the internal VALIDATION split only (no test data). That exploration used the V3 data loader and wrote six 32x32 train/val image-cache files into results/qml_v3/cache; they were deleted minutes later (they were additions, not modifications; all V3 records and hashes are unchanged).",
+  "A first V4 launch failed after 1 minute (disk full: checkpoints stored training density matrices). Its partial candidate outputs (validation only, no test access) were deleted and the grid was re-run from scratch with small checkpoints; a reloaded checkpoint was verified to reproduce its validation predictions exactly.",
+  "The locked test set has been used by Protocols V2 and V3 before; V4 is a new method frozen on validation and evaluated once, but readers should know the test set is not 'fresh' for the project as a whole."
+ ]
+}

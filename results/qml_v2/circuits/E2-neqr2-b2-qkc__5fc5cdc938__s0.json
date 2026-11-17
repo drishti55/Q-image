@@ -1,0 +1,251 @@
+{
+ "experiment_id": "E2-neqr2-b2-qkc__5fc5cdc938__s0",
+ "group": "E2-neqr2-b2-qkc",
+ "kind": "NEQR encoding circuit (2-bit)",
+ "params": {
+  "representation": "NEQR",
+  "C": 100.0,
+  "bits": 2,
+  "angle_scale": 1.0,
+  "shots": 0
+ },
+ "n_qubits": 4,
+ "registers": [
+  {
+   "name": "pos",
+   "size": 2
+  },
+  {
+   "name": "intensity",
+   "size": 2
+  }
+ ],
+ "input": "first training image of split split-s0-2a1d15648e (train/images/crazing/crazing_1.jpg)",
+ "logical_counts_displayed_circuit": {
+  "x": 8,
+  "ccx": 4,
+  "h": 2,
+  "barrier": 1
+ },
+ "logical_gates_displayed_circuit": 15,
+ "logical_depth_displayed_circuit": 10,
+ "recorded_resources": {
+  "n_qubits": 4,
+  "gates_logical": 15,
+  "depth_logical": 10,
+  "gate_counts_logical": {
+   "x": 8,
+   "ccx": 4,
+   "h": 2,
+   "barrier": 1
+  },
+  "two_qubit_gates_logical": 0,
+  "gates_compiled": 71,
+  "depth_compiled": 47,
+  "gate_counts_compiled": {
+   "rz": 35,
+   "cx": 24,
+   "x": 6,
+   "sx": 4,
+   "barrier": 1
+  },
+  "single_qubit_gates_compiled": 45,
+  "two_qubit_gates_compiled": 24,
+  "cx_compiled": 24,
+  "transpilation": {
+   "basis_gates": [
+    "cx",
+    "rz",
+    "sx",
+    "x"
+   ],
+   "optimization_level": 1,
+   "seed_transpiler": 0,
+   "coupling_map": "none (all-to-all)"
+  },
+  "gates_logical_range": [
+   15,
+   15
+  ],
+  "depth_logical_range": [
+   10,
+   10
+  ],
+  "gates_compiled_range": [
+   70,
+   75
+  ],
+  "depth_compiled_range": [
+   47,
+   47
+  ],
+  "cx_compiled_range": [
+   24,
+   24
+  ],
+  "two_qubit_gates_compiled_range": [
+   24,
+   24
+  ],
+  "n_sample_images": 5,
+  "note": "encoding circuit of one image; values are means over sample training images (NEQR gate count depends on pixel bit patterns)",
+  "representation": "NEQR",
+  "shots": 0,
+  "angle_scale": null,
+  "intensity_bits": 2,
+  "execution_mode": "statevector overlap (exact)"
+ },
+ "entanglement": [
+  [
+   "all position qubits",
+   "colour/intensity qubit(s)",
+   "multi-controlled rotations / X"
+  ]
+ ],
+ "measurement": "Kernel = |\u27e8I_A|I_B\u27e9|\u00b2 of the encoded states; exact statevector overlap.",
+ "instructions": [
+  {
+   "i": 0,
+   "name": "h",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 1,
+   "name": "h",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 2,
+   "name": "barrier",
+   "qubits": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 3,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 4,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 5,
+   "name": "ccx",
+   "qubits": [
+    0,
+    1,
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 6,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 7,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 8,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 9,
+   "name": "ccx",
+   "qubits": [
+    0,
+    1,
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 10,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 11,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 12,
+   "name": "ccx",
+   "qubits": [
+    0,
+    1,
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 13,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 14,
+   "name": "ccx",
+   "qubits": [
+    0,
+    1,
+    3
+   ],
+   "params": []
+  }
+ ],
+ "instructions_truncated": false,
+ "text_diagram": "             \u250c\u2500\u2500\u2500\u2510 \u2591 \u250c\u2500\u2500\u2500\u2510     \u250c\u2500\u2500\u2500\u2510          \u250c\u2500\u2500\u2500\u2510     \u250c\u2500\u2500\u2500\u2510     \n      pos_0: \u2524 H \u251c\u2500\u2591\u2500\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2524 X \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25a0\u2500\u2500\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\n             \u251c\u2500\u2500\u2500\u2524 \u2591 \u251c\u2500\u2500\u2500\u2524  \u2502  \u251c\u2500\u2500\u2500\u2524\u250c\u2500\u2500\u2500\u2510  \u2502  \u251c\u2500\u2500\u2500\u2524  \u2502  \u2514\u2500\u2500\u2500\u2518  \u2502  \n      pos_1: \u2524 H \u251c\u2500\u2591\u2500\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2524 X \u251c\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25a0\u2500\u2500\n             \u2514\u2500\u2500\u2500\u2518 \u2591 \u2514\u2500\u2500\u2500\u2518  \u2502  \u2514\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2518  \u2502  \u2514\u2500\u2500\u2500\u2518  \u2502         \u2502  \nintensity_0: \u2500\u2500\u2500\u2500\u2500\u2500\u2591\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\n                   \u2591      \u250c\u2500\u2534\u2500\u2510          \u250c\u2500\u2534\u2500\u2510     \u250c\u2500\u2534\u2500\u2510     \u250c\u2500\u2534\u2500\u2510\nintensity_1: \u2500\u2500\u2500\u2500\u2500\u2500\u2591\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\n                   \u2591      \u2514\u2500\u2500\u2500\u2518          \u2514\u2500\u2500\u2500\u2518     \u2514\u2500\u2500\u2500\u2518     \u2514\u2500\u2500\u2500\u2518",
+ "status": "completed",
+ "circuit_key": "neqr|2x2|b2",
+ "used_by": [
+  {
+   "group": "E2-neqr2-b2-qkc",
+   "display_name": "NEQR kernel \u00b7 2\u00d72 \u00b7 2-bit",
+   "execution": "exact statevector, simulated"
+  }
+ ],
+ "built_by": "scripts/v2/build_circuit_artifacts.py"
+}

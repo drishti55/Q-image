@@ -1,0 +1,85 @@
+# start phase4_shots: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+== group E3-pca4-qkc-zz_full-shots100: 1 configs x 3 seeds
+  [ok] E3-pca4-qkc-zz_full-shots100__a4ab2e29f2__s0  val acc=0.492 F1=0.493  fit 0.2s
+  [ok] E3-pca4-qkc-zz_full-shots100__a4ab2e29f2__s1  val acc=0.489 F1=0.487  fit 0.4s
+  [ok] E3-pca4-qkc-zz_full-shots100__a4ab2e29f2__s2  val acc=0.544 F1=0.545  fit 0.3s
+  [TEST] E3-pca4-qkc-zz_full-shots100__a4ab2e29f2__s0  acc=0.453 F1=0.421
+  [TEST] E3-pca4-qkc-zz_full-shots100__a4ab2e29f2__s1  acc=0.461 F1=0.429
+  [TEST] E3-pca4-qkc-zz_full-shots100__a4ab2e29f2__s2  acc=0.425 F1=0.406
+== group E3-pca4-qkc-zz_full-shots500: 1 configs x 3 seeds
+  [ok] E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s0  val acc=0.531 F1=0.527  fit 0.2s
+  [ok] E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s1  val acc=0.494 F1=0.495  fit 0.2s
+  [ok] E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s2  val acc=0.542 F1=0.541  fit 0.2s
+  [TEST] E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s0  acc=0.503 F1=0.475
+  [TEST] E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s1  acc=0.472 F1=0.439
+  [TEST] E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s2  acc=0.475 F1=0.456
+== group E3-pca4-qkc-zz_full-shots1000: 1 configs x 3 seeds
+  [ok] E3-pca4-qkc-zz_full-shots1000__5304bb1c4d__s0  val acc=0.542 F1=0.540  fit 1.1s
+  [ok] E3-pca4-qkc-zz_full-shots1000__5304bb1c4d__s1  val acc=0.528 F1=0.526  fit 0.8s
+  [ok] E3-pca4-qkc-zz_full-shots1000__5304bb1c4d__s2  val acc=0.650 F1=0.649  fit 0.4s
+  [TEST] E3-pca4-qkc-zz_full-shots1000__5304bb1c4d__s0  acc=0.461 F1=0.438
+  [TEST] E3-pca4-qkc-zz_full-shots1000__5304bb1c4d__s1  acc=0.539 F1=0.504
+  [TEST] E3-pca4-qkc-zz_full-shots1000__5304bb1c4d__s2  acc=0.453 F1=0.428
+== group E3-pca4-qkc-zz_full-shots5000: 1 configs x 3 seeds
+  [ok] E3-pca4-qkc-zz_full-shots5000__b4da148cfd__s0  val acc=0.561 F1=0.564  fit 0.3s
+  [ok] E3-pca4-qkc-zz_full-shots5000__b4da148cfd__s1  val acc=0.550 F1=0.550  fit 0.3s
+  [ok] E3-pca4-qkc-zz_full-shots5000__b4da148cfd__s2  val acc=0.614 F1=0.613  fit 0.2s
+  [TEST] E3-pca4-qkc-zz_full-shots5000__b4da148cfd__s0  acc=0.483 F1=0.461
+  [TEST] E3-pca4-qkc-zz_full-shots5000__b4da148cfd__s1  acc=0.453 F1=0.419
+  [TEST] E3-pca4-qkc-zz_full-shots5000__b4da148cfd__s2  acc=0.503 F1=0.482
+== group E3-pca6-qkc-zz_full-shots100: 1 configs x 3 seeds
+  [ok] E3-pca6-qkc-zz_full-shots100__4f5ff3be37__s0  val acc=0.550 F1=0.549  fit 0.2s
+  [ok] E3-pca6-qkc-zz_full-shots100__4f5ff3be37__s1  val acc=0.592 F1=0.584  fit 0.9s
+  [ok] E3-pca6-qkc-zz_full-shots100__4f5ff3be37__s2  val acc=0.608 F1=0.609  fit 0.3s
+  [TEST] E3-pca6-qkc-zz_full-shots100__4f5ff3be37__s0  acc=0.492 F1=0.460
+  [TEST] E3-pca6-qkc-zz_full-shots100__4f5ff3be37__s1  acc=0.508 F1=0.478
+  [TEST] E3-pca6-qkc-zz_full-shots100__4f5ff3be37__s2  acc=0.472 F1=0.453
+== group E3-pca6-qkc-zz_full-shots500: 1 configs x 3 seeds
+  [ok] E3-pca6-qkc-zz_full-shots500__e69dfbc19f__s0  val acc=0.644 F1=0.645  fit 0.2s
+  [ok] E3-pca6-qkc-zz_full-shots500__e69dfbc19f__s1  val acc=0.611 F1=0.605  fit 0.2s
+  [ok] E3-pca6-qkc-zz_full-shots500__e69dfbc19f__s2  val acc=0.689 F1=0.689  fit 0.3s
+  [TEST] E3-pca6-qkc-zz_full-shots500__e69dfbc19f__s0  acc=0.553 F1=0.525
+  [TEST] E3-pca6-qkc-zz_full-shots500__e69dfbc19f__s1  acc=0.550 F1=0.515
+  [TEST] E3-pca6-qkc-zz_full-shots500__e69dfbc19f__s2  acc=0.542 F1=0.521
+== group E3-pca6-qkc-zz_full-shots1000: 1 configs x 3 seeds
+  [ok] E3-pca6-qkc-zz_full-shots1000__1f2bc0e39b__s0  val acc=0.678 F1=0.678  fit 0.2s
+  [ok] E3-pca6-qkc-zz_full-shots1000__1f2bc0e39b__s1  val acc=0.653 F1=0.649  fit 0.2s
+  [ok] E3-pca6-qkc-zz_full-shots1000__1f2bc0e39b__s2  val acc=0.725 F1=0.728  fit 0.2s
+  [TEST] E3-pca6-qkc-zz_full-shots1000__1f2bc0e39b__s0  acc=0.572 F1=0.538
+  [TEST] E3-pca6-qkc-zz_full-shots1000__1f2bc0e39b__s1  acc=0.547 F1=0.513
+  [TEST] E3-pca6-qkc-zz_full-shots1000__1f2bc0e39b__s2  acc=0.531 F1=0.497
+== group E3-pca6-qkc-zz_full-shots5000: 1 configs x 3 seeds
+  [ok] E3-pca6-qkc-zz_full-shots5000__593a76a3fc__s0  val acc=0.686 F1=0.687  fit 0.1s
+  [ok] E3-pca6-qkc-zz_full-shots5000__593a76a3fc__s1  val acc=0.667 F1=0.667  fit 0.1s
+  [ok] E3-pca6-qkc-zz_full-shots5000__593a76a3fc__s2  val acc=0.750 F1=0.752  fit 0.1s
+  [TEST] E3-pca6-qkc-zz_full-shots5000__593a76a3fc__s0  acc=0.544 F1=0.518
+  [TEST] E3-pca6-qkc-zz_full-shots5000__593a76a3fc__s1  acc=0.558 F1=0.527
+  [TEST] E3-pca6-qkc-zz_full-shots5000__593a76a3fc__s2  acc=0.542 F1=0.517
+== group E3-pca8-qkc-zz_full-shots100: 1 configs x 3 seeds
+  [ok] E3-pca8-qkc-zz_full-shots100__0efc69f15e__s0  val acc=0.658 F1=0.652  fit 0.3s
+  [ok] E3-pca8-qkc-zz_full-shots100__0efc69f15e__s1  val acc=0.614 F1=0.601  fit 0.3s
+  [ok] E3-pca8-qkc-zz_full-shots100__0efc69f15e__s2  val acc=0.700 F1=0.693  fit 0.3s
+  [TEST] E3-pca8-qkc-zz_full-shots100__0efc69f15e__s0  acc=0.556 F1=0.534
+  [TEST] E3-pca8-qkc-zz_full-shots100__0efc69f15e__s1  acc=0.575 F1=0.539
+  [TEST] E3-pca8-qkc-zz_full-shots100__0efc69f15e__s2  acc=0.583 F1=0.564
+== group E3-pca8-qkc-zz_full-shots500: 1 configs x 3 seeds
+  [ok] E3-pca8-qkc-zz_full-shots500__7d019f24b6__s0  val acc=0.725 F1=0.722  fit 0.3s
+  [ok] E3-pca8-qkc-zz_full-shots500__7d019f24b6__s1  val acc=0.708 F1=0.703  fit 0.3s
+  [ok] E3-pca8-qkc-zz_full-shots500__7d019f24b6__s2  val acc=0.756 F1=0.755  fit 0.4s
+  [TEST] E3-pca8-qkc-zz_full-shots500__7d019f24b6__s0  acc=0.656 F1=0.635
+  [TEST] E3-pca8-qkc-zz_full-shots500__7d019f24b6__s1  acc=0.592 F1=0.556
+  [TEST] E3-pca8-qkc-zz_full-shots500__7d019f24b6__s2  acc=0.658 F1=0.651
+== group E3-pca8-qkc-zz_full-shots1000: 1 configs x 3 seeds
+  [ok] E3-pca8-qkc-zz_full-shots1000__6065403030__s0  val acc=0.717 F1=0.715  fit 0.3s
+  [ok] E3-pca8-qkc-zz_full-shots1000__6065403030__s1  val acc=0.708 F1=0.705  fit 0.4s
+  [ok] E3-pca8-qkc-zz_full-shots1000__6065403030__s2  val acc=0.781 F1=0.781  fit 0.8s
+  [TEST] E3-pca8-qkc-zz_full-shots1000__6065403030__s0  acc=0.672 F1=0.658
+  [TEST] E3-pca8-qkc-zz_full-shots1000__6065403030__s1  acc=0.597 F1=0.562
+  [TEST] E3-pca8-qkc-zz_full-shots1000__6065403030__s2  acc=0.633 F1=0.627
+== group E3-pca8-qkc-zz_full-shots5000: 1 configs x 3 seeds
+  [ok] E3-pca8-qkc-zz_full-shots5000__1380aa0d69__s0  val acc=0.758 F1=0.758  fit 0.2s
+  [ok] E3-pca8-qkc-zz_full-shots5000__1380aa0d69__s1  val acc=0.700 F1=0.695  fit 0.2s
+  [ok] E3-pca8-qkc-zz_full-shots5000__1380aa0d69__s2  val acc=0.831 F1=0.831  fit 0.2s
+  [TEST] E3-pca8-qkc-zz_full-shots5000__1380aa0d69__s0  acc=0.653 F1=0.639
+  [TEST] E3-pca8-qkc-zz_full-shots5000__1380aa0d69__s1  acc=0.597 F1=0.562
+  [TEST] E3-pca8-qkc-zz_full-shots5000__1380aa0d69__s2  acc=0.653 F1=0.647

@@ -1,0 +1,114 @@
+{
+ "group": "E5-mnv3pca4-logreg",
+ "selected_at": "2026-11-14T20:10:19.867233",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 6,
+ "n_eligible": 6,
+ "selected": {
+  "config_key": "E5-mnv3pca4-logreg__182df13302",
+  "params": {
+   "C": 100.0
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.9151938553935154,
+  "val_std": 0.034057672594252075,
+  "experiment_ids": [
+   "E5-mnv3pca4-logreg__182df13302__s0",
+   "E5-mnv3pca4-logreg__182df13302__s1",
+   "E5-mnv3pca4-logreg__182df13302__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E5-mnv3pca4-logreg__fc63704ae8",
+   "params": {
+    "C": 0.001
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.846426622484283,
+   "val_std": 0.03670783798798321,
+   "experiment_ids": [
+    "E5-mnv3pca4-logreg__fc63704ae8__s0",
+    "E5-mnv3pca4-logreg__fc63704ae8__s1",
+    "E5-mnv3pca4-logreg__fc63704ae8__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca4-logreg__fc40281baf",
+   "params": {
+    "C": 0.01
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.8681464229641146,
+   "val_std": 0.041101841875453356,
+   "experiment_ids": [
+    "E5-mnv3pca4-logreg__fc40281baf__s0",
+    "E5-mnv3pca4-logreg__fc40281baf__s1",
+    "E5-mnv3pca4-logreg__fc40281baf__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca4-logreg__786e08163d",
+   "params": {
+    "C": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.8846420822560721,
+   "val_std": 0.031153875622057743,
+   "experiment_ids": [
+    "E5-mnv3pca4-logreg__786e08163d__s0",
+    "E5-mnv3pca4-logreg__786e08163d__s1",
+    "E5-mnv3pca4-logreg__786e08163d__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca4-logreg__83326b12e3",
+   "params": {
+    "C": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9021891538209349,
+   "val_std": 0.034732117982476024,
+   "experiment_ids": [
+    "E5-mnv3pca4-logreg__83326b12e3__s0",
+    "E5-mnv3pca4-logreg__83326b12e3__s1",
+    "E5-mnv3pca4-logreg__83326b12e3__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca4-logreg__0d5d7e29d3",
+   "params": {
+    "C": 10.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9105458195192733,
+   "val_std": 0.03209707457999748,
+   "experiment_ids": [
+    "E5-mnv3pca4-logreg__0d5d7e29d3__s0",
+    "E5-mnv3pca4-logreg__0d5d7e29d3__s1",
+    "E5-mnv3pca4-logreg__0d5d7e29d3__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca4-logreg__182df13302",
+   "params": {
+    "C": 100.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9151938553935154,
+   "val_std": 0.034057672594252075,
+   "experiment_ids": [
+    "E5-mnv3pca4-logreg__182df13302__s0",
+    "E5-mnv3pca4-logreg__182df13302__s1",
+    "E5-mnv3pca4-logreg__182df13302__s2"
+   ]
+  }
+ ]
+}

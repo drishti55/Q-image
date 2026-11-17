@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Paired comparisons on identical features (k = 8): mean accuracy difference A $-$ B over seeds and exact McNemar p-values per seed (uncorrected).}
+\label{tab:paired}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrlr}
+\toprule
+\textbf{Comparison (A vs B)} & \textbf{$\Delta$ acc. (pp)} & \textbf{McNemar p (seeds 0, 1, 2)} & \textbf{Seeds p$<$0.05} \\
+\midrule
+QKC product\_ry vs RBF-SVM, identical PCA(8) angle features & -2.7 & 1.000, 0.012, 0.002 & 2 \\
+QKC zz\_linear vs RBF-SVM, identical PCA(8) angle features & +0.2 & 0.464, 0.098, 0.456 & 0 \\
+QKC zz\_full vs RBF-SVM, identical PCA(8) angle features & +3.2 & 0.008, 0.311, 0.021 & 2 \\
+ZZ-linear vs product-RY control (PCA 8) & +2.9 & 0.410, 1.000, 0.022 & 1 \\
+VQC vs RBF-SVM, PCA(8) & -12.7 & $<$0.001, $<$0.001, $<$0.001 & 3 \\
+Trained VQC vs frozen-circuit ablation (PCA 8) & +19.4 & $<$0.001, $<$0.001, $<$0.001 & 3 \\
+VQC vs logistic regression, PCA(8) & +9.9 & 0.003, $<$0.001, 0.037 & 3 \\
+CNN+QKC product\_ry vs CNN+RBF-SVM (MobileNet PCA 8) & +0.3 & 1.000, 0.375, 1.000 & 0 \\
+CNN+QKC zz\_linear vs CNN+RBF-SVM (MobileNet PCA 8) & -1.1 & 1.000, 0.011, 1.000 & 1 \\
+CNN+QKC zz\_full vs CNN+RBF-SVM (MobileNet PCA 8) & -0.3 & 1.000, 0.109, 0.754 & 0 \\
+CNN+VQC vs CNN+LogReg (MobileNet PCA 8) & -10.7 & $<$0.001, $<$0.001, $<$0.001 & 3 \\
+Frozen MobileNetV3+SVM vs small CNN & +3.4 & $<$0.001, $<$0.001, 0.125 & 2 \\
+\bottomrule
+\end{tabular}}
+\end{table}

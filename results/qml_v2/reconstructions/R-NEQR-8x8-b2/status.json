@@ -1,0 +1,14 @@
+{
+ "record_id": "R-NEQR-8x8-b2",
+ "status": "completed",
+ "record_type": "reconstruction",
+ "summary": {
+  "representation": "NEQR",
+  "resolution": 8,
+  "intensity_bits": 2,
+  "n_qubits": 8,
+  "gates_compiled": 9184.8,
+  "depth_compiled": 6619.2,
+  "statevector_mse": 0.008014329424580288
+ }
+}

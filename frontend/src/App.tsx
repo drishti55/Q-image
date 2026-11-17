@@ -1,161 +1,308 @@
-import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
-import { Activity, Beaker, Box, Settings, Image as ImageIcon, LayoutDashboard, BarChart2, Zap, Layout, Grid } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import type { ReactNode } from 'react';
+import { BrowserRouter, Link, Navigate, NavLink, Route, Routes, useLocation, useParams } from 'react-router-dom';
+import {
+  Activity, Atom, BarChart3, ChevronRight, Cpu, FlaskConical, History, Image as ImageIcon,
+  Clapperboard, Layers, LayoutDashboard, Menu, Microscope, Presentation, Scale, Settings as SettingsIcon, Sparkles, Table2, TrendingUp, Trophy, Wand2, X,
+} from 'lucide-react';
 
+import Overview from './v2/pages/Overview';
+import ExperimentsPage from './v2/pages/Experiments';
+import ModelsPage from './v2/pages/Models';
+import EncodingPage from './v2/pages/Encoding';
+import CircuitsPage from './v2/pages/Circuits';
+import ReconstructionPage from './v2/pages/Reconstruction';
+import ClassificationPage from './v2/pages/Classification';
+import ExperimentDetail from './v2/pages/ExperimentDetail';
+import HistoricalHome from './v2/pages/HistoricalHome';
+import Present from './v2/pages/Present';
+import Playground from './v2/pages/Playground';
+import QuantumVsClassical from './v2/pages/QuantumVsClassical';
+import V3Results from './v2/pages/V3Results';
+import V4Results from './v2/pages/V4Results';
+import AllVersions from './v2/pages/AllVersions';
+import HowItWorks from './v2/pages/HowItWorks';
+import ReconstructionFull from './v2/pages/ReconstructionFull';
+import { getJSON } from './v2/api';
+
+// Historical Protocol V0 pages (unchanged implementations, read-only)
 import Dashboard from './pages/Dashboard';
 import DatasetExplorer from './pages/DatasetExplorer';
 import MLAnalytics from './pages/MLAnalytics';
 import QuantumLab from './pages/QuantumLab';
-import CircuitAnalyzer from './pages/CircuitAnalyzer';
-import Reconstruction from './pages/Reconstruction';
-import Experiments from './pages/Experiments';
-import ConfusionMatrix from './pages/ConfusionMatrix';
+import ExperimentsV0 from './pages/Experiments';
+import ConfusionMatrixV0 from './pages/ConfusionMatrix';
 import SettingsPage from './pages/Settings';
 import { Comparison } from './pages/Comparison';
 import QuantumCompareLab from './pages/QuantumCompareLab';
-const SidebarItem = ({ icon: Icon, label, to }: { icon: any; label: string; to: string }) => {
+import QuantumMLLab from './pages/QuantumMLLab';
+
+type NavItem = { to: string; label: string; icon: typeof Activity; end?: boolean };
+
+const LATEST_NAV: NavItem[] = [
+  { to: '/', label: 'All versions · V4 latest', icon: Trophy, end: true },
+  { to: '/quantum-v4', label: 'V4 results (FRQI / NEQR)', icon: Sparkles },
+  { to: '/how-it-works', label: 'How it works (live)', icon: Clapperboard },
+  { to: '/reconstruction-full', label: 'Reconstruction (all 1,800)', icon: Layers },
+];
+
+const V2_NAV: NavItem[] = [
+  { to: '/quantum-v3', label: 'V3 results (texture features)', icon: TrendingUp },
+  { to: '/overview-v2', label: 'V2 overview', icon: LayoutDashboard },
+  { to: '/quantum-vs-classical', label: 'Quantum vs Classical (V2)', icon: Scale },
+  { to: '/playground', label: '3×3 Algorithm Playground', icon: Wand2 },
+  { to: '/present', label: 'Presentation mode (V2)', icon: Presentation },
+  { to: '/models', label: 'Model Comparison', icon: Table2 },
+  { to: '/encoding', label: 'Quantum Image Encoding', icon: Atom },
+  { to: '/circuits', label: 'Quantum Circuits', icon: Cpu },
+  { to: '/reconstruction', label: 'Reconstruction Studio', icon: ImageIcon },
+  { to: '/classification', label: 'Classification Analysis', icon: BarChart3 },
+];
+
+const DATA_NAV: NavItem[] = [
+  { to: '/experiments-v2', label: 'Experiment log', icon: FlaskConical },
+  { to: '/historical-v0', label: 'Historical results (V0)', icon: History },
+];
+
+const TITLES: [RegExp, string, string][] = [
+  [/^\/$/, 'Results — all versions', 'Protocol V4 · latest'],
+  [/^\/overview-v2/, 'Overview', 'Protocol V2'],
+  [/^\/present/, 'Presentation', 'Protocol V2'],
+  [/^\/playground/, '3×3 Algorithm Playground', 'Illustrative demo · V3'],
+  [/^\/quantum-vs-classical/, 'Quantum vs Classical', 'Protocol V2'],
+  [/^\/quantum-v3/, 'Quantum Improvement', 'Protocol V3'],
+  [/^\/quantum-v4/, 'FRQI / NEQR Improvement', 'Protocol V4'],
+  [/^\/how-it-works/, 'How it works (live)', 'Protocol V4 · real image'],
+  [/^\/reconstruction-full/, 'Reconstruction — all images', 'Protocol V4 study'],
+  [/^\/experiments-v2/, 'Experiment log', 'Protocol V2'],
+  [/^\/experiments\//, 'Experiment Details', 'Protocol V2'],
+  [/^\/models/, 'Model Comparison', 'Protocol V2'],
+  [/^\/encoding/, 'Quantum Image Encoding', 'Protocol V2'],
+  [/^\/circuits/, 'Quantum Circuits', 'Protocol V2'],
+  [/^\/reconstruction/, 'Reconstruction Studio', 'Protocol V2'],
+  [/^\/classification/, 'Classification Analysis', 'Protocol V2'],
+  [/^\/historical-v0\/?$/, 'Historical Results', 'Protocol V0 · read-only'],
+  [/^\/historical-v0\//, 'Historical page', 'Protocol V0 · read-only'],
+  [/^\/settings/, 'Settings', 'App'],
+];
+
+function titleFor(path: string): [string, string] {
+  const hit = TITLES.find(([re]) => re.test(path));
+  return hit ? [hit[1], hit[2]] : ['Not found', ''];
+}
+
+type Health = { state: 'checking' | 'ok' | 'stale' | 'offline'; detail?: string; n_selected?: number; version?: string };
+
+function useV2Health(): Health {
+  const [h, setH] = useState<Health>({ state: 'checking' });
+  useEffect(() => {
+    getJSON<{ api_version: string; n_selected: number; analysis_present: boolean }>('/health')
+      .then((d) => setH({ state: d.analysis_present ? 'ok' : 'stale', version: d.api_version, n_selected: d.n_selected,
+        detail: d.analysis_present ? undefined : 'results/qml_v2/aggregates/analysis.json missing' }))
+      .catch((e) => setH({ state: String(e?.message ?? e).startsWith('404') ? 'stale' : 'offline', detail: String(e?.message ?? e) }));
+  }, []);
+  return h;
+}
+
+function SideLink({ item, onClick }: { item: NavItem; onClick?: () => void }) {
+  const Icon = item.icon;
   return (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        `flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all duration-200 ${
-          isActive
-            ? 'bg-blue-600/15 text-blue-400 border border-blue-500/25 shadow-[0_0_12px_rgba(59,130,246,0.08)]'
-            : 'text-slate-400 hover:text-slate-200 hover:bg-white/[0.03]'
-        }`
-      }
-    >
-      <Icon size={18} className="stroke-[1.5] shrink-0" />
-      <span className="font-medium text-sm">{label}</span>
+    <NavLink to={item.to} end={item.end} onClick={onClick}
+      className={({ isActive }) => `flex items-center gap-3 rounded-lg px-3 py-2 text-[13px] transition-colors ${
+        isActive ? 'bg-cyan-500/10 text-cyan-200 ring-1 ring-cyan-500/30' : 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-100'}`}>
+      <Icon size={16} className="shrink-0" />
+      <span className="truncate">{item.label}</span>
     </NavLink>
   );
-};
+}
 
-const LayoutComponent = ({ children }: { children: React.ReactNode }) => {
-  const location = useLocation();
-  const [status, setStatus] = useState<any>(null);
-
-  const titleMap: Record<string, string> = {
-    '/': 'Dashboard',
-    '/dataset': 'Dataset Explorer',
-    '/ml': 'ML Analytics',
-    '/quantum': 'Quantum Lab',
-    '/circuit': 'Circuit Analyzer',
-    '/reconstruction': 'Reconstruction Studio',
-    '/experiments': 'Experiment Lab',
-    '/confusion-matrix': 'Confusion Matrix',
-    '/settings': 'Settings',
-    '/compare': 'FRQI vs NEQR',
-    '/quantum-compare-lab': 'Quantum Compare Lab',
-  };
-
-  useEffect(() => {
-    fetch('/api/status')
-      .then(r => r.json())
-      .then(setStatus)
-      .catch(() => setStatus({ backend: 'offline' }));
-  }, []);
-
-  const pageTitle = titleMap[location.pathname] || 'Dashboard';
-
+function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   return (
-    <div className="flex h-screen w-full overflow-hidden bg-background font-sans">
-      {/* Sidebar */}
-      <div className="w-60 flex flex-col border-r border-border bg-surface shadow-xl z-20 shrink-0">
-        <div className="h-14 flex items-center px-5 border-b border-border">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
-              <Zap size={16} className="text-white" />
-            </div>
-            <span className="font-bold text-base tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-              Q-ImageLab
-            </span>
-          </div>
+    <nav aria-label="Main navigation" className="flex h-full flex-col">
+      <Link to="/" onClick={onNavigate} className="flex items-center gap-3 px-5 h-16 border-b border-slate-800/80">
+        <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/20">
+          <Microscope size={18} className="text-white" />
         </div>
-
-        <div className="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-0.5">
-          <div className="px-3 mb-1.5 text-[10px] font-bold text-slate-600 uppercase tracking-[0.15em]">Overview</div>
-          <SidebarItem to="/" icon={LayoutDashboard} label="Dashboard" />
-          <SidebarItem to="/dataset" icon={ImageIcon} label="Dataset Explorer" />
-          <SidebarItem to="/ml" icon={BarChart2} label="ML Analytics" />
-          <SidebarItem to="/confusion-matrix" icon={Grid} label="Confusion Matrix" />
-
-          <div className="px-3 mt-5 mb-1.5 text-[10px] font-bold text-slate-600 uppercase tracking-[0.15em]">Quantum Core</div>
-          <SidebarItem to="/quantum" icon={Activity} label="Quantum Lab" />
-          <SidebarItem to="/circuit" icon={Box} label="Circuit Analyzer" />
-          <SidebarItem to="/reconstruction" icon={Layout} label="Reconstruction" />
-          <SidebarItem to="/experiments" icon={Beaker} label="Experiments" />
-          <SidebarItem to="/compare" icon={Activity} label="FRQI vs NEQR" />
-          <SidebarItem to="/quantum-compare-lab" icon={Activity} label="Quantum Compare Lab" />
+        <div>
+          <div className="text-sm font-semibold text-white">Q-ImageLab</div>
+          <div className="text-[11px] text-cyan-300/80">Protocol V4 · NEU-DET</div>
         </div>
-
-        <div className="p-3 border-t border-border">
-          <SidebarItem to="/settings" icon={Settings} label="Settings" />
+      </Link>
+      <div className="flex-1 overflow-y-auto px-3 py-4 space-y-6">
+        <div>
+          <div className="px-3 pb-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-cyan-300">Latest · Protocol V4</div>
+          <div className="space-y-0.5">{LATEST_NAV.map((i) => <SideLink key={i.to} item={i} onClick={onNavigate} />)}</div>
+        </div>
+        <div>
+          <div className="px-3 pb-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-cyan-400/60">Earlier · Protocols V3 / V2</div>
+          <div className="space-y-0.5">{V2_NAV.map((i) => <SideLink key={i.to} item={i} onClick={onNavigate} />)}</div>
+        </div>
+        <div>
+          <div className="px-3 pb-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500">Data & history</div>
+          <div className="space-y-0.5">{DATA_NAV.map((i) => <SideLink key={i.to} item={i} onClick={onNavigate} />)}</div>
         </div>
       </div>
+      <div className="border-t border-slate-800/80 p-3">
+        <SideLink item={{ to: '/settings', label: 'Settings', icon: SettingsIcon }} onClick={onNavigate} />
+      </div>
+    </nav>
+  );
+}
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col overflow-hidden relative min-w-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-950/10 via-background to-background pointer-events-none z-0" />
+function HealthPill({ h }: { h: Health }) {
+  const map = {
+    checking: ['bg-slate-800 text-slate-300 border-slate-700', 'Checking V2 API…'],
+    ok: ['bg-emerald-500/10 text-emerald-300 border-emerald-500/30', `V2 API online · ${h.n_selected ?? '?'} selected models`],
+    stale: ['bg-amber-500/10 text-amber-300 border-amber-500/30', 'V2 API unavailable'],
+    offline: ['bg-rose-500/10 text-rose-300 border-rose-500/30', 'Backend offline'],
+  } as const;
+  const [cls, text] = map[h.state];
+  return <span className={`rounded-full border px-3 py-1 text-xs ${cls}`}>{text}</span>;
+}
 
-        {/* Topbar */}
-        <div className="h-14 border-b border-border/50 bg-surface/60 backdrop-blur-lg flex items-center justify-between px-6 z-10 sticky top-0 shrink-0">
-          <div>
-            <h1 className="font-semibold text-slate-100 text-sm">{pageTitle}</h1>
-            <div className="text-[11px] text-slate-500">Q-ImageLab / {pageTitle}</div>
+function Shell({ children }: { children: ReactNode }) {
+  const loc = useLocation();
+  const [open, setOpen] = useState(false);
+  const health = useV2Health();
+  const [title, section] = titleFor(loc.pathname);
+  const historical = loc.pathname.startsWith('/historical-v0');
+  useEffect(() => {
+    document.title = `${title} · Q-ImageLab ${historical ? '(V0 historical)' : (section.match(/V\d/)?.[0] ?? 'V2')}`;
+  }, [title, historical, section]);
+  if (loc.pathname.startsWith('/present')) return <>{children}</>;
+  return (
+    <div className="min-h-screen bg-[#070b16] text-slate-200">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 border-r border-slate-800/80 bg-[#0a0f1e] lg:block">
+        <Sidebar />
+      </aside>
+      {open && (
+        <div className="fixed inset-0 z-40 lg:hidden">
+          <div className="absolute inset-0 bg-black/60" onClick={() => setOpen(false)} />
+          <aside className="absolute inset-y-0 left-0 w-72 border-r border-slate-800 bg-[#0a0f1e]">
+            <button aria-label="Close navigation" className="absolute right-3 top-4 p-1 text-slate-400" onClick={() => setOpen(false)}><X size={18} /></button>
+            <Sidebar onNavigate={() => setOpen(false)} />
+          </aside>
+        </div>
+      )}
+      <div className="lg:pl-64">
+        <header className="sticky top-0 z-20 flex h-16 items-center justify-between gap-3 border-b border-slate-800/80 bg-[#070b16]/90 px-4 backdrop-blur md:px-8">
+          <div className="flex items-center gap-3 min-w-0">
+            <button aria-label="Open navigation" className="p-1.5 text-slate-300 lg:hidden" onClick={() => setOpen(true)}><Menu size={20} /></button>
+            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm min-w-0">
+              <Link to={historical ? '/historical-v0' : '/'} className="text-slate-400 hover:text-slate-200 whitespace-nowrap">
+                {historical ? 'Historical V0' : (section.match(/Protocol V\d/)?.[0] ?? 'Protocol V2')}
+              </Link>
+              <ChevronRight size={14} className="text-slate-600 shrink-0" />
+              <span className="font-medium text-slate-100 truncate">{title}</span>
+            </nav>
           </div>
-
-          <div className="flex items-center gap-3">
-            <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[11px] font-medium ${
-              status?.backend === 'online'
-                ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
-                : 'bg-red-500/10 border-red-500/20 text-red-400'
-            }`}>
-              <div className={`w-1.5 h-1.5 rounded-full ${status?.backend === 'online' ? 'bg-emerald-400 animate-pulse' : 'bg-red-400'}`} />
-              {status?.backend === 'online' ? 'Backend Online' : 'Backend Offline'}
+          <div className="flex items-center gap-2">
+            {historical && <span className="hidden sm:inline rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs text-amber-300">{section}</span>}
+            <HealthPill h={health} />
+          </div>
+        </header>
+        {(health.state === 'stale' || health.state === 'offline') && !historical && (
+          <div role="alert" className="mx-4 mt-4 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm text-amber-100 md:mx-8">
+            <div className="font-semibold">Protocol V2 data cannot be loaded</div>
+            <div className="mt-1 text-amber-200/90">
+              {health.state === 'stale'
+                ? 'The running backend does not provide the /api/v2 endpoints (it was probably started before Protocol V2 existed). Stop it and start it again with `python api_main.py`.'
+                : 'The backend at http://127.0.0.1:8000 is not reachable. Start it with `python api_main.py`.'}
+              {health.detail && <span className="block text-xs mt-1 opacity-80">Detail: {health.detail}</span>}
             </div>
-            {status?.dataset_available && (
-              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[11px] font-medium text-blue-400">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-                Dataset Ready
-              </div>
-            )}
-            {status?.experiments_available && (
-              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] font-medium text-cyan-400">
-                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                Simulator Ready
-              </div>
-            )}
           </div>
-        </div>
-
-        {/* Page Content */}
-        <div className="flex-1 overflow-y-auto p-6 z-10 relative">
-          {children}
-        </div>
+        )}
+        <main className="mx-auto max-w-[1500px] px-4 py-6 md:px-8">{children}</main>
       </div>
     </div>
   );
-};
+}
+
+function HistoricalFrame({ children }: { children: ReactNode }) {
+  return (
+    <div className="space-y-4">
+      <div className="rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+        <span className="font-semibold">Historical Results — Protocol V0 (read-only).</span>{' '}
+        Generated before the locked-test protocol (tiny samples, random in-folder splits, mislabelled “VQC/HQCC”). Not comparable with
+        Protocol V2. <Link to="/" className="underline text-amber-200">Go to the current results (all versions)</Link>.
+      </div>
+      {children}
+    </div>
+  );
+}
+
+// Redirect that preserves the query string (old V0 URLs → /historical-v0/...)
+function RedirectKeepSearch({ to }: { to: string }) {
+  const loc = useLocation();
+  return <Navigate to={`${to}${loc.search}`} replace />;
+}
+
+function LegacyExperimentRedirect() {
+  const { id } = useParams();
+  return <Navigate to={`/experiments/${id ?? ''}`} replace />;
+}
+
+function NotFound() {
+  return (
+    <div className="py-20 text-center">
+      <h1 className="text-xl font-semibold text-slate-100">Page not found</h1>
+      <p className="mt-2 text-sm text-slate-400">This address does not exist. <Link to="/" className="text-cyan-300 underline">Open the results overview</Link>.</p>
+    </div>
+  );
+}
+
+const H = (el: ReactNode) => <HistoricalFrame>{el}</HistoricalFrame>;
 
 export default function App() {
   return (
     <BrowserRouter>
-      <LayoutComponent>
+      <Shell>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/dataset" element={<DatasetExplorer />} />
-          <Route path="/ml" element={<MLAnalytics />} />
-          <Route path="/confusion-matrix" element={<ConfusionMatrix />} />
-          <Route path="/quantum" element={<QuantumLab />} />
-          <Route path="/circuit" element={<CircuitAnalyzer />} />
-          <Route path="/reconstruction" element={<Reconstruction />} />
-          <Route path="/experiments" element={<Experiments />} />
-          <Route path="/compare" element={<Comparison />} />
-          <Route path="/quantum-compare-lab" element={<QuantumCompareLab />} />
+          {/* Protocol V2 — current */}
+          <Route path="/" element={<AllVersions />} />
+          <Route path="/overview-v2" element={<Overview />} />
+          <Route path="/present" element={<Present />} />
+          <Route path="/playground" element={<Playground />} />
+          <Route path="/quantum-vs-classical" element={<QuantumVsClassical />} />
+          <Route path="/quantum-v3" element={<V3Results />} />
+          <Route path="/quantum-v4" element={<V4Results />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/reconstruction-full" element={<ReconstructionFull />} />
+          <Route path="/experiments-v2" element={<ExperimentsPage />} />
+          <Route path="/experiments/:id" element={<ExperimentDetail />} />
+          <Route path="/models" element={<ModelsPage />} />
+          <Route path="/encoding" element={<EncodingPage />} />
+          <Route path="/circuits" element={<CircuitsPage />} />
+          <Route path="/reconstruction" element={<ReconstructionPage />} />
+          <Route path="/classification" element={<ClassificationPage />} />
+
+          {/* Protocol V0 — historical, read-only */}
+          <Route path="/historical-v0" element={<HistoricalHome />} />
+          <Route path="/historical-v0/dashboard" element={H(<Dashboard />)} />
+          <Route path="/historical-v0/qml-lab" element={H(<QuantumMLLab />)} />
+          <Route path="/historical-v0/ml" element={H(<MLAnalytics />)} />
+          <Route path="/historical-v0/confusion-matrix" element={H(<ConfusionMatrixV0 />)} />
+          <Route path="/historical-v0/compare" element={H(<Comparison />)} />
+          <Route path="/historical-v0/quantum" element={H(<QuantumLab />)} />
+          <Route path="/historical-v0/quantum-compare-lab" element={H(<QuantumCompareLab />)} />
+          <Route path="/historical-v0/experiments" element={H(<ExperimentsV0 />)} />
+          <Route path="/historical-v0/dataset" element={H(<DatasetExplorer />)} />
           <Route path="/settings" element={<SettingsPage />} />
+
+          {/* Old URLs */}
+          <Route path="/quantum-ml-lab" element={<RedirectKeepSearch to="/historical-v0/qml-lab" />} />
+          <Route path="/ml" element={<RedirectKeepSearch to="/historical-v0/ml" />} />
+          <Route path="/confusion-matrix" element={<RedirectKeepSearch to="/historical-v0/confusion-matrix" />} />
+          <Route path="/compare" element={<RedirectKeepSearch to="/historical-v0/compare" />} />
+          <Route path="/quantum" element={<RedirectKeepSearch to="/historical-v0/quantum" />} />
+          <Route path="/quantum-compare-lab" element={<RedirectKeepSearch to="/historical-v0/quantum-compare-lab" />} />
+          <Route path="/dataset" element={<RedirectKeepSearch to="/historical-v0/dataset" />} />
+          <Route path="/circuit" element={<Navigate to="/circuits" replace />} />
+          <Route path="/experiments" element={<Navigate to="/experiments-v2" replace />} />
+          <Route path="/experiments-v2/:id" element={<LegacyExperimentRedirect />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </LayoutComponent>
+      </Shell>
     </BrowserRouter>
   );
 }

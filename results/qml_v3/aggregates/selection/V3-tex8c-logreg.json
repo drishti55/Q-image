@@ -1,0 +1,129 @@
+{
+ "group": "V3-tex8c-logreg",
+ "selected_at": "2026-11-16T08:17:29.403438",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 7,
+ "n_eligible": 7,
+ "selected": {
+  "config_key": "V3-tex8c-logreg__56860e5e12",
+  "params": {
+   "C": 100.0
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.9340565305812927,
+  "val_std": 0.028646028001080546,
+  "experiment_ids": [
+   "V3-tex8c-logreg__56860e5e12__s0",
+   "V3-tex8c-logreg__56860e5e12__s1",
+   "V3-tex8c-logreg__56860e5e12__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-tex8c-logreg__9c2468bfbe",
+   "params": {
+    "C": 0.001
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9165120764400893,
+   "val_std": 0.03431504628878837,
+   "experiment_ids": [
+    "V3-tex8c-logreg__9c2468bfbe__s0",
+    "V3-tex8c-logreg__9c2468bfbe__s1",
+    "V3-tex8c-logreg__9c2468bfbe__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-logreg__c2bbfdce36",
+   "params": {
+    "C": 0.01
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9253642794290858,
+   "val_std": 0.031566748899483354,
+   "experiment_ids": [
+    "V3-tex8c-logreg__c2bbfdce36__s0",
+    "V3-tex8c-logreg__c2bbfdce36__s1",
+    "V3-tex8c-logreg__c2bbfdce36__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-logreg__7d3d765a35",
+   "params": {
+    "C": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.927197510284202,
+   "val_std": 0.026415264995680744,
+   "experiment_ids": [
+    "V3-tex8c-logreg__7d3d765a35__s0",
+    "V3-tex8c-logreg__7d3d765a35__s1",
+    "V3-tex8c-logreg__7d3d765a35__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-logreg__f94417a70a",
+   "params": {
+    "C": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9321475294782315,
+   "val_std": 0.027433187488685215,
+   "experiment_ids": [
+    "V3-tex8c-logreg__f94417a70a__s0",
+    "V3-tex8c-logreg__f94417a70a__s1",
+    "V3-tex8c-logreg__f94417a70a__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-logreg__d7761fd1b0",
+   "params": {
+    "C": 10.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.931134332516736,
+   "val_std": 0.03158661870192213,
+   "experiment_ids": [
+    "V3-tex8c-logreg__d7761fd1b0__s0",
+    "V3-tex8c-logreg__d7761fd1b0__s1",
+    "V3-tex8c-logreg__d7761fd1b0__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-logreg__56860e5e12",
+   "params": {
+    "C": 100.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9340565305812927,
+   "val_std": 0.028646028001080546,
+   "experiment_ids": [
+    "V3-tex8c-logreg__56860e5e12__s0",
+    "V3-tex8c-logreg__56860e5e12__s1",
+    "V3-tex8c-logreg__56860e5e12__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-logreg__2f65cba403",
+   "params": {
+    "C": 1000.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9303191380082086,
+   "val_std": 0.030595127265287604,
+   "experiment_ids": [
+    "V3-tex8c-logreg__2f65cba403__s0",
+    "V3-tex8c-logreg__2f65cba403__s1",
+    "V3-tex8c-logreg__2f65cba403__s2"
+   ]
+  }
+ ]
+}

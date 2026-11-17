@@ -1,0 +1,29 @@
+{
+ "experiment_code": "V4C",
+ "group": "V4-patchmom-rbfsvm",
+ "model_name": "RBF-SVM on classical patch moments (matched control)",
+ "family": "classical",
+ "family_label": "Classical",
+ "compute_type": "classical",
+ "feature_extraction": "64x64 grayscale, 8x8 patches stride 4, per-image contrast stretch",
+ "encoding": null,
+ "params": {
+  "image_size": 64,
+  "patch": 8,
+  "stride": 4,
+  "norm": "stretch",
+  "gamma": 1.0,
+  "C": 1000.0
+ },
+ "quantum": {},
+ "provider": {
+  "name": "image64",
+  "input": "64x64 grayscale in [0,1]",
+  "preprocessing": "convert('L') -> BILINEAR resize -> /255 (no learned transform)"
+ },
+ "seed": 1,
+ "split_id": "split-s1-c53cfc7e08",
+ "dataset_manifest_id": "neu-5625b937479b",
+ "protocol": "V2 locked-test (validation folder) + group-blocked train/val",
+ "notes": "classical control: same patches, mean + second moment of raw intensities, no quantum feature map"
+}

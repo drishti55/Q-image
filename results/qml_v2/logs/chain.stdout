@@ -1,0 +1,8 @@
+[before-chain] original=3690 current=3690 changed=0 missing=0 added=0 mandatory_ok=True all_ok=True
+[after-phase4] original=3690 current=3690 changed=0 missing=0 added=0 mandatory_ok=True all_ok=True
+[resume-before-phase5] original=3690 current=3690 changed=0 missing=0 added=0 mandatory_ok=True all_ok=True
+[after-phase5] original=3690 current=3690 changed=0 missing=0 added=0 mandatory_ok=True all_ok=True
+[after-phase6] original=3690 current=3690 changed=0 missing=0 added=0 mandatory_ok=True all_ok=True
+[after-phase7] original=3690 current=3690 changed=0 missing=0 added=0 mandatory_ok=True all_ok=True
+[after-phase8] original=3690 current=3690 changed=0 missing=0 added=0 mandatory_ok=True all_ok=True
+CHAIN_DONE

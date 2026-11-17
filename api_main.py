@@ -1,11 +1,27 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
+from typing import Optional, Dict, Any, List, Tuple
+import numpy as np
 import pandas as pd
+# pandas 3 stores strings in pyarrow by default; pyarrow's `take` segfaulted when V0 endpoints filtered the V0 CSV
+# from concurrent request threads (observed 2026-11-15, Fatal Python error in pyarrow/compute.py:take via
+# experiment_manager.get_reconstruction_details). Plain object strings give identical values without that native path.
+pd.set_option("future.infer_string", False)
 import json
 from pathlib import Path
 from fastapi.responses import FileResponse
 
 app = FastAPI(title="Q-ImageLab API")
+
+# Protocol V2 (locked-test) read-only API — results/qml_v2
+from src.v2.api import router as v2_router  # noqa: E402
+app.include_router(v2_router)
+from src.v2.api_models import router as v2_dashboard_router  # noqa: E402
+app.include_router(v2_dashboard_router)
+from src.v3.api import router as v3_router  # noqa: E402
+app.include_router(v3_router)
+from src.v4.api import router as v4_router  # noqa: E402
+app.include_router(v4_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,6 +35,7 @@ PROJECT_ROOT = Path(__file__).parent.resolve()
 import sys
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
+from config.settings import DATASET_PATH
 
 
 # ─── SYSTEM STATUS ───────────────────────────────────────────────
@@ -124,6 +141,9 @@ def get_batch_status():
 
 @app.post("/api/quantum/batch/run")
 def start_batch_job(config: dict):
+    raise HTTPException(status_code=409, detail=(
+        "Protocol V0 results are immutable historical evidence; launching V0 runs would write into "
+        "results/. Use the Protocol V2 runners (scripts/v2/*.py) — results appear under /experiments-v2."))
     global batch_job_state
     if batch_job_state["is_running"]:
         return {"status": "error", "message": "A batch job is already running."}
@@ -223,7 +243,7 @@ def get_class_distribution():
 @app.get("/api/dataset/images")
 def list_dataset_images(split: str = "train", defect_class: str = "all", limit: int = 30, offset: int = 0):
     """List images from the NEU-DET dataset."""
-    base = PROJECT_ROOT / "NEU-DET" / split / "images"
+    base = DATASET_PATH / split / "images"
     if not base.exists():
         return {"images": [], "total": 0}
 
@@ -252,7 +272,7 @@ def list_dataset_images(split: str = "train", defect_class: str = "all", limit: 
 @app.get("/api/dataset/image/{split}/{defect_class}/{filename}")
 def serve_dataset_image(split: str, defect_class: str, filename: str):
     """Serve a specific image file."""
-    p = PROJECT_ROOT / "NEU-DET" / split / "images" / defect_class / filename
+    p = DATASET_PATH / split / "images" / defect_class / filename
     if p.exists():
         return FileResponse(str(p))
     raise HTTPException(status_code=404, detail=f"Image not found: {p}")
@@ -1079,6 +1099,449 @@ def get_quantum_comparison(defect_class: str = "all", resolution: str = "all", s
             "shots": shot_vals
         }
     }))
+
+# ─── QUANTUM ML LAB ──────────────────────────────────────────────
+
+qml_job_state = {
+    "is_running": False,
+    "experiment_id": None,
+    "phase": "",
+    "message": "",
+    "percent": 0,
+    "result": None,
+    "error": None,
+}
+
+def run_qml_experiment_thread(config: dict):
+    """Background thread for QML experiment execution."""
+    global qml_job_state
+
+    qml_job_state["is_running"] = True
+    qml_job_state["result"] = None
+    qml_job_state["error"] = None
+    qml_job_state["phase"] = "initializing"
+    qml_job_state["message"] = "Starting experiment..."
+    qml_job_state["percent"] = 0
+
+    try:
+        from src.qml.experiment_manager import QMLExperimentManager
+
+        manager = QMLExperimentManager()
+
+        def progress_callback(status):
+            qml_job_state["experiment_id"] = status.get("experiment_id", "")
+            qml_job_state["phase"] = status.get("phase", "")
+            qml_job_state["message"] = status.get("message", "")
+            qml_job_state["percent"] = status.get("percent", 0)
+            qml_job_state["completed"] = status.get("completed", 0)
+            qml_job_state["pending"] = status.get("pending", 0)
+            qml_job_state["failed"] = status.get("failed", 0)
+            qml_job_state["current_image"] = status.get("current_image", "")
+            qml_job_state["current_class"] = status.get("current_class", "")
+
+        result = manager.run_experiment(config, progress_callback=progress_callback)
+
+        qml_job_state["result"] = result
+        if result.get("status") == "failed":
+            qml_job_state["error"] = result.get("error", "Unknown error")
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        qml_job_state["error"] = str(e)
+    finally:
+        qml_job_state["is_running"] = False
+        qml_job_state["phase"] = "completed" if qml_job_state["error"] is None else "failed"
+        qml_job_state["percent"] = 100
+
+
+@app.post("/api/qml/run")
+def start_qml_experiment(config: dict):
+    """Start a QML experiment in a background thread."""
+    raise HTTPException(status_code=409, detail=(
+        "Protocol V0 results are immutable historical evidence; launching V0 runs would write into "
+        "results/. Use the Protocol V2 runners (scripts/v2/*.py) — results appear under /experiments-v2."))
+    global qml_job_state
+    if qml_job_state["is_running"]:
+        return {"status": "error", "message": "A QML experiment is already running."}
+
+    thread = threading.Thread(target=run_qml_experiment_thread, args=(config,))
+    thread.daemon = True
+    thread.start()
+    return {"status": "started", "message": "QML experiment started in background."}
+
+
+@app.get("/api/qml/status")
+def get_qml_status():
+    """Get the current status of a running QML experiment."""
+    global qml_job_state
+    return qml_job_state
+
+
+@app.get("/api/qml/result")
+def get_qml_latest_result():
+    """Get the result of the most recently completed QML experiment."""
+    global qml_job_state
+    if qml_job_state["result"]:
+        return qml_job_state["result"]
+    return {"status": "no_result", "message": "No QML experiment result available."}
+
+
+@app.get("/api/qml/experiments")
+def get_qml_experiments():
+    """Get QML experiment history."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    return manager.get_experiment_history()
+
+
+@app.get("/api/qml/experiment/{experiment_id}")
+def get_qml_experiment(experiment_id: str):
+    """Get a specific QML experiment result."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    result = manager.get_experiment(experiment_id)
+    if result is None:
+        raise HTTPException(status_code=404, detail="Experiment not found")
+    return result
+
+
+@app.get("/api/qml/comparison")
+def get_qml_classical_comparison():
+    """Get classical vs QML comparison data."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    comparison = manager.get_classical_comparison()
+
+    # Add latest QML result if available
+    history = manager.get_experiment_history()
+    completed = [e for e in history if e.get("status") == "completed"]
+    if completed:
+        latest = completed[-1]
+        exp = manager.get_experiment(latest["experiment_id"])
+        if exp:
+            comparison["qml_result"] = {
+                "experiment_id": exp["experiment_id"],
+                "model_type": exp.get("config", {}).get("model_type", "Quantum Kernel SVM"),
+                "test_accuracy": exp.get("evaluation", {}).get("test_accuracy", 0),
+                "precision_macro": exp.get("evaluation", {}).get("precision_macro", 0),
+                "recall_macro": exp.get("evaluation", {}).get("recall_macro", 0),
+                "f1_macro": exp.get("evaluation", {}).get("f1_macro", 0),
+                "f1_weighted": exp.get("evaluation", {}).get("f1_weighted", 0),
+                "training_time_s": exp.get("timing", {}).get("total_train_time_s", 0),
+                "inference_time_s": exp.get("timing", {}).get("total_predict_time_s", 0),
+                "n_qubits": exp.get("config", {}).get("n_qubits", 0),
+                "confusion_matrix": exp.get("evaluation", {}).get("confusion_matrix", []),
+                "per_class": exp.get("evaluation", {}).get("per_class", {}),
+                "circuit_stats": exp.get("model_config", {}).get("circuit_stats", {}),
+            }
+
+    return comparison
+
+
+@app.delete("/api/qml/experiment/{experiment_id}")
+def delete_qml_experiment(experiment_id: str):
+    """Delete a QML experiment."""
+    raise HTTPException(status_code=409, detail=(
+        "Protocol V0 results are immutable historical evidence; launching V0 runs would write into "
+        "results/. Use the Protocol V2 runners (scripts/v2/*.py) — results appear under /experiments-v2."))
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    success = manager.delete_experiment(experiment_id)
+    if success:
+        return {"status": "deleted", "experiment_id": experiment_id}
+    raise HTTPException(status_code=404, detail="Experiment not found")
+
+
+@app.get("/api/qml/overview")
+def get_qml_overview():
+    """Get high-level KPI cards for the Quantum ML Experiment Lab."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    return manager.get_overview_kpis()
+
+
+@app.get("/api/qml/analytics/graphs")
+def get_qml_analytics_graphs():
+    """Get datasets for all 15 interactive QML visualization charts."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    return manager.get_analytics_graphs()
+
+
+@app.get("/api/qml/comparison/frqi-vs-neqr")
+def get_frqi_vs_neqr_comparison(comparison_id: Optional[str] = None):
+    """Get detailed side-by-side comparison between FRQI and NEQR for a paired experiment."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    history = manager.get_experiment_history()
+
+    # Find target comparison_id if not specified (prioritizing full evaluation support >= 60)
+    if not comparison_id:
+        cids = [e.get("comparison_id") for e in history if e.get("comparison_id")]
+        cid_counts = {}
+        for c in cids:
+            cid_counts[c] = cid_counts.get(c, 0) + 1
+        paired_cids = [c for c, count in cid_counts.items() if count >= 2]
+
+        for c in paired_cids:
+            matched_subset = [h for h in history if h.get("comparison_id") == c]
+            if len(matched_subset) >= 2:
+                sample_exp = manager.get_experiment(matched_subset[0]["experiment_id"])
+                if sample_exp:
+                    pc = sample_exp.get("classification_metrics", {}).get("per_class", {})
+                    if pc and list(pc.values())[0].get("support", 0) >= 60:
+                        comparison_id = c
+                        break
+
+        if not comparison_id and paired_cids:
+            comparison_id = paired_cids[-1]
+
+    if not comparison_id:
+        return {"status": "no_data", "message": "No paired experiments found."}
+
+    matched = [h for h in history if h.get("comparison_id") == comparison_id]
+    frqi_exp, neqr_exp = None, None
+    for m in matched:
+        full = manager.get_experiment(m["experiment_id"])
+        if full:
+            cm = full.get("classification_metrics", {})
+            if "heldout_accuracy" in cm:
+                cm["accuracy"] = cm.get("heldout_accuracy", cm.get("accuracy", 0.0))
+            if "heldout_f1_macro" in cm:
+                cm["f1_macro"] = cm.get("heldout_f1_macro", cm.get("f1_macro", 0.0))
+
+            if full.get("representation") == "FRQI":
+                frqi_exp = full
+            elif full.get("representation") == "NEQR":
+                neqr_exp = full
+
+    return {
+        "comparison_id": comparison_id,
+        "frqi": frqi_exp,
+        "neqr": neqr_exp,
+        "compatible": bool(frqi_exp and neqr_exp),
+        "notes": "Direct paired comparison of identical images, resolutions, and classifiers."
+    }
+
+
+@app.get("/api/qml/circuit/{experiment_id}")
+def get_qml_circuit_details(experiment_id: str):
+    """Get quantum circuit diagram, registers, and gate breakdown for an experiment."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    try:
+        return manager.get_circuit_details(experiment_id)
+    except KeyError:
+        raise HTTPException(status_code=404, detail="Experiment not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to generate circuit details: {str(e)}")
+
+
+@app.get("/api/qml/images")
+def get_qml_dataset_images(
+    category: Optional[str] = None,
+    search: Optional[str] = None,
+    page: int = 1,
+    limit: int = 50
+):
+    """Browse all 1,800 images in the NEU dataset with experiment status and pagination."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    return manager.get_dataset_images(category=category, search=search, page=page, limit=limit)
+
+
+@app.get("/api/qml/reconstruction/image/{image_name}")
+def get_qml_reconstruction_by_image(
+    image_name: str,
+    resolution: str = "4x4",
+    intensity_bits: int = 4,
+    shots: int = 0
+):
+    """
+    Get full 6-panel visual comparison and real metrics for ANY dataset image:
+    1. Original (200x200)
+    2. Preprocessed (at target resolution)
+    3. FRQI reconstruction
+    4. NEQR reconstruction
+    5. FRQI difference map
+    6. NEQR difference map
+    """
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    try:
+        return manager.get_reconstruction_details(
+            image_name=image_name,
+            resolution=resolution,
+            intensity_bits=intensity_bits,
+            shots=shots
+        )
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Reconstruction failed: {str(e)}")
+
+
+@app.get("/api/qml/models/comparison")
+def get_qml_models_comparison():
+    """Unified side-by-side benchmark comparing all implemented QML models and classical baselines."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    return manager.get_unified_model_comparison()
+
+
+@app.get("/api/qml/reconstruction/{comparison_id}")
+def get_qml_reconstruction_paired(comparison_id: str):
+    """Get paired reconstruction visual comparison (original, FRQI, NEQR, difference maps)."""
+    from src.qml.experiment_manager import QMLExperimentManager
+    manager = QMLExperimentManager()
+    history = manager.get_experiment_history()
+    matched = [h for h in history if h.get("comparison_id") == comparison_id]
+
+    frqi_exp, neqr_exp = None, None
+    for m in matched:
+        full = manager.get_experiment(m["experiment_id"])
+        if full:
+            if full.get("representation") == "FRQI":
+                frqi_exp = full
+            elif full.get("representation") == "NEQR":
+                neqr_exp = full
+
+    if not frqi_exp or not neqr_exp:
+        raise HTTPException(status_code=404, detail="Paired reconstruction data not found")
+
+    image_name = frqi_exp.get("image_name", "")
+    if image_name:
+        try:
+            return manager.get_reconstruction_details(
+                image_name=image_name,
+                resolution=frqi_exp.get("resolution", "4x4"),
+                intensity_bits=frqi_exp.get("intensity_bits", 4),
+                shots=frqi_exp.get("shots", 0)
+            )
+        except Exception:
+            pass
+
+    return {
+        "comparison_id": comparison_id,
+        "image_name": frqi_exp.get("image_name", "sample.jpg"),
+        "resolution": frqi_exp.get("resolution", "4x4"),
+        "original_b64": frqi_exp.get("reconstruction_metrics", {}).get("original_b64"),
+        "frqi": {
+            "reconstructed_b64": frqi_exp.get("reconstruction_metrics", {}).get("reconstructed_b64"),
+            "diff_b64": frqi_exp.get("reconstruction_metrics", {}).get("diff_b64"),
+            "mse": frqi_exp.get("reconstruction_metrics", {}).get("mse"),
+            "psnr": frqi_exp.get("reconstruction_metrics", {}).get("psnr"),
+            "ssim": frqi_exp.get("reconstruction_metrics", {}).get("ssim"),
+            "time_s": frqi_exp.get("reconstruction_metrics", {}).get("reconstruction_time"),
+        },
+        "neqr": {
+            "reconstructed_b64": neqr_exp.get("reconstruction_metrics", {}).get("reconstructed_b64"),
+            "diff_b64": neqr_exp.get("reconstruction_metrics", {}).get("diff_b64"),
+            "mse": neqr_exp.get("reconstruction_metrics", {}).get("mse"),
+            "psnr": neqr_exp.get("reconstruction_metrics", {}).get("psnr"),
+            "ssim": neqr_exp.get("reconstruction_metrics", {}).get("ssim"),
+            "time_s": neqr_exp.get("reconstruction_metrics", {}).get("reconstruction_time"),
+        }
+    }
+
+
+@app.post("/api/qml/suite/run")
+def start_qml_suite(config: dict):
+    """Start a comprehensive or batch QML experiment suite in background."""
+    raise HTTPException(status_code=409, detail=(
+        "Protocol V0 results are immutable historical evidence; launching V0 runs would write into "
+        "results/. Use the Protocol V2 runners (scripts/v2/*.py) — results appear under /experiments-v2."))
+    global qml_job_state
+    if qml_job_state["is_running"]:
+        return {"status": "error", "message": "An experiment suite is already running."}
+
+    thread = threading.Thread(target=run_qml_experiment_thread, args=(config,))
+    thread.daemon = True
+    thread.start()
+    return {"status": "started", "message": "QML Experiment Suite started."}
+
+
+@app.post("/api/qml/suite/pause")
+def pause_qml_suite():
+    """Signal pause or stop to running experiment suite."""
+    global qml_job_state
+    qml_job_state["is_running"] = False
+    qml_job_state["message"] = "Execution paused by user."
+    return {"status": "paused", "message": "Experiment suite paused."}
+
+
+@app.post("/api/qml/suite/resume")
+def resume_qml_suite(config: dict = None):
+    """Resume incomplete experiments in the suite."""
+    raise HTTPException(status_code=409, detail=(
+        "Protocol V0 results are immutable historical evidence; launching V0 runs would write into "
+        "results/. Use the Protocol V2 runners (scripts/v2/*.py) — results appear under /experiments-v2."))
+    global qml_job_state
+    if qml_job_state["is_running"]:
+        return {"status": "error", "message": "An experiment suite is already running."}
+
+    cfg = config or {"resolution": "4x4", "max_per_class": 10, "model_type": "Quantum Kernel Classifier"}
+    thread = threading.Thread(target=run_qml_experiment_thread, args=(cfg,))
+    thread.daemon = True
+    thread.start()
+    return {"status": "started", "message": "Resumed QML Experiment Suite."}
+
+
+@app.get("/api/qml/export/csv")
+def export_qml_csv():
+    """Download entire QML experiment results database as CSV."""
+    from src.qml.experiment_manager import CSV_INDEX_PATH
+    if CSV_INDEX_PATH.exists():
+        return FileResponse(
+            str(CSV_INDEX_PATH),
+            media_type="text/csv",
+            filename=f"qml_experiments_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        )
+    raise HTTPException(status_code=404, detail="No QML experiment CSV found.")
+
+
+@app.get("/api/qml/export/json")
+def export_qml_json():
+    """Download full QML experiment results database as JSON."""
+    from src.qml.experiment_manager import JSON_INDEX_PATH
+    if JSON_INDEX_PATH.exists():
+        return FileResponse(
+            str(JSON_INDEX_PATH),
+            media_type="application/json",
+            filename=f"qml_experiments_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        )
+    raise HTTPException(status_code=404, detail="No QML experiment JSON found.")
+
+
+@app.get("/api/qml/config")
+def get_qml_config():
+    """Get rich configuration options and parameters for QML experiments."""
+    return {
+        "defaults": {
+            "resolution": "4x4",
+            "intensity_bits": 4,
+            "shots": 0,
+            "model_type": "Quantum Kernel Classifier",
+            "max_per_class": 10,
+            "test_ratio": 0.3,
+            "seed": 42,
+        },
+        "options": {
+            "representations": ["FRQI", "NEQR", "BOTH (Paired)"],
+            "resolutions": ["2x2", "4x4", "8x8"],
+            "intensity_bits": [2, 4, 8],
+            "shots": [0, 100, 500, 1000],
+            "models": [
+                "Quantum Kernel Classifier",
+                "Variational Quantum Classifier",
+                "Hybrid Quantum-Classical Classifier"
+            ],
+            "max_per_class": [5, 10, 20, 50, 100],
+        },
+        "dataset_classes": DEFECT_CATEGORIES,
+    }
+
+
 
 if __name__ == "__main__":
     import uvicorn

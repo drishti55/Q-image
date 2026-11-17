@@ -1,0 +1,139 @@
+{
+  "experiment_id": "4b891a9d",
+  "comparison_id": "9e66bd35",
+  "dataset": "NEU-DET",
+  "image_name": "patches_103.jpg",
+  "ground_truth": "patches",
+  "representation": "FRQI",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "8x8",
+  "intensity_bits": 8,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 7,
+  "gate_count": 8582,
+  "circuit_depth": 4875,
+  "controlled_gates": 3584,
+  "gate_types": {
+    "h": 518,
+    "x": 384,
+    "p": 3840,
+    "cx": 3584,
+    "ry": 256
+  },
+  "classification_metrics": {
+    "accuracy": 0.3333333333333333,
+    "precision_macro": 0.20039682539682538,
+    "recall_macro": 0.3611111111111111,
+    "f1_macro": 0.2407407407407407,
+    "f1_weighted": 0.23703703703703702,
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1_score": 0.3333333333333333,
+        "support": 2
+      },
+      "inclusion": {
+        "precision": 0.2857142857142857,
+        "recall": 1.0,
+        "f1_score": 0.4444444444444444,
+        "support": 2
+      },
+      "patches": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 3
+      },
+      "pitted_surface": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1_score": 0.6666666666666666,
+        "support": 3
+      },
+      "rolled-in_scale": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 3
+      },
+      "scratches": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 2
+      }
+    }
+  },
+  "reconstruction_metrics": {
+    "mse": 2.0787645225365154e-30,
+    "psnr": 100.0,
+    "ssim": 1.0000000000000004,
+    "reconstruction_time": 0.00035149999894201756,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAABO0lEQVR4nO2ZO0oFQRRE65Ut/lEMjEQ3IIgrdJEGugYDEVRU/Mavkpu9O9DnZGcmmKJrYHpur261zln4fvh3+Ag/Ct8KPw63mjEBRAXNmACigmZMAM1ewcjv9V/4fbEfuC72Az/he0tbARNAVNCMCSAqaMYE0OwVjLywKuYDd+Hn4Rfhn+HMBxb3DpgAooJmTABRQTOePsDYjiX4DT8Mfwx/CL8JPwjfpYLAasYEEBU0YwKICprx9AFGzgNei/1BDhSew9+KeUDOCzx9BWYF1IwJICpoxgQQFSxtPuDwj/Cd4v//q/DEasYEEBU0YwKICpoxATR7BeO9OB84Cb8MPy3OA3I/8LK0FTABRAXNmACigmZMAM1ewcgE6XmecFXcfy7mB0/F8zaON/9IAqxjNWMCiAqaMQFEBerlH8nkGVhmwCNWAAAAAElFTkSuQmCC",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAABQElEQVR4nO2aMU7DQBREJ6ONkgAiKFLKwAFSoJwwh6ThCjQoBYgEAqT2NL/zRNp53ZNtebTjwv7ryR5D1uI34mfxJn4vTvFlcXx0OP4tE2AIYYYJgFRghgmAVGCmaQf/4q/iP+LP4nfiv+ILccIMEwCpwAwTAKnADBMAvVfQJkUinQ+8iG/EH8W/xTMfuLpngAmAVGCGCYBUYIbdB2g67/8rvvffivnBrnifmKcCgTDDBEAqMMMEQCoww+4DNF2Cj+L9YCp+EP8s5gGnVCAQZpgASAVmmABIBWbYfYA2LZbkKD4Tvy3+L9D9glSgEGaYAEgFZpgASAVm2H2A9lXsDzyIP4mviv2AczF/YPcVMCsAM0wApAIzTACkgmvbL6C4/m+4Lc4/FPOD9+L60eH4t0yAIYQZJgBSgRkmAFIBvFwAqVMZWZ7E2gIAAAAASUVORK5CYII=",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAJklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAO8GQIAAAfnHrWYAAAAASUVORK5CYII="
+  },
+  "training_history": [],
+  "timings": {
+    "encoding_time_s": 0.010171415997319855,
+    "train_time_s": 6.287157291000767,
+    "predict_time_s": 3.1788917499943636,
+    "reconstruction_time_s": 0.00035149999894201756,
+    "total_time_s": 9.753427250005188
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:13:10.488423"
+}

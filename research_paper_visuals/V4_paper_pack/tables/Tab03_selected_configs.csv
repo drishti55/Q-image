@@ -1,0 +1,6 @@
+Group,Image,Patch / stride,Patches per image,Encoding,Normalisation,C,Qubits per patch state,State dimension D
+FRQI patches 4×4,64×64,4×4 / 4,256,"FRQI, angle ×4",per-image stretch,1000,5,32
+FRQI patches 8×8,64×64,8×8 / 4,225,"FRQI, angle ×4",per-image stretch,1000,7,128
+NEQR patches 2×2,64×64,2×2 / 2,1024,"NEQR, 4-bit",none,1000,6,64
+NEQR patches 4×4,128×128,4×4 / 4,1024,"NEQR, 4-bit",none,1000,8,256
+"Classical RBF-SVM, same patches",64×64,8×8 / 4,225,"patch moments, γ=1",per-image stretch,1000,— (classical),—

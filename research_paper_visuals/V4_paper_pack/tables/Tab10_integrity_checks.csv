@@ -1,0 +1,18 @@
+Check,Result
+"historical V0 results: 0 changed, 0 missing",PASS
+"V2 manifest/splits/caches unchanged (SHA-256, in qml_v2 and qml_v3)",PASS
+V4 copies of manifest/splits/image caches identical to the V3/V2 originals,PASS
+no Protocol V2 result file modified or added since V3 was finalised,PASS
+no Protocol V3 result file modified or added since V3 was finalised,PASS
+all 70 V3 selection files unchanged since the V3 freeze,PASS
+V4 selection files unchanged since the V4 freeze,PASS
+"every V4 locked-test access after the freeze, one per frozen group",PASS
+test predictions exist only for the frozen configurations,PASS
+no selection file contains a test metric,PASS
+"864 candidate runs, 0 failed",PASS
+test accuracy recomputed from predictions.csv (360 locked images per run),PASS
+FRQI headline chosen by validation,PASS
+NEQR headline chosen by validation,PASS
+comparisons are exactly the 8 pre-declared ones,PASS
+"every V4 quantum group records a real FRQI/NEQR encoder circuit (Qiskit, transpiled)",PASS
+classical control has no circuit and is labelled classical,PASS

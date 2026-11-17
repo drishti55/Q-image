@@ -11,7 +11,7 @@ interface DashboardData {
 }
 
 export default function Dashboard() {
-  const [data, setData] = useState<DashboardData>({ dataset: null, models: [], quantum: null, loading: true });
+  const [data, setData] = useState<DashboardData>({ dataset: null, models: [], quantum: null, coverage: null, loading: true });
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -149,7 +149,7 @@ export default function Dashboard() {
           <Database size={18} className="text-blue-400" /> Dataset Overview
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <KPICard title="Total Images" value={data.dataset?.total_images} icon={Database} color="blue" onClick={() => navigate('/dataset')} />
+          <KPICard title="Total Images" value={data.dataset?.total_images} icon={Database} color="blue" onClick={() => navigate('/historical-v0/dataset')} />
           <KPICard title="Defect Classes" value={data.dataset?.n_classes} icon={Grid} color="purple" />
           <KPICard title="Train Images" value={data.dataset?.train_total} icon={Database} color="emerald" />
           <KPICard title="Validation" value={data.dataset?.validation_total} icon={Database} color="cyan" />
@@ -164,8 +164,8 @@ export default function Dashboard() {
             <BarChart2 size={18} className="text-emerald-400" /> ML Performance
           </h2>
           <div className="grid grid-cols-2 gap-4">
-            <KPICard title="Models Evaluated" value={data.models.length || '—'} icon={Activity} color="emerald" onClick={() => navigate('/ml')} />
-            <KPICard title="Best Test Accuracy" value={getBestAcc()} icon={BarChart2} color="blue" onClick={() => navigate('/ml')} />
+            <KPICard title="Models Evaluated" value={data.models.length || '—'} icon={Activity} color="emerald" onClick={() => navigate('/historical-v0/ml')} />
+            <KPICard title="Best Test Accuracy" value={getBestAcc()} icon={BarChart2} color="blue" onClick={() => navigate('/historical-v0/ml')} />
             <KPICard title="Best Macro F1" value={getBestF1()} icon={Activity} color="purple" />
             <KPICard title="Best Model" value={data.models.length ? data.models.sort((a,b) => (b.test_accuracy||0)-(a.test_accuracy||0))[0]?.model : '—'} icon={Cpu} color="cyan" />
           </div>
@@ -175,10 +175,10 @@ export default function Dashboard() {
             <Beaker size={18} className="text-cyan-400" /> Quantum Processing
           </h2>
           <div className="grid grid-cols-2 gap-4">
-            <KPICard title="Experiments Run" value={data.quantum?.n_experiments} icon={Beaker} color="cyan" onClick={() => navigate('/experiments')} />
+            <KPICard title="Experiments Run" value={data.quantum?.n_experiments} icon={Beaker} color="cyan" onClick={() => navigate('/historical-v0/experiments')} />
             <KPICard title="Avg PSNR (dB)" value={data.quantum?.avg_psnr} icon={Activity} color="emerald" />
             <KPICard title="Avg SSIM" value={data.quantum?.avg_ssim} icon={Box} color="blue" />
-            <KPICard title="Encoders" value="FRQI + NEQR" icon={Zap} color="purple" onClick={() => navigate('/quantum')} />
+            <KPICard title="Encoders" value="FRQI + NEQR" icon={Zap} color="purple" onClick={() => navigate('/historical-v0/quantum')} />
           </div>
         </div>
       </div>
@@ -187,10 +187,10 @@ export default function Dashboard() {
       <div>
         <h2 className="text-lg font-semibold text-slate-300 mb-4">Quick Navigation</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <NavCard title="Dataset Explorer" description="Browse NEU-DET defect classes and sample images" icon={Database} color="blue" to="/dataset" />
-          <NavCard title="ML Analytics" description="Compare SVM, RF, KNN, DT accuracy & metrics" icon={BarChart2} color="emerald" to="/ml" />
-          <NavCard title="Quantum Lab" description="Run FRQI/NEQR experiments interactively" icon={Zap} color="cyan" to="/quantum" />
-          <NavCard title="Experiment History" description="Browse all stored experiment results" icon={Beaker} color="purple" to="/experiments" />
+          <NavCard title="Dataset Explorer" description="Browse NEU-DET defect classes and sample images" icon={Database} color="blue" to="/historical-v0/dataset" />
+          <NavCard title="ML Analytics" description="Compare SVM, RF, KNN, DT accuracy & metrics" icon={BarChart2} color="emerald" to="/historical-v0/ml" />
+          <NavCard title="Quantum Lab" description="Run FRQI/NEQR experiments interactively" icon={Zap} color="cyan" to="/historical-v0/quantum" />
+          <NavCard title="Experiment History" description="Browse all stored experiment results" icon={Beaker} color="purple" to="/historical-v0/experiments" />
         </div>
       </div>
     </div>

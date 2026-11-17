@@ -1,0 +1,61 @@
+{
+ "train_kernel": {
+  "n": 1080,
+  "symmetry_max_abs_error": 0.0,
+  "diag_min": 0.42975518107414246,
+  "diag_max": 0.9873918890953064,
+  "min": 0.011049098335206509,
+  "max": 0.9873918890953064,
+  "in_unit_interval": true,
+  "min_eigenvalue": -1.5681294999862657e-05,
+  "max_eigenvalue": 657.9361723206945,
+  "psd_within_tol": false,
+  "offdiag_mean": 0.5858709879639943,
+  "offdiag_std": 0.23701910986248909,
+  "offdiag_var": 0.056178058440006666,
+  "offdiag_quantiles": {
+   "0.01": 0.06713857464492322,
+   "0.25": 0.42051541060209274,
+   "0.5": 0.6015449464321136,
+   "0.75": 0.7879658788442612,
+   "0.99": 0.9576079118251801
+  },
+  "offdiag_hist": [
+   5742,
+   22538,
+   31370,
+   33290,
+   34942,
+   38832,
+   45740,
+   54452,
+   62266,
+   76562,
+   81004,
+   92986,
+   81922,
+   73242,
+   76930,
+   82872,
+   89458,
+   88556,
+   72660,
+   19956
+  ],
+  "mean_same_class": 0.704954045170796,
+  "mean_diff_class": 0.5621866910306414,
+  "kernel_target_alignment": -0.5549683046786463,
+  "centered_kernel_alignment": 0.2926090318707801
+ },
+ "train_kernel_spectrum": {
+  "top1_fraction": 0.7256887802557398,
+  "top10_fraction": 0.9999157866549077,
+  "effective_dimension": 1.7630235267802448,
+  "n_eig_for_90pct": 2
+ },
+ "purity_mean": 0.8394756584807679,
+ "kernel": "exact Hilbert-Schmidt overlap Tr(rho_A rho_B) of patch-ensemble mixed states",
+ "features": {
+  "input": "64x64 grayscale in [0,1]"
+ }
+}

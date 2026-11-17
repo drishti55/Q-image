@@ -1,0 +1,20 @@
+{
+ "id": "R-FRQI-8x8",
+ "kind": "quantum_whole",
+ "representation": "FRQI",
+ "resolution": 8,
+ "bits": null,
+ "shots": [
+  100,
+  1000,
+  10000,
+  100000
+ ],
+ "n_images": 1800,
+ "execution": "classical CPU simulation",
+ "simulator": "qiskit-aer statevector + multinomial sampling",
+ "encoder": "src/frqi/encoder.py::FRQIEncoder",
+ "decoder": "src/reconstruction/reconstructor.py",
+ "shots_note": "shots per image",
+ "compute_seconds": 368.62063425197266
+}

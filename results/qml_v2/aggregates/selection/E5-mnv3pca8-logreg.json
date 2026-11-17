@@ -1,0 +1,114 @@
+{
+ "group": "E5-mnv3pca8-logreg",
+ "selected_at": "2026-11-14T20:16:46.291756",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 6,
+ "n_eligible": 6,
+ "selected": {
+  "config_key": "E5-mnv3pca8-logreg__5def3f9a70",
+  "params": {
+   "C": 10.0
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.954630140649864,
+  "val_std": 0.0234760308838385,
+  "experiment_ids": [
+   "E5-mnv3pca8-logreg__5def3f9a70__s0",
+   "E5-mnv3pca8-logreg__5def3f9a70__s1",
+   "E5-mnv3pca8-logreg__5def3f9a70__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E5-mnv3pca8-logreg__1cfecbb64e",
+   "params": {
+    "C": 0.001
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9226615269310262,
+   "val_std": 0.03776024901021599,
+   "experiment_ids": [
+    "E5-mnv3pca8-logreg__1cfecbb64e__s0",
+    "E5-mnv3pca8-logreg__1cfecbb64e__s1",
+    "E5-mnv3pca8-logreg__1cfecbb64e__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca8-logreg__2ee7261e07",
+   "params": {
+    "C": 0.01
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9257752323859249,
+   "val_std": 0.024503624649920407,
+   "experiment_ids": [
+    "E5-mnv3pca8-logreg__2ee7261e07__s0",
+    "E5-mnv3pca8-logreg__2ee7261e07__s1",
+    "E5-mnv3pca8-logreg__2ee7261e07__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca8-logreg__1da5ed2f23",
+   "params": {
+    "C": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9361245181995649,
+   "val_std": 0.029677202248030804,
+   "experiment_ids": [
+    "E5-mnv3pca8-logreg__1da5ed2f23__s0",
+    "E5-mnv3pca8-logreg__1da5ed2f23__s1",
+    "E5-mnv3pca8-logreg__1da5ed2f23__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca8-logreg__7ade66709e",
+   "params": {
+    "C": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9480114393162883,
+   "val_std": 0.029396659931248712,
+   "experiment_ids": [
+    "E5-mnv3pca8-logreg__7ade66709e__s0",
+    "E5-mnv3pca8-logreg__7ade66709e__s1",
+    "E5-mnv3pca8-logreg__7ade66709e__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca8-logreg__5def3f9a70",
+   "params": {
+    "C": 10.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.954630140649864,
+   "val_std": 0.0234760308838385,
+   "experiment_ids": [
+    "E5-mnv3pca8-logreg__5def3f9a70__s0",
+    "E5-mnv3pca8-logreg__5def3f9a70__s1",
+    "E5-mnv3pca8-logreg__5def3f9a70__s2"
+   ]
+  },
+  {
+   "config_key": "E5-mnv3pca8-logreg__bebf6e38ce",
+   "params": {
+    "C": 100.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9519902202122509,
+   "val_std": 0.027551506241398675,
+   "experiment_ids": [
+    "E5-mnv3pca8-logreg__bebf6e38ce__s0",
+    "E5-mnv3pca8-logreg__bebf6e38ce__s1",
+    "E5-mnv3pca8-logreg__bebf6e38ce__s2"
+   ]
+  }
+ ]
+}

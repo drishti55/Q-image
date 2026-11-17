@@ -1,0 +1,20 @@
+{
+ "id": "P-FRQI-64-p8",
+ "kind": "quantum_patch",
+ "representation": "FRQI",
+ "resolution": 64,
+ "patch": 8,
+ "bits": null,
+ "shots": [
+  100,
+  1000,
+  10000
+ ],
+ "n_images": 1800,
+ "execution": "classical CPU simulation",
+ "simulator": "qiskit-aer statevector + multinomial sampling",
+ "encoder": "src/frqi/encoder.py::FRQIEncoder",
+ "decoder": "src/reconstruction/reconstructor.py",
+ "shots_note": "shots per patch (total per image = shots x number of patches)",
+ "compute_seconds": 22054.72555070807
+}

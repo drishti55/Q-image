@@ -1,0 +1,19 @@
+model,class,f1_mean
+FRQI patch-ensemble,crazing,93.07
+FRQI patch-ensemble,inclusion,84.02
+FRQI patch-ensemble,patches,95.76
+FRQI patch-ensemble,pitted_surface,81.54
+FRQI patch-ensemble,rolled-in_scale,89.47
+FRQI patch-ensemble,scratches,81.29
+NEQR patch-ensemble,crazing,89.53
+NEQR patch-ensemble,inclusion,72.68
+NEQR patch-ensemble,patches,91.38
+NEQR patch-ensemble,pitted_surface,80.01
+NEQR patch-ensemble,rolled-in_scale,65.01
+NEQR patch-ensemble,scratches,83.97
+"Classical RBF-SVM, same patches",crazing,83.54
+"Classical RBF-SVM, same patches",inclusion,67.78
+"Classical RBF-SVM, same patches",patches,92.91
+"Classical RBF-SVM, same patches",pitted_surface,66.67
+"Classical RBF-SVM, same patches",rolled-in_scale,93.05
+"Classical RBF-SVM, same patches",scratches,95.87

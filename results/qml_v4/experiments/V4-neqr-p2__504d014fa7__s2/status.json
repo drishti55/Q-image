@@ -1,0 +1,49 @@
+{
+ "experiment_id": "V4-neqr-p2__504d014fa7__s2",
+ "status": "completed",
+ "updated_at": "2026-11-17T05:03:16.093894",
+ "summary": {
+  "record_type": "classification",
+  "experiment_code": "V4E",
+  "group": "V4-neqr-p2",
+  "model_name": "NEQR patch-ensemble kernel (2x2 patches)",
+  "family": "quantum_kernel",
+  "compute_type": "hybrid",
+  "feature_extraction": "32x32 grayscale, 2x2 patches stride 1",
+  "encoding": "NEQR",
+  "n_qubits": 8,
+  "circuit_depth": 20,
+  "circuit_depth_compiled": 147,
+  "n_layers": null,
+  "optimizer": null,
+  "learning_rate": null,
+  "shots": 0,
+  "seed": 2,
+  "n_train": 1080,
+  "n_val": 360,
+  "n_test": null,
+  "dataset_manifest_id": "neu-5625b937479b",
+  "split_id": "split-s2-cbd05190d5",
+  "params": {
+   "representation": "NEQR",
+   "image_size": 32,
+   "patch": 2,
+   "stride": 1,
+   "norm": "none",
+   "C": 100.0,
+   "bits": 6
+  },
+  "val": {
+   "accuracy": 0.8444444444444444,
+   "precision_macro": 0.851772765220511,
+   "recall_macro": 0.8444444444444444,
+   "f1_macro": 0.8451359043564408,
+   "f1_weighted": 0.8451359043564407
+  },
+  "test": null,
+  "train_time_s": 0.6323035419918597,
+  "val_inference_time_s": 0.16504175000591204,
+  "inference_ms_per_image": 0.4584493055719779,
+  "selected": false
+ }
+}

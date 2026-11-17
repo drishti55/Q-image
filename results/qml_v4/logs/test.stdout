@@ -1,0 +1,16 @@
+# start v4_final_test: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+  [TEST] V4-frqi-p4__323bd64cc5__s0  acc=0.869 F1=0.866
+  [TEST] V4-frqi-p4__323bd64cc5__s1  acc=0.853 F1=0.850
+  [TEST] V4-frqi-p4__323bd64cc5__s2  acc=0.836 F1=0.834
+  [TEST] V4-frqi-p8__09d3a4f853__s0  acc=0.867 F1=0.864
+  [TEST] V4-frqi-p8__09d3a4f853__s1  acc=0.872 F1=0.869
+  [TEST] V4-frqi-p8__09d3a4f853__s2  acc=0.894 F1=0.893
+  [TEST] V4-neqr-p2__76e0073cb1__s0  acc=0.856 F1=0.850
+  [TEST] V4-neqr-p2__76e0073cb1__s1  acc=0.694 F1=0.631
+  [TEST] V4-neqr-p2__76e0073cb1__s2  acc=0.894 F1=0.895
+  [TEST] V4-neqr-p4__6f94f19016__s0  acc=0.875 F1=0.870
+  [TEST] V4-neqr-p4__6f94f19016__s1  acc=0.711 F1=0.649
+  [TEST] V4-neqr-p4__6f94f19016__s2  acc=0.894 F1=0.894
+  [TEST] V4-patchmom-rbfsvm__7d793c468e__s0  acc=0.833 F1=0.830
+  [TEST] V4-patchmom-rbfsvm__7d793c468e__s1  acc=0.839 F1=0.835
+  [TEST] V4-patchmom-rbfsvm__7d793c468e__s2  acc=0.836 F1=0.834

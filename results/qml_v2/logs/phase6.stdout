@@ -1,0 +1,513 @@
+# start phase6_classify_shots_recon: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+== group E1-frqi2-qkc: 4 configs x 3 seeds
+  [ok] E1-frqi2-qkc__ad04ec2e08__s0  val acc=0.339 F1=0.287  fit 0.2s
+  [ok] E1-frqi2-qkc__ad04ec2e08__s1  val acc=0.339 F1=0.291  fit 0.2s
+  [ok] E1-frqi2-qkc__ad04ec2e08__s2  val acc=0.367 F1=0.327  fit 0.2s
+  [ok] E1-frqi2-qkc__df5a055f9b__s0  val acc=0.319 F1=0.264  fit 0.2s
+  [ok] E1-frqi2-qkc__df5a055f9b__s1  val acc=0.364 F1=0.314  fit 0.2s
+  [ok] E1-frqi2-qkc__df5a055f9b__s2  val acc=0.372 F1=0.340  fit 0.2s
+  [ok] E1-frqi2-qkc__620a3b3819__s0  val acc=0.406 F1=0.397  fit 0.2s
+  [ok] E1-frqi2-qkc__620a3b3819__s1  val acc=0.397 F1=0.394  fit 0.2s
+  [ok] E1-frqi2-qkc__620a3b3819__s2  val acc=0.442 F1=0.450  fit 0.2s
+  [ok] E1-frqi2-qkc__f9024af5e0__s0  val acc=0.461 F1=0.461  fit 0.2s
+  [ok] E1-frqi2-qkc__f9024af5e0__s1  val acc=0.436 F1=0.436  fit 0.3s
+  [ok] E1-frqi2-qkc__f9024af5e0__s2  val acc=0.522 F1=0.533  fit 0.2s
+  [TEST] E1-frqi2-qkc__f9024af5e0__s0  acc=0.447 F1=0.442
+  [TEST] E1-frqi2-qkc__f9024af5e0__s1  acc=0.425 F1=0.420
+  [TEST] E1-frqi2-qkc__f9024af5e0__s2  acc=0.417 F1=0.417
+== group E2-neqr2-b2-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr2-b2-qkc__8211ae1c85__s0  val acc=0.364 F1=0.301  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__8211ae1c85__s1  val acc=0.350 F1=0.279  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__8211ae1c85__s2  val acc=0.389 F1=0.332  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__fd7b73643d__s0  val acc=0.369 F1=0.305  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__fd7b73643d__s1  val acc=0.353 F1=0.294  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__fd7b73643d__s2  val acc=0.408 F1=0.363  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__3d14f2b28c__s0  val acc=0.367 F1=0.308  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__3d14f2b28c__s1  val acc=0.367 F1=0.308  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__3d14f2b28c__s2  val acc=0.433 F1=0.373  fit 0.2s
+  [ok] E2-neqr2-b2-qkc__5fc5cdc938__s0  val acc=0.367 F1=0.310  fit 0.3s
+  [ok] E2-neqr2-b2-qkc__5fc5cdc938__s1  val acc=0.367 F1=0.308  fit 0.3s
+  [ok] E2-neqr2-b2-qkc__5fc5cdc938__s2  val acc=0.433 F1=0.373  fit 0.3s
+  [TEST] E2-neqr2-b2-qkc__5fc5cdc938__s0  acc=0.367 F1=0.318
+  [TEST] E2-neqr2-b2-qkc__5fc5cdc938__s1  acc=0.356 F1=0.308
+  [TEST] E2-neqr2-b2-qkc__5fc5cdc938__s2  acc=0.353 F1=0.305
+== group E2-neqr2-b4-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr2-b4-qkc__ac260e424a__s0  val acc=0.450 F1=0.437  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__ac260e424a__s1  val acc=0.467 F1=0.469  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__ac260e424a__s2  val acc=0.453 F1=0.453  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__f4c65a4f83__s0  val acc=0.483 F1=0.486  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__f4c65a4f83__s1  val acc=0.456 F1=0.455  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__f4c65a4f83__s2  val acc=0.494 F1=0.501  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__b7b9bebac5__s0  val acc=0.464 F1=0.464  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__b7b9bebac5__s1  val acc=0.442 F1=0.442  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__b7b9bebac5__s2  val acc=0.492 F1=0.498  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__8923128a56__s0  val acc=0.458 F1=0.457  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__8923128a56__s1  val acc=0.456 F1=0.456  fit 0.2s
+  [ok] E2-neqr2-b4-qkc__8923128a56__s2  val acc=0.503 F1=0.509  fit 0.2s
+  [TEST] E2-neqr2-b4-qkc__f4c65a4f83__s0  acc=0.386 F1=0.367
+  [TEST] E2-neqr2-b4-qkc__f4c65a4f83__s1  acc=0.408 F1=0.388
+  [TEST] E2-neqr2-b4-qkc__f4c65a4f83__s2  acc=0.422 F1=0.400
+== group E2-neqr2-b8-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr2-b8-qkc__8ea0165da3__s0  val acc=0.378 F1=0.365  fit 0.4s
+  [ok] E2-neqr2-b8-qkc__8ea0165da3__s1  val acc=0.328 F1=0.317  fit 0.4s
+  [ok] E2-neqr2-b8-qkc__8ea0165da3__s2  val acc=0.367 F1=0.351  fit 0.5s
+  [ok] E2-neqr2-b8-qkc__145fb266d4__s0  val acc=0.372 F1=0.369  fit 1.0s
+  [ok] E2-neqr2-b8-qkc__145fb266d4__s1  val acc=0.347 F1=0.346  fit 0.8s
+  [ok] E2-neqr2-b8-qkc__145fb266d4__s2  val acc=0.372 F1=0.375  fit 0.6s
+  [ok] E2-neqr2-b8-qkc__427e8fb2b0__s0  val acc=0.367 F1=0.364  fit 0.5s
+  [ok] E2-neqr2-b8-qkc__427e8fb2b0__s1  val acc=0.353 F1=0.351  fit 0.5s
+  [ok] E2-neqr2-b8-qkc__427e8fb2b0__s2  val acc=0.367 F1=0.368  fit 0.6s
+  [ok] E2-neqr2-b8-qkc__7f9aedc12e__s0  val acc=0.367 F1=0.364  fit 0.6s
+  [ok] E2-neqr2-b8-qkc__7f9aedc12e__s1  val acc=0.353 F1=0.351  fit 0.6s
+  [ok] E2-neqr2-b8-qkc__7f9aedc12e__s2  val acc=0.367 F1=0.368  fit 0.7s
+  [TEST] E2-neqr2-b8-qkc__145fb266d4__s0  acc=0.311 F1=0.305
+  [TEST] E2-neqr2-b8-qkc__145fb266d4__s1  acc=0.308 F1=0.295
+  [TEST] E2-neqr2-b8-qkc__145fb266d4__s2  acc=0.303 F1=0.296
+== group E1-frqi4-qkc: 4 configs x 3 seeds
+  [ok] E1-frqi4-qkc__f116c821fd__s0  val acc=0.347 F1=0.295  fit 0.2s
+  [ok] E1-frqi4-qkc__f116c821fd__s1  val acc=0.353 F1=0.315  fit 0.2s
+  [ok] E1-frqi4-qkc__f116c821fd__s2  val acc=0.378 F1=0.338  fit 0.3s
+  [ok] E1-frqi4-qkc__e997c6d4c9__s0  val acc=0.367 F1=0.335  fit 0.3s
+  [ok] E1-frqi4-qkc__e997c6d4c9__s1  val acc=0.403 F1=0.389  fit 0.3s
+  [ok] E1-frqi4-qkc__e997c6d4c9__s2  val acc=0.414 F1=0.402  fit 0.3s
+  [ok] E1-frqi4-qkc__a685e6b674__s0  val acc=0.486 F1=0.488  fit 0.3s
+  [ok] E1-frqi4-qkc__a685e6b674__s1  val acc=0.503 F1=0.513  fit 0.2s
+  [ok] E1-frqi4-qkc__a685e6b674__s2  val acc=0.550 F1=0.569  fit 0.3s
+  [ok] E1-frqi4-qkc__9503a70735__s0  val acc=0.553 F1=0.559  fit 0.3s
+  [ok] E1-frqi4-qkc__9503a70735__s1  val acc=0.569 F1=0.574  fit 0.3s
+  [ok] E1-frqi4-qkc__9503a70735__s2  val acc=0.622 F1=0.632  fit 0.4s
+  [TEST] E1-frqi4-qkc__9503a70735__s0  acc=0.539 F1=0.522
+  [TEST] E1-frqi4-qkc__9503a70735__s1  acc=0.531 F1=0.516
+  [TEST] E1-frqi4-qkc__9503a70735__s2  acc=0.511 F1=0.498
+== group E1b-frqi4-qkc-scaled: 12 configs x 3 seeds
+  [ok] E1b-frqi4-qkc-scaled__4125f41469__s0  val acc=0.322 F1=0.278  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__4125f41469__s1  val acc=0.356 F1=0.330  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__4125f41469__s2  val acc=0.378 F1=0.356  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__298398fb02__s0  val acc=0.483 F1=0.487  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__298398fb02__s1  val acc=0.492 F1=0.500  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__298398fb02__s2  val acc=0.544 F1=0.560  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__1014079234__s0  val acc=0.564 F1=0.569  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__1014079234__s1  val acc=0.581 F1=0.586  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__1014079234__s2  val acc=0.658 F1=0.668  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__516640ca2c__s0  val acc=0.639 F1=0.640  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__516640ca2c__s1  val acc=0.639 F1=0.638  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__516640ca2c__s2  val acc=0.681 F1=0.685  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__21b0b3ff54__s0  val acc=0.397 F1=0.382  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__21b0b3ff54__s1  val acc=0.444 F1=0.429  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__21b0b3ff54__s2  val acc=0.425 F1=0.402  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__27f524d455__s0  val acc=0.536 F1=0.539  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__27f524d455__s1  val acc=0.544 F1=0.551  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__27f524d455__s2  val acc=0.558 F1=0.560  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__a1a2bed6da__s0  val acc=0.592 F1=0.596  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__a1a2bed6da__s1  val acc=0.581 F1=0.581  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__a1a2bed6da__s2  val acc=0.611 F1=0.612  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__608adb051a__s0  val acc=0.611 F1=0.614  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__608adb051a__s1  val acc=0.586 F1=0.588  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__608adb051a__s2  val acc=0.625 F1=0.629  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__a9dc394195__s0  val acc=0.492 F1=0.464  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__a9dc394195__s1  val acc=0.489 F1=0.470  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__a9dc394195__s2  val acc=0.481 F1=0.463  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__d705836c94__s0  val acc=0.531 F1=0.520  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__d705836c94__s1  val acc=0.533 F1=0.525  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__d705836c94__s2  val acc=0.569 F1=0.570  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__4c0204e7d3__s0  val acc=0.558 F1=0.548  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__4c0204e7d3__s1  val acc=0.550 F1=0.548  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__4c0204e7d3__s2  val acc=0.611 F1=0.605  fit 0.2s
+  [ok] E1b-frqi4-qkc-scaled__a222daf606__s0  val acc=0.544 F1=0.541  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__a222daf606__s1  val acc=0.556 F1=0.551  fit 0.3s
+  [ok] E1b-frqi4-qkc-scaled__a222daf606__s2  val acc=0.575 F1=0.566  fit 0.3s
+  [TEST] E1b-frqi4-qkc-scaled__516640ca2c__s0  acc=0.569 F1=0.549
+  [TEST] E1b-frqi4-qkc-scaled__516640ca2c__s1  acc=0.553 F1=0.532
+  [TEST] E1b-frqi4-qkc-scaled__516640ca2c__s2  acc=0.556 F1=0.537
+== group E2-neqr4-b2-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr4-b2-qkc__9bedd7f74d__s0  val acc=0.411 F1=0.367  fit 0.2s
+  [ok] E2-neqr4-b2-qkc__9bedd7f74d__s1  val acc=0.414 F1=0.353  fit 0.2s
+  [ok] E2-neqr4-b2-qkc__9bedd7f74d__s2  val acc=0.428 F1=0.385  fit 0.2s
+  [ok] E2-neqr4-b2-qkc__eaac82e376__s0  val acc=0.456 F1=0.436  fit 0.2s
+  [ok] E2-neqr4-b2-qkc__eaac82e376__s1  val acc=0.450 F1=0.409  fit 0.2s
+  [ok] E2-neqr4-b2-qkc__eaac82e376__s2  val acc=0.519 F1=0.484  fit 0.2s
+  [ok] E2-neqr4-b2-qkc__28b91b66c9__s0  val acc=0.450 F1=0.424  fit 0.2s
+  [ok] E2-neqr4-b2-qkc__28b91b66c9__s1  val acc=0.472 F1=0.455  fit 0.2s
+  [ok] E2-neqr4-b2-qkc__28b91b66c9__s2  val acc=0.539 F1=0.520  fit 0.3s
+  [ok] E2-neqr4-b2-qkc__abd238b4dd__s0  val acc=0.425 F1=0.398  fit 0.4s
+  [ok] E2-neqr4-b2-qkc__abd238b4dd__s1  val acc=0.475 F1=0.459  fit 0.4s
+  [ok] E2-neqr4-b2-qkc__abd238b4dd__s2  val acc=0.481 F1=0.452  fit 0.3s
+  [TEST] E2-neqr4-b2-qkc__28b91b66c9__s0  acc=0.450 F1=0.419
+  [TEST] E2-neqr4-b2-qkc__28b91b66c9__s1  acc=0.458 F1=0.431
+  [TEST] E2-neqr4-b2-qkc__28b91b66c9__s2  acc=0.442 F1=0.417
+== group E2-neqr4-b4-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr4-b4-qkc__2f2f6a157c__s0  val acc=0.511 F1=0.490  fit 0.3s
+  [ok] E2-neqr4-b4-qkc__2f2f6a157c__s1  val acc=0.486 F1=0.476  fit 0.2s
+  [ok] E2-neqr4-b4-qkc__2f2f6a157c__s2  val acc=0.522 F1=0.512  fit 0.2s
+  [ok] E2-neqr4-b4-qkc__2a6cd70e08__s0  val acc=0.636 F1=0.636  fit 0.2s
+  [ok] E2-neqr4-b4-qkc__2a6cd70e08__s1  val acc=0.572 F1=0.574  fit 0.2s
+  [ok] E2-neqr4-b4-qkc__2a6cd70e08__s2  val acc=0.664 F1=0.665  fit 0.2s
+  [ok] E2-neqr4-b4-qkc__8b6081a1e4__s0  val acc=0.622 F1=0.625  fit 0.2s
+  [ok] E2-neqr4-b4-qkc__8b6081a1e4__s1  val acc=0.583 F1=0.581  fit 0.3s
+  [ok] E2-neqr4-b4-qkc__8b6081a1e4__s2  val acc=0.628 F1=0.625  fit 0.4s
+  [ok] E2-neqr4-b4-qkc__cc13533add__s0  val acc=0.617 F1=0.619  fit 0.4s
+  [ok] E2-neqr4-b4-qkc__cc13533add__s1  val acc=0.569 F1=0.569  fit 0.4s
+  [ok] E2-neqr4-b4-qkc__cc13533add__s2  val acc=0.619 F1=0.615  fit 0.4s
+  [TEST] E2-neqr4-b4-qkc__2a6cd70e08__s0  acc=0.500 F1=0.475
+  [TEST] E2-neqr4-b4-qkc__2a6cd70e08__s1  acc=0.528 F1=0.499
+  [TEST] E2-neqr4-b4-qkc__2a6cd70e08__s2  acc=0.511 F1=0.485
+== group E2-neqr4-b8-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr4-b8-qkc__8935e94e9c__s0  val acc=0.417 F1=0.384  fit 0.5s
+  [ok] E2-neqr4-b8-qkc__8935e94e9c__s1  val acc=0.372 F1=0.336  fit 0.6s
+  [ok] E2-neqr4-b8-qkc__8935e94e9c__s2  val acc=0.400 F1=0.382  fit 0.5s
+  [ok] E2-neqr4-b8-qkc__6e78255cd1__s0  val acc=0.475 F1=0.479  fit 0.6s
+  [ok] E2-neqr4-b8-qkc__6e78255cd1__s1  val acc=0.439 F1=0.444  fit 0.7s
+  [ok] E2-neqr4-b8-qkc__6e78255cd1__s2  val acc=0.475 F1=0.487  fit 0.6s
+  [ok] E2-neqr4-b8-qkc__7847adffcc__s0  val acc=0.478 F1=0.480  fit 0.5s
+  [ok] E2-neqr4-b8-qkc__7847adffcc__s1  val acc=0.439 F1=0.444  fit 0.5s
+  [ok] E2-neqr4-b8-qkc__7847adffcc__s2  val acc=0.472 F1=0.481  fit 0.5s
+  [ok] E2-neqr4-b8-qkc__38c503d941__s0  val acc=0.478 F1=0.480  fit 0.4s
+  [ok] E2-neqr4-b8-qkc__38c503d941__s1  val acc=0.439 F1=0.444  fit 0.4s
+  [ok] E2-neqr4-b8-qkc__38c503d941__s2  val acc=0.472 F1=0.481  fit 0.4s
+  [TEST] E2-neqr4-b8-qkc__6e78255cd1__s0  acc=0.414 F1=0.395
+  [TEST] E2-neqr4-b8-qkc__6e78255cd1__s1  acc=0.400 F1=0.374
+  [TEST] E2-neqr4-b8-qkc__6e78255cd1__s2  acc=0.381 F1=0.361
+== group E1-frqi8-qkc: 4 configs x 3 seeds
+  [ok] E1-frqi8-qkc__03a20531aa__s0  val acc=0.350 F1=0.297  fit 0.2s
+  [ok] E1-frqi8-qkc__03a20531aa__s1  val acc=0.358 F1=0.323  fit 0.2s
+  [ok] E1-frqi8-qkc__03a20531aa__s2  val acc=0.383 F1=0.345  fit 0.2s
+  [ok] E1-frqi8-qkc__f94932ffa0__s0  val acc=0.417 F1=0.403  fit 0.2s
+  [ok] E1-frqi8-qkc__f94932ffa0__s1  val acc=0.428 F1=0.424  fit 0.2s
+  [ok] E1-frqi8-qkc__f94932ffa0__s2  val acc=0.483 F1=0.496  fit 0.2s
+  [ok] E1-frqi8-qkc__323e66cd6a__s0  val acc=0.553 F1=0.552  fit 0.2s
+  [ok] E1-frqi8-qkc__323e66cd6a__s1  val acc=0.508 F1=0.517  fit 0.2s
+  [ok] E1-frqi8-qkc__323e66cd6a__s2  val acc=0.608 F1=0.623  fit 0.2s
+  [ok] E1-frqi8-qkc__1414bdd0a2__s0  val acc=0.639 F1=0.642  fit 0.2s
+  [ok] E1-frqi8-qkc__1414bdd0a2__s1  val acc=0.594 F1=0.598  fit 0.2s
+  [ok] E1-frqi8-qkc__1414bdd0a2__s2  val acc=0.689 F1=0.693  fit 0.2s
+  [TEST] E1-frqi8-qkc__1414bdd0a2__s0  acc=0.589 F1=0.571
+  [TEST] E1-frqi8-qkc__1414bdd0a2__s1  acc=0.578 F1=0.558
+  [TEST] E1-frqi8-qkc__1414bdd0a2__s2  acc=0.567 F1=0.547
+== group E1b-frqi8-qkc-scaled: 12 configs x 3 seeds
+  [ok] E1b-frqi8-qkc-scaled__64dc361e53__s0  val acc=0.386 F1=0.373  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__64dc361e53__s1  val acc=0.397 F1=0.389  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__64dc361e53__s2  val acc=0.458 F1=0.468  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__211f6c57bf__s0  val acc=0.553 F1=0.557  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__211f6c57bf__s1  val acc=0.522 F1=0.531  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__211f6c57bf__s2  val acc=0.617 F1=0.630  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__cc57aac41a__s0  val acc=0.628 F1=0.632  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__cc57aac41a__s1  val acc=0.614 F1=0.618  fit 0.3s
+  [ok] E1b-frqi8-qkc-scaled__cc57aac41a__s2  val acc=0.706 F1=0.715  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__cc07cabfa9__s0  val acc=0.678 F1=0.683  fit 0.3s
+  [ok] E1b-frqi8-qkc-scaled__cc07cabfa9__s1  val acc=0.658 F1=0.660  fit 0.3s
+  [ok] E1b-frqi8-qkc-scaled__cc07cabfa9__s2  val acc=0.736 F1=0.737  fit 0.4s
+  [ok] E1b-frqi8-qkc-scaled__1d4731a9a0__s0  val acc=0.447 F1=0.431  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__1d4731a9a0__s1  val acc=0.492 F1=0.481  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__1d4731a9a0__s2  val acc=0.467 F1=0.444  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__8c69fc48a8__s0  val acc=0.597 F1=0.601  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__8c69fc48a8__s1  val acc=0.581 F1=0.585  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__8c69fc48a8__s2  val acc=0.611 F1=0.615  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__c37451a0a4__s0  val acc=0.647 F1=0.652  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__c37451a0a4__s1  val acc=0.628 F1=0.627  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__c37451a0a4__s2  val acc=0.678 F1=0.681  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__91c1ce559b__s0  val acc=0.653 F1=0.655  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__91c1ce559b__s1  val acc=0.639 F1=0.641  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__91c1ce559b__s2  val acc=0.667 F1=0.672  fit 0.3s
+  [ok] E1b-frqi8-qkc-scaled__4cc59f0883__s0  val acc=0.500 F1=0.467  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__4cc59f0883__s1  val acc=0.511 F1=0.489  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__4cc59f0883__s2  val acc=0.500 F1=0.477  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__45e2f1a555__s0  val acc=0.572 F1=0.557  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__45e2f1a555__s1  val acc=0.600 F1=0.593  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__45e2f1a555__s2  val acc=0.625 F1=0.624  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__9ba507ec19__s0  val acc=0.608 F1=0.603  fit 0.3s
+  [ok] E1b-frqi8-qkc-scaled__9ba507ec19__s1  val acc=0.653 F1=0.653  fit 0.2s
+  [ok] E1b-frqi8-qkc-scaled__9ba507ec19__s2  val acc=0.669 F1=0.663  fit 0.3s
+  [ok] E1b-frqi8-qkc-scaled__506b4d6904__s0  val acc=0.586 F1=0.583  fit 0.3s
+  [ok] E1b-frqi8-qkc-scaled__506b4d6904__s1  val acc=0.636 F1=0.639  fit 0.3s
+  [ok] E1b-frqi8-qkc-scaled__506b4d6904__s2  val acc=0.658 F1=0.655  fit 0.3s
+  [TEST] E1b-frqi8-qkc-scaled__cc07cabfa9__s0  acc=0.619 F1=0.596
+  [TEST] E1b-frqi8-qkc-scaled__cc07cabfa9__s1  acc=0.603 F1=0.581
+  [TEST] E1b-frqi8-qkc-scaled__cc07cabfa9__s2  acc=0.597 F1=0.571
+== group E2-neqr8-b2-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr8-b2-qkc__6ab22e4715__s0  val acc=0.444 F1=0.415  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__6ab22e4715__s1  val acc=0.461 F1=0.430  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__6ab22e4715__s2  val acc=0.492 F1=0.457  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__0cab05a432__s0  val acc=0.525 F1=0.521  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__0cab05a432__s1  val acc=0.500 F1=0.484  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__0cab05a432__s2  val acc=0.619 F1=0.604  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__a60e5048e6__s0  val acc=0.522 F1=0.516  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__a60e5048e6__s1  val acc=0.517 F1=0.497  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__a60e5048e6__s2  val acc=0.617 F1=0.607  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__76f86ecda7__s0  val acc=0.486 F1=0.477  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__76f86ecda7__s1  val acc=0.508 F1=0.493  fit 0.2s
+  [ok] E2-neqr8-b2-qkc__76f86ecda7__s2  val acc=0.600 F1=0.592  fit 0.2s
+  [TEST] E2-neqr8-b2-qkc__a60e5048e6__s0  acc=0.506 F1=0.472
+  [TEST] E2-neqr8-b2-qkc__a60e5048e6__s1  acc=0.519 F1=0.489
+  [TEST] E2-neqr8-b2-qkc__a60e5048e6__s2  acc=0.506 F1=0.483
+== group E2-neqr8-b4-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr8-b4-qkc__da8e41ea19__s0  val acc=0.508 F1=0.483  fit 0.2s
+  [ok] E2-neqr8-b4-qkc__da8e41ea19__s1  val acc=0.494 F1=0.480  fit 0.2s
+  [ok] E2-neqr8-b4-qkc__da8e41ea19__s2  val acc=0.533 F1=0.523  fit 0.2s
+  [ok] E2-neqr8-b4-qkc__6daf971d37__s0  val acc=0.661 F1=0.663  fit 0.2s
+  [ok] E2-neqr8-b4-qkc__6daf971d37__s1  val acc=0.656 F1=0.657  fit 0.2s
+  [ok] E2-neqr8-b4-qkc__6daf971d37__s2  val acc=0.714 F1=0.718  fit 0.2s
+  [ok] E2-neqr8-b4-qkc__25ce1fb5f5__s0  val acc=0.678 F1=0.680  fit 0.3s
+  [ok] E2-neqr8-b4-qkc__25ce1fb5f5__s1  val acc=0.667 F1=0.668  fit 0.3s
+  [ok] E2-neqr8-b4-qkc__25ce1fb5f5__s2  val acc=0.739 F1=0.741  fit 0.3s
+  [ok] E2-neqr8-b4-qkc__33e95ddebb__s0  val acc=0.678 F1=0.680  fit 0.3s
+  [ok] E2-neqr8-b4-qkc__33e95ddebb__s1  val acc=0.667 F1=0.668  fit 0.3s
+  [ok] E2-neqr8-b4-qkc__33e95ddebb__s2  val acc=0.739 F1=0.741  fit 0.3s
+  [TEST] E2-neqr8-b4-qkc__25ce1fb5f5__s0  acc=0.597 F1=0.569
+  [TEST] E2-neqr8-b4-qkc__25ce1fb5f5__s1  acc=0.589 F1=0.548
+  [TEST] E2-neqr8-b4-qkc__25ce1fb5f5__s2  acc=0.611 F1=0.585
+== group E2-neqr8-b8-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr8-b8-qkc__12b1c8b11b__s0  val acc=0.375 F1=0.332  fit 0.4s
+  [ok] E2-neqr8-b8-qkc__12b1c8b11b__s1  val acc=0.381 F1=0.332  fit 0.5s
+  [ok] E2-neqr8-b8-qkc__12b1c8b11b__s2  val acc=0.411 F1=0.367  fit 0.5s
+  [ok] E2-neqr8-b8-qkc__4b3d72f77b__s0  val acc=0.544 F1=0.546  fit 0.5s
+  [ok] E2-neqr8-b8-qkc__4b3d72f77b__s1  val acc=0.531 F1=0.531  fit 0.5s
+  [ok] E2-neqr8-b8-qkc__4b3d72f77b__s2  val acc=0.564 F1=0.568  fit 0.5s
+  [ok] E2-neqr8-b8-qkc__1ed8b1e1b9__s0  val acc=0.539 F1=0.543  fit 0.5s
+  [ok] E2-neqr8-b8-qkc__1ed8b1e1b9__s1  val acc=0.528 F1=0.531  fit 1.1s
+  [ok] E2-neqr8-b8-qkc__1ed8b1e1b9__s2  val acc=0.578 F1=0.584  fit 0.9s
+  [ok] E2-neqr8-b8-qkc__0090dfc3e4__s0  val acc=0.539 F1=0.543  fit 0.6s
+  [ok] E2-neqr8-b8-qkc__0090dfc3e4__s1  val acc=0.528 F1=0.531  fit 0.5s
+  [ok] E2-neqr8-b8-qkc__0090dfc3e4__s2  val acc=0.578 F1=0.584  fit 0.5s
+  [TEST] E2-neqr8-b8-qkc__1ed8b1e1b9__s0  acc=0.461 F1=0.431
+  [TEST] E2-neqr8-b8-qkc__1ed8b1e1b9__s1  acc=0.461 F1=0.422
+  [TEST] E2-neqr8-b8-qkc__1ed8b1e1b9__s2  acc=0.442 F1=0.414
+== group E1-frqi16-qkc: 4 configs x 3 seeds
+  [ok] E1-frqi16-qkc__a037e74b4b__s0  val acc=0.353 F1=0.302  fit 0.1s
+  [ok] E1-frqi16-qkc__a037e74b4b__s1  val acc=0.361 F1=0.329  fit 0.1s
+  [ok] E1-frqi16-qkc__a037e74b4b__s2  val acc=0.386 F1=0.347  fit 0.1s
+  [ok] E1-frqi16-qkc__b786b77118__s0  val acc=0.442 F1=0.432  fit 0.2s
+  [ok] E1-frqi16-qkc__b786b77118__s1  val acc=0.433 F1=0.431  fit 0.2s
+  [ok] E1-frqi16-qkc__b786b77118__s2  val acc=0.528 F1=0.545  fit 0.2s
+  [ok] E1-frqi16-qkc__b6d42c0b39__s0  val acc=0.575 F1=0.579  fit 0.2s
+  [ok] E1-frqi16-qkc__b6d42c0b39__s1  val acc=0.525 F1=0.534  fit 0.2s
+  [ok] E1-frqi16-qkc__b6d42c0b39__s2  val acc=0.631 F1=0.644  fit 0.2s
+  [ok] E1-frqi16-qkc__08c086c77b__s0  val acc=0.639 F1=0.640  fit 0.2s
+  [ok] E1-frqi16-qkc__08c086c77b__s1  val acc=0.592 F1=0.595  fit 0.2s
+  [ok] E1-frqi16-qkc__08c086c77b__s2  val acc=0.692 F1=0.697  fit 0.2s
+  [TEST] E1-frqi16-qkc__08c086c77b__s0  acc=0.592 F1=0.575
+  [TEST] E1-frqi16-qkc__08c086c77b__s1  acc=0.586 F1=0.567
+  [TEST] E1-frqi16-qkc__08c086c77b__s2  acc=0.550 F1=0.534
+== group E1b-frqi16-qkc-scaled: 12 configs x 3 seeds
+  [ok] E1b-frqi16-qkc-scaled__2f8d9a99aa__s0  val acc=0.408 F1=0.399  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__2f8d9a99aa__s1  val acc=0.417 F1=0.415  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__2f8d9a99aa__s2  val acc=0.500 F1=0.510  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__ac6b388525__s0  val acc=0.572 F1=0.576  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__ac6b388525__s1  val acc=0.522 F1=0.531  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__ac6b388525__s2  val acc=0.636 F1=0.647  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__6e81363ee9__s0  val acc=0.650 F1=0.653  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__6e81363ee9__s1  val acc=0.619 F1=0.624  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__6e81363ee9__s2  val acc=0.714 F1=0.720  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__e14816b41e__s0  val acc=0.675 F1=0.678  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__e14816b41e__s1  val acc=0.647 F1=0.646  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__e14816b41e__s2  val acc=0.750 F1=0.751  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__62cbad21fa__s0  val acc=0.467 F1=0.454  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__62cbad21fa__s1  val acc=0.517 F1=0.512  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__62cbad21fa__s2  val acc=0.472 F1=0.456  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__5df3f234e9__s0  val acc=0.617 F1=0.622  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__5df3f234e9__s1  val acc=0.606 F1=0.609  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__5df3f234e9__s2  val acc=0.639 F1=0.646  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__70582943e4__s0  val acc=0.656 F1=0.659  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__70582943e4__s1  val acc=0.611 F1=0.613  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__70582943e4__s2  val acc=0.694 F1=0.699  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__7184ede25e__s0  val acc=0.664 F1=0.665  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__7184ede25e__s1  val acc=0.619 F1=0.621  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__7184ede25e__s2  val acc=0.675 F1=0.678  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__b8310e64f2__s0  val acc=0.517 F1=0.488  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__b8310e64f2__s1  val acc=0.519 F1=0.498  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__b8310e64f2__s2  val acc=0.508 F1=0.483  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__87d8b39acf__s0  val acc=0.611 F1=0.598  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__87d8b39acf__s1  val acc=0.639 F1=0.632  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__87d8b39acf__s2  val acc=0.681 F1=0.678  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__820663c914__s0  val acc=0.619 F1=0.616  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__820663c914__s1  val acc=0.633 F1=0.631  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__820663c914__s2  val acc=0.689 F1=0.683  fit 0.2s
+  [ok] E1b-frqi16-qkc-scaled__c34d56b528__s0  val acc=0.608 F1=0.607  fit 0.4s
+  [ok] E1b-frqi16-qkc-scaled__c34d56b528__s1  val acc=0.625 F1=0.627  fit 0.3s
+  [ok] E1b-frqi16-qkc-scaled__c34d56b528__s2  val acc=0.681 F1=0.676  fit 0.3s
+  [TEST] E1b-frqi16-qkc-scaled__e14816b41e__s0  acc=0.597 F1=0.578
+  [TEST] E1b-frqi16-qkc-scaled__e14816b41e__s1  acc=0.606 F1=0.583
+  [TEST] E1b-frqi16-qkc-scaled__e14816b41e__s2  acc=0.594 F1=0.570
+== group E2-neqr16-b2-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr16-b2-qkc__5a3e8d2667__s0  val acc=0.461 F1=0.440  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__5a3e8d2667__s1  val acc=0.472 F1=0.457  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__5a3e8d2667__s2  val acc=0.528 F1=0.500  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__7d72fe9d2a__s0  val acc=0.572 F1=0.568  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__7d72fe9d2a__s1  val acc=0.550 F1=0.538  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__7d72fe9d2a__s2  val acc=0.653 F1=0.642  fit 0.3s
+  [ok] E2-neqr16-b2-qkc__4293022e82__s0  val acc=0.561 F1=0.557  fit 0.3s
+  [ok] E2-neqr16-b2-qkc__4293022e82__s1  val acc=0.583 F1=0.574  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__4293022e82__s2  val acc=0.653 F1=0.651  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__02da673163__s0  val acc=0.531 F1=0.528  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__02da673163__s1  val acc=0.547 F1=0.530  fit 0.2s
+  [ok] E2-neqr16-b2-qkc__02da673163__s2  val acc=0.639 F1=0.638  fit 0.2s
+  [TEST] E2-neqr16-b2-qkc__4293022e82__s0  acc=0.533 F1=0.502
+  [TEST] E2-neqr16-b2-qkc__4293022e82__s1  acc=0.531 F1=0.499
+  [TEST] E2-neqr16-b2-qkc__4293022e82__s2  acc=0.528 F1=0.503
+== group E2-neqr16-b4-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr16-b4-qkc__ead632a964__s0  val acc=0.533 F1=0.512  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__ead632a964__s1  val acc=0.514 F1=0.498  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__ead632a964__s2  val acc=0.556 F1=0.547  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__25375a7dfc__s0  val acc=0.689 F1=0.692  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__25375a7dfc__s1  val acc=0.664 F1=0.665  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__25375a7dfc__s2  val acc=0.742 F1=0.744  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__968470dd9f__s0  val acc=0.703 F1=0.706  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__968470dd9f__s1  val acc=0.683 F1=0.684  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__968470dd9f__s2  val acc=0.789 F1=0.791  fit 0.3s
+  [ok] E2-neqr16-b4-qkc__e2c97409b9__s0  val acc=0.703 F1=0.706  fit 0.3s
+  [ok] E2-neqr16-b4-qkc__e2c97409b9__s1  val acc=0.683 F1=0.684  fit 0.2s
+  [ok] E2-neqr16-b4-qkc__e2c97409b9__s2  val acc=0.789 F1=0.791  fit 0.2s
+  [TEST] E2-neqr16-b4-qkc__968470dd9f__s0  acc=0.606 F1=0.569
+  [TEST] E2-neqr16-b4-qkc__968470dd9f__s1  acc=0.597 F1=0.561
+  [TEST] E2-neqr16-b4-qkc__968470dd9f__s2  acc=0.603 F1=0.567
+== group E2-neqr16-b8-qkc: 4 configs x 3 seeds
+  [ok] E2-neqr16-b8-qkc__f2f14c2a9c__s0  val acc=0.397 F1=0.356  fit 0.7s
+  [ok] E2-neqr16-b8-qkc__f2f14c2a9c__s1  val acc=0.392 F1=0.356  fit 0.7s
+  [ok] E2-neqr16-b8-qkc__f2f14c2a9c__s2  val acc=0.403 F1=0.348  fit 0.7s
+  [ok] E2-neqr16-b8-qkc__d9efd207dd__s0  val acc=0.567 F1=0.567  fit 0.7s
+  [ok] E2-neqr16-b8-qkc__d9efd207dd__s1  val acc=0.547 F1=0.554  fit 0.7s
+  [ok] E2-neqr16-b8-qkc__d9efd207dd__s2  val acc=0.617 F1=0.616  fit 0.7s
+  [ok] E2-neqr16-b8-qkc__ab0f3229d4__s0  val acc=0.558 F1=0.560  fit 0.8s
+  [ok] E2-neqr16-b8-qkc__ab0f3229d4__s1  val acc=0.547 F1=0.555  fit 0.8s
+  [ok] E2-neqr16-b8-qkc__ab0f3229d4__s2  val acc=0.606 F1=0.607  fit 0.9s
+  [ok] E2-neqr16-b8-qkc__e84a686d7a__s0  val acc=0.558 F1=0.560  fit 0.9s
+  [ok] E2-neqr16-b8-qkc__e84a686d7a__s1  val acc=0.547 F1=0.555  fit 0.7s
+  [ok] E2-neqr16-b8-qkc__e84a686d7a__s2  val acc=0.606 F1=0.607  fit 0.7s
+  [TEST] E2-neqr16-b8-qkc__d9efd207dd__s0  acc=0.514 F1=0.475
+  [TEST] E2-neqr16-b8-qkc__d9efd207dd__s1  acc=0.506 F1=0.465
+  [TEST] E2-neqr16-b8-qkc__d9efd207dd__s2  acc=0.489 F1=0.453
+== group E1-frqi4-encstats-logreg: 4 configs x 3 seeds
+  [ok] E1-frqi4-encstats-logreg__229e6b1b11__s0  val acc=0.494 F1=0.485  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__229e6b1b11__s1  val acc=0.467 F1=0.458  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__229e6b1b11__s2  val acc=0.506 F1=0.500  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__eaf899567d__s0  val acc=0.544 F1=0.536  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__eaf899567d__s1  val acc=0.497 F1=0.495  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__eaf899567d__s2  val acc=0.519 F1=0.522  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__19c174b5ea__s0  val acc=0.564 F1=0.556  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__19c174b5ea__s1  val acc=0.525 F1=0.524  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__19c174b5ea__s2  val acc=0.567 F1=0.565  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__50e0e0de51__s0  val acc=0.575 F1=0.570  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__50e0e0de51__s1  val acc=0.536 F1=0.536  fit 0.1s
+  [ok] E1-frqi4-encstats-logreg__50e0e0de51__s2  val acc=0.572 F1=0.570  fit 0.1s
+  [TEST] E1-frqi4-encstats-logreg__50e0e0de51__s0  acc=0.478 F1=0.459
+  [TEST] E1-frqi4-encstats-logreg__50e0e0de51__s1  acc=0.481 F1=0.463
+  [TEST] E1-frqi4-encstats-logreg__50e0e0de51__s2  acc=0.461 F1=0.439
+== group E2-neqr4-encstats-logreg: 4 configs x 3 seeds
+  [ok] E2-neqr4-encstats-logreg__4db767242e__s0  val acc=0.406 F1=0.395  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__4db767242e__s1  val acc=0.386 F1=0.378  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__4db767242e__s2  val acc=0.403 F1=0.389  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__2fed7d936a__s0  val acc=0.400 F1=0.396  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__2fed7d936a__s1  val acc=0.417 F1=0.409  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__2fed7d936a__s2  val acc=0.422 F1=0.416  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__c3951207dd__s0  val acc=0.422 F1=0.424  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__c3951207dd__s1  val acc=0.450 F1=0.445  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__c3951207dd__s2  val acc=0.436 F1=0.429  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__e926c3efd1__s0  val acc=0.419 F1=0.419  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__e926c3efd1__s1  val acc=0.442 F1=0.439  fit 0.1s
+  [ok] E2-neqr4-encstats-logreg__e926c3efd1__s2  val acc=0.447 F1=0.441  fit 0.1s
+  [TEST] E2-neqr4-encstats-logreg__e926c3efd1__s0  acc=0.414 F1=0.399
+  [TEST] E2-neqr4-encstats-logreg__e926c3efd1__s1  acc=0.375 F1=0.366
+  [TEST] E2-neqr4-encstats-logreg__e926c3efd1__s2  acc=0.411 F1=0.399
+== group E1-frqi8-encstats-logreg: 4 configs x 3 seeds
+  [ok] E1-frqi8-encstats-logreg__77c34605e3__s0  val acc=0.569 F1=0.571  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__77c34605e3__s1  val acc=0.503 F1=0.499  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__77c34605e3__s2  val acc=0.578 F1=0.576  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__b80ed73a50__s0  val acc=0.625 F1=0.622  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__b80ed73a50__s1  val acc=0.575 F1=0.574  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__b80ed73a50__s2  val acc=0.631 F1=0.627  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__d9cd2cf34f__s0  val acc=0.628 F1=0.621  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__d9cd2cf34f__s1  val acc=0.614 F1=0.615  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__d9cd2cf34f__s2  val acc=0.664 F1=0.661  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__e124fbbc77__s0  val acc=0.633 F1=0.629  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__e124fbbc77__s1  val acc=0.614 F1=0.616  fit 0.1s
+  [ok] E1-frqi8-encstats-logreg__e124fbbc77__s2  val acc=0.683 F1=0.681  fit 0.1s
+  [TEST] E1-frqi8-encstats-logreg__e124fbbc77__s0  acc=0.558 F1=0.536
+  [TEST] E1-frqi8-encstats-logreg__e124fbbc77__s1  acc=0.542 F1=0.519
+  [TEST] E1-frqi8-encstats-logreg__e124fbbc77__s2  acc=0.569 F1=0.543
+== group E2-neqr8-encstats-logreg: 4 configs x 3 seeds
+  [ok] E2-neqr8-encstats-logreg__99e5e043ee__s0  val acc=0.472 F1=0.467  fit 0.1s
+  [ok] E2-neqr8-encstats-logreg__99e5e043ee__s1  val acc=0.397 F1=0.392  fit 0.1s
+  [ok] E2-neqr8-encstats-logreg__99e5e043ee__s2  val acc=0.453 F1=0.447  fit 0.1s
+  [ok] E2-neqr8-encstats-logreg__2e1a7610d6__s0  val acc=0.458 F1=0.458  fit 0.1s
+  [ok] E2-neqr8-encstats-logreg__2e1a7610d6__s1  val acc=0.428 F1=0.423  fit 0.1s
+  [ok] E2-neqr8-encstats-logreg__2e1a7610d6__s2  val acc=0.483 F1=0.477  fit 0.1s
+  [ok] E2-neqr8-encstats-logreg__c9731fe2f6__s0  val acc=0.497 F1=0.497  fit 0.2s
+  [ok] E2-neqr8-encstats-logreg__c9731fe2f6__s1  val acc=0.444 F1=0.441  fit 0.1s
+  [ok] E2-neqr8-encstats-logreg__c9731fe2f6__s2  val acc=0.506 F1=0.500  fit 0.2s
+  [ok] E2-neqr8-encstats-logreg__2f50f6da71__s0  val acc=0.492 F1=0.495  fit 0.2s
+  [ok] E2-neqr8-encstats-logreg__2f50f6da71__s1  val acc=0.464 F1=0.460  fit 0.2s
+  [ok] E2-neqr8-encstats-logreg__2f50f6da71__s2  val acc=0.519 F1=0.509  fit 0.2s
+  [TEST] E2-neqr8-encstats-logreg__2f50f6da71__s0  acc=0.489 F1=0.475
+  [TEST] E2-neqr8-encstats-logreg__2f50f6da71__s1  acc=0.442 F1=0.438
+  [TEST] E2-neqr8-encstats-logreg__2f50f6da71__s2  acc=0.489 F1=0.478
+== group E1-frqi4-legacy-softmax: 1 configs x 3 seeds
+  [ok] E1-frqi4-legacy-softmax__7eb057c1b3__s0  val acc=0.322 F1=0.308  fit 0.1s
+  [ok] E1-frqi4-legacy-softmax__7eb057c1b3__s1  val acc=0.319 F1=0.254  fit 0.1s
+  [ok] E1-frqi4-legacy-softmax__7eb057c1b3__s2  val acc=0.372 F1=0.361  fit 0.1s
+  [TEST] E1-frqi4-legacy-softmax__7eb057c1b3__s0  acc=0.236 F1=0.191
+  [TEST] E1-frqi4-legacy-softmax__7eb057c1b3__s1  acc=0.258 F1=0.218
+  [TEST] E1-frqi4-legacy-softmax__7eb057c1b3__s2  acc=0.289 F1=0.223
+== group E2-neqr4-legacy-softmax: 1 configs x 3 seeds
+  [ok] E2-neqr4-legacy-softmax__ee7d827d65__s0  val acc=0.336 F1=0.303  fit 0.1s
+  [ok] E2-neqr4-legacy-softmax__ee7d827d65__s1  val acc=0.303 F1=0.256  fit 0.1s
+  [ok] E2-neqr4-legacy-softmax__ee7d827d65__s2  val acc=0.319 F1=0.298  fit 0.1s
+  [TEST] E2-neqr4-legacy-softmax__ee7d827d65__s0  acc=0.253 F1=0.209
+  [TEST] E2-neqr4-legacy-softmax__ee7d827d65__s1  acc=0.242 F1=0.194
+  [TEST] E2-neqr4-legacy-softmax__ee7d827d65__s2  acc=0.236 F1=0.220
+== group E1-frqi8-qkc-shots100: 1 configs x 3 seeds
+  [ok] E1-frqi8-qkc-shots100__c6187831c4__s0  val acc=0.386 F1=0.388  fit 0.2s
+  [ok] E1-frqi8-qkc-shots100__c6187831c4__s1  val acc=0.356 F1=0.349  fit 0.3s
+  [ok] E1-frqi8-qkc-shots100__c6187831c4__s2  val acc=0.369 F1=0.369  fit 0.3s
+  [TEST] E1-frqi8-qkc-shots100__c6187831c4__s0  acc=0.317 F1=0.304
+  [TEST] E1-frqi8-qkc-shots100__c6187831c4__s1  acc=0.347 F1=0.326
+  [TEST] E1-frqi8-qkc-shots100__c6187831c4__s2  acc=0.342 F1=0.332
+== group E2-neqr8-b4-qkc-shots100: 1 configs x 3 seeds
+  [ok] E2-neqr8-b4-qkc-shots100__bca5fa7e87__s0  val acc=0.592 F1=0.592  fit 0.2s
+  [ok] E2-neqr8-b4-qkc-shots100__bca5fa7e87__s1  val acc=0.600 F1=0.596  fit 0.2s
+  [ok] E2-neqr8-b4-qkc-shots100__bca5fa7e87__s2  val acc=0.644 F1=0.646  fit 0.2s
+  [TEST] E2-neqr8-b4-qkc-shots100__bca5fa7e87__s0  acc=0.578 F1=0.556
+  [TEST] E2-neqr8-b4-qkc-shots100__bca5fa7e87__s1  acc=0.553 F1=0.512
+  [TEST] E2-neqr8-b4-qkc-shots100__bca5fa7e87__s2  acc=0.556 F1=0.533
+== group E1-frqi8-qkc-shots1000: 1 configs x 3 seeds
+  [ok] E1-frqi8-qkc-shots1000__99879411aa__s0  val acc=0.433 F1=0.442  fit 0.2s
+  [ok] E1-frqi8-qkc-shots1000__99879411aa__s1  val acc=0.419 F1=0.423  fit 0.2s
+  [ok] E1-frqi8-qkc-shots1000__99879411aa__s2  val acc=0.439 F1=0.450  fit 0.2s
+  [TEST] E1-frqi8-qkc-shots1000__99879411aa__s0  acc=0.403 F1=0.383
+  [TEST] E1-frqi8-qkc-shots1000__99879411aa__s1  acc=0.414 F1=0.389
+  [TEST] E1-frqi8-qkc-shots1000__99879411aa__s2  acc=0.361 F1=0.351
+== group E2-neqr8-b4-qkc-shots1000: 1 configs x 3 seeds
+  [ok] E2-neqr8-b4-qkc-shots1000__86b69c771c__s0  val acc=0.686 F1=0.687  fit 0.2s
+  [ok] E2-neqr8-b4-qkc-shots1000__86b69c771c__s1  val acc=0.664 F1=0.663  fit 0.2s
+  [ok] E2-neqr8-b4-qkc-shots1000__86b69c771c__s2  val acc=0.731 F1=0.732  fit 0.3s
+  [TEST] E2-neqr8-b4-qkc-shots1000__86b69c771c__s0  acc=0.600 F1=0.573
+  [TEST] E2-neqr8-b4-qkc-shots1000__86b69c771c__s1  acc=0.586 F1=0.546
+  [TEST] E2-neqr8-b4-qkc-shots1000__86b69c771c__s2  acc=0.597 F1=0.566
+== group E1-frqi8-qkc-shots10000: 1 configs x 3 seeds
+  [ok] E1-frqi8-qkc-shots10000__9774dafad9__s0  val acc=0.506 F1=0.509  fit 0.2s
+  [ok] E1-frqi8-qkc-shots10000__9774dafad9__s1  val acc=0.475 F1=0.481  fit 0.2s
+  [ok] E1-frqi8-qkc-shots10000__9774dafad9__s2  val acc=0.522 F1=0.531  fit 0.2s
+  [TEST] E1-frqi8-qkc-shots10000__9774dafad9__s0  acc=0.469 F1=0.450
+  [TEST] E1-frqi8-qkc-shots10000__9774dafad9__s1  acc=0.472 F1=0.451
+  [TEST] E1-frqi8-qkc-shots10000__9774dafad9__s2  acc=0.447 F1=0.427
+== group E2-neqr8-b4-qkc-shots10000: 1 configs x 3 seeds
+  [ok] E2-neqr8-b4-qkc-shots10000__28291e41ed__s0  val acc=0.669 F1=0.672  fit 0.3s
+  [ok] E2-neqr8-b4-qkc-shots10000__28291e41ed__s1  val acc=0.664 F1=0.665  fit 0.3s
+  [ok] E2-neqr8-b4-qkc-shots10000__28291e41ed__s2  val acc=0.750 F1=0.751  fit 0.3s
+  [TEST] E2-neqr8-b4-qkc-shots10000__28291e41ed__s0  acc=0.606 F1=0.576
+  [TEST] E2-neqr8-b4-qkc-shots10000__28291e41ed__s1  acc=0.594 F1=0.553
+  [TEST] E2-neqr8-b4-qkc-shots10000__28291e41ed__s2  acc=0.603 F1=0.575
+  [ok] R-FRQI-2x2: sv MSE=5.83e-33 1k-shot MSE=4.92e-04
+  [ok] R-NEQR-2x2-b2: sv MSE=7.72e-03 1k-shot MSE=7.72e-03
+  [ok] R-NEQR-2x2-b4: sv MSE=3.10e-04 1k-shot MSE=3.10e-04
+  [ok] R-NEQR-2x2-b8: sv MSE=0.00e+00 1k-shot MSE=0.00e+00
+  [ok] R-FRQI-4x4: sv MSE=1.66e-30 1k-shot MSE=1.77e-03
+  [ok] R-NEQR-4x4-b2: sv MSE=7.81e-03 1k-shot MSE=7.81e-03
+  [ok] R-NEQR-4x4-b4: sv MSE=3.87e-04 1k-shot MSE=3.87e-04
+  [ok] R-NEQR-4x4-b8: sv MSE=0.00e+00 1k-shot MSE=0.00e+00
+  [ok] R-FRQI-8x8: sv MSE=2.97e-30 1k-shot MSE=8.27e-03
+  [ok] R-NEQR-8x8-b2: sv MSE=8.01e-03 1k-shot MSE=8.01e-03
+  [ok] R-NEQR-8x8-b4: sv MSE=3.71e-04 1k-shot MSE=3.71e-04
+  [ok] R-NEQR-8x8-b8: sv MSE=0.00e+00 1k-shot MSE=0.00e+00
+  [ok] R-FRQI-16x16: sv MSE=3.06e-27 1k-shot MSE=6.53e-02
+  [ok] R-NEQR-16x16-b2: sv MSE=8.05e-03 1k-shot MSE=1.41e-02
+  [ok] R-NEQR-16x16-b4: sv MSE=3.76e-04 1k-shot MSE=6.71e-03
+  [ok] R-NEQR-16x16-b8: sv MSE=0.00e+00 1k-shot MSE=6.32e-03

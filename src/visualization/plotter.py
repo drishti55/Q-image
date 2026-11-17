@@ -14,6 +14,7 @@ Figures are saved to the results/images/ directory.
 """
 
 import numpy as np
+from src.v2.paths import assert_writable as _assert_writable  # historical-results guard
 import matplotlib
 matplotlib.use("Agg")  # Non-interactive backend for saving
 import matplotlib.pyplot as plt
@@ -94,6 +95,7 @@ class ResultPlotter:
         plt.tight_layout()
 
         save_path = self.output_dir / filename
+        _assert_writable(save_path)
         fig.savefig(save_path, dpi=FIGURE_DPI, bbox_inches="tight")
         plt.close(fig)
         return str(save_path)
@@ -139,6 +141,7 @@ class ResultPlotter:
         plt.tight_layout()
 
         save_path = self.output_dir / filename
+        _assert_writable(save_path)
         fig.savefig(save_path, dpi=FIGURE_DPI, bbox_inches="tight")
         plt.close(fig)
         return str(save_path)
@@ -183,6 +186,7 @@ class ResultPlotter:
         plt.tight_layout()
 
         save_path = self.output_dir / filename
+        _assert_writable(save_path)
         fig.savefig(save_path, dpi=FIGURE_DPI, bbox_inches="tight")
         plt.close(fig)
         return str(save_path)
@@ -247,6 +251,7 @@ class ResultPlotter:
         plt.tight_layout()
 
         save_path = self.output_dir / filename
+        _assert_writable(save_path)
         fig.savefig(save_path, dpi=FIGURE_DPI, bbox_inches="tight")
         plt.close(fig)
         return str(save_path)
@@ -300,6 +305,7 @@ class ResultPlotter:
         plt.tight_layout()
 
         save_path = self.output_dir / filename
+        _assert_writable(save_path)
         fig.savefig(save_path, dpi=FIGURE_DPI, bbox_inches="tight")
         plt.close(fig)
         return str(save_path)
@@ -368,6 +374,7 @@ class ResultPlotter:
         ax.set_title(title, fontsize=13, fontweight="bold", pad=20)
 
         save_path = self.output_dir / filename
+        _assert_writable(save_path)
         fig.savefig(save_path, dpi=FIGURE_DPI, bbox_inches="tight")
         plt.close(fig)
         return str(save_path)

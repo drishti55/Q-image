@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\caption{FRQI (original angle map, $b=1$) versus NEQR: circuit resources, classification (state-overlap kernel + SVM, locked test, mean $\pm$ s.d. over 3 seeds) and exact (statevector) reconstruction quality against the preprocessed image.}
+\label{tab:frqi-neqr}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrrrrrrr}
+\toprule
+\textbf{Res.} & \textbf{Encoding} & \textbf{Qubits} & \textbf{Gates (compiled)} & \textbf{Depth (compiled)} & \textbf{Accuracy (\%)} & \textbf{Macro-F1 (\%)} & \textbf{PSNR (dB)} & \textbf{SSIM} \\
+\midrule
+2$\times$2 & FRQI & 3 & 143 & 93 & 43.0 $\pm$ 1.6 & 42.6 $\pm$ 1.4 & $\infty$ (exact) & 1.000 \\
+2$\times$2 & NEQR 2-bit & 4 & 72 & 47 & 35.8 $\pm$ 0.7 & 31.0 $\pm$ 0.7 & 23.1 & 0.629 \\
+2$\times$2 & NEQR 4-bit & 6 & 122 & 79 & 40.6 $\pm$ 1.8 & 38.5 $\pm$ 1.7 & 35.6 & 0.897 \\
+2$\times$2 & NEQR 8-bit & 10 & 231 & 149 & 30.7 $\pm$ 0.4 & 29.9 $\pm$ 0.6 & $\infty$ (exact) & 1.000 \\
+4$\times$4 & FRQI & 5 & 1,070 & 710 & 52.7 $\pm$ 1.4 & 51.2 $\pm$ 1.3 & $\infty$ (exact) & 1.000 \\
+4$\times$4 & NEQR 2-bit & 6 & 1,184 & 934 & 45.0 $\pm$ 0.8 & 42.2 $\pm$ 0.7 & 22.2 & 0.544 \\
+4$\times$4 & NEQR 4-bit & 8 & 1,679 & 1,385 & 51.3 $\pm$ 1.4 & 48.6 $\pm$ 1.2 & 34.2 & 0.925 \\
+4$\times$4 & NEQR 8-bit & 12 & 2,913 & 2,438 & 39.8 $\pm$ 1.7 & 37.7 $\pm$ 1.7 & $\infty$ (exact) & 1.000 \\
+8$\times$8 & FRQI & 7 & 8,339 & 4,878 & 57.8 $\pm$ 1.1 & 55.9 $\pm$ 1.2 & $\infty$ (exact) & 1.000 \\
+8$\times$8 & NEQR 2-bit & 8 & 9,185 & 6,619 & 51.0 $\pm$ 0.8 & 48.1 $\pm$ 0.8 & 21.7 & 0.542 \\
+8$\times$8 & NEQR 4-bit & 10 & 16,690 & 12,431 & 59.9 $\pm$ 1.1 & 56.7 $\pm$ 1.9 & 34.3 & 0.935 \\
+8$\times$8 & NEQR 8-bit & 14 & 25,005 & 21,925 & 45.5 $\pm$ 1.1 & 42.2 $\pm$ 0.8 & $\infty$ (exact) & 1.000 \\
+16$\times$16 & FRQI & 9 & 77,307 & 57,352 & 57.6 $\pm$ 2.3 & 55.9 $\pm$ 2.2 & $\infty$ (exact) & 1.000 \\
+16$\times$16 & NEQR 2-bit & 10 & 55,352 & 38,402 & 53.1 $\pm$ 0.3 & 50.1 $\pm$ 0.3 & 21.6 & 0.571 \\
+16$\times$16 & NEQR 4-bit & 12 & 107,241 & 55,886 & 60.2 $\pm$ 0.4 & 56.5 $\pm$ 0.4 & 34.3 & 0.905 \\
+16$\times$16 & NEQR 8-bit & 16 & 145,804 & 130,741 & 50.3 $\pm$ 1.3 & 46.4 $\pm$ 1.1 & $\infty$ (exact) & 1.000 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\footnotesize Gate counts and depth: one encoding circuit, transpiled to \{cx, rz, sx, x\} (optimisation level 1); NEQR values are means over 5 sample images because they depend on pixel values. Reconstruction: 30 training images per configuration.
+\end{table}
