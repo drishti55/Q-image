@@ -19,7 +19,6 @@ Things YOU must do before submitting (tonight, 18 Nov 2026, 11:59 pm)
       https://github.com/drishti55/Q-image/tree/v4-paper
   [ ] main.tex line with "Overleaf Project Link": replace 0123456789abcdef01234567 with your real project id
       (copy it from the browser address bar after creating the project).
-  [ ] Contribution Statement (end of main.tex): replace the two [EDIT: ...] lines with what each of you did.
   [ ] AI rule (<=10% AI content): the text is an AI-assisted draft. Rewrite it in your own words,
       section by section, keeping the numbers. Keep the AI-use declaration honest and adjust it to what you did.
   [ ] Read and verify every reference (the template says each must be real and read by you).
