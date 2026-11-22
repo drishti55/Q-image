@@ -1,0 +1,37 @@
+family,group,class,f1_mean,f1_std
+Classical: pixel PCA,E6-pca8-rbfsvm,crazing,0.8000589262448844,0.02042408768486647
+Classical: pixel PCA,E6-pca8-rbfsvm,inclusion,0.32341977159568364,0.09360007169173584
+Classical: pixel PCA,E6-pca8-rbfsvm,patches,0.9638165648773169,0.02135814543409165
+Classical: pixel PCA,E6-pca8-rbfsvm,pitted_surface,0.7467099810165504,0.009530305841828799
+Classical: pixel PCA,E6-pca8-rbfsvm,rolled-in_scale,0.31344792719919107,0.2763084915502567
+Classical: pixel PCA,E6-pca8-rbfsvm,scratches,0.6529702601088868,0.02618420105261156
+Classical: CNN features,E7-mnv3-rbfsvm,crazing,0.997245179063361,0.00477148982801342
+Classical: CNN features,E7-mnv3-rbfsvm,inclusion,0.8798209115020561,0.05954086078137773
+Classical: CNN features,E7-mnv3-rbfsvm,patches,1.0,0.0
+Classical: CNN features,E7-mnv3-rbfsvm,pitted_surface,0.978494623655914,0.018624202231923393
+Classical: CNN features,E7-mnv3-rbfsvm,rolled-in_scale,0.9971988795518207,0.004851682934366586
+Classical: CNN features,E7-mnv3-rbfsvm,scratches,0.9235557086099472,0.025896099004559393
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,crazing,0.8229073147027105,0.003506143017209151
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,inclusion,0.31211053362952096,0.02257405432744096
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,patches,0.9659068770699396,0.0003374344063059987
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,pitted_surface,0.7247997857238516,0.01050023092483331
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,rolled-in_scale,0.0,0.0
+Quantum: FRQI kernel,E1b-frqi8-qkc-scaled,scratches,0.6703679255606426,0.06475529124321136
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,crazing,0.7696656833824976,0.03900736136750745
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,inclusion,0.3098395009863823,0.029282059912774404
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,patches,0.9431309913310661,0.00766798505366995
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,pitted_surface,0.6958637469586376,0.00842847108306022
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,rolled-in_scale,0.0,0.0
+Quantum: NEQR kernel,E2-neqr16-b4-qkc,scratches,0.6736223384938195,0.020829792686207736
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,crazing,0.8614845614845615,0.03367378350759323
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,inclusion,0.31283395913538975,0.040384071505603567
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,patches,0.9678668215253582,0.013411156078736969
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,pitted_surface,0.7550241441928046,0.020805719745917998
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,rolled-in_scale,0.24408933744509861,0.21282232396391898
+Quantum: QKC (PCA),E3-pca8-qkc-zz_full,scratches,0.5877399095659237,0.012685295615983824
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,crazing,0.991869918699187,0.014081713882673812
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,inclusion,0.7838051036975768,0.06448129722898767
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,patches,0.9916429381670024,8.019310635316565e-05
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,pitted_surface,0.9835613963780879,0.014158027194597283
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,rolled-in_scale,0.9831909230984731,0.014799705737736616
+Hybrid: CNN + QKC,E5-mnv3pca8-qkc-product_ry,scratches,0.8463145185791495,0.025112766998114655

@@ -1,0 +1,16 @@
+model,seed,test_acc
+V4-frqi-p4,0,86.94
+V4-frqi-p4,1,85.28
+V4-frqi-p4,2,83.61
+V4-frqi-p8,0,86.67
+V4-frqi-p8,1,87.22
+V4-frqi-p8,2,89.44
+V4-neqr-p2,0,85.56
+V4-neqr-p2,1,69.44
+V4-neqr-p2,2,89.44
+V4-neqr-p4,0,87.50
+V4-neqr-p4,1,71.11
+V4-neqr-p4,2,89.44
+V4-patchmom-rbfsvm,0,83.33
+V4-patchmom-rbfsvm,1,83.89
+V4-patchmom-rbfsvm,2,83.61

@@ -1,0 +1,14 @@
+**Table 4. Main results on the locked test set (360 images; mean ± s.d. over seeds 0–2)**
+
+| Model | Type | Validation macro-F1 % | Test accuracy % | Test macro-F1 % | Per-seed test accuracy % |
+|---|---|---|---|---|---|
+| FRQI patches 4×4 | quantum (simulated) | 85.7 | 85.3 ± 1.7 | 85.0 ± 1.6 | 86.9, 85.3, 83.6 |
+| FRQI patches 8×8 | quantum (simulated) | 88.0 | 87.8 ± 1.5 | 87.5 ± 1.6 | 86.7, 87.2, 89.4 |
+| NEQR patches 2×2 | quantum (simulated) | 88.2 | 81.5 ± 10.6 | 79.2 ± 14.1 | 85.6, 69.4, 89.4 |
+| NEQR patches 4×4 | quantum (simulated) | 89.2 | 82.7 ± 10.1 | 80.4 ± 13.5 | 87.5, 71.1, 89.4 |
+| Classical RBF-SVM, same patches | classical | 83.8 | 83.6 ± 0.3 | 83.3 ± 0.3 | 83.3, 83.9, 83.6 |
+| V2 FRQI, whole image (baseline) | reference | 69.3 | 60.6 ± 1.2 | 58.3 ± 1.3 | — |
+| V2 NEQR, whole image (baseline) | reference | 72.7 | 60.2 ± 0.4 | 56.5 ± 0.4 | — |
+| V3 classical texture RBF-SVM (best classical) | reference | 95.3 | 95.6 ± 2.2 | 95.5 ± 2.2 | — |
+
+*Headline models (pre-declared rule, by validation): FRQI = FRQI patches 8×8, NEQR = NEQR patches 4×4. Exact noiseless CPU simulation (no quantum hardware).*

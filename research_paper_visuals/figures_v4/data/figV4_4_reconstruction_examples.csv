@@ -1,0 +1,7 @@
+class,image_index,image
+crazing,1440,validation/images/crazing/crazing_241.jpg
+inclusion,1500,validation/images/inclusion/inclusion_241.jpg
+patches,1560,validation/images/patches/patches_241.jpg
+pitted_surface,1620,validation/images/pitted_surface/pitted_surface_241.jpg
+rolled-in_scale,1680,validation/images/rolled-in_scale/rolled-in_scale_241.jpg
+scratches,1740,validation/images/scratches/scratches_241.jpg

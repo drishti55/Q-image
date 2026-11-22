@@ -1,0 +1,12 @@
+protocol,model,type,mean,sd
+V4,Classical RBF-SVM on the same patches,classical,83.61,0.28
+V4,NEQR patch-ensemble kernel (4×4),quantum,82.69,10.07
+V4,FRQI patch-ensemble kernel (8×8),quantum,87.78,1.47
+V3,Classical RBF-SVM on texture PCA-12,classical,95.56,2.17
+V3,VQC on texture PCA-8,quantum,73.43,3.83
+V3,ZZ-feature-map kernel on texture PCA-8,quantum,92.96,2.97
+V2,Classical RBF-SVM on pixel PCA-8,classical,64.81,3.34
+V2,Variational classifier (VQC) on pixel PCA-8,quantum,48.06,1.94
+V2,ZZ-feature-map kernel on pixel PCA-8,quantum,63.98,3.47
+V2,"NEQR, whole image (pixel kernel)",quantum,60.19,0.42
+V2,"FRQI, whole image (pixel kernel)",quantum,60.65,1.16

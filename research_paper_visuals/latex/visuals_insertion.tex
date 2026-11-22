@@ -1,0 +1,165 @@
+% =====================================================================================
+% Q-ImageLab -- figure and table insertion snippets (single-column paper)
+% All numbers come from the Protocol V2 records (results/qml_v2); see README.md and VALIDATION_REPORT.md.
+%
+% REQUIRED PACKAGES (put in your preamble, or \input{research_paper_visuals/latex/preamble_packages}):
+%   \usepackage[T1]{fontenc}
+%   \usepackage{graphicx}   % figures
+%   \usepackage{booktabs}   % \toprule \midrule \bottomrule
+%   \usepackage{array}      % p{} columns
+%   \usepackage{amsmath}    % math in captions
+%   \usepackage{caption}    % caption formatting (optional but recommended)
+%
+% PATHS: upload the folder `research_paper_visuals/` to the ROOT of your Overleaf project
+% (next to main.tex). If you put it elsewhere, change \visdir below. Paths are relative to main.tex.
+% Copy individual blocks into your paper where they belong, or \input this whole file.
+% =====================================================================================
+\providecommand{\visdir}{research_paper_visuals}
+
+% ------------------------------------------------------------------ Methodology
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\linewidth]{\visdir/flowchart/methodology_flowchart.pdf}
+  \caption{Methodology. The locked test set (NEU validation folder) is used once, after all configurations have been
+  selected on the internal validation split (mean macro-F1 over seeds 0--2). All quantum circuits are simulated without
+  noise on a CPU.}
+  \label{fig:methodology}
+\end{figure}
+
+% ------------------------------------------------------------------ Dataset
+\input{\visdir/tables/tab01_dataset}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig01_dataset_distribution.pdf}
+  \caption{Class distribution of NEU-DET under the evaluation protocol (seed-0 split; seeds 1 and 2 have identical
+  per-class counts). The locked test set is the NEU validation folder.}
+  \label{fig:dataset}
+\end{figure}
+
+% ------------------------------------------------------------------ Experimental configuration
+\input{\visdir/tables/tab02_experimental_configuration}
+
+% ------------------------------------------------------------------ Classification performance
+\input{\visdir/tables/tab04_classification_performance}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig02_accuracy_comparison.pdf}
+  \caption{Locked-test accuracy of one representative model per family, chosen by validation macro-F1.
+  Error bars: standard deviation over seeds 0--2. Quantum results are noiseless CPU simulations.}
+  \label{fig:accuracy}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig03_macro_f1_comparison.pdf}
+  \caption{Locked-test macro-F1 of the same representative models as Fig.~\ref{fig:accuracy}.}
+  \label{fig:macrof1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig04_precision_recall.pdf}
+  \caption{Macro precision and macro recall on the locked test set (mean $\pm$ s.d. over seeds 0--2).}
+  \label{fig:precrec}
+\end{figure}
+
+% ------------------------------------------------------------------ Pure quantum vs classical vs hybrid
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig05_paradigm_comparison.pdf}
+  \caption{Matched-feature comparison for $k = 4, 6, 8$ features (qubits). Pixel-PCA features: classical RBF-SVM on
+  the identical angle features versus the best quantum kernel. MobileNetV3-PCA features: best classical classifier versus
+  best quantum classifier (hybrid). Within each pair the classifiers receive identical inputs; within-pair choices are made on validation.}
+  \label{fig:paradigms}
+\end{figure}
+
+\input{\visdir/tables/tab07_best_model_comparison}
+\input{\visdir/tables/tab08_paired_tests}
+
+% ------------------------------------------------------------------ FRQI vs NEQR
+\input{\visdir/tables/tab03_frqi_vs_neqr}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig06_frqi_vs_neqr_resolution.pdf}
+  \caption{FRQI versus NEQR state-overlap kernels as a function of image resolution: (a) locked-test accuracy,
+  (b) macro-F1 (mean $\pm$ s.d. over seeds 0--2). The angle-scaled FRQI variant is defined for $4\times4$ and larger.}
+  \label{fig:frqi-neqr}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\linewidth]{\visdir/figures/fig07_neqr_precision.pdf}
+  \caption{NEQR intensity precision versus locked-test accuracy for each resolution. 4-bit encodings perform best;
+  8-bit encodings reconstruct images more accurately but classify worse.}
+  \label{fig:neqr-bits}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig12_per_class_f1.pdf}
+  \caption{Per-class F1 on the locked test set (mean over seeds 0--2) for the representative models.}
+  \label{fig:perclass}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig11_confusion_matrices.pdf}
+  \caption{Row-normalised confusion matrices (\%) on the locked test set, counts summed over seeds 0--2
+  ($3\times360$ predictions per model).}
+  \label{fig:confusion}
+\end{figure}
+
+% ------------------------------------------------------------------ Measurement shots
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig08_shot_analysis.pdf}
+  \caption{Effect of the number of measurement shots per kernel entry on locked-test accuracy: (a) FRQI and NEQR
+  kernels at $8\times8$, (b) ZZ-full quantum kernels on PCA features. ``exact'' denotes the statevector kernel.
+  Configurations were selected with exact kernels and not re-tuned for shots.}
+  \label{fig:shots}
+\end{figure}
+
+% ------------------------------------------------------------------ Circuit resources
+\input{\visdir/tables/tab05_circuit_resources}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig10_circuit_resources.pdf}
+  \caption{Resources of one FRQI / NEQR encoding circuit: (a) qubits, (b) compiled gates and (c) compiled depth
+  (basis $\{$cx, rz, sx, x$\}$, optimisation level 1; logarithmic axes in (b) and (c)). NEQR values are means over
+  5 sample images.}
+  \label{fig:resources}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig14_kernel_concentration.pdf}
+  \caption{Kernel concentration of the ZZ-full feature map: (a) mean off-diagonal value of the training kernel and
+  (b) validation macro-F1 versus bandwidth (mean over the $C$ grid and seeds 0--2).}
+  \label{fig:concentration}
+\end{figure}
+
+% ------------------------------------------------------------------ Reconstruction (separate task)
+\input{\visdir/tables/tab06_reconstruction_metrics}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig09_reconstruction_metrics.pdf}
+  \caption{Reconstruction quality versus measurement shots (30 training images, against the preprocessed image):
+  (a) MSE, (b) PSNR, (c) SSIM. Statevector decoding is exact for FRQI; NEQR curves saturate at the quantisation error.}
+  \label{fig:recon-metrics}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{\visdir/figures/fig13_reconstruction_examples.pdf}
+  \caption{Original ($16\times16$ preprocessed) and reconstructed images for three training images: FRQI with
+  statevector, $10^4$ and $10^5$ shots; NEQR 4-bit and 2-bit (statevector).}
+  \label{fig:recon-examples}
+\end{figure}
+
+% ------------------------------------------------------------------ Limitations
+\input{\visdir/tables/tab09_limitations}

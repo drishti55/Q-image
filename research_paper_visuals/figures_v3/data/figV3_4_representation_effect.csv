@@ -1,0 +1,6 @@
+model,pixels_pca8_acc,texture_pca8_acc
+Logistic regression,35.65,91.94
+RBF-SVM,60.74,93.24
+QKC ZZ-full,55.65,92.96
+QKC product-RY,56.39,93.06
+VQC,35.28,73.43

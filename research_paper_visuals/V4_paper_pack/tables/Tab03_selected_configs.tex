@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Table 3. Configurations selected by validation macro-F1}
+\label{tab:tab03}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllllllll}
+\toprule
+Group & Image & Patch / stride & Patches per image & Encoding & Normalisation & C & Qubits per patch state & State dimension D \\
+\midrule
+FRQI patches 4$\times$4 & 64$\times$64 & 4$\times$4 / 4 & 256 & FRQI, angle $\times$4 & per-image stretch & 1000 & 5 & 32 \\
+FRQI patches 8$\times$8 & 64$\times$64 & 8$\times$8 / 4 & 225 & FRQI, angle $\times$4 & per-image stretch & 1000 & 7 & 128 \\
+NEQR patches 2$\times$2 & 64$\times$64 & 2$\times$2 / 2 & 1024 & NEQR, 4-bit & none & 1000 & 6 & 64 \\
+NEQR patches 4$\times$4 & 128$\times$128 & 4$\times$4 / 4 & 1024 & NEQR, 4-bit & none & 1000 & 8 & 256 \\
+Classical RBF-SVM, same patches & 64$\times$64 & 8$\times$8 / 4 & 225 & patch moments, $\gamma$=1 & per-image stretch & 1000 & — (classical) & — \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\footnotesize $\rho$ is a D$\times$D density matrix (average of the patch states). FRQI: 2·log2(p)+1 qubits; NEQR: 2·log2(p)+q qubits.
+\end{table}

@@ -1,0 +1,13 @@
+group,metric,value
+V4-frqi-p4,n_qubits,5
+V4-frqi-p8,n_qubits,7
+V4-neqr-p2,n_qubits,6
+V4-neqr-p4,n_qubits,8
+V4-frqi-p4,gates_compiled,1070
+V4-frqi-p8,gates_compiled,8339
+V4-neqr-p2,gates_compiled,150
+V4-neqr-p4,gates_compiled,1998
+V4-frqi-p4,depth_compiled,710
+V4-frqi-p8,depth_compiled,4878
+V4-neqr-p2,depth_compiled,99
+V4-neqr-p4,depth_compiled,1634

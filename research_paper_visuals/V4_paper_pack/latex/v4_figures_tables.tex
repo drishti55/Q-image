@@ -1,0 +1,117 @@
+% Protocol V4 figures and tables. Needs: \usepackage{graphicx,booktabs}. Put this folder next to figures/ and tables/.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig01_methodology_flowchart.pdf}
+\caption{Methodology. (a) Data protocol: validation-only model selection, SHA-256 freeze, one locked-test evaluation per frozen model and pre-declared statistics. (b) The patch-ensemble mixed-state kernel for one image.}
+\label{fig:fig01}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig02_patch_encoding_illustration.pdf}
+\caption{The method on a real NEU-DET training image (frozen FRQI settings: 64$\times$64, 8$\times$8 patches, stride 4). (a) image and example patches; (b) one patch; (c) its 7-qubit FRQI amplitudes; (d) the image's mixed state $\rho$; (e) normalised kernel between classes (10 training images per class).}
+\label{fig:fig02}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig09_validation_sweep.pdf}
+\caption{Validation-only hyper-parameter sweep: best validation macro-F1 for each image size / stride and normalisation. The locked test set was not used.}
+\label{fig:fig09}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig03_main_results.pdf}
+\caption{Locked-test accuracy of all V4 groups and reference models (mean $\pm$ s.d. over seeds 0--2; dots = individual seeds; $\star$ = headline chosen by validation).}
+\label{fig:fig03}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig04_frqi_neqr_across_protocols.pdf}
+\caption{FRQI and NEQR test accuracy across protocols V2, V3 and V4, with classical references.}
+\label{fig:fig04}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig05_comparisons_forest.pdf}
+\caption{The eight pre-declared paired comparisons: accuracy difference with 95 \% bootstrap CI and Holm-corrected p-values.}
+\label{fig:fig05}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig07_per_class_f1.pdf}
+\caption{Per-class F1 on the locked test set (mean over seeds).}
+\label{fig:fig07}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig06_confusion_matrices.pdf}
+\caption{Row-normalised confusion matrices summed over seeds 0--2.}
+\label{fig:fig06}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig08_seed_stability.pdf}
+\caption{Test accuracy of each split seed. NEQR's seed-1 drop is caused by the rolled-in-scale class.}
+\label{fig:fig08}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig10_circuit_resources.pdf}
+\caption{Qubits, compiled gates and compiled depth of the encoder circuit for one patch.}
+\label{fig:fig10}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig11_reconstruction_mse_vs_shots.pdf}
+\caption{Reconstruction MSE versus measurement shots, mean over all 1,800 images.}
+\label{fig:fig11}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig13_reconstruction_ssim_by_method.pdf}
+\caption{Mean SSIM of every reconstruction method (exact and 1,000 shots).}
+\label{fig:fig13}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig12_reconstruction_examples.pdf}
+\caption{One locked-test-folder image per class reconstructed by representative methods (saved decoder outputs).}
+\label{fig:fig12}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig14_per_image_difficulty.pdf}
+\caption{(a) Fraction of all model-seed pairs that classify each test image correctly; (b) mean per class, all models vs V4 FRQI.}
+\label{fig:fig14}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig15_cross_protocol_overview.pdf}
+\caption{Key quantum (simulated) and classical models across protocols V2, V3 and V4.}
+\label{fig:fig15}
+\end{figure}
+
+\input{tables/Tab01_dataset_splits.tex}
+\input{tables/Tab02_search_space.tex}
+\input{tables/Tab03_selected_configs.tex}
+\input{tables/Tab04_main_results.tex}
+\input{tables/Tab05_statistical_comparisons.tex}
+\input{tables/Tab06_per_class_f1.tex}
+\input{tables/Tab07_circuit_resources.tex}
+\input{tables/Tab08_reconstruction.tex}
+\input{tables/Tab09_cross_protocol.tex}
+\input{tables/Tab10_integrity_checks.tex}

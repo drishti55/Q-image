@@ -1,0 +1,10 @@
+features,group,acc_mean,acc_sd
+pix8c,V3-pix8c-vqc,35.28,1.73
+tex8c,V3-tex8c-vqc,73.43,3.83
+mnv8c,V3-mnv8c-vqc,72.41,2.36
+pix8c,V3-pix8c-vqc-encoding-only,33.98,2.84
+tex8c,V3-tex8c-vqc-encoding-only,92.59,2.51
+mnv8c,V3-mnv8c-vqc-encoding-only,90.83,1.27
+pix8c,V3-pix8c-vqc-ablation-frozen,22.04,2.43
+tex8c,V3-tex8c-vqc-ablation-frozen,42.87,2.97
+mnv8c,V3-mnv8c-vqc-ablation-frozen,42.87,8.75

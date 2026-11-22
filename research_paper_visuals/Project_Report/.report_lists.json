@@ -1,0 +1,384 @@
+{
+ "figs": [
+  "Figure 3.1",
+  "Figure 3.2",
+  "Figure 3.3",
+  "Figure 3.4",
+  "Figure 3.5",
+  "Figure 3.6",
+  "Figure 3.7",
+  "Figure 4.1",
+  "Figure 4.2",
+  "Figure 4.3",
+  "Figure 4.4",
+  "Figure 4.5",
+  "Figure 4.6",
+  "Figure 4.7",
+  "Figure 4.8",
+  "Figure 4.9",
+  "Figure 4.10",
+  "Figure 4.11",
+  "Figure 4.12",
+  "Figure 4.13",
+  "Figure 4.14",
+  "Figure 4.15",
+  "Figure 5.1",
+  "Figure 5.2",
+  "Figure 5.3",
+  "Figure 5.4",
+  "Figure 5.5",
+  "Figure 5.6",
+  "Figure 5.7",
+  "Figure 5.8",
+  "Figure 5.9",
+  "Figure 5.10",
+  "Figure 5.11",
+  "Figure 5.12",
+  "Figure 5.13",
+  "Figure 5.14",
+  "Figure A.1",
+  "Figure A.2",
+  "Figure A.3",
+  "Figure A.4",
+  "Figure A.5",
+  "Figure A.6",
+  "Figure A.7",
+  "Figure A.8",
+  "Figure A.9",
+  "Figure A.10",
+  "Figure A.11",
+  "Figure A.12",
+  "Figure A.13",
+  "Figure A.14",
+  "Figure A.15",
+  "Figure A.16",
+  "Figure A.17",
+  "Figure A.18",
+  "Figure A.19",
+  "Figure A.20"
+ ],
+ "tabs": [
+  "Table 1.1",
+  "Table 1.2",
+  "Table 1.3",
+  "Table 2.1",
+  "Table 2.2",
+  "Table 3.1",
+  "Table 3.2",
+  "Table 4.1",
+  "Table 4.2",
+  "Table 4.3",
+  "Table 5.1",
+  "Table 5.2",
+  "Table 5.3",
+  "Table 5.4",
+  "Table 5.5",
+  "Table 5.6",
+  "Table 5.7",
+  "Table 6.1",
+  "Table 6.2"
+ ],
+ "toc": [
+  {
+   "level": 0,
+   "text": "1  Introduction",
+   "key": "CH1"
+  },
+  {
+   "level": 1,
+   "text": "1.1  Introduction to Project",
+   "key": "H1.1"
+  },
+  {
+   "level": 1,
+   "text": "1.2  Overview",
+   "key": "H1.2"
+  },
+  {
+   "level": 1,
+   "text": "1.3  Existing System",
+   "key": "H1.3"
+  },
+  {
+   "level": 1,
+   "text": "1.4  User Requirement Analysis",
+   "key": "H1.4"
+  },
+  {
+   "level": 1,
+   "text": "1.5  Feasibility Study",
+   "key": "H1.5"
+  },
+  {
+   "level": 0,
+   "text": "2  Literature Review",
+   "key": "CH2"
+  },
+  {
+   "level": 1,
+   "text": "2.1  Quantum Image Representations",
+   "key": "H2.1"
+  },
+  {
+   "level": 1,
+   "text": "2.2  Quantum Kernels and Their Limits",
+   "key": "H2.2"
+  },
+  {
+   "level": 1,
+   "text": "2.3  Variational and Convolution-Style Quantum Models",
+   "key": "H2.3"
+  },
+  {
+   "level": 1,
+   "text": "2.4  Steel Surface Defect Recognition",
+   "key": "H2.4"
+  },
+  {
+   "level": 1,
+   "text": "2.5  Comparison",
+   "key": "H2.5"
+  },
+  {
+   "level": 1,
+   "text": "2.6  Research Gap",
+   "key": "H2.6"
+  },
+  {
+   "level": 1,
+   "text": "2.7  Objectives of Project",
+   "key": "H2.7"
+  },
+  {
+   "level": 0,
+   "text": "3  Exploratory Data Analysis",
+   "key": "CH3"
+  },
+  {
+   "level": 1,
+   "text": "3.1  Dataset",
+   "key": "H3.1"
+  },
+  {
+   "level": 1,
+   "text": "3.2  Exploratory Data Analysis and Visualizations",
+   "key": "H3.2"
+  },
+  {
+   "level": 1,
+   "text": "3.3  Preprocessing and Feature Engineering",
+   "key": "H3.3"
+  },
+  {
+   "level": 0,
+   "text": "4  Methodology",
+   "key": "CH4"
+  },
+  {
+   "level": 1,
+   "text": "4.1  Introduction to Languages (Front End and Back End)",
+   "key": "H4.1"
+  },
+  {
+   "level": 1,
+   "text": "4.2  Supporting Languages and Packages",
+   "key": "H4.2"
+  },
+  {
+   "level": 1,
+   "text": "4.3  User Characteristics",
+   "key": "H4.3"
+  },
+  {
+   "level": 1,
+   "text": "4.4  Constraints",
+   "key": "H4.4"
+  },
+  {
+   "level": 1,
+   "text": "4.5  Use Case Model, Flow Chart and DFDs",
+   "key": "H4.5"
+  },
+  {
+   "level": 1,
+   "text": "4.6  Database Design",
+   "key": "H4.6"
+  },
+  {
+   "level": 1,
+   "text": "4.7  Table Structure",
+   "key": "H4.7"
+  },
+  {
+   "level": 1,
+   "text": "4.8  ER Diagram",
+   "key": "H4.8"
+  },
+  {
+   "level": 1,
+   "text": "4.9  Assumptions and Dependencies",
+   "key": "H4.9"
+  },
+  {
+   "level": 1,
+   "text": "4.10  Algorithm Discussion",
+   "key": "H4.10"
+  },
+  {
+   "level": 2,
+   "text": "4.10.1  FRQI",
+   "key": "H4.10.1"
+  },
+  {
+   "level": 2,
+   "text": "4.10.2  NEQR",
+   "key": "H4.10.2"
+  },
+  {
+   "level": 2,
+   "text": "4.10.3  Quantum Kernel Classifier (QKC) and Feature Maps",
+   "key": "H4.10.3"
+  },
+  {
+   "level": 2,
+   "text": "4.10.4  Projected Quantum Kernel (PQK)",
+   "key": "H4.10.4"
+  },
+  {
+   "level": 2,
+   "text": "4.10.5  Variational Quantum Classifier (VQC)",
+   "key": "H4.10.5"
+  },
+  {
+   "level": 2,
+   "text": "4.10.6  Hybrid CNN + Quantum Models",
+   "key": "H4.10.6"
+  },
+  {
+   "level": 2,
+   "text": "4.10.7  Proposed Patch-Ensemble Mixed-State Kernel",
+   "key": "H4.10.7"
+  },
+  {
+   "level": 2,
+   "text": "4.10.8  Classifier",
+   "key": "H4.10.8"
+  },
+  {
+   "level": 2,
+   "text": "4.10.9  Leakage-Controlled Evaluation Protocol",
+   "key": "H4.10.9"
+  },
+  {
+   "level": 2,
+   "text": "4.10.10  Evaluation Metrics",
+   "key": "H4.10.10"
+  },
+  {
+   "level": 1,
+   "text": "4.11  Implementation of Algorithm with Screenshots",
+   "key": "H4.11"
+  },
+  {
+   "level": 0,
+   "text": "5  Results",
+   "key": "CH5"
+  },
+  {
+   "level": 1,
+   "text": "5.1  Results Across Protocol Versions",
+   "key": "H5.1"
+  },
+  {
+   "level": 1,
+   "text": "5.2  Model Family Comparison (Protocol V3)",
+   "key": "H5.2"
+  },
+  {
+   "level": 1,
+   "text": "5.3  Main Results of the Proposed Method (V4)",
+   "key": "H5.3"
+  },
+  {
+   "level": 1,
+   "text": "5.4  RQ1: Improvement Over Whole-Image Kernels",
+   "key": "H5.4"
+  },
+  {
+   "level": 1,
+   "text": "5.5  RQ2: Is the Gain Due to the Quantum Encoding?",
+   "key": "H5.5"
+  },
+  {
+   "level": 1,
+   "text": "5.6  Ablation Study",
+   "key": "H5.6"
+  },
+  {
+   "level": 1,
+   "text": "5.7  Error Analysis",
+   "key": "H5.7"
+  },
+  {
+   "level": 1,
+   "text": "5.8  Circuit Resources and Reconstruction",
+   "key": "H5.8"
+  },
+  {
+   "level": 1,
+   "text": "5.9  Per-Image Analysis",
+   "key": "H5.9"
+  },
+  {
+   "level": 1,
+   "text": "5.10  Discussion",
+   "key": "H5.10"
+  },
+  {
+   "level": 0,
+   "text": "6  Conclusion and Future Scope",
+   "key": "CH6"
+  },
+  {
+   "level": 1,
+   "text": "6.1  Conclusion",
+   "key": "H6.1"
+  },
+  {
+   "level": 1,
+   "text": "6.2  Future Scope",
+   "key": "H6.2"
+  },
+  {
+   "level": 0,
+   "text": "Appendix A  Screenshots of the Q-ImageLab Platform",
+   "key": "APPA",
+   "appendix": true
+  },
+  {
+   "level": 1,
+   "text": "A.1  Results and Model Comparison",
+   "key": "HA.1"
+  },
+  {
+   "level": 1,
+   "text": "A.2  Interactive Pipeline and Live Model",
+   "key": "HA.2"
+  },
+  {
+   "level": 1,
+   "text": "A.3  Circuits and Encoding Walkthroughs",
+   "key": "HA.3"
+  },
+  {
+   "level": 1,
+   "text": "A.4  Learning Tools",
+   "key": "HA.4"
+  },
+  {
+   "level": 1,
+   "text": "A.5  Upload Lab, Reconstruction and Presentation",
+   "key": "HA.5"
+  }
+ ]
+}
