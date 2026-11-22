@@ -1,0 +1,41 @@
+{
+  "random_seed": 42,
+  "feature_size": 64,
+  "n_features": 4096,
+  "train_samples": 1008,
+  "val_samples": 360,
+  "test_samples": 432,
+  "n_classes": 6,
+  "classes": [
+    "crazing",
+    "inclusion",
+    "patches",
+    "pitted_surface",
+    "rolled-in_scale",
+    "scratches"
+  ],
+  "train_class_distribution": {
+    "crazing": 168,
+    "inclusion": 168,
+    "patches": 168,
+    "pitted_surface": 168,
+    "rolled-in_scale": 168,
+    "scratches": 168
+  },
+  "val_class_distribution": {
+    "crazing": 60,
+    "inclusion": 60,
+    "patches": 60,
+    "pitted_surface": 60,
+    "rolled-in_scale": 60,
+    "scratches": 60
+  },
+  "test_class_distribution": {
+    "crazing": 72,
+    "inclusion": 72,
+    "patches": 72,
+    "pitted_surface": 72,
+    "rolled-in_scale": 72,
+    "scratches": 72
+  }
+}

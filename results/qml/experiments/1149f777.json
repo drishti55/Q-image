@@ -1,0 +1,15 @@
+{
+  "experiment_id": "1149f777",
+  "status": "failed",
+  "started_at": "2026-10-25T16:19:27.898031",
+  "completed_at": "2026-10-25T16:26:46.950518",
+  "config": {
+    "n_qubits": 4,
+    "feature_map_reps": 1,
+    "svm_C": 1.0,
+    "max_per_class": 5,
+    "feature_size": 32
+  },
+  "error": "The least populated classes in y have only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2. Classes with too few members are: [4]",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/drishti/Library/Mobile Documents/com~apple~CloudDocs/Projects/QIP/src/qml/experiment_manager.py\", line 151, in run_experiment\n    splits = classifier.feature_extractor.prepare_splits(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/drishti/Library/Mobile Documents/com~apple~CloudDocs/Projects/QIP/src/qml/feature_extractor.py\", line 152, in prepare_splits\n    train_idx, test_idx = next(splitter.split(X_train_full, y_train_full))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/drishti/Library/Mobile Documents/com~apple~CloudDocs/Projects/QIP/.venv/lib/python3.11/site-packages/sklearn/model_selection/_split.py\", line 1935, in split\n    for train, test in self._iter_indices(X, y, groups):\n  File \"/Users/drishti/Library/Mobile Documents/com~apple~CloudDocs/Projects/QIP/.venv/lib/python3.11/site-packages/sklearn/model_selection/_split.py\", line 2353, in _iter_indices\n    raise ValueError(\nValueError: The least populated classes in y have only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2. Classes with too few members are: [4]\n"
+}

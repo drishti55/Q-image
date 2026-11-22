@@ -1,0 +1,281 @@
+{
+ "group": "E6-pca6-rbfsvm",
+ "selected_at": "2026-11-13T16:04:39.222856",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 16,
+ "n_eligible": 16,
+ "selected": {
+  "config_key": "E6-pca6-rbfsvm__fd96bb6c16",
+  "params": {
+   "C": 1.0,
+   "gamma": 0.3
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.7300205693015993,
+  "val_std": 0.06034333778623868,
+  "experiment_ids": [
+   "E6-pca6-rbfsvm__fd96bb6c16__s0",
+   "E6-pca6-rbfsvm__fd96bb6c16__s1",
+   "E6-pca6-rbfsvm__fd96bb6c16__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E6-pca6-rbfsvm__2aa5b0ace1",
+   "params": {
+    "C": 0.1,
+    "gamma": 0.03
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.5007958630693911,
+   "val_std": 0.08573547000825839,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__2aa5b0ace1__s0",
+    "E6-pca6-rbfsvm__2aa5b0ace1__s1",
+    "E6-pca6-rbfsvm__2aa5b0ace1__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__ae53ff5867",
+   "params": {
+    "C": 0.1,
+    "gamma": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.5962398021211325,
+   "val_std": 0.07137406209603835,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__ae53ff5867__s0",
+    "E6-pca6-rbfsvm__ae53ff5867__s1",
+    "E6-pca6-rbfsvm__ae53ff5867__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__7b1d312f5c",
+   "params": {
+    "C": 0.1,
+    "gamma": 0.3
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.6572373434866061,
+   "val_std": 0.031953786200499296,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__7b1d312f5c__s0",
+    "E6-pca6-rbfsvm__7b1d312f5c__s1",
+    "E6-pca6-rbfsvm__7b1d312f5c__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__f71073361e",
+   "params": {
+    "C": 0.1,
+    "gamma": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.5068490249671106,
+   "val_std": 0.010052497494310095,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__f71073361e__s0",
+    "E6-pca6-rbfsvm__f71073361e__s1",
+    "E6-pca6-rbfsvm__f71073361e__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__d3eda7707d",
+   "params": {
+    "C": 1.0,
+    "gamma": 0.03
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.6070684244759352,
+   "val_std": 0.06144126666044842,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__d3eda7707d__s0",
+    "E6-pca6-rbfsvm__d3eda7707d__s1",
+    "E6-pca6-rbfsvm__d3eda7707d__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__0e826996cc",
+   "params": {
+    "C": 1.0,
+    "gamma": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.6713725789908326,
+   "val_std": 0.0390658383676493,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__0e826996cc__s0",
+    "E6-pca6-rbfsvm__0e826996cc__s1",
+    "E6-pca6-rbfsvm__0e826996cc__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__fd96bb6c16",
+   "params": {
+    "C": 1.0,
+    "gamma": 0.3
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.7300205693015993,
+   "val_std": 0.06034333778623868,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__fd96bb6c16__s0",
+    "E6-pca6-rbfsvm__fd96bb6c16__s1",
+    "E6-pca6-rbfsvm__fd96bb6c16__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__c598a45b79",
+   "params": {
+    "C": 1.0,
+    "gamma": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.7239240638284988,
+   "val_std": 0.03878212439083144,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__c598a45b79__s0",
+    "E6-pca6-rbfsvm__c598a45b79__s1",
+    "E6-pca6-rbfsvm__c598a45b79__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__48eac96d41",
+   "params": {
+    "C": 10.0,
+    "gamma": 0.03
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.6654528757391005,
+   "val_std": 0.043203145462735744,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__48eac96d41__s0",
+    "E6-pca6-rbfsvm__48eac96d41__s1",
+    "E6-pca6-rbfsvm__48eac96d41__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__ec4c6897ba",
+   "params": {
+    "C": 10.0,
+    "gamma": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.7135103145389947,
+   "val_std": 0.051831592863750574,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__ec4c6897ba__s0",
+    "E6-pca6-rbfsvm__ec4c6897ba__s1",
+    "E6-pca6-rbfsvm__ec4c6897ba__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__d933ca4071",
+   "params": {
+    "C": 10.0,
+    "gamma": 0.3
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.7279114767180653,
+   "val_std": 0.04078952042027828,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__d933ca4071__s0",
+    "E6-pca6-rbfsvm__d933ca4071__s1",
+    "E6-pca6-rbfsvm__d933ca4071__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__6527e2e081",
+   "params": {
+    "C": 10.0,
+    "gamma": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.706202571901693,
+   "val_std": 0.03141253494347605,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__6527e2e081__s0",
+    "E6-pca6-rbfsvm__6527e2e081__s1",
+    "E6-pca6-rbfsvm__6527e2e081__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__38b286254f",
+   "params": {
+    "C": 100.0,
+    "gamma": 0.03
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.7081599570805704,
+   "val_std": 0.04724120353314444,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__38b286254f__s0",
+    "E6-pca6-rbfsvm__38b286254f__s1",
+    "E6-pca6-rbfsvm__38b286254f__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__d706a9fca2",
+   "params": {
+    "C": 100.0,
+    "gamma": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.7006019655698924,
+   "val_std": 0.038692111340264713,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__d706a9fca2__s0",
+    "E6-pca6-rbfsvm__d706a9fca2__s1",
+    "E6-pca6-rbfsvm__d706a9fca2__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__78f04e7109",
+   "params": {
+    "C": 100.0,
+    "gamma": 0.3
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.7120917111212522,
+   "val_std": 0.030018401544139994,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__78f04e7109__s0",
+    "E6-pca6-rbfsvm__78f04e7109__s1",
+    "E6-pca6-rbfsvm__78f04e7109__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca6-rbfsvm__eddf6237d3",
+   "params": {
+    "C": 100.0,
+    "gamma": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.6925597641720865,
+   "val_std": 0.03275183276334695,
+   "experiment_ids": [
+    "E6-pca6-rbfsvm__eddf6237d3__s0",
+    "E6-pca6-rbfsvm__eddf6237d3__s1",
+    "E6-pca6-rbfsvm__eddf6237d3__s2"
+   ]
+  }
+ ]
+}

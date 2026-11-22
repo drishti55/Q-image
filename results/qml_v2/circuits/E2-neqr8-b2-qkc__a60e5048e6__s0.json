@@ -1,0 +1,4151 @@
+{
+ "experiment_id": "E2-neqr8-b2-qkc__a60e5048e6__s0",
+ "group": "E2-neqr8-b2-qkc",
+ "kind": "NEQR encoding circuit (2-bit)",
+ "params": {
+  "representation": "NEQR",
+  "C": 10.0,
+  "bits": 2,
+  "angle_scale": 1.0,
+  "shots": 0
+ },
+ "n_qubits": 8,
+ "registers": [
+  {
+   "name": "pos",
+   "size": 6
+  },
+  {
+   "name": "intensity",
+   "size": 2
+  }
+ ],
+ "input": "first training image of split split-s0-2a1d15648e (train/images/crazing/crazing_1.jpg)",
+ "logical_counts_displayed_circuit": {
+  "x": 384,
+  "mcx": 64,
+  "h": 6,
+  "barrier": 1
+ },
+ "logical_gates_displayed_circuit": 455,
+ "logical_depth_displayed_circuit": 186,
+ "recorded_resources": {
+  "n_qubits": 8,
+  "gates_logical": 455,
+  "depth_logical": 186,
+  "gate_counts_logical": {
+   "x": 384,
+   "mcx": 64,
+   "h": 6,
+   "barrier": 1
+  },
+  "two_qubit_gates_logical": 0,
+  "gates_compiled": 9749,
+  "depth_compiled": 7022,
+  "gate_counts_compiled": {
+   "rz": 4801,
+   "cx": 2682,
+   "sx": 1366,
+   "x": 78,
+   "barrier": 1
+  },
+  "single_qubit_gates_compiled": 6245,
+  "two_qubit_gates_compiled": 2922,
+  "cx_compiled": 2922,
+  "transpilation": {
+   "basis_gates": [
+    "cx",
+    "rz",
+    "sx",
+    "x"
+   ],
+   "optimization_level": 1,
+   "seed_transpiler": 0,
+   "coupling_map": "none (all-to-all)"
+  },
+  "gates_logical_range": [
+   455,
+   455
+  ],
+  "depth_logical_range": [
+   186,
+   186
+  ],
+  "gates_compiled_range": [
+   6108,
+   11493
+  ],
+  "depth_compiled_range": [
+   4424,
+   8266
+  ],
+  "cx_compiled_range": [
+   1856,
+   3432
+  ],
+  "two_qubit_gates_compiled_range": [
+   1856,
+   3432
+  ],
+  "n_sample_images": 5,
+  "note": "encoding circuit of one image; values are means over sample training images (NEQR gate count depends on pixel bit patterns)",
+  "representation": "NEQR",
+  "shots": 0,
+  "angle_scale": null,
+  "intensity_bits": 2,
+  "execution_mode": "statevector overlap (exact)"
+ },
+ "entanglement": [
+  [
+   "all position qubits",
+   "colour/intensity qubit(s)",
+   "multi-controlled rotations / X"
+  ]
+ ],
+ "measurement": "Kernel = |\u27e8I_A|I_B\u27e9|\u00b2 of the encoded states; exact statevector overlap.",
+ "instructions": [
+  {
+   "i": 0,
+   "name": "h",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 1,
+   "name": "h",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 2,
+   "name": "h",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 3,
+   "name": "h",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 4,
+   "name": "h",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 5,
+   "name": "h",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 6,
+   "name": "barrier",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 7,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 8,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 9,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 10,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 11,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 12,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 13,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 14,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 15,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 16,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 17,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 18,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 19,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 20,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 21,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 22,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 23,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 24,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 25,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 26,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 27,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 28,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 29,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 30,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 31,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 32,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 33,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 34,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 35,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 36,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 37,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 38,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 39,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 40,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 41,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 42,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 43,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 44,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 45,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 46,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 47,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 48,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 49,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 50,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 51,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 52,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 53,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 54,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 55,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 56,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 57,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 58,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 59,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 60,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 61,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 62,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 63,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 64,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 65,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 66,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 67,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 68,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 69,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 70,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 71,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 72,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 73,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 74,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 75,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 76,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 77,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 78,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 79,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 80,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 81,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 82,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 83,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 84,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 85,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 86,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 87,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 88,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 89,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 90,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 91,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 92,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 93,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 94,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 95,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 96,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 97,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 98,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 99,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 100,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 101,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 102,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 103,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 104,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 105,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 106,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 107,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 108,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 109,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 110,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 111,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 112,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 113,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 114,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 115,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 116,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 117,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 118,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 119,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 120,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 121,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 122,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 123,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 124,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 125,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 126,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 127,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 128,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 129,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 130,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 131,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 132,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 133,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 134,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 135,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 136,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 137,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 138,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 139,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 140,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 141,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 142,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 143,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 144,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 145,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 146,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 147,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 148,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 149,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 150,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 151,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 152,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 153,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 154,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 155,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 156,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 157,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 158,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 159,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 160,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 161,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 162,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 163,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 164,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 165,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 166,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 167,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 168,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 169,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 170,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 171,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 172,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 173,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 174,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 175,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 176,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 177,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 178,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 179,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 180,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 181,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 182,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 183,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 184,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 185,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 186,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 187,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 188,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 189,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 190,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 191,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 192,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 193,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 194,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 195,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 196,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 197,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 198,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 199,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 200,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 201,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 202,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 203,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 204,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 205,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 206,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 207,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 208,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 209,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 210,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 211,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 212,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 213,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 214,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 215,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 216,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 217,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 218,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 219,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 220,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 221,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 222,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 223,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 224,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 225,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 226,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 227,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 228,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 229,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 230,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 231,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 232,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 233,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 234,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 235,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 236,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 237,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 238,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 239,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 240,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 241,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 242,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 243,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 244,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 245,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 246,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 247,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 248,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 249,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 250,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 251,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 252,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 253,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 254,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 255,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 256,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 257,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 258,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 259,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 260,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 261,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "params": []
+  },
+  {
+   "i": 262,
+   "name": "x",
+   "qubits": [
+    5
+   ],
+   "params": []
+  },
+  {
+   "i": 263,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 264,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 265,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 266,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 267,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 268,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 269,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 270,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 271,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 272,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 273,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 274,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 275,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 276,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 277,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 278,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 279,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 280,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 281,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 282,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 283,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 284,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 285,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 286,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 287,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 288,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 289,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 290,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 291,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 292,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 293,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 294,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 295,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 296,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 297,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 298,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 299,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 300,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 301,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 302,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 303,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 304,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 305,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 306,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 307,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 308,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 309,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 310,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 311,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 312,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 313,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 314,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 315,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 316,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 317,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 318,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 319,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 320,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 321,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 322,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 323,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 324,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 325,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 326,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 327,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 328,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 329,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 330,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 331,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 332,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 333,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 334,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 335,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 336,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 337,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 338,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 339,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 340,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 341,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 342,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 343,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 344,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 345,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 346,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 347,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 348,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 349,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 350,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 351,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 352,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 353,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 354,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 355,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 356,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 357,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 358,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 359,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 360,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 361,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 362,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 363,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 364,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 365,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 366,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 367,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 368,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 369,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 370,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 371,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 372,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 373,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 374,
+   "name": "x",
+   "qubits": [
+    4
+   ],
+   "params": []
+  },
+  {
+   "i": 375,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 376,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 377,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 378,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 379,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 380,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 381,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 382,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 383,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 384,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 385,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 386,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 387,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 388,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 389,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 390,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 391,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 392,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 393,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 394,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 395,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 396,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 397,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 398,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 399,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 400,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 401,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 402,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 403,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 404,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 405,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 406,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 407,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 408,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 409,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 410,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 411,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 412,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 413,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 414,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 415,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 416,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 417,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 418,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 419,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 420,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 421,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 422,
+   "name": "x",
+   "qubits": [
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 423,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 424,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 425,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 426,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 427,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 428,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 429,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 430,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 431,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 432,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 433,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 434,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 435,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 436,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 437,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 438,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 439,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 440,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 441,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 442,
+   "name": "x",
+   "qubits": [
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 443,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 444,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 445,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 446,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 447,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 448,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 449,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 450,
+   "name": "x",
+   "qubits": [
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 451,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 452,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  },
+  {
+   "i": 453,
+   "name": "x",
+   "qubits": [
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 454,
+   "name": "mcx",
+   "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+   ],
+   "params": []
+  }
+ ],
+ "instructions_truncated": false,
+ "text_diagram": null,
+ "status": "completed",
+ "circuit_key": "neqr|8x8|b2",
+ "used_by": [
+  {
+   "group": "E2-neqr8-b2-qkc",
+   "display_name": "NEQR kernel \u00b7 8\u00d78 \u00b7 2-bit",
+   "execution": "exact statevector, simulated"
+  }
+ ],
+ "built_by": "scripts/v2/build_circuit_artifacts.py"
+}

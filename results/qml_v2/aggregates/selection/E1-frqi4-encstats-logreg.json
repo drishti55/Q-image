@@ -1,0 +1,94 @@
+{
+ "group": "E1-frqi4-encstats-logreg",
+ "selected_at": "2026-11-14T20:08:02.190929",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 4,
+ "n_eligible": 4,
+ "selected": {
+  "config_key": "E1-frqi4-encstats-logreg__50e0e0de51",
+  "params": {
+   "representation": "FRQI",
+   "C": 10.0,
+   "bits": 4
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.5587147762680035,
+  "val_std": 0.01974854860209828,
+  "experiment_ids": [
+   "E1-frqi4-encstats-logreg__50e0e0de51__s0",
+   "E1-frqi4-encstats-logreg__50e0e0de51__s1",
+   "E1-frqi4-encstats-logreg__50e0e0de51__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E1-frqi4-encstats-logreg__229e6b1b11",
+   "params": {
+    "representation": "FRQI",
+    "C": 0.01,
+    "bits": 4
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.4810389194955649,
+   "val_std": 0.021577899885768137,
+   "experiment_ids": [
+    "E1-frqi4-encstats-logreg__229e6b1b11__s0",
+    "E1-frqi4-encstats-logreg__229e6b1b11__s1",
+    "E1-frqi4-encstats-logreg__229e6b1b11__s2"
+   ]
+  },
+  {
+   "config_key": "E1-frqi4-encstats-logreg__eaf899567d",
+   "params": {
+    "representation": "FRQI",
+    "C": 0.1,
+    "bits": 4
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.517761896004784,
+   "val_std": 0.02116127074449388,
+   "experiment_ids": [
+    "E1-frqi4-encstats-logreg__eaf899567d__s0",
+    "E1-frqi4-encstats-logreg__eaf899567d__s1",
+    "E1-frqi4-encstats-logreg__eaf899567d__s2"
+   ]
+  },
+  {
+   "config_key": "E1-frqi4-encstats-logreg__19c174b5ea",
+   "params": {
+    "representation": "FRQI",
+    "C": 1.0,
+    "bits": 4
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.5484771999152495,
+   "val_std": 0.021598685463239547,
+   "experiment_ids": [
+    "E1-frqi4-encstats-logreg__19c174b5ea__s0",
+    "E1-frqi4-encstats-logreg__19c174b5ea__s1",
+    "E1-frqi4-encstats-logreg__19c174b5ea__s2"
+   ]
+  },
+  {
+   "config_key": "E1-frqi4-encstats-logreg__50e0e0de51",
+   "params": {
+    "representation": "FRQI",
+    "C": 10.0,
+    "bits": 4
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.5587147762680035,
+   "val_std": 0.01974854860209828,
+   "experiment_ids": [
+    "E1-frqi4-encstats-logreg__50e0e0de51__s0",
+    "E1-frqi4-encstats-logreg__50e0e0de51__s1",
+    "E1-frqi4-encstats-logreg__50e0e0de51__s2"
+   ]
+  }
+ ]
+}

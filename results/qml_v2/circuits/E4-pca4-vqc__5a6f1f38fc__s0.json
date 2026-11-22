@@ -1,0 +1,400 @@
+{
+ "experiment_id": "E4-pca4-vqc__5a6f1f38fc__s0",
+ "group": "E4-pca4-vqc",
+ "kind": "Variational quantum classifier (encoding + trained layers)",
+ "params": {
+  "layers": 2,
+  "optimizer": "adam",
+  "entangler": "ring",
+  "reupload": false,
+  "train_quantum": true
+ },
+ "n_qubits": 4,
+ "registers": [
+  {
+   "name": "q",
+   "size": 4
+  }
+ ],
+ "input": "first training image of split split-s0-2a1d15648e (train/images/crazing/crazing_1.jpg) as PCA angles",
+ "logical_counts_displayed_circuit": {
+  "ry": 12,
+  "rz": 8,
+  "cx": 8
+ },
+ "logical_gates_displayed_circuit": 28,
+ "logical_depth_displayed_circuit": 13,
+ "recorded_resources": {
+  "n_qubits": 4,
+  "gates_logical": 28,
+  "depth_logical": 13,
+  "gate_counts_logical": {
+   "ry": 12,
+   "rz": 8,
+   "cx": 8
+  },
+  "two_qubit_gates_logical": 8,
+  "gates_compiled": 40,
+  "depth_compiled": 16,
+  "gate_counts_compiled": {
+   "sx": 16,
+   "rz": 16,
+   "cx": 8
+  },
+  "single_qubit_gates_compiled": 32,
+  "two_qubit_gates_compiled": 8,
+  "cx_compiled": 8,
+  "transpilation": {
+   "basis_gates": [
+    "cx",
+    "rz",
+    "sx",
+    "x"
+   ],
+   "optimization_level": 1,
+   "seed_transpiler": 0,
+   "coupling_map": "none (all-to-all)"
+  },
+  "circuit": "encoding + variational layers (measurement: exact expectation values)",
+  "n_layers": 2,
+  "entangler": "ring",
+  "data_reuploading": false,
+  "n_trainable_quantum_params": 16,
+  "readout": [
+   "Z(0,)",
+   "Z(1,)",
+   "Z(2,)",
+   "Z(3,)",
+   "ZZ(0, 1)",
+   "ZZ(2, 3)"
+  ],
+  "shots": 0,
+  "execution_mode": "statevector (exact expectation values)"
+ },
+ "entanglement": [
+  [
+   0,
+   1
+  ],
+  [
+   1,
+   2
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   3,
+   0
+  ],
+  [
+   0,
+   1
+  ],
+  [
+   1,
+   2
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   3,
+   0
+  ]
+ ],
+ "measurement": "Exact expectation values of ['Z(0,)', 'Z(1,)', 'Z(2,)', 'Z(3,)', 'ZZ(0, 1)', 'ZZ(2, 3)'] \u2192 6 class logits",
+ "instructions": [
+  {
+   "i": 0,
+   "name": "ry",
+   "qubits": [
+    0
+   ],
+   "params": [
+    1.8703
+   ]
+  },
+  {
+   "i": 1,
+   "name": "ry",
+   "qubits": [
+    1
+   ],
+   "params": [
+    1.2087
+   ]
+  },
+  {
+   "i": 2,
+   "name": "ry",
+   "qubits": [
+    2
+   ],
+   "params": [
+    1.3959
+   ]
+  },
+  {
+   "i": 3,
+   "name": "ry",
+   "qubits": [
+    3
+   ],
+   "params": [
+    1.4648
+   ]
+  },
+  {
+   "i": 4,
+   "name": "ry",
+   "qubits": [
+    0
+   ],
+   "params": [
+    0.0647
+   ]
+  },
+  {
+   "i": 5,
+   "name": "rz",
+   "qubits": [
+    0
+   ],
+   "params": [
+    0.6166
+   ]
+  },
+  {
+   "i": 6,
+   "name": "ry",
+   "qubits": [
+    1
+   ],
+   "params": [
+    -0.7814
+   ]
+  },
+  {
+   "i": 7,
+   "name": "rz",
+   "qubits": [
+    1
+   ],
+   "params": [
+    -0.583
+   ]
+  },
+  {
+   "i": 8,
+   "name": "ry",
+   "qubits": [
+    2
+   ],
+   "params": [
+    1.1195
+   ]
+  },
+  {
+   "i": 9,
+   "name": "rz",
+   "qubits": [
+    2
+   ],
+   "params": [
+    0.9578
+   ]
+  },
+  {
+   "i": 10,
+   "name": "ry",
+   "qubits": [
+    3
+   ],
+   "params": [
+    1.4772
+   ]
+  },
+  {
+   "i": 11,
+   "name": "rz",
+   "qubits": [
+    3
+   ],
+   "params": [
+    -0.4384
+   ]
+  },
+  {
+   "i": 12,
+   "name": "cx",
+   "qubits": [
+    0,
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 13,
+   "name": "cx",
+   "qubits": [
+    1,
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 14,
+   "name": "cx",
+   "qubits": [
+    2,
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 15,
+   "name": "cx",
+   "qubits": [
+    3,
+    0
+   ],
+   "params": []
+  },
+  {
+   "i": 16,
+   "name": "ry",
+   "qubits": [
+    0
+   ],
+   "params": [
+    -1.042
+   ]
+  },
+  {
+   "i": 17,
+   "name": "rz",
+   "qubits": [
+    0
+   ],
+   "params": [
+    0.087
+   ]
+  },
+  {
+   "i": 18,
+   "name": "ry",
+   "qubits": [
+    1
+   ],
+   "params": [
+    -0.3248
+   ]
+  },
+  {
+   "i": 19,
+   "name": "rz",
+   "qubits": [
+    1
+   ],
+   "params": [
+    -0.0995
+   ]
+  },
+  {
+   "i": 20,
+   "name": "ry",
+   "qubits": [
+    2
+   ],
+   "params": [
+    -0.0125
+   ]
+  },
+  {
+   "i": 21,
+   "name": "rz",
+   "qubits": [
+    2
+   ],
+   "params": [
+    -0.0933
+   ]
+  },
+  {
+   "i": 22,
+   "name": "ry",
+   "qubits": [
+    3
+   ],
+   "params": [
+    0.0919
+   ]
+  },
+  {
+   "i": 23,
+   "name": "rz",
+   "qubits": [
+    3
+   ],
+   "params": [
+    -0.0649
+   ]
+  },
+  {
+   "i": 24,
+   "name": "cx",
+   "qubits": [
+    0,
+    1
+   ],
+   "params": []
+  },
+  {
+   "i": 25,
+   "name": "cx",
+   "qubits": [
+    1,
+    2
+   ],
+   "params": []
+  },
+  {
+   "i": 26,
+   "name": "cx",
+   "qubits": [
+    2,
+    3
+   ],
+   "params": []
+  },
+  {
+   "i": 27,
+   "name": "cx",
+   "qubits": [
+    3,
+    0
+   ],
+   "params": []
+  }
+ ],
+ "instructions_truncated": false,
+ "text_diagram": "     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510                          \u250c\u2500\u2500\u2500\u2510  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u00bb\nq_0: \u2524 Ry(1.8703) \u251c\u2524 Ry(0.064741) \u251c\u2524 Rz(0.61662) \u251c\u2500\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2500\u2500\u2524 Ry(-1.042) \u251c\u2500\u2500\u2524 Rz(0.087014) \u251c\u00bb\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\u2514\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 \u250c\u2500\u2534\u2500\u2510     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u2514\u2500\u252c\u2500\u2518\u250c\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2510 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u00bb\nq_1: \u2524 Ry(1.2087) \u251c\u2524 Ry(-0.78144) \u251c\u2500\u2524 Rz(-0.583) \u251c\u2500\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2524 Ry(-0.3248) \u251c\u2500\u2500\u253c\u2500\u2500\u2524 Rz(-0.099452) \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u00bb\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\u2514\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2518\u250c\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 \u2514\u2500\u2500\u2500\u2518\u250c\u2500\u2534\u2500\u2510\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518  \u2502  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u00bb\nq_2: \u2524 Ry(1.3959) \u251c\u2500\u2524 Ry(1.1195) \u251c\u2500\u2524 Rz(0.95779) \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2524 Ry(-0.012548) \u251c\u2524 Rz(-0.093283) \u251c\u00bb\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2510     \u2514\u2500\u2500\u2500\u2518     \u250c\u2500\u2534\u2500\u2510       \u2502  \u2514\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\u00bb\nq_3: \u2524 Ry(1.4648) \u251c\u2500\u2524 Ry(1.4772) \u251c\u2500\u2524 Rz(-0.43839) \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25a0\u2500\u2500\u2500\u2524 Ry(0.091856) \u251c\u2524 Rz(-0.064869) \u251c\u00bb\n     \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518               \u2514\u2500\u2500\u2500\u2518           \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u00bb\n\u00ab                    \u250c\u2500\u2500\u2500\u2510\n\u00abq_0: \u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\n\u00ab     \u250c\u2500\u2534\u2500\u2510          \u2514\u2500\u252c\u2500\u2518\n\u00abq_1: \u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\n\u00ab     \u2514\u2500\u2500\u2500\u2518\u250c\u2500\u2534\u2500\u2510       \u2502  \n\u00abq_2: \u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\u2500\u2500\u253c\u2500\u2500\n\u00ab          \u2514\u2500\u2500\u2500\u2518\u250c\u2500\u2534\u2500\u2510  \u2502  \n\u00abq_3: \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524 X \u251c\u2500\u2500\u25a0\u2500\u2500\n\u00ab               \u2514\u2500\u2500\u2500\u2518     ",
+ "status": "completed",
+ "circuit_key": "vqc|L2|reuploadFalse|q4",
+ "used_by": [
+  {
+   "group": "E4-pca4-vqc",
+   "display_name": "VQC \u00b7 4 qubits \u00b7 adam \u00b7 2 layer(s)",
+   "execution": "exact statevector, simulated"
+  },
+  {
+   "group": "E4-pca4-vqc-ablation-frozen",
+   "display_name": "VQC ablation (frozen random circuit) \u00b7 4 qubits",
+   "execution": "exact statevector, simulated"
+  }
+ ],
+ "built_by": "scripts/v2/build_circuit_artifacts.py"
+}

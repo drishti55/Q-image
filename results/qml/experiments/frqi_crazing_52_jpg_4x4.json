@@ -1,0 +1,143 @@
+{
+  "experiment_id": "frqi_crazing_52_jpg_4x4",
+  "comparison_id": "paired_crazing_52_jpg_4x4",
+  "dataset": "NEU-DET",
+  "image_name": "crazing_52.jpg",
+  "ground_truth": "crazing",
+  "predicted_class": "inclusion",
+  "correct": false,
+  "representation": "FRQI",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "4x4",
+  "intensity_bits": 8,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 5,
+  "gate_count": 1092,
+  "circuit_depth": 705,
+  "controlled_gates": 384,
+  "gate_types": {
+    "h": 132,
+    "x": 64,
+    "cx": 384,
+    "tdg": 192,
+    "t": 256,
+    "ry": 64
+  },
+  "classification_metrics": {
+    "accuracy": 0.0,
+    "f1_macro": 0.0,
+    "heldout_accuracy": 0.2222222222222222,
+    "heldout_f1_macro": 0.17305539552169727,
+    "precision_macro": 0.2365823733832396,
+    "recall_macro": 0.2222222222222222,
+    "f1_weighted": 0.17305539552169727,
+    "confusion_matrix": [
+      [
+        3,
+        2,
+        2,
+        51,
+        2,
+        0
+      ],
+      [
+        2,
+        26,
+        4,
+        20,
+        5,
+        3
+      ],
+      [
+        6,
+        16,
+        10,
+        21,
+        6,
+        1
+      ],
+      [
+        8,
+        7,
+        5,
+        38,
+        1,
+        1
+      ],
+      [
+        0,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        52,
+        2,
+        0,
+        3,
+        3
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 0.15789473684210525,
+        "recall": 0.05,
+        "f1_score": 0.0759493670886076,
+        "support": 60
+      },
+      "inclusion": {
+        "precision": 0.15950920245398773,
+        "recall": 0.43333333333333335,
+        "f1_score": 0.23318385650224216,
+        "support": 60
+      },
+      "patches": {
+        "precision": 0.43478260869565216,
+        "recall": 0.16666666666666666,
+        "f1_score": 0.24096385542168675,
+        "support": 60
+      },
+      "pitted_surface": {
+        "precision": 0.2923076923076923,
+        "recall": 0.6333333333333333,
+        "f1_score": 0.4,
+        "support": 60
+      },
+      "rolled-in_scale": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 60
+      },
+      "scratches": {
+        "precision": 0.375,
+        "recall": 0.05,
+        "f1_score": 0.08823529411764706,
+        "support": 60
+      }
+    }
+  },
+  "reconstruction_metrics": {
+    "mse": 1.0324910431859971e-30,
+    "psnr": 100.0,
+    "ssim": 1.0000000000000138,
+    "reconstruction_time": 6.004200258757919e-05,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAvklEQVR4nO2RTQrCYBTE0qHeQG/o/XfiDwreoG9RyiAm23kfDc1yZZvLsN+G/TzsoUwUwARlogAmKBMFMEGZKIAJykQBTFAmCmCCMutzOPjsbPja+f5wcvwnFNgmlIkCmKBMFMAEZaIAJigTBTBBmSiACf49wboMB49hv//6H4gCmKBMFMAEZaIAJigTBTBBmSiACcpEAUxQZp0O3jv307CHMlEAE5SJApigTBTABGWiACYoEwUwQZkogAno8gUUEQlnFoHbKQAAAABJRU5ErkJggg==",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAvklEQVR4nO2RQQrCUBTE0qGeQLyh99+JigreoG9RyiAm23mfhma5ss1l2G/Dfh72UCYKYIIyUQATlIkCmKBMFMAEZaIAJigTBTBBmfU5HHx2NnztfH84Of4TCmwTykQBTFAmCmCCMlEAE5SJApigTBTABP+eYF2Gg8ew33/9D0QBTFAmCmCCMlEAE5SJApigTBTABGWiACYos04H7537adhDmSiACcpEAUxQJgpggjJRABOUiQKYoEwUwAR0+QID8QlnZoqYbAAAAABJRU5ErkJggg==",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAJklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAO8GQIAAAfnHrWYAAAAASUVORK5CYII="
+  },
+  "timings": {
+    "encoding_time_s": 0.002268500000354834,
+    "train_time_s": 3.077604792000784,
+    "predict_time_s": 0.021028875002230052,
+    "reconstruction_time_s": 6.004200258757919e-05,
+    "total_time_s": 0.039692999998806044
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:09:27.512450"
+}

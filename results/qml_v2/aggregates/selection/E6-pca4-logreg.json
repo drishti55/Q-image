@@ -1,0 +1,114 @@
+{
+ "group": "E6-pca4-logreg",
+ "selected_at": "2026-11-13T16:04:32.597255",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 6,
+ "n_eligible": 6,
+ "selected": {
+  "config_key": "E6-pca4-logreg__1e22988b2e",
+  "params": {
+   "C": 1.0
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.3308363218298025,
+  "val_std": 0.030773063669700056,
+  "experiment_ids": [
+   "E6-pca4-logreg__1e22988b2e__s0",
+   "E6-pca4-logreg__1e22988b2e__s1",
+   "E6-pca4-logreg__1e22988b2e__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E6-pca4-logreg__d5434e836f",
+   "params": {
+    "C": 0.001
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.25589338622814367,
+   "val_std": 0.017517994441741208,
+   "experiment_ids": [
+    "E6-pca4-logreg__d5434e836f__s0",
+    "E6-pca4-logreg__d5434e836f__s1",
+    "E6-pca4-logreg__d5434e836f__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca4-logreg__9f9a9dea85",
+   "params": {
+    "C": 0.01
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.29813348730851436,
+   "val_std": 0.0263553858182577,
+   "experiment_ids": [
+    "E6-pca4-logreg__9f9a9dea85__s0",
+    "E6-pca4-logreg__9f9a9dea85__s1",
+    "E6-pca4-logreg__9f9a9dea85__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca4-logreg__634419da37",
+   "params": {
+    "C": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.3305909756624022,
+   "val_std": 0.029005334745643888,
+   "experiment_ids": [
+    "E6-pca4-logreg__634419da37__s0",
+    "E6-pca4-logreg__634419da37__s1",
+    "E6-pca4-logreg__634419da37__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca4-logreg__1e22988b2e",
+   "params": {
+    "C": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.3308363218298025,
+   "val_std": 0.030773063669700056,
+   "experiment_ids": [
+    "E6-pca4-logreg__1e22988b2e__s0",
+    "E6-pca4-logreg__1e22988b2e__s1",
+    "E6-pca4-logreg__1e22988b2e__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca4-logreg__15a505d396",
+   "params": {
+    "C": 10.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.3302222952904372,
+   "val_std": 0.03306730959498114,
+   "experiment_ids": [
+    "E6-pca4-logreg__15a505d396__s0",
+    "E6-pca4-logreg__15a505d396__s1",
+    "E6-pca4-logreg__15a505d396__s2"
+   ]
+  },
+  {
+   "config_key": "E6-pca4-logreg__af4d2e4c1b",
+   "params": {
+    "C": 100.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.3302222952904372,
+   "val_std": 0.03306730959498114,
+   "experiment_ids": [
+    "E6-pca4-logreg__af4d2e4c1b__s0",
+    "E6-pca4-logreg__af4d2e4c1b__s1",
+    "E6-pca4-logreg__af4d2e4c1b__s2"
+   ]
+  }
+ ]
+}

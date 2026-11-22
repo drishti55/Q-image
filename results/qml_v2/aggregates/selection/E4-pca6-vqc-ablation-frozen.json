@@ -1,0 +1,65 @@
+{
+ "group": "E4-pca6-vqc-ablation-frozen",
+ "selected_at": "2026-11-14T20:02:44.447788",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 1,
+ "n_eligible": 1,
+ "selected": {
+  "config_key": "E4-pca6-vqc-ablation-frozen__88ad57cc6d",
+  "params": {
+   "layers": 3,
+   "optimizer": "adam",
+   "entangler": "ring",
+   "reupload": true,
+   "train_quantum": false
+  },
+  "quantum": {
+   "n_qubits": 6,
+   "n_layers": 3,
+   "optimizer": "adam",
+   "learning_rate": 0.05,
+   "shots": 0,
+   "entangler": "ring",
+   "data_reuploading": true,
+   "train_quantum": false
+  },
+  "eligible": true,
+  "val_mean": 0.21129607425787536,
+  "val_std": 0.05012241538192174,
+  "experiment_ids": [
+   "E4-pca6-vqc-ablation-frozen__88ad57cc6d__s0",
+   "E4-pca6-vqc-ablation-frozen__88ad57cc6d__s1",
+   "E4-pca6-vqc-ablation-frozen__88ad57cc6d__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E4-pca6-vqc-ablation-frozen__88ad57cc6d",
+   "params": {
+    "layers": 3,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "train_quantum": false
+   },
+   "quantum": {
+    "n_qubits": 6,
+    "n_layers": 3,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "train_quantum": false
+   },
+   "eligible": true,
+   "val_mean": 0.21129607425787536,
+   "val_std": 0.05012241538192174,
+   "experiment_ids": [
+    "E4-pca6-vqc-ablation-frozen__88ad57cc6d__s0",
+    "E4-pca6-vqc-ablation-frozen__88ad57cc6d__s1",
+    "E4-pca6-vqc-ablation-frozen__88ad57cc6d__s2"
+   ]
+  }
+ ]
+}

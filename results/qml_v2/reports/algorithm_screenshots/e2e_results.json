@@ -1,0 +1,331 @@
+{
+ "passed": 65,
+ "failed": 0,
+ "checks": [
+  {
+   "check": "sidebar link opens the 3\u00d73 Algorithm Playground",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "illustrative disclaimer visible",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "3\u00d73 grid shows 70,180,0,19,20,0,0,0,0",
+   "ok": true,
+   "detail": "['70', '180', '0', '19', '20', '0', '0', '0', '0']"
+  },
+  {
+   "check": "hover tooltip shows row/column/intensity",
+   "ok": true,
+   "detail": "row 1, column 2 \u00b7 intensity 180"
+  },
+  {
+   "check": "hover on padding cell says zero padding",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "three-part layout: input, processing, explanation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "pixel 70 facts: intensity, row/col, normalised, binary, NEQR, FRQI angle",
+   "ok": true,
+   "detail": "SELECTED PIXEL | Intensity | 70 | Row, column | 1, 1 | Normalised | 70/255 = 0.2745 | Binary (8-bit) | 01000110 | NEQR 4-bit | 0100 (q = 4) | FRQI angle | 0.4312 rad = 24.71\u00b0 | CURRENT PROCESSING STAT"
+  },
+  {
+   "check": "preprocessing: 70/255 = 0.2745 in the actual output",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "flattened raw vector [70, 180, 0, 19, 20, 0, 0, 0, 0] shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "PCA: pixel 70 feature change from the real fitted transform",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "FRQI: pixel 70 angle 0.4312 rad = 24.71\u00b0 and journey stage active",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "selected pixel cell shows its current value (\u03b8)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "FRQI angle table covers all 9 cells incl. padding \u03b8 = 0",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "FRQI controlled rotation for pixel 70: X gates + MCRY(0.8624)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "FRQI real gate count from data",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "FRQI shots toggle changes the reconstruction",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "NEQR 2-bit binary of pixel 70 = 01",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "NEQR 4-bit binary of pixel 70 = 0100",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "NEQR 8-bit binary of pixel 70 = 01000110",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "NEQR 2-bit binary of pixel 19 = 00",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "NEQR 4-bit binary of pixel 19 = 0001",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "NEQR 8-bit binary of pixel 19 = 00010011",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "NEQR explains amplitude vs basis-state encoding",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "QKC product_ry circuit has 4 gates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "QKC zz_linear circuit has 17 gates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "QKC zz_full circuit has 26 gates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "kernel heatmap: clicking an entry explains that entry",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "VQC parameter-shift derivative from data",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "VQC updated circuit after the illustrative Adam step",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "VQC recorded loss curve rendered",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "no class prediction shown for the artificial grid",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "Next advances",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "Previous goes back",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "Play auto-advances",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "Pause stops",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "Reset returns to step 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "presentation mode hides the dashboard navigation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "presentation: arrow key advances",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "presentation: Escape exits",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "Charts tab is default and family-best chart labels the API best",
+   "ok": true,
+   "detail": "Best model in each family\n\nTest accuracy of the strongest configuration per family; whiskers show \u00b1 1 standard deviation"
+  },
+  {
+   "check": "chart-model-strip renders marks",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chart-hybrid-effect renders marks",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chart-qubit-scaling renders marks",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chart-neqr-bits renders marks",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chart-shots-qkc renders marks",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chart-shots-encoding renders marks",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chart-cost renders marks",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chart hover tooltip appears",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chart table view lists API values",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "classical best highlighted matches API",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "classical row shows API accuracy",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "quantum row: accuracy + gate counts from API",
+   "ok": true,
+   "detail": "QKC ZZ-full \u00b7 8 qubits\nQuantum kernel\n\tZZ feature map (full)\t8\t\n64.0%\n64.0 \u00b1 3.5%\n\t62.2%\t41 / 42\t100 / 108\t\nexact\nexact statevector\n\t245.0 \u00b1 98.5 ms\t0.104 ms\ts0:66.4s1:60.0s2:65.6"
+  },
+  {
+   "check": "quantum view excludes legacy V0 rows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "hybrid table shows product-RY hybrid accuracy",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "hybrid explains no quantum advantage",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "side-by-side shows real VQC accuracy",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "side-by-side follows the selected pixel (180 -> FRQI angle 1.1088, classical feature change)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "side-by-side shows no class prediction for the grid",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "Model Comparison page shows comparison charts",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile /playground?algo=frqi&step=3: no horizontal page overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile /quantum-vs-classical?view=side: no horizontal page overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile /quantum-vs-classical: no horizontal page overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile /models: no horizontal page overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "no console errors",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "no failed /api requests",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

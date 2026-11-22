@@ -1,0 +1,35 @@
+{
+ "experiment_code": "E7",
+ "group": "E7-mnv3-logreg",
+ "model_name": "Frozen MobileNetV3 + Logistic Regression",
+ "family": "classical",
+ "family_label": "Classical",
+ "compute_type": "classical",
+ "feature_extraction": "frozen MobileNetV3-small IMAGENET1K_V1, 576-d GAP features -> standardized",
+ "encoding": null,
+ "params": {
+  "C": 0.001
+ },
+ "quantum": {},
+ "provider": {
+  "name": "mnv3s-frozen-full-standard",
+  "source": {
+   "name": "mnv3s-frozen",
+   "architecture": "torchvision mobilenet_v3_small",
+   "weights": "MobileNet_V3_Small_Weights.IMAGENET1K_V1",
+   "weights_url": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth",
+   "frozen": true,
+   "feature": "global average pool of model.features (576-d)",
+   "preprocessing": "PIL convert('RGB') of 200x200 gray image -> weights.transforms(): resize 256 bilinear, centre-crop 224, ImageNet mean/std",
+   "load_info": {}
+  },
+  "pca_k": null,
+  "view": "standard",
+  "fit": "train split only"
+ },
+ "seed": 0,
+ "split_id": "split-s0-2a1d15648e",
+ "dataset_manifest_id": "neu-5625b937479b",
+ "protocol": "V2 locked-test (validation folder) + group-blocked train/val",
+ "notes": ""
+}

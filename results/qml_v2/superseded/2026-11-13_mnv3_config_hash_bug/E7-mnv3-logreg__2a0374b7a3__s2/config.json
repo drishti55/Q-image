@@ -1,0 +1,41 @@
+{
+ "experiment_code": "E7",
+ "group": "E7-mnv3-logreg",
+ "model_name": "Frozen MobileNetV3 + Logistic Regression",
+ "family": "classical",
+ "family_label": "Classical",
+ "compute_type": "classical",
+ "feature_extraction": "frozen MobileNetV3-small IMAGENET1K_V1, 576-d GAP features -> standardized",
+ "encoding": null,
+ "params": {
+  "C": 100.0
+ },
+ "quantum": {},
+ "provider": {
+  "name": "mnv3s-frozen-full-standard",
+  "source": {
+   "name": "mnv3s-frozen",
+   "architecture": "torchvision mobilenet_v3_small",
+   "weights": "MobileNet_V3_Small_Weights.IMAGENET1K_V1",
+   "weights_url": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth",
+   "frozen": true,
+   "feature": "global average pool of model.features (576-d)",
+   "preprocessing": "PIL convert('RGB') of 200x200 gray image -> weights.transforms(): resize 256 bilinear, centre-crop 224, ImageNet mean/std",
+   "load_info": {
+    "pretrained_loaded": true,
+    "loaded_from_cache": true,
+    "checkpoint_path": "/Users/drishti/.cache/torch/hub/checkpoints/mobilenet_v3_small-047dcff4.pth",
+    "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+    "n_parameters": 2542856
+   }
+  },
+  "pca_k": null,
+  "view": "standard",
+  "fit": "train split only"
+ },
+ "seed": 2,
+ "split_id": "split-s2-cbd05190d5",
+ "dataset_manifest_id": "neu-5625b937479b",
+ "protocol": "V2 locked-test (validation folder) + group-blocked train/val",
+ "notes": ""
+}

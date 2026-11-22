@@ -1,0 +1,1850 @@
+{
+ "summary": {
+  "statevector": {
+   "vs_preprocessed": {
+    "mse": {
+     "mean": 3.0577396836524385e-27,
+     "std": 9.840508940742203e-28,
+     "n": 30
+    },
+    "psnr": {
+     "mean": null,
+     "n_finite": 0,
+     "n_exact": 30
+    },
+    "ssim": {
+     "mean": 0.9999999999999964,
+     "std": 1.5227063944725425e-14,
+     "n": 30
+    }
+   },
+   "decode_time_s_mean": 0.0006703958361564825
+  },
+  "shots100": {
+   "vs_preprocessed": {
+    "mse": {
+     "mean": 0.2654811976438859,
+     "std": 0.12360227371104922,
+     "n": 30
+    },
+    "psnr": {
+     "mean": 6.232633570310472,
+     "n_finite": 30,
+     "n_exact": 0
+    },
+    "ssim": {
+     "mean": 0.02681215465688552,
+     "std": 0.03606255867346659,
+     "n": 30
+    }
+   },
+   "decode_time_s_mean": 0.0004416360675046841
+  },
+  "shots1000": {
+   "vs_preprocessed": {
+    "mse": {
+     "mean": 0.06528556732830815,
+     "std": 0.012869393823632105,
+     "n": 30
+    },
+    "psnr": {
+     "mean": 11.964387898277375,
+     "n_finite": 30,
+     "n_exact": 0
+    },
+    "ssim": {
+     "mean": 0.15054872359549792,
+     "std": 0.17544158004912797,
+     "n": 30
+    }
+   },
+   "decode_time_s_mean": 0.0012525668212523063
+  },
+  "shots10000": {
+   "vs_preprocessed": {
+    "mse": {
+     "mean": 0.002933462074396868,
+     "std": 0.0003614910920492263,
+     "n": 30
+    },
+    "psnr": {
+     "mean": 25.35871671217513,
+     "n_finite": 30,
+     "n_exact": 0
+    },
+    "ssim": {
+     "mean": 0.6048440525226262,
+     "std": 0.18922161595052525,
+     "n": 30
+    }
+   },
+   "decode_time_s_mean": 0.001407479130042096
+  },
+  "shots100000": {
+   "vs_preprocessed": {
+    "mse": {
+     "mean": 0.00027038257308438296,
+     "std": 2.847206675529259e-05,
+     "n": 30
+    },
+    "psnr": {
+     "mean": 35.70331136945728,
+     "n_finite": 30,
+     "n_exact": 0
+    },
+    "ssim": {
+     "mean": 0.9241366013173025,
+     "std": 0.051052752151155914,
+     "n": 30
+    }
+   },
+   "decode_time_s_mean": 0.0013282625004649162
+  }
+ },
+ "per_image": [
+  {
+   "image": "train/images/crazing/crazing_12.jpg",
+   "class": "crazing",
+   "build_time_s": 0.031223541998770088,
+   "statevector_sim_time_s": 0.8383681250270456,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 1.88331903325716e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000007,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0008875000057742
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.3354895819928332,
+      "psnr": 4.743209614958057,
+      "exact_match": false,
+      "ssim": 0.02931947554292133,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005872919573448598
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07230908835257908,
+      "psnr": 11.408071138628888,
+      "exact_match": false,
+      "ssim": 0.11682259559248484,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0016387089854106307
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0030677146651420504,
+      "psnr": 25.1318503752525,
+      "exact_match": false,
+      "ssim": 0.5878975818019951,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0024265419924631715
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002769388105643994,
+      "psnr": 35.576161773969055,
+      "exact_match": false,
+      "ssim": 0.9421093003024404,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0019913329742848873
+    }
+   }
+  },
+  {
+   "image": "train/images/crazing/crazing_60.jpg",
+   "class": "crazing",
+   "build_time_s": 0.28946129203541204,
+   "statevector_sim_time_s": 0.7274987080018036,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.434901990086276e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999961,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006733330083079636
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.2016400957409503,
+      "psnr": 6.9542310502600895,
+      "exact_match": false,
+      "ssim": 0.03189098596922191,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00044237502152100205
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06977427016074017,
+      "psnr": 11.563046975383058,
+      "exact_match": false,
+      "ssim": 0.15937287512113185,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0014132090145722032
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0027768924219896203,
+      "psnr": 25.564409446794354,
+      "exact_match": false,
+      "ssim": 0.768863192433071,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001362500013783574
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002623191870022213,
+      "psnr": 35.8116994233212,
+      "exact_match": false,
+      "ssim": 0.9723083655428044,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012985409703105688
+    }
+   }
+  },
+  {
+   "image": "train/images/crazing/crazing_108.jpg",
+   "class": "crazing",
+   "build_time_s": 0.03757024998776615,
+   "statevector_sim_time_s": 0.6815159170073457,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.9156175556710912e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999836,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006317500374279916
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.2358749739049148,
+      "psnr": 6.273181348734442,
+      "exact_match": false,
+      "ssim": 0.006480867873864648,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0004177079536020756
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07721156738352215,
+      "psnr": 11.123176313416213,
+      "exact_match": false,
+      "ssim": 0.04529513513385489,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012235830072313547
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0029822088347395063,
+      "psnr": 25.25461947536494,
+      "exact_match": false,
+      "ssim": 0.5936758396123691,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013359999866224825
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002597165817486815,
+      "psnr": 35.855003217143235,
+      "exact_match": false,
+      "ssim": 0.944627482729772,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0014825830003246665
+    }
+   }
+  },
+  {
+   "image": "train/images/crazing/crazing_156.jpg",
+   "class": "crazing",
+   "build_time_s": 0.03659316699486226,
+   "statevector_sim_time_s": 0.6556952919927426,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.4374805904436152e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999991,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.000627624976914376
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.293892087778739,
+      "psnr": 5.318121059324516,
+      "exact_match": false,
+      "ssim": 0.016434306520883332,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0004468749975785613
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07202196071984893,
+      "psnr": 11.425350596070572,
+      "exact_match": false,
+      "ssim": 0.07497995048570867,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012207499821670353
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0027051182501087773,
+      "psnr": 25.678137456231237,
+      "exact_match": false,
+      "ssim": 0.6233614337765685,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00137720798375085
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00026429034982728577,
+      "psnr": 35.77918694201898,
+      "exact_match": false,
+      "ssim": 0.9294502313632849,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012738329824060202
+    }
+   }
+  },
+  {
+   "image": "train/images/crazing/crazing_204.jpg",
+   "class": "crazing",
+   "build_time_s": 0.035423166991677135,
+   "statevector_sim_time_s": 0.6084076249971986,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.9290776424822474e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999994,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005702910129912198
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.14301524271336832,
+      "psnr": 8.446176725103328,
+      "exact_match": false,
+      "ssim": 0.017705412851252843,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00034858303843066096
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06839726666190626,
+      "psnr": 11.649612535045957,
+      "exact_match": false,
+      "ssim": 0.1026505140751172,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010910420096479356
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0024856655750392794,
+      "psnr": 26.045573023576637,
+      "exact_match": false,
+      "ssim": 0.6591546343302798,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011796249891631305
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002704340366997706,
+      "psnr": 35.679386491925726,
+      "exact_match": false,
+      "ssim": 0.9446540285755662,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011671670363284647
+    }
+   }
+  },
+  {
+   "image": "train/images/inclusion/inclusion_12.jpg",
+   "class": "inclusion",
+   "build_time_s": 0.03169295797124505,
+   "statevector_sim_time_s": 0.599420041020494,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.7965820160295394e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999689,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005613749963231385
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.17392703741894341,
+      "psnr": 7.596329005209993,
+      "exact_match": false,
+      "ssim": 0.009905140768991105,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0003750830073840916
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07136869075663448,
+      "psnr": 11.464922702093663,
+      "exact_match": false,
+      "ssim": 0.028013396072484178,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011105839512310922
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0026635810086194046,
+      "psnr": 25.74534090295937,
+      "exact_match": false,
+      "ssim": 0.36517369652861875,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011933339992538095
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00022545433610034253,
+      "psnr": 36.469414076124885,
+      "exact_match": false,
+      "ssim": 0.882484373538775,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012000839924439788
+    }
+   }
+  },
+  {
+   "image": "train/images/inclusion/inclusion_60.jpg",
+   "class": "inclusion",
+   "build_time_s": 0.03070054203271866,
+   "statevector_sim_time_s": 0.6114153750240803,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.996992047148915e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999909,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005659590242430568
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.1529641093569781,
+      "psnr": 8.154104576576254,
+      "exact_match": false,
+      "ssim": 0.008864189407745578,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0003796660457737744
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06768215631725472,
+      "psnr": 11.695258133590007,
+      "exact_match": false,
+      "ssim": 0.033500914564673884,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010897080064751208
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.003017552649665152,
+      "psnr": 25.20345143679802,
+      "exact_match": false,
+      "ssim": 0.39754952317439596,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012228750274516642
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00028839203325167973,
+      "psnr": 35.40016741049084,
+      "exact_match": false,
+      "ssim": 0.8453045825088025,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011885410058312118
+    }
+   }
+  },
+  {
+   "image": "train/images/inclusion/inclusion_108.jpg",
+   "class": "inclusion",
+   "build_time_s": 0.03308770898729563,
+   "statevector_sim_time_s": 0.617816457990557,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 4.626393148128565e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000047,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006687910063192248
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.12509888023836985,
+      "psnr": 9.027465776644817,
+      "exact_match": false,
+      "ssim": 0.0018574685340952692,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0004747919738292694
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.057555893397519216,
+      "psnr": 12.399102004619884,
+      "exact_match": false,
+      "ssim": 0.04880379012872569,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012344170245341957
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.003229771694815532,
+      "psnr": 24.90828175868936,
+      "exact_match": false,
+      "ssim": 0.3663582379840821,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013474579900503159
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002827577862073473,
+      "psnr": 35.485854272147876,
+      "exact_match": false,
+      "ssim": 0.8641630827402831,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013168749865144491
+    }
+   }
+  },
+  {
+   "image": "train/images/inclusion/inclusion_156.jpg",
+   "class": "inclusion",
+   "build_time_s": 0.034417750022839755,
+   "statevector_sim_time_s": 0.6355411250260659,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 4.217180409813644e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999983,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0007564579718746245
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.11402539578985532,
+      "psnr": 9.429984116189088,
+      "exact_match": false,
+      "ssim": 0.013294836773310692,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005276669980958104
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.062453632340666546,
+      "psnr": 12.044422977280737,
+      "exact_match": false,
+      "ssim": 0.05258991624085643,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0014103339635767043
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0035795202613320173,
+      "psnr": 24.46175174981086,
+      "exact_match": false,
+      "ssim": 0.391542949005749,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0017530409968458116
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00021616348271703565,
+      "psnr": 36.652176711319726,
+      "exact_match": false,
+      "ssim": 0.9013711509842653,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013614589697681367
+    }
+   }
+  },
+  {
+   "image": "train/images/inclusion/inclusion_204.jpg",
+   "class": "inclusion",
+   "build_time_s": 0.039689125027507544,
+   "statevector_sim_time_s": 0.6958676659851335,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 4.0489508685241874e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.000000000000004,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006531659746542573
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.16000192233756247,
+      "psnr": 7.95874799496697,
+      "exact_match": false,
+      "ssim": 0.007473979534622072,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00044141599209979177
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06497333209246081,
+      "psnr": 11.872648603046406,
+      "exact_match": false,
+      "ssim": 0.026615763141415057,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012373339850455523
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.003111229548610763,
+      "psnr": 25.070679451699107,
+      "exact_match": false,
+      "ssim": 0.3273263154455417,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00137945800088346
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0003285461548514266,
+      "psnr": 34.83403611220626,
+      "exact_match": false,
+      "ssim": 0.8163078484179995,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013335419935174286
+    }
+   }
+  },
+  {
+   "image": "train/images/patches/patches_12.jpg",
+   "class": "patches",
+   "build_time_s": 0.035115541017148644,
+   "statevector_sim_time_s": 0.6822648330125958,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.1156845335283882e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000007,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006645420216955245
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.23206299860630525,
+      "psnr": 6.343941003115999,
+      "exact_match": false,
+      "ssim": 0.0802816707947749,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00046800001291558146
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07317534005760602,
+      "psnr": 11.356352506529861,
+      "exact_match": false,
+      "ssim": 0.3317289115109586,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001237250049598515
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0024895842878556746,
+      "psnr": 26.038731655801513,
+      "exact_match": false,
+      "ssim": 0.9056023726617219,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013690420310012996
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00026634647590268487,
+      "psnr": 35.74553045100825,
+      "exact_match": false,
+      "ssim": 0.9879978589772351,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001319709001109004
+    }
+   }
+  },
+  {
+   "image": "train/images/patches/patches_60.jpg",
+   "class": "patches",
+   "build_time_s": 0.03554541600169614,
+   "statevector_sim_time_s": 0.6768491659895517,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.551992882151794e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999951,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006687089917249978
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.41719223075259515,
+      "psnr": 3.796637879077649,
+      "exact_match": false,
+      "ssim": 0.08118209399745469,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0004409170360304415
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.04726638767783592,
+      "psnr": 13.254475872788339,
+      "exact_match": false,
+      "ssim": 0.5172817140433639,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001195915974676609
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0032055951146445494,
+      "psnr": 24.940913324435034,
+      "exact_match": false,
+      "ssim": 0.8933388749528177,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013567499700002372
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00025714729757403854,
+      "psnr": 35.89818035429416,
+      "exact_match": false,
+      "ssim": 0.9897564305641444,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001308209029957652
+    }
+   }
+  },
+  {
+   "image": "train/images/patches/patches_108.jpg",
+   "class": "patches",
+   "build_time_s": 0.035242624988313764,
+   "statevector_sim_time_s": 0.6393658330198377,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.630467440727043e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.999999999999999,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006650409777648747
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.3032461523212226,
+      "psnr": 5.182047008859973,
+      "exact_match": false,
+      "ssim": 0.13051006755967826,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00043120799819007516
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.05470596235660301,
+      "psnr": 12.61965337698426,
+      "exact_match": false,
+      "ssim": 0.6448879839941211,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012282920069992542
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.003186766732839949,
+      "psnr": 24.96649725151333,
+      "exact_match": false,
+      "ssim": 0.961898101870515,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013497499749064445
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002759254129851831,
+      "psnr": 35.59208298756146,
+      "exact_match": false,
+      "ssim": 0.99636705430467,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013269580085761845
+    }
+   }
+  },
+  {
+   "image": "train/images/patches/patches_156.jpg",
+   "class": "patches",
+   "build_time_s": 0.03527837502770126,
+   "statevector_sim_time_s": 0.8593408750020899,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.6644850418671805e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000018,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.000943958992138505
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.38837601523452514,
+      "psnr": 4.107475984677683,
+      "exact_match": false,
+      "ssim": 0.06168927798804663,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006282089743763208
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06027313277948303,
+      "psnr": 12.198762348887552,
+      "exact_match": false,
+      "ssim": 0.42784002770397633,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0016608749865554273
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0029112608358464603,
+      "psnr": 25.359188819902588,
+      "exact_match": false,
+      "ssim": 0.9093910824985927,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0015772089827805758
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0003041697294714121,
+      "psnr": 35.168840084870304,
+      "exact_match": false,
+      "ssim": 0.9872404714634085,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0015993750421330333
+    }
+   }
+  },
+  {
+   "image": "train/images/patches/patches_204.jpg",
+   "class": "patches",
+   "build_time_s": 0.04451504198368639,
+   "statevector_sim_time_s": 0.7156073750229552,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.0382062225639957e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000004,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006425419705919921
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.26459766075547864,
+      "psnr": 5.774139996250039,
+      "exact_match": false,
+      "ssim": 0.1422812553887928,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0004396660369820893
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06843361903268022,
+      "psnr": 11.64730492235712,
+      "exact_match": false,
+      "ssim": 0.5937339161570376,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012010830105282366
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0032852360815371594,
+      "psnr": 24.83433415990092,
+      "exact_match": false,
+      "ssim": 0.9486212071231865,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001354832958895713
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00028315812206718247,
+      "psnr": 35.47970976617818,
+      "exact_match": false,
+      "ssim": 0.9951612959282972,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013389579835347831
+    }
+   }
+  },
+  {
+   "image": "train/images/pitted_surface/pitted_surface_12.jpg",
+   "class": "pitted_surface",
+   "build_time_s": 0.0355846660095267,
+   "statevector_sim_time_s": 0.6317193330032751,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 1.3564388635489953e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999731,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005670419777743518
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.47708759851980004,
+      "psnr": 3.2140187240443274,
+      "exact_match": false,
+      "ssim": 0.0036173737694958352,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00037679204251617193
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06290975898371852,
+      "psnr": 12.01281978656062,
+      "exact_match": false,
+      "ssim": 0.05447582501220676,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010434999712742865
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0032541108730402904,
+      "psnr": 24.87567654002332,
+      "exact_match": false,
+      "ssim": 0.511988330618939,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011648330255411565
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00025635537177872537,
+      "psnr": 35.91157577738247,
+      "exact_match": false,
+      "ssim": 0.9210557147833565,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011685420176945627
+    }
+   }
+  },
+  {
+   "image": "train/images/pitted_surface/pitted_surface_60.jpg",
+   "class": "pitted_surface",
+   "build_time_s": 0.03261012496659532,
+   "statevector_sim_time_s": 0.6181842079968192,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 1.9386519153761288e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999376,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005619170260615647
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.5468635861207228,
+      "psnr": 2.6212099392895643,
+      "exact_match": false,
+      "ssim": 0.0057570603526166915,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00037174997851252556
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.03694358492851285,
+      "psnr": 14.324609638191985,
+      "exact_match": false,
+      "ssim": 0.16434173061967236,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010083329980261624
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.003124960083151435,
+      "psnr": 25.051555257687973,
+      "exact_match": false,
+      "ssim": 0.6106616000195136,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001114124956075102
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00030890753101908675,
+      "psnr": 35.10171503676007,
+      "exact_match": false,
+      "ssim": 0.9061688403988479,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001173083030153066
+    }
+   }
+  },
+  {
+   "image": "train/images/pitted_surface/pitted_surface_108.jpg",
+   "class": "pitted_surface",
+   "build_time_s": 0.031170790956821293,
+   "statevector_sim_time_s": 0.6074397910269909,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.5712383060340814e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999926,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005834160256199539
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.21848359104671278,
+      "psnr": 6.605811746453516,
+      "exact_match": false,
+      "ssim": 0.012714092108210135,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00039316696347668767
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07088616703358491,
+      "psnr": 11.49438506243085,
+      "exact_match": false,
+      "ssim": 0.08824444550950546,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010955419857054949
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.002660111332177838,
+      "psnr": 25.75100186700258,
+      "exact_match": false,
+      "ssim": 0.6698276917920759,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012238749768584967
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002713615818167658,
+      "psnr": 35.66451637833276,
+      "exact_match": false,
+      "ssim": 0.9475496493579287,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011632079840637743
+    }
+   }
+  },
+  {
+   "image": "train/images/pitted_surface/pitted_surface_156.jpg",
+   "class": "pitted_surface",
+   "build_time_s": 0.03144320799037814,
+   "statevector_sim_time_s": 0.6146641670493409,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 1.876256575928719e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000053,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006538330344483256
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.36170571414840447,
+      "psnr": 4.41644630294176,
+      "exact_match": false,
+      "ssim": 0.009812464723435894,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.000436208036262542
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.08295304647406175,
+      "psnr": 10.811676597592228,
+      "exact_match": false,
+      "ssim": 0.05929496844031704,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012441669823601842
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.002750388021671218,
+      "psnr": 25.606060320667886,
+      "exact_match": false,
+      "ssim": 0.6432750123864911,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013759160065092146
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00024754773690106185,
+      "psnr": 36.06341039665252,
+      "exact_match": false,
+      "ssim": 0.9435768290061998,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013483340153470635
+    }
+   }
+  },
+  {
+   "image": "train/images/pitted_surface/pitted_surface_204.jpg",
+   "class": "pitted_surface",
+   "build_time_s": 0.03541745798429474,
+   "statevector_sim_time_s": 0.6699506670120172,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 1.322715685778029e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.000000000000028,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006518750451505184
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.5427239222895041,
+      "psnr": 2.654210350828574,
+      "exact_match": false,
+      "ssim": 0.003508781961636797,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0004003749927505851
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.023540698892429865,
+      "psnr": 16.281806476684526,
+      "exact_match": false,
+      "ssim": 0.23698438189305143,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011694999993778765
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.003286608670086796,
+      "psnr": 24.832520034144068,
+      "exact_match": false,
+      "ssim": 0.5717633779585131,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012746250140480697
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00031713102034307473,
+      "psnr": 34.98761275144406,
+      "exact_match": false,
+      "ssim": 0.9298677163634589,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013155409833416343
+    }
+   }
+  },
+  {
+   "image": "train/images/rolled-in_scale/rolled-in_scale_12.jpg",
+   "class": "rolled-in_scale",
+   "build_time_s": 0.03374054201412946,
+   "statevector_sim_time_s": 0.6123980830307119,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.25124540371493e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.000000000000005,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005824590334668756
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.3085223681997309,
+      "psnr": 5.10713343677569,
+      "exact_match": false,
+      "ssim": 0.01636736197986443,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0003704159753397107
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06870991665678165,
+      "psnr": 11.629805782459027,
+      "exact_match": false,
+      "ssim": 0.0777114951139547,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001119416963774711
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0037568050196810816,
+      "psnr": 24.251813444825267,
+      "exact_match": false,
+      "ssim": 0.5514559213854189,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012091670068912208
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002517323853735442,
+      "psnr": 35.9906090886853,
+      "exact_match": false,
+      "ssim": 0.9505280853505309,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001173707947600633
+    }
+   }
+  },
+  {
+   "image": "train/images/rolled-in_scale/rolled-in_scale_60.jpg",
+   "class": "rolled-in_scale",
+   "build_time_s": 0.031407375005073845,
+   "statevector_sim_time_s": 0.6191930839559063,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.1448907855092543e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.000000000000005,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005615410045720637
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.319714485982964,
+      "psnr": 4.952376857804232,
+      "exact_match": false,
+      "ssim": 0.017394629858185132,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00039554102113470435
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07853942575242513,
+      "psnr": 11.0491227843439,
+      "exact_match": false,
+      "ssim": 0.09759560648553768,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010975829791277647
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0027888567200585863,
+      "psnr": 25.545737974178316,
+      "exact_match": false,
+      "ssim": 0.6748501773049589,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00119554199045524
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00023874786916234093,
+      "psnr": 36.22060495828685,
+      "exact_match": false,
+      "ssim": 0.9552091126075207,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001170917006675154
+    }
+   }
+  },
+  {
+   "image": "train/images/rolled-in_scale/rolled-in_scale_108.jpg",
+   "class": "rolled-in_scale",
+   "build_time_s": 0.031349125027190894,
+   "statevector_sim_time_s": 0.6074634170508943,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.1710556904957363e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000007,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005713329883292317
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.2008630904265335,
+      "psnr": 6.970998596517336,
+      "exact_match": false,
+      "ssim": 0.016724058668733735,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0003862919984385371
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06966353405766104,
+      "psnr": 11.56994497394159,
+      "exact_match": false,
+      "ssim": 0.03291832328037853,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010981669765897095
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0021298508184880525,
+      "psnr": 26.716508148600372,
+      "exact_match": false,
+      "ssim": 0.552478943095602,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012098749866709113
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002445570360713431,
+      "psnr": 36.11619837716955,
+      "exact_match": false,
+      "ssim": 0.9046955922517453,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011612919624894857
+    }
+   }
+  },
+  {
+   "image": "train/images/rolled-in_scale/rolled-in_scale_156.jpg",
+   "class": "rolled-in_scale",
+   "build_time_s": 0.03144637495279312,
+   "statevector_sim_time_s": 0.6230909579899162,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.564107258354419e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000082,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006793750217184424
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.2798329928234906,
+      "psnr": 5.5310108270885525,
+      "exact_match": false,
+      "ssim": 0.01649155723056385,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0004485419485718012
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.08088324011244027,
+      "psnr": 10.921414596083473,
+      "exact_match": false,
+      "ssim": 0.05400744957964927,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012572089908644557
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0028159290561172766,
+      "psnr": 25.503782909095083,
+      "exact_match": false,
+      "ssim": 0.5577408441437648,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001364958006888628
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00022705036562321594,
+      "psnr": 36.43877794410373,
+      "exact_match": false,
+      "ssim": 0.9334016841325443,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013473330182023346
+    }
+   }
+  },
+  {
+   "image": "train/images/rolled-in_scale/rolled-in_scale_204.jpg",
+   "class": "rolled-in_scale",
+   "build_time_s": 0.040013042045757174,
+   "statevector_sim_time_s": 0.7021807089913636,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 3.051852218629019e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.000000000000002,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006502919713966548
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.21801999768386146,
+      "psnr": 6.615036693062519,
+      "exact_match": false,
+      "ssim": 0.009685529066734427,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0004271669895388186
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07443497689030434,
+      "psnr": 11.28222942129513,
+      "exact_match": false,
+      "ssim": 0.023186591854176614,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012497499701566994
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0026065255167287043,
+      "psnr": 25.839380191658016,
+      "exact_match": false,
+      "ssim": 0.5236716636699481,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001346500008367002
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002710691282634311,
+      "psnr": 35.66919940878708,
+      "exact_match": false,
+      "ssim": 0.9079880731466209,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001307083002757281
+    }
+   }
+  },
+  {
+   "image": "train/images/scratches/scratches_12.jpg",
+   "class": "scratches",
+   "build_time_s": 0.03535504196770489,
+   "statevector_sim_time_s": 0.6464075839612633,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.6204038998916837e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000002,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005704170325770974
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.265189838419349,
+      "psnr": 5.764431213040454,
+      "exact_match": false,
+      "ssim": 0.0016965169950647085,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00037920899922028184
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07797496010220684,
+      "psnr": 11.080448387881427,
+      "exact_match": false,
+      "ssim": 0.018499988115110676,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011037079966627061
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0023023075462105416,
+      "psnr": 26.378366630255982,
+      "exact_match": false,
+      "ssim": 0.4088493709956305,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001214000047184527
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00026701705929627875,
+      "psnr": 35.73460991363638,
+      "exact_match": false,
+      "ssim": 0.8487937460178935,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001173041993752122
+    }
+   }
+  },
+  {
+   "image": "train/images/scratches/scratches_60.jpg",
+   "class": "scratches",
+   "build_time_s": 0.031778041971847415,
+   "statevector_sim_time_s": 0.6095885839895345,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 2.0167816450608205e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0000000000000049,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005827919812873006
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.3453619323083562,
+      "psnr": 4.617255344568711,
+      "exact_match": false,
+      "ssim": 0.009878122947430318,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0003809169866144657
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.07165476272506283,
+      "psnr": 11.447549377653054,
+      "exact_match": false,
+      "ssim": 0.05412113813309105,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010866669472306967
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0028167018798966057,
+      "psnr": 25.5025911636789,
+      "exact_match": false,
+      "ssim": 0.445948229135921,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0012011249782517552
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.0002710337783219446,
+      "psnr": 35.66976580621305,
+      "exact_match": false,
+      "ssim": 0.8431633401235997,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011808330309577286
+    }
+   }
+  },
+  {
+   "image": "train/images/scratches/scratches_108.jpg",
+   "class": "scratches",
+   "build_time_s": 0.031643624999560416,
+   "statevector_sim_time_s": 0.6129282499896362,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 4.404000173456496e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999939,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0005823749816045165
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.12566222116951697,
+      "psnr": 9.007952680870604,
+      "exact_match": false,
+      "ssim": 0.017952427638061454,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0003826250322163105
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.05689235151343819,
+      "psnr": 12.449461153057994,
+      "exact_match": false,
+      "ssim": 0.19987301720588782,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0010928749688901007
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0028498230760463216,
+      "psnr": 25.451821012131973,
+      "exact_match": false,
+      "ssim": 0.7302482639051915,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011972920037806034
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00032830313331085514,
+      "psnr": 34.83724972363194,
+      "exact_match": false,
+      "ssim": 0.9474006476599505,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011714170104824007
+    }
+   }
+  },
+  {
+   "image": "train/images/scratches/scratches_156.jpg",
+   "class": "scratches",
+   "build_time_s": 0.031224917038343847,
+   "statevector_sim_time_s": 0.6553762500407174,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 4.2820731808608446e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 1.0,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0014750419650226831
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.1358207330113418,
+      "psnr": 8.670339300176913,
+      "exact_match": false,
+      "ssim": 0.01452934938132963,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0008284579962491989
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.06338497146490192,
+      "psnr": 11.980137008494063,
+      "exact_match": false,
+      "ssim": 0.13162623488420183,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.002537333988584578
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0028415565952789427,
+      "psnr": 25.464436896904896,
+      "exact_match": false,
+      "ssim": 0.6941020256729677,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0032437079935334623
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00024972917698015413,
+      "psnr": 36.02530714111518,
+      "exact_match": false,
+      "ssim": 0.9532114847482706,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.002179750008508563
+    }
+   }
+  },
+  {
+   "image": "train/images/scratches/scratches_204.jpg",
+   "class": "scratches",
+   "build_time_s": 0.042748583015054464,
+   "statevector_sim_time_s": 0.7342747080256231,
+   "modes": {
+    "statevector": {
+     "vs_preprocessed": {
+      "mse": 4.873147484510352e-27,
+      "psnr": null,
+      "exact_match": true,
+      "ssim": 0.9999999999999954,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0006571250269189477
+    },
+    "shots100": {
+     "vs_preprocessed": {
+      "mse": 0.07717947222364614,
+      "psnr": 11.124981955902486,
+      "exact_match": false,
+      "ssim": 0.009064283519546343,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.00042216602014377713
+    },
+    "shots1000": {
+     "vs_preprocessed": {
+      "mse": 0.051593324174373505,
+      "psnr": 12.874064894928825,
+      "exact_match": false,
+      "ssim": 0.019463107772286273,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0011801669606938958
+    },
+    "shots10000": {
+     "vs_preprocessed": {
+      "mse": 0.0033216290604864487,
+      "psnr": 24.786488685669514,
+      "exact_match": false,
+      "ssim": 0.2987050803943414,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.0013032080023549497
+    },
+    "shots100000": {
+     "vs_preprocessed": {
+      "mse": 0.00029917422129897527,
+      "psnr": 35.24075830693708,
+      "exact_match": false,
+      "ssim": 0.8321839656288573,
+      "ssim_method": "skimage win7"
+     },
+     "decode_time_s": 0.001306625024881214
+    }
+   }
+  }
+ ],
+ "timing": {
+  "build_time_s_mean": 0.043082980567123744,
+  "statevector_sim_time_s_mean": 0.6603278069077836
+ }
+}

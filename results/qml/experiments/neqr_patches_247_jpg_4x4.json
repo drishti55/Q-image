@@ -1,0 +1,140 @@
+{
+  "experiment_id": "neqr_patches_247_jpg_4x4",
+  "comparison_id": "paired_patches_247_jpg_4x4",
+  "dataset": "NEU-DET",
+  "image_name": "patches_247.jpg",
+  "ground_truth": "patches",
+  "predicted_class": "patches",
+  "correct": true,
+  "representation": "NEQR",
+  "qml_model_type": "Hybrid Quantum-Classical Classifier",
+  "resolution": "4x4",
+  "intensity_bits": 4,
+  "shots": 0,
+  "backend": "AerSimulator (statevector)",
+  "n_qubits": 8,
+  "gate_count": 108,
+  "circuit_depth": 68,
+  "controlled_gates": 40,
+  "gate_types": {
+    "h": 4,
+    "x": 64,
+    "mcx": 40
+  },
+  "classification_metrics": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "heldout_accuracy": 0.24722222222222223,
+    "heldout_f1_macro": 0.23925956495642423,
+    "precision_macro": 0.24037109864574654,
+    "recall_macro": 0.24722222222222223,
+    "f1_weighted": 0.23925956495642425,
+    "confusion_matrix": [
+      [
+        17,
+        2,
+        34,
+        3,
+        3,
+        1
+      ],
+      [
+        12,
+        14,
+        5,
+        13,
+        7,
+        9
+      ],
+      [
+        6,
+        1,
+        9,
+        21,
+        6,
+        17
+      ],
+      [
+        8,
+        1,
+        7,
+        32,
+        2,
+        10
+      ],
+      [
+        0,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        30,
+        1,
+        2,
+        9,
+        17
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 0.38636363636363635,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.3269230769230769,
+        "support": 60
+      },
+      "inclusion": {
+        "precision": 0.12962962962962962,
+        "recall": 0.23333333333333334,
+        "f1_score": 0.16666666666666666,
+        "support": 60
+      },
+      "patches": {
+        "precision": 0.16071428571428573,
+        "recall": 0.15,
+        "f1_score": 0.15517241379310345,
+        "support": 60
+      },
+      "pitted_surface": {
+        "precision": 0.4507042253521127,
+        "recall": 0.5333333333333333,
+        "f1_score": 0.48854961832061067,
+        "support": 60
+      },
+      "rolled-in_scale": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 60
+      },
+      "scratches": {
+        "precision": 0.3148148148148148,
+        "recall": 0.2833333333333333,
+        "f1_score": 0.2982456140350877,
+        "support": 60
+      }
+    }
+  },
+  "reconstruction_metrics": {
+    "mse": 0.0001624375240292199,
+    "psnr": 37.893136389101606,
+    "ssim": 0.9970946722781624,
+    "reconstruction_time": 3.337499947519973e-05,
+    "original_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAw0lEQVR4nO2RsQ0CQRDE/KML6YHiqJAGvgoSRA1IEEJEB78BwSR2OiutJW8vjrkP+3XYL8MeykQBTFAmCmCCMlEAE5SJApigTBTABGWiACYos/bh4PTng8+whzJRABOUiQKYoEwUwARlogAmKBMFMEGZKIAJyqzncHAe9u+w34Y9lIkCmKBMFMAEZaIAJigTBTBBmSiACcpEAUxQZq3h4D3s27A/hj2UiQKYoEwUwARlogAmKBMFMEGZKIAJykQBTECXH6vvClF/3XzbAAAAAElFTkSuQmCC",
+    "reconstructed_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAxElEQVR4nO2bwQ0CMRDEzCgNXAsUR3PXAi3QwpUALdAB+zid5oH93Siy1r9Iub35zTHM92H+GOahTBTABGWiACYoEwUwQZkogAnKRAFMUCYKYIIy6zkc2C4WyMX3KzASykQBTFAmCmCCMlEAE5SJApigTBTABGXy9wLrM6zgfnJFLxMMhDJRABOUiQKYoEwUwARlogAmKBMFMEGZKECZNR2Y3g84+T8hlIkCmKBMFMAEZaIAJigTBTBBmSiACcpEAUxAly/KMwhbdpTbfAAAAABJRU5ErkJggg==",
+    "diff_b64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAAuklEQVR4nO2aQQpCMRDF0qd4/wMregNnMcj7YLJtGUKzauk5fCfseP14/prsRyiwI5SJApigTBTABGWiACYoEwUwQZkogAn+PcG5Dxuew/ptWL9f/QSiACYoEwUwQZkogAnKRAFMUCYKYIIyUQATlDnT/4H38n3A/wMToUwUwARlogAmKBMFMEGZKIAJykQBTFAmClDmPJb3++n94PInEAUwQZkogAnKRAFMUCYKYIIyUQATlIkCmIAuH9r2BwagzyJuAAAAAElFTkSuQmCC"
+  },
+  "timings": {
+    "encoding_time_s": 0.0011408749996917322,
+    "train_time_s": 7.482178083002509,
+    "predict_time_s": 0.05288937500154134,
+    "reconstruction_time_s": 3.337499947519973e-05,
+    "total_time_s": 0.0580726659973152
+  },
+  "status": "completed",
+  "error_message": "",
+  "timestamp": "2026-10-25T19:12:25.160580"
+}

@@ -1,0 +1,114 @@
+{
+ "group": "E7-mnv3-logreg",
+ "selected_at": "2026-11-13T16:07:03.146227",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 6,
+ "n_eligible": 6,
+ "selected": {
+  "config_key": "E7-mnv3-logreg__4297988101",
+  "params": {
+   "C": 10.0
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.9738231514462408,
+  "val_std": 0.015523718631942242,
+  "experiment_ids": [
+   "E7-mnv3-logreg__4297988101__s0",
+   "E7-mnv3-logreg__4297988101__s1",
+   "E7-mnv3-logreg__4297988101__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E7-mnv3-logreg__adfd8a0975",
+   "params": {
+    "C": 0.001
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9633870411911157,
+   "val_std": 0.020159270987576975,
+   "experiment_ids": [
+    "E7-mnv3-logreg__adfd8a0975__s0",
+    "E7-mnv3-logreg__adfd8a0975__s1",
+    "E7-mnv3-logreg__adfd8a0975__s2"
+   ]
+  },
+  {
+   "config_key": "E7-mnv3-logreg__a1d2d40913",
+   "params": {
+    "C": 0.01
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9662698242344296,
+   "val_std": 0.017802326189955434,
+   "experiment_ids": [
+    "E7-mnv3-logreg__a1d2d40913__s0",
+    "E7-mnv3-logreg__a1d2d40913__s1",
+    "E7-mnv3-logreg__a1d2d40913__s2"
+   ]
+  },
+  {
+   "config_key": "E7-mnv3-logreg__a8509a9d7c",
+   "params": {
+    "C": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9681832071115819,
+   "val_std": 0.018203288456814685,
+   "experiment_ids": [
+    "E7-mnv3-logreg__a8509a9d7c__s0",
+    "E7-mnv3-logreg__a8509a9d7c__s1",
+    "E7-mnv3-logreg__a8509a9d7c__s2"
+   ]
+  },
+  {
+   "config_key": "E7-mnv3-logreg__2d6f599e51",
+   "params": {
+    "C": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9719443337117514,
+   "val_std": 0.014693197515268503,
+   "experiment_ids": [
+    "E7-mnv3-logreg__2d6f599e51__s0",
+    "E7-mnv3-logreg__2d6f599e51__s1",
+    "E7-mnv3-logreg__2d6f599e51__s2"
+   ]
+  },
+  {
+   "config_key": "E7-mnv3-logreg__4297988101",
+   "params": {
+    "C": 10.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9738231514462408,
+   "val_std": 0.015523718631942242,
+   "experiment_ids": [
+    "E7-mnv3-logreg__4297988101__s0",
+    "E7-mnv3-logreg__4297988101__s1",
+    "E7-mnv3-logreg__4297988101__s2"
+   ]
+  },
+  {
+   "config_key": "E7-mnv3-logreg__96985117c1",
+   "params": {
+    "C": 100.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.9729223981790236,
+   "val_std": 0.016461476357065383,
+   "experiment_ids": [
+    "E7-mnv3-logreg__96985117c1__s0",
+    "E7-mnv3-logreg__96985117c1__s1",
+    "E7-mnv3-logreg__96985117c1__s2"
+   ]
+  }
+ ]
+}

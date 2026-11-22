@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-14T20:32:24.762518",
+  "manifest": "results/qml_v2/manifests/historical_preservation_manifest.json",
+  "original_file_count": 3690,
+  "current_file_count": 3690,
+  "changed": [],
+  "missing": [],
+  "added": [],
+  "mandatory": {
+    "results/qml": {
+      "original": 3652,
+      "current": 3652
+    },
+    "results/models": {
+      "original": 14,
+      "current": 14
+    }
+  },
+  "mandatory_ok": true,
+  "all_ok": true,
+  "label": "final"
+}

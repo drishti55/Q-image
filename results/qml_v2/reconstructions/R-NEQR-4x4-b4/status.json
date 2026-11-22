@@ -1,0 +1,14 @@
+{
+ "record_id": "R-NEQR-4x4-b4",
+ "status": "completed",
+ "record_type": "reconstruction",
+ "summary": {
+  "representation": "NEQR",
+  "resolution": 4,
+  "intensity_bits": 4,
+  "n_qubits": 8,
+  "gates_compiled": 1678.8,
+  "depth_compiled": 1384.6,
+  "statevector_mse": 0.00038693451236703825
+ }
+}

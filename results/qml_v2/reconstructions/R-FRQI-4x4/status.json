@@ -1,0 +1,14 @@
+{
+ "record_id": "R-FRQI-4x4",
+ "status": "completed",
+ "record_type": "reconstruction",
+ "summary": {
+  "representation": "FRQI",
+  "resolution": 4,
+  "intensity_bits": null,
+  "n_qubits": 5,
+  "gates_compiled": 1070.0,
+  "depth_compiled": 710.0,
+  "statevector_mse": 1.656339875713531e-30
+ }
+}

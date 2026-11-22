@@ -1,0 +1,13 @@
+split,class,count
+train,crazing,240
+train,inclusion,240
+train,patches,240
+train,pitted_surface,240
+train,rolled-in_scale,240
+train,scratches,240
+validation,crazing,60
+validation,inclusion,60
+validation,patches,60
+validation,pitted_surface,60
+validation,rolled-in_scale,60
+validation,scratches,60

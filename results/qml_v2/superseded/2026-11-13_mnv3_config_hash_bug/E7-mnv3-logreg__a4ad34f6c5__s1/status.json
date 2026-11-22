@@ -1,0 +1,43 @@
+{
+ "experiment_id": "E7-mnv3-logreg__a4ad34f6c5__s1",
+ "status": "completed",
+ "updated_at": "2026-11-13T16:05:55.918112",
+ "summary": {
+  "record_type": "classification",
+  "experiment_code": "E7",
+  "group": "E7-mnv3-logreg",
+  "model_name": "Frozen MobileNetV3 + Logistic Regression",
+  "family": "classical",
+  "compute_type": "classical",
+  "feature_extraction": "frozen MobileNetV3-small IMAGENET1K_V1, 576-d GAP features -> standardized",
+  "encoding": null,
+  "n_qubits": null,
+  "circuit_depth": null,
+  "circuit_depth_compiled": null,
+  "n_layers": null,
+  "optimizer": null,
+  "learning_rate": null,
+  "shots": null,
+  "seed": 1,
+  "n_train": 1080,
+  "n_val": 360,
+  "n_test": null,
+  "dataset_manifest_id": "neu-5625b937479b",
+  "split_id": "split-s1-c53cfc7e08",
+  "params": {
+   "C": 1.0
+  },
+  "val": {
+   "accuracy": 0.9638888888888889,
+   "precision_macro": 0.9646646903002836,
+   "recall_macro": 0.9638888888888889,
+   "f1_macro": 0.9636241711970204,
+   "f1_weighted": 0.9636241711970204
+  },
+  "test": null,
+  "train_time_s": 0.003975875035393983,
+  "val_inference_time_s": 0.00011408398859202862,
+  "inference_ms_per_image": 0.0003168999683111906,
+  "selected": false
+ }
+}

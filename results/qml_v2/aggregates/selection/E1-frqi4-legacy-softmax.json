@@ -1,0 +1,41 @@
+{
+ "group": "E1-frqi4-legacy-softmax",
+ "selected_at": "2026-11-14T20:08:29.119262",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 1,
+ "n_eligible": 1,
+ "selected": {
+  "config_key": "E1-frqi4-legacy-softmax__7eb057c1b3",
+  "params": {
+   "representation": "FRQI",
+   "bits": 4
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.30781549845763106,
+  "val_std": 0.05343325175525385,
+  "experiment_ids": [
+   "E1-frqi4-legacy-softmax__7eb057c1b3__s0",
+   "E1-frqi4-legacy-softmax__7eb057c1b3__s1",
+   "E1-frqi4-legacy-softmax__7eb057c1b3__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E1-frqi4-legacy-softmax__7eb057c1b3",
+   "params": {
+    "representation": "FRQI",
+    "bits": 4
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.30781549845763106,
+   "val_std": 0.05343325175525385,
+   "experiment_ids": [
+    "E1-frqi4-legacy-softmax__7eb057c1b3__s0",
+    "E1-frqi4-legacy-softmax__7eb057c1b3__s1",
+    "E1-frqi4-legacy-softmax__7eb057c1b3__s2"
+   ]
+  }
+ ]
+}

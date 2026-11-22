@@ -1,0 +1,161 @@
+{
+ "experiment_id": "E3-pca8-qkc-product_ry__805427b2b0__s0",
+ "group": "E3-pca8-qkc-product_ry",
+ "kind": "Quantum kernel feature map U(x)",
+ "params": {
+  "feature_map": "product_ry",
+  "reps": 1,
+  "bandwidth": 1.0,
+  "C": 100.0,
+  "shots": 0
+ },
+ "n_qubits": 8,
+ "registers": [
+  {
+   "name": "q",
+   "size": 8
+  }
+ ],
+ "input": "first training image of split split-s0-2a1d15648e (train/images/crazing/crazing_1.jpg), PCA angles \u00d7 bandwidth 1.0",
+ "logical_counts_displayed_circuit": {
+  "ry": 8
+ },
+ "logical_gates_displayed_circuit": 8,
+ "logical_depth_displayed_circuit": 1,
+ "recorded_resources": {
+  "n_qubits": 8,
+  "gates_logical": 8,
+  "depth_logical": 1,
+  "gate_counts_logical": {
+   "ry": 8
+  },
+  "two_qubit_gates_logical": 0,
+  "gates_compiled": 32,
+  "depth_compiled": 4,
+  "gate_counts_compiled": {
+   "rz": 16,
+   "sx": 16
+  },
+  "single_qubit_gates_compiled": 32,
+  "two_qubit_gates_compiled": 0,
+  "cx_compiled": 0,
+  "transpilation": {
+   "basis_gates": [
+    "cx",
+    "rz",
+    "sx",
+    "x"
+   ],
+   "optimization_level": 1,
+   "seed_transpiler": 0,
+   "coupling_map": "none (all-to-all)"
+  },
+  "circuit": "feature map U(x) (one encoding; kernel circuit = U(x) then U(y)\u2020 + measurement)",
+  "feature_map": "product_ry",
+  "reps": 1,
+  "kernel_circuit_note": "compute-uncompute doubles gates/depth; measured once",
+  "shots": 0,
+  "execution_mode": "statevector (exact)"
+ },
+ "entanglement": [],
+ "measurement": "Kernel circuit U(x) then U(y)\u2020, all qubits measured once; K(x,y) = P(0\u20260). Exact statevector overlap used.",
+ "instructions": [
+  {
+   "i": 0,
+   "name": "ry",
+   "qubits": [
+    0
+   ],
+   "params": [
+    1.8703
+   ]
+  },
+  {
+   "i": 1,
+   "name": "ry",
+   "qubits": [
+    1
+   ],
+   "params": [
+    1.2087
+   ]
+  },
+  {
+   "i": 2,
+   "name": "ry",
+   "qubits": [
+    2
+   ],
+   "params": [
+    1.3959
+   ]
+  },
+  {
+   "i": 3,
+   "name": "ry",
+   "qubits": [
+    3
+   ],
+   "params": [
+    1.4648
+   ]
+  },
+  {
+   "i": 4,
+   "name": "ry",
+   "qubits": [
+    4
+   ],
+   "params": [
+    1.7981
+   ]
+  },
+  {
+   "i": 5,
+   "name": "ry",
+   "qubits": [
+    5
+   ],
+   "params": [
+    2.3704
+   ]
+  },
+  {
+   "i": 6,
+   "name": "ry",
+   "qubits": [
+    6
+   ],
+   "params": [
+    1.5136
+   ]
+  },
+  {
+   "i": 7,
+   "name": "ry",
+   "qubits": [
+    7
+   ],
+   "params": [
+    1.0957
+   ]
+  }
+ ],
+ "instructions_truncated": false,
+ "text_diagram": "     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\nq_0: \u2524 Ry(1.8703) \u251c\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\nq_1: \u2524 Ry(1.2087) \u251c\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\nq_2: \u2524 Ry(1.3959) \u251c\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\nq_3: \u2524 Ry(1.4648) \u251c\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\nq_4: \u2524 Ry(1.7981) \u251c\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\nq_5: \u2524 Ry(2.3704) \u251c\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\nq_6: \u2524 Ry(1.5136) \u251c\n     \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\nq_7: \u2524 Ry(1.0957) \u251c\n     \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518",
+ "status": "completed",
+ "circuit_key": "qkc|product_ry|reps1|q8",
+ "used_by": [
+  {
+   "group": "E3-pca8-qkc-product_ry",
+   "display_name": "QKC product-RY \u00b7 8 qubits",
+   "execution": "exact statevector, simulated"
+  },
+  {
+   "group": "E5-mnv3pca8-qkc-product_ry",
+   "display_name": "MobileNetV3 features \u2192 PCA 8 + QKC product-RY",
+   "execution": "exact statevector, simulated"
+  }
+ ],
+ "built_by": "scripts/v2/build_circuit_artifacts.py"
+}

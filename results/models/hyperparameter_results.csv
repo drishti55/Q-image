@@ -1,0 +1,28 @@
+model,param,C,kernel,gamma,val_accuracy,f1_macro,train_time_s,n_estimators,max_depth,k,metric
+SVM,"C=0.1, kernel=rbf",0.1,rbf,scale,0.5028,0.4951,0.2278,,,,
+SVM,"C=0.1, kernel=linear",0.1,linear,scale,0.3889,0.3827,0.4184,,,,
+SVM,"C=1, kernel=rbf",1,rbf,scale,0.5944,0.5714,0.1485,,,,
+SVM,"C=1, kernel=linear",1,linear,scale,0.3889,0.3827,0.4422,,,,
+SVM,"C=10, kernel=rbf",10,rbf,scale,0.65,0.6279,0.1728,,,,
+SVM,"C=10, kernel=linear",10,linear,scale,0.3889,0.3827,0.4337,,,,
+SVM,"C=100, kernel=rbf",100,rbf,scale,0.6639,0.6414,0.1383,,,,
+SVM,"C=100, kernel=linear",100,linear,scale,0.3889,0.3827,0.4396,,,,
+Random Forest,"n_est=50, max_d=10",,,,0.5694,0.548,0.0972,50,10,,
+Random Forest,"n_est=50, max_d=20",,,,0.5833,0.5677,0.1042,50,20,,
+Random Forest,"n_est=50, max_d=None",,,,0.5861,0.5724,0.0981,50,None,,
+Random Forest,"n_est=100, max_d=10",,,,0.5944,0.5727,0.1712,100,10,,
+Random Forest,"n_est=100, max_d=20",,,,0.6111,0.5939,0.191,100,20,,
+Random Forest,"n_est=100, max_d=None",,,,0.6111,0.5935,0.1861,100,None,,
+Random Forest,"n_est=200, max_d=10",,,,0.5833,0.5647,0.3524,200,10,,
+Random Forest,"n_est=200, max_d=20",,,,0.6139,0.5936,0.3813,200,20,,
+Random Forest,"n_est=200, max_d=None",,,,0.6083,0.5883,0.3798,200,None,,
+KNN,"k=3, metric=euclidean",,,,0.3944,0.373,0.0007,,,3,euclidean
+KNN,"k=3, metric=manhattan",,,,0.4417,0.428,0.0007,,,3,manhattan
+KNN,"k=5, metric=euclidean",,,,0.4222,0.4022,0.0007,,,5,euclidean
+KNN,"k=5, metric=manhattan",,,,0.4444,0.4312,0.0007,,,5,manhattan
+KNN,"k=7, metric=euclidean",,,,0.4083,0.3881,0.0007,,,7,euclidean
+KNN,"k=7, metric=manhattan",,,,0.4444,0.4358,0.0007,,,7,manhattan
+KNN,"k=11, metric=euclidean",,,,0.4111,0.3824,0.0007,,,11,euclidean
+KNN,"k=11, metric=manhattan",,,,0.4333,0.4173,0.0007,,,11,manhattan
+KNN,"k=15, metric=euclidean",,,,0.3917,0.3684,0.0007,,,15,euclidean
+KNN,"k=15, metric=manhattan",,,,0.4139,0.3976,0.0007,,,15,manhattan

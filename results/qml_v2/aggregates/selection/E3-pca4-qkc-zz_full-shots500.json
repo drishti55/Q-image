@@ -1,0 +1,63 @@
+{
+ "group": "E3-pca4-qkc-zz_full-shots500",
+ "selected_at": "2026-11-13T18:35:08.333562",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 1,
+ "n_eligible": 1,
+ "selected": {
+  "config_key": "E3-pca4-qkc-zz_full-shots500__7a30dc4aee",
+  "params": {
+   "feature_map": "zz_full",
+   "reps": 1,
+   "bandwidth": 0.2,
+   "C": 100.0,
+   "shots": 500
+  },
+  "quantum": {
+   "n_qubits": 4,
+   "n_layers": 1,
+   "shots": 500,
+   "optimizer": null,
+   "learning_rate": null,
+   "feature_map": "zz_full",
+   "bandwidth": 0.2
+  },
+  "eligible": true,
+  "val_mean": 0.5214357922656755,
+  "val_std": 0.023654902951725145,
+  "experiment_ids": [
+   "E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s0",
+   "E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s1",
+   "E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "E3-pca4-qkc-zz_full-shots500__7a30dc4aee",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.2,
+    "C": 100.0,
+    "shots": 500
+   },
+   "quantum": {
+    "n_qubits": 4,
+    "n_layers": 1,
+    "shots": 500,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.2
+   },
+   "eligible": true,
+   "val_mean": 0.5214357922656755,
+   "val_std": 0.023654902951725145,
+   "experiment_ids": [
+    "E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s0",
+    "E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s1",
+    "E3-pca4-qkc-zz_full-shots500__7a30dc4aee__s2"
+   ]
+  }
+ ]
+}
