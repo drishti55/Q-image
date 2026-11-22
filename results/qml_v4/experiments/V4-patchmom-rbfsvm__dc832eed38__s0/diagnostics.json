@@ -1,0 +1,6 @@
+{
+ "label_note": "classical control: no quantum circuit; closed-form patch statistics",
+ "features": {
+  "input": "128x128 grayscale in [0,1]"
+ }
+}

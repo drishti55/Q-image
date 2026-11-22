@@ -1,0 +1,32 @@
+{
+ "schema_version": "qml_v2.1",
+ "experiment_id": "V4-neqr-p2__bda1d7f65f__s1",
+ "started_at": "2026-11-17T05:03:21.870613",
+ "environment": {
+  "git_commit": "2774c9d8f1f9df21a8e95613f3846c41fd9e8df0",
+  "git_worktree_dirty": true,
+  "python": "3.11.0",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu_count": 10,
+  "memory_bytes": 17179869184,
+  "packages": {
+   "numpy": "2.4.6",
+   "scipy": "1.17.1",
+   "sklearn": "1.9.1",
+   "qiskit": "2.5.2",
+   "qiskit_aer": "0.17.2",
+   "torch": "2.15.0",
+   "torchvision": "0.29.2",
+   "PIL": "12.3.0",
+   "skimage": "0.26.0"
+  },
+  "execution": "classical CPU simulation (no quantum hardware)"
+ },
+ "dataset_manifest_id": "neu-5625b937479b",
+ "split_id": "split-s1-c53cfc7e08",
+ "seed": 1,
+ "stage": "candidate (train -> internal validation)",
+ "ended_at": "2026-11-17T05:03:23.120532",
+ "duration_s": 1.249919
+}

@@ -1,0 +1,68 @@
+{
+ "experiment_id": "V4-neqr-p4__6f94f19016__s2",
+ "status": "completed",
+ "updated_at": "2026-11-17T05:07:18.385359",
+ "summary": {
+  "record_type": "classification",
+  "experiment_code": "V4E",
+  "group": "V4-neqr-p4",
+  "model_name": "NEQR patch-ensemble kernel (4x4 patches)",
+  "family": "quantum_kernel",
+  "compute_type": "hybrid",
+  "feature_extraction": "128x128 grayscale, 4x4 patches stride 4",
+  "encoding": "NEQR",
+  "n_qubits": 8,
+  "circuit_depth": 65,
+  "circuit_depth_compiled": 1634,
+  "n_layers": null,
+  "optimizer": null,
+  "learning_rate": null,
+  "shots": 0,
+  "seed": 2,
+  "n_train": 1080,
+  "n_val": 360,
+  "n_test": 360,
+  "dataset_manifest_id": "neu-5625b937479b",
+  "split_id": "split-s2-cbd05190d5",
+  "params": {
+   "representation": "NEQR",
+   "image_size": 128,
+   "patch": 4,
+   "stride": 4,
+   "norm": "none",
+   "C": 1000.0,
+   "bits": 4
+  },
+  "val": {
+   "accuracy": 0.9472222222222222,
+   "precision_macro": 0.9476952739664605,
+   "recall_macro": 0.9472222222222223,
+   "f1_macro": 0.9473072265974049,
+   "f1_weighted": 0.9473072265974049
+  },
+  "test": {
+   "accuracy": 0.8944444444444445,
+   "precision_macro": 0.8992710605202886,
+   "recall_macro": 0.8944444444444444,
+   "f1_macro": 0.8937612933384954,
+   "f1_weighted": 0.8937612933384955
+  },
+  "train_time_s": 0.6906591660226695,
+  "val_inference_time_s": 0.729869874950964,
+  "inference_ms_per_image": 2.0274163193082333,
+  "selected": true,
+  "test_ci": {
+   "method": "percentile bootstrap over test images, n_boot=2000, seed=2",
+   "accuracy": [
+    0.8610416666666667,
+    0.925
+   ],
+   "f1_macro": [
+    0.8583046023244626,
+    0.9228795295409994
+   ],
+   "level": 0.95
+  },
+  "test_inference_ms_per_image": 3.2932565972765184
+ }
+}

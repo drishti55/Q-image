@@ -1,0 +1,51 @@
+{
+ "frozen_at": "2026-11-17T05:06:51.858617",
+ "n_groups": 5,
+ "groups": {
+  "V4-frqi-p4": {
+   "selected_config_key": "V4-frqi-p4__323bd64cc5",
+   "val_mean_f1_macro": 0.8572301285694613,
+   "n_candidates": 48,
+   "selection_sha256": "f1bc004f7132a62124991732f1607affb57b03ecd1f74ccb1743f53b6a3567e6"
+  },
+  "V4-frqi-p8": {
+   "selected_config_key": "V4-frqi-p8__09d3a4f853",
+   "val_mean_f1_macro": 0.8795780226864628,
+   "n_candidates": 72,
+   "selection_sha256": "ba5665912638000ee35c0b1ca6c77f9a84afcdaff6e2245dfcdcfd2d3204fd38"
+  },
+  "V4-neqr-p2": {
+   "selected_config_key": "V4-neqr-p2__76e0073cb1",
+   "val_mean_f1_macro": 0.8816249792452214,
+   "n_candidates": 48,
+   "selection_sha256": "3e59038694cf10bfc7959723e9894c6e44f9aaee66575f6a2fba3ecb8bf53ea2"
+  },
+  "V4-neqr-p4": {
+   "selected_config_key": "V4-neqr-p4__6f94f19016",
+   "val_mean_f1_macro": 0.8922156824213029,
+   "n_candidates": 48,
+   "selection_sha256": "c82b89906dd14fe97b620e14d85b4e0f80145542f431bfaa5ea3a52eb06a9e0e"
+  },
+  "V4-patchmom-rbfsvm": {
+   "selected_config_key": "V4-patchmom-rbfsvm__7d793c468e",
+   "val_mean_f1_macro": 0.837859451074762,
+   "n_candidates": 72,
+   "selection_sha256": "3e9b253a83eb0384b4c37364a7196b741235b3066b3e42b3381b84d49d06b1b3"
+  }
+ },
+ "plan": {
+  "headline_rule": "FRQI headline = V4 FRQI group (p4 or p8) with the highest mean validation macro-F1; NEQR headline likewise (p2 or p4). Test not consulted.",
+  "comparisons": [
+   "V4 FRQI headline vs V2 E1b-frqi8-qkc-scaled (published FRQI baseline)",
+   "V4 FRQI headline vs V3-frqi8 (best V3 FRQI by validation)",
+   "V4 NEQR headline vs V2 E2-neqr16-b4-qkc (published NEQR baseline; V3-neqr16 re-selected the same configuration)",
+   "V4 FRQI headline vs V4 NEQR headline",
+   "V4 FRQI headline vs V4-patchmom-rbfsvm (classical control, same patches)",
+   "V4 NEQR headline vs V4-patchmom-rbfsvm",
+   "V4 FRQI headline vs V3-tex12c-rbfsvm (best V3 non-CNN classical control by validation)",
+   "V4 NEQR headline vs V3-tex12c-rbfsvm"
+  ],
+  "statistics": "paired sign-flip permutation test on per-image correctness averaged over seeds (10,000), bootstrap 95% CI, per-seed exact McNemar; Holm correction over these 8 comparisons; per-comparison RNG seeded from its name."
+ },
+ "statement": "All V4 configurations frozen using validation data only; the locked test set had not been accessed in Protocol V4 when this file was written."
+}

@@ -1,0 +1,68 @@
+{
+ "experiment_id": "V4-frqi-p8__09d3a4f853__s1",
+ "status": "completed",
+ "updated_at": "2026-11-17T05:07:02.468519",
+ "summary": {
+  "record_type": "classification",
+  "experiment_code": "V4E",
+  "group": "V4-frqi-p8",
+  "model_name": "FRQI patch-ensemble kernel (8x8 patches)",
+  "family": "quantum_kernel",
+  "compute_type": "hybrid",
+  "feature_extraction": "64x64 grayscale, 8x8 patches stride 4, per-image contrast stretch",
+  "encoding": "FRQI",
+  "n_qubits": 7,
+  "circuit_depth": 4875,
+  "circuit_depth_compiled": 4878,
+  "n_layers": null,
+  "optimizer": null,
+  "learning_rate": null,
+  "shots": 0,
+  "seed": 1,
+  "n_train": 1080,
+  "n_val": 360,
+  "n_test": 360,
+  "dataset_manifest_id": "neu-5625b937479b",
+  "split_id": "split-s1-c53cfc7e08",
+  "params": {
+   "representation": "FRQI",
+   "image_size": 64,
+   "patch": 8,
+   "stride": 4,
+   "norm": "stretch",
+   "C": 1000.0,
+   "angle_scale": 4.0
+  },
+  "val": {
+   "accuracy": 0.8638888888888889,
+   "precision_macro": 0.8836094911474489,
+   "recall_macro": 0.8638888888888889,
+   "f1_macro": 0.8651788456779732,
+   "f1_weighted": 0.8651788456779731
+  },
+  "test": {
+   "accuracy": 0.8722222222222222,
+   "precision_macro": 0.8835291391409656,
+   "recall_macro": 0.8722222222222222,
+   "f1_macro": 0.8690579438340887,
+   "f1_weighted": 0.8690579438340887
+  },
+  "train_time_s": 0.9174302499741316,
+  "val_inference_time_s": 0.20160045800730586,
+  "inference_ms_per_image": 0.5600012722425163,
+  "selected": true,
+  "test_ci": {
+   "method": "percentile bootstrap over test images, n_boot=2000, seed=1",
+   "accuracy": [
+    0.8388194444444445,
+    0.9055555555555556
+   ],
+   "f1_macro": [
+    0.8332337268121928,
+    0.9008634831876738
+   ],
+   "level": 0.95
+  },
+  "test_inference_ms_per_image": 1.0679790499529593
+ }
+}

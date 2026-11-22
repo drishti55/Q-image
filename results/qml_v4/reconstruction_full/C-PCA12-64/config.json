@@ -1,0 +1,13 @@
+{
+ "id": "C-PCA12-64",
+ "kind": "classical",
+ "resolution": 64,
+ "k": 12,
+ "n_images": 1800,
+ "execution": "classical (no circuit)",
+ "simulator": null,
+ "encoder": null,
+ "decoder": "sklearn PCA inverse_transform (fit on seed-0 train split)",
+ "shots_note": null,
+ "compute_seconds": 15.134667750040535
+}
