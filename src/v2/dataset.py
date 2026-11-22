@@ -300,7 +300,7 @@ class NEUData:
     def __init__(self, seed: int, manifest: Optional[Dict] = None, root: Optional[Path] = None,
                  cache_dir: Optional[Path] = None, split: Optional[Dict] = None):
         self.manifest = manifest or load_manifest()
-        self.root = Path(root) if root else Path(self.manifest["dataset_root"])
+        self.root = Path(root) if root else manifest_root(self.manifest)
         self.split = split or load_split(seed)
         if self.split["manifest_id"] != self.manifest["manifest_id"]:
             raise ValueError("Split was built from a different dataset manifest.")
@@ -338,11 +338,19 @@ class NEUData:
         return np.array([self._by_path[p]["group_id"] for p in self.split[which]])
 
 
+def manifest_root(manifest: Dict) -> Path:
+    """Folder holding the manifest's images. The manifest records the absolute path of the machine that built it; on any
+    other machine (a clone, the hosted demo) use this project's NEU-DET folder (or QIL_DATASET_PATH) instead. The images
+    themselves are verified by the manifest's SHA-256 hashes."""
+    here = dataset_root()
+    return here if here.is_dir() else Path(manifest["dataset_root"])
+
+
 def adjacency_report(manifest: Dict, split: Dict, size: int = 64, root: Optional[Path] = None,
                      radius: int = 3) -> Dict:
     """For each val (and test) image find its most similar same-class TRAIN image and report how
     often it lies within ±radius file indices — a proxy for near-duplicate leakage."""
-    root = Path(root) if root else Path(manifest["dataset_root"])
+    root = Path(root) if root else manifest_root(manifest)
     by_path = {r["rel_path"]: r for r in manifest["records"]}
 
     def feats(paths):

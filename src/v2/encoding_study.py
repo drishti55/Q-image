@@ -27,7 +27,7 @@ from typing import Dict, List, Optional, Tuple
 import numpy as np
 from PIL import Image
 
-from .dataset import CLASSES, load_manifest, preprocess_image
+from .dataset import CLASSES, load_manifest, manifest_root, preprocess_image
 from .paths import assert_writable, v2_root
 from .qsim import circuit_resources
 from .store import dump_json, environment_info
@@ -201,7 +201,7 @@ def run_config(rep: str, r: int, bits: Optional[int], images: List[Dict], root, 
 def run_all(log=print):
     m = load_manifest()
     from pathlib import Path
-    root = Path(m["dataset_root"])
+    root = manifest_root(m)
     imgs = subset(m)
     out = v2_root() / "reconstructions"
     for r in RESOLUTIONS:

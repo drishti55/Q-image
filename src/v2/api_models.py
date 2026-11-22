@@ -25,6 +25,12 @@ from fastapi import APIRouter, HTTPException
 
 from .paths import v2_root
 
+
+def _manifest_root(m):
+    from .dataset import manifest_root
+    return manifest_root(m)
+
+
 router = APIRouter(prefix="/api/v2", tags=["v2-dashboard"])
 API_VERSION = "2.2"
 
@@ -598,7 +604,7 @@ def recon_render(record_id: str, index: int, mode: str, kind: str):
     key = f"{index}__{mode}"
     if key not in arrs:
         raise HTTPException(404, "no saved reconstruction for this image and mode")
-    root = Path(load_manifest()["dataset_root"])
+    root = _manifest_root(load_manifest())
     orig = preprocess_image(root / imgs[index], int(cfg["resolution"]))
     arr = orig if kind == "original" else arrs[key] if kind == "reconstructed" else np.abs(orig - arrs[key])
     return Response(_png(arr), media_type="image/png", headers={"Cache-Control": "max-age=3600"})
@@ -616,7 +622,7 @@ def dataset_sample(cls: str, n: int = 0):
     import io
 
     from PIL import Image
-    path = Path(man["dataset_root"]) / recs[n]["rel_path"]
+    path = _manifest_root(man) / recs[n]["rel_path"]
     if not path.exists():
         raise HTTPException(404, f"dataset file missing on disk: {recs[n]['rel_path']}")
     with Image.open(path) as im:

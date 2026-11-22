@@ -382,7 +382,7 @@ def _dataset_index():
     from src.v2.paths import DEFAULT_V2_ROOT
     man_dir = DEFAULT_V2_ROOT / "manifests"
     cur = _need(_read(man_dir / "dataset_manifest_current.json"), "dataset manifest missing (run scripts/v2/phase1_data_protocol.py)")
-    man = _need(_read(Path(cur["path"]) if Path(cur["path"]).is_absolute() else man_dir / Path(cur["path"]).name), "dataset manifest file missing")
+    man = _need(_read(man_dir / Path(cur["path"]).name), "dataset manifest file missing")
     split_ptr = _read(man_dir / "splits" / "current_seed0.json") or {}
     split = _read(man_dir / "splits" / f"{split_ptr.get('split_id', '')}.json") or {}
     role = {p: r for r in ("train", "val", "test") for p in split.get(r, [])}

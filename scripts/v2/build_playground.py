@@ -20,7 +20,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from src.v2.dataset import CLASSES, load_manifest  # noqa: E402
+from src.v2.dataset import CLASSES, load_manifest, manifest_root  # noqa: E402
 from src.v2.paths import v2_root  # noqa: E402
 from src.v2.store import dump_json, environment_info  # noqa: E402
 
@@ -75,7 +75,7 @@ def softmax(z):
 def real_sample_u8(cls: str) -> tuple[np.ndarray, str]:
     man = load_manifest()
     rec = sorted((x for x in man["records"] if x["class"] == cls and x["role"] == "trainval"), key=lambda x: x["index"])[0]
-    with Image.open(Path(man["dataset_root"]) / rec["rel_path"]) as im:
+    with Image.open(manifest_root(man) / rec["rel_path"]) as im:
         return np.asarray(im.convert("L"), dtype=np.uint8), rec["rel_path"]
 
 
