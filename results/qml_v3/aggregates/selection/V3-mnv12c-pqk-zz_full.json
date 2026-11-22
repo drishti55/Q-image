@@ -1,0 +1,793 @@
+{
+ "group": "V3-mnv12c-pqk-zz_full",
+ "selected_at": "2026-11-16T08:17:31.114461",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 27,
+ "n_eligible": 27,
+ "selected": {
+  "config_key": "V3-mnv12c-pqk-zz_full__327cc6bc4c",
+  "params": {
+   "feature_map": "zz_full",
+   "reps": 1,
+   "bandwidth": 1.0,
+   "gamma": 0.1,
+   "C": 1000.0
+  },
+  "quantum": {
+   "n_qubits": 12,
+   "n_layers": 1,
+   "shots": 0,
+   "optimizer": null,
+   "learning_rate": null,
+   "feature_map": "zz_full",
+   "bandwidth": 1.0,
+   "kernel": "projected"
+  },
+  "eligible": true,
+  "val_mean": 0.46486679584056256,
+  "val_std": 0.0023346666310884298,
+  "experiment_ids": [
+   "V3-mnv12c-pqk-zz_full__327cc6bc4c__s0",
+   "V3-mnv12c-pqk-zz_full__327cc6bc4c__s1",
+   "V3-mnv12c-pqk-zz_full__327cc6bc4c__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__35e545220c",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.1,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1267296111689148,
+   "val_std": 0.009063729356193671,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__35e545220c__s0",
+    "V3-mnv12c-pqk-zz_full__35e545220c__s1",
+    "V3-mnv12c-pqk-zz_full__35e545220c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__3e699393c1",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.1,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.12691353250340212,
+   "val_std": 0.019398119678398162,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__3e699393c1__s0",
+    "V3-mnv12c-pqk-zz_full__3e699393c1__s1",
+    "V3-mnv12c-pqk-zz_full__3e699393c1__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__38c620de12",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.1,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.15300194823022975,
+   "val_std": 0.005276165744154854,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__38c620de12__s0",
+    "V3-mnv12c-pqk-zz_full__38c620de12__s1",
+    "V3-mnv12c-pqk-zz_full__38c620de12__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__c8cc2b2332",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.3,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1190058761230565,
+   "val_std": 0.010232054906247243,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__c8cc2b2332__s0",
+    "V3-mnv12c-pqk-zz_full__c8cc2b2332__s1",
+    "V3-mnv12c-pqk-zz_full__c8cc2b2332__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__0f9c1c7511",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.3,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1485363898958478,
+   "val_std": 0.02116675372098984,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__0f9c1c7511__s0",
+    "V3-mnv12c-pqk-zz_full__0f9c1c7511__s1",
+    "V3-mnv12c-pqk-zz_full__0f9c1c7511__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__376b3a69ca",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 0.3,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.16543701572423272,
+   "val_std": 0.029604828766984875,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__376b3a69ca__s0",
+    "V3-mnv12c-pqk-zz_full__376b3a69ca__s1",
+    "V3-mnv12c-pqk-zz_full__376b3a69ca__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__8013092715",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 1.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.12316196446078276,
+   "val_std": 0.012374510235247221,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__8013092715__s0",
+    "V3-mnv12c-pqk-zz_full__8013092715__s1",
+    "V3-mnv12c-pqk-zz_full__8013092715__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__dc410c2c5d",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 1.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.14257493275763775,
+   "val_std": 0.015781481550950792,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__dc410c2c5d__s0",
+    "V3-mnv12c-pqk-zz_full__dc410c2c5d__s1",
+    "V3-mnv12c-pqk-zz_full__dc410c2c5d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__8a54798098",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 0.5,
+    "gamma": 1.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 0.5,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.1800324548823737,
+   "val_std": 0.01939673238863404,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__8a54798098__s0",
+    "V3-mnv12c-pqk-zz_full__8a54798098__s1",
+    "V3-mnv12c-pqk-zz_full__8a54798098__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__3e181429b8",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.1,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.387505802571063,
+   "val_std": 0.012515813671896381,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__3e181429b8__s0",
+    "V3-mnv12c-pqk-zz_full__3e181429b8__s1",
+    "V3-mnv12c-pqk-zz_full__3e181429b8__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__e8f2034cb9",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.1,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.42876855265491987,
+   "val_std": 0.004453166669929029,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__e8f2034cb9__s0",
+    "V3-mnv12c-pqk-zz_full__e8f2034cb9__s1",
+    "V3-mnv12c-pqk-zz_full__e8f2034cb9__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__327cc6bc4c",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.1,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.46486679584056256,
+   "val_std": 0.0023346666310884298,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__327cc6bc4c__s0",
+    "V3-mnv12c-pqk-zz_full__327cc6bc4c__s1",
+    "V3-mnv12c-pqk-zz_full__327cc6bc4c__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__7c349b7a0e",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.3,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.4140113263749188,
+   "val_std": 0.014846000483132683,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__7c349b7a0e__s0",
+    "V3-mnv12c-pqk-zz_full__7c349b7a0e__s1",
+    "V3-mnv12c-pqk-zz_full__7c349b7a0e__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__140e68e46f",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.3,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.4496444564315509,
+   "val_std": 0.00400518172724975,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__140e68e46f__s0",
+    "V3-mnv12c-pqk-zz_full__140e68e46f__s1",
+    "V3-mnv12c-pqk-zz_full__140e68e46f__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__a48b41f625",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 0.3,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.45961707828534665,
+   "val_std": 0.010401015182946885,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__a48b41f625__s0",
+    "V3-mnv12c-pqk-zz_full__a48b41f625__s1",
+    "V3-mnv12c-pqk-zz_full__a48b41f625__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__d8fbff655b",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 1.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.4432458996806508,
+   "val_std": 0.005285185167775484,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__d8fbff655b__s0",
+    "V3-mnv12c-pqk-zz_full__d8fbff655b__s1",
+    "V3-mnv12c-pqk-zz_full__d8fbff655b__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__75c3754cf3",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 1.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.4609497526204764,
+   "val_std": 0.010207027035983359,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__75c3754cf3__s0",
+    "V3-mnv12c-pqk-zz_full__75c3754cf3__s1",
+    "V3-mnv12c-pqk-zz_full__75c3754cf3__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__b927710cf9",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 1.0,
+    "gamma": 1.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 1.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.4523404810041256,
+   "val_std": 0.016197282813762145,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__b927710cf9__s0",
+    "V3-mnv12c-pqk-zz_full__b927710cf9__s1",
+    "V3-mnv12c-pqk-zz_full__b927710cf9__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__a9afa2dfe2",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.1,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.2529297041468988,
+   "val_std": 0.040719090109728885,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__a9afa2dfe2__s0",
+    "V3-mnv12c-pqk-zz_full__a9afa2dfe2__s1",
+    "V3-mnv12c-pqk-zz_full__a9afa2dfe2__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__974399b08a",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.1,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.26507910994674705,
+   "val_std": 0.045450844356844086,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__974399b08a__s0",
+    "V3-mnv12c-pqk-zz_full__974399b08a__s1",
+    "V3-mnv12c-pqk-zz_full__974399b08a__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__a2e706807d",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.1,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.2729442146508309,
+   "val_std": 0.038108982418088126,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__a2e706807d__s0",
+    "V3-mnv12c-pqk-zz_full__a2e706807d__s1",
+    "V3-mnv12c-pqk-zz_full__a2e706807d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__3bb30b546d",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.3,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.2650415764577898,
+   "val_std": 0.041889589830313954,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__3bb30b546d__s0",
+    "V3-mnv12c-pqk-zz_full__3bb30b546d__s1",
+    "V3-mnv12c-pqk-zz_full__3bb30b546d__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__d2b77f1a3e",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.3,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.2679988771063906,
+   "val_std": 0.027081468468143573,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__d2b77f1a3e__s0",
+    "V3-mnv12c-pqk-zz_full__d2b77f1a3e__s1",
+    "V3-mnv12c-pqk-zz_full__d2b77f1a3e__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__63c2b81084",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 0.3,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.29459628267756816,
+   "val_std": 0.032936573873694454,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__63c2b81084__s0",
+    "V3-mnv12c-pqk-zz_full__63c2b81084__s1",
+    "V3-mnv12c-pqk-zz_full__63c2b81084__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__006c200e21",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 1.0,
+    "C": 10.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.26955190206367413,
+   "val_std": 0.04004244858678002,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__006c200e21__s0",
+    "V3-mnv12c-pqk-zz_full__006c200e21__s1",
+    "V3-mnv12c-pqk-zz_full__006c200e21__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__4bea2a45b8",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 1.0,
+    "C": 100.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.293248012186061,
+   "val_std": 0.027373892045657225,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__4bea2a45b8__s0",
+    "V3-mnv12c-pqk-zz_full__4bea2a45b8__s1",
+    "V3-mnv12c-pqk-zz_full__4bea2a45b8__s2"
+   ]
+  },
+  {
+   "config_key": "V3-mnv12c-pqk-zz_full__ec844a3e4e",
+   "params": {
+    "feature_map": "zz_full",
+    "reps": 1,
+    "bandwidth": 2.0,
+    "gamma": 1.0,
+    "C": 1000.0
+   },
+   "quantum": {
+    "n_qubits": 12,
+    "n_layers": 1,
+    "shots": 0,
+    "optimizer": null,
+    "learning_rate": null,
+    "feature_map": "zz_full",
+    "bandwidth": 2.0,
+    "kernel": "projected"
+   },
+   "eligible": true,
+   "val_mean": 0.28637488753184265,
+   "val_std": 0.04884210116615095,
+   "experiment_ids": [
+    "V3-mnv12c-pqk-zz_full__ec844a3e4e__s0",
+    "V3-mnv12c-pqk-zz_full__ec844a3e4e__s1",
+    "V3-mnv12c-pqk-zz_full__ec844a3e4e__s2"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "group": "V3-pixn8c-logreg",
+ "selected_at": "2026-11-16T08:17:29.256826",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 7,
+ "n_eligible": 7,
+ "selected": {
+  "config_key": "V3-pixn8c-logreg__fcac9f4885",
+  "params": {
+   "C": 1.0
+  },
+  "quantum": {},
+  "eligible": true,
+  "val_mean": 0.3392158323358423,
+  "val_std": 0.023975405694565334,
+  "experiment_ids": [
+   "V3-pixn8c-logreg__fcac9f4885__s0",
+   "V3-pixn8c-logreg__fcac9f4885__s1",
+   "V3-pixn8c-logreg__fcac9f4885__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-pixn8c-logreg__8f53b8edf1",
+   "params": {
+    "C": 0.001
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.3018061992327336,
+   "val_std": 0.034052962355553516,
+   "experiment_ids": [
+    "V3-pixn8c-logreg__8f53b8edf1__s0",
+    "V3-pixn8c-logreg__8f53b8edf1__s1",
+    "V3-pixn8c-logreg__8f53b8edf1__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pixn8c-logreg__b9ec4eab67",
+   "params": {
+    "C": 0.01
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.32548889842884704,
+   "val_std": 0.02988574025278333,
+   "experiment_ids": [
+    "V3-pixn8c-logreg__b9ec4eab67__s0",
+    "V3-pixn8c-logreg__b9ec4eab67__s1",
+    "V3-pixn8c-logreg__b9ec4eab67__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pixn8c-logreg__4acd6d9da0",
+   "params": {
+    "C": 0.1
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.3330525642704992,
+   "val_std": 0.024679882544613205,
+   "experiment_ids": [
+    "V3-pixn8c-logreg__4acd6d9da0__s0",
+    "V3-pixn8c-logreg__4acd6d9da0__s1",
+    "V3-pixn8c-logreg__4acd6d9da0__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pixn8c-logreg__fcac9f4885",
+   "params": {
+    "C": 1.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.3392158323358423,
+   "val_std": 0.023975405694565334,
+   "experiment_ids": [
+    "V3-pixn8c-logreg__fcac9f4885__s0",
+    "V3-pixn8c-logreg__fcac9f4885__s1",
+    "V3-pixn8c-logreg__fcac9f4885__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pixn8c-logreg__461428aea7",
+   "params": {
+    "C": 10.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.33761398299591056,
+   "val_std": 0.02061368216753827,
+   "experiment_ids": [
+    "V3-pixn8c-logreg__461428aea7__s0",
+    "V3-pixn8c-logreg__461428aea7__s1",
+    "V3-pixn8c-logreg__461428aea7__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pixn8c-logreg__25bacb8204",
+   "params": {
+    "C": 100.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.33840449365484226,
+   "val_std": 0.021689584456019727,
+   "experiment_ids": [
+    "V3-pixn8c-logreg__25bacb8204__s0",
+    "V3-pixn8c-logreg__25bacb8204__s1",
+    "V3-pixn8c-logreg__25bacb8204__s2"
+   ]
+  },
+  {
+   "config_key": "V3-pixn8c-logreg__43894259a1",
+   "params": {
+    "C": 1000.0
+   },
+   "quantum": {},
+   "eligible": true,
+   "val_mean": 0.33761398299591056,
+   "val_std": 0.02061368216753827,
+   "experiment_ids": [
+    "V3-pixn8c-logreg__43894259a1__s0",
+    "V3-pixn8c-logreg__43894259a1__s1",
+    "V3-pixn8c-logreg__43894259a1__s2"
+   ]
+  }
+ ]
+}

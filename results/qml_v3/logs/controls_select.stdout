@@ -1,0 +1,9 @@
+# start v3_controls_w0of1: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+worker 0/1: 18 units
+# start v3_select_controls: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+== group V3-pix8c-vqc-ablation-frozen: 1 configs x 3 seeds
+== group V3-pix8c-vqc-encoding-only: 1 configs x 3 seeds
+== group V3-tex8c-vqc-ablation-frozen: 1 configs x 3 seeds
+== group V3-tex8c-vqc-encoding-only: 1 configs x 3 seeds
+== group V3-mnv8c-vqc-ablation-frozen: 1 configs x 3 seeds
+== group V3-mnv8c-vqc-encoding-only: 1 configs x 3 seeds

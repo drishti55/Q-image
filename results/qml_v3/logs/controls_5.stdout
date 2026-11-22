@@ -1,0 +1,6 @@
+# start v3_controls_w5of6: manifest=neu-5625b937479b splits={"0": "split-s0-2a1d15648e", "1": "split-s1-c53cfc7e08", "2": "split-s2-cbd05190d5"}
+worker 5/6: 4 units
+  [ok] V3-pix8c-vqc-ablation-frozen__fd17a7a689__s2  val acc=0.417 F1=0.415  fit 29.1s
+  [ok] V3-mnv8c-vqc-encoding-only__2532ac52d9__s2  val acc=0.975 F1=0.975  fit 13.5s
+  [ok] V3-pix8c-vqc-encoding-only__6c1d4f5d83__s2  val acc=0.428 F1=0.419  fit 4.2s
+  [ok] V3-tex8c-vqc-encoding-only__51f9b062fe__s2  val acc=0.964 F1=0.964  fit 8.7s

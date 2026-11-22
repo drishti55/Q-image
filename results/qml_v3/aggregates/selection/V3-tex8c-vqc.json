@@ -1,0 +1,174 @@
+{
+ "group": "V3-tex8c-vqc",
+ "selected_at": "2026-11-16T08:17:31.145100",
+ "criterion": "max mean validation f1_macro over seeds [0, 1, 2] (ties: first in grid order); locked test NOT consulted",
+ "n_candidates": 4,
+ "n_eligible": 4,
+ "selected": {
+  "config_key": "V3-tex8c-vqc__814af668a9",
+  "params": {
+   "layers": 2,
+   "optimizer": "adam",
+   "entangler": "ring",
+   "reupload": true,
+   "readout": "zall",
+   "train_quantum": true,
+   "lr": 0.05,
+   "epochs": 120,
+   "patience": 15
+  },
+  "quantum": {
+   "n_qubits": 8,
+   "n_layers": 2,
+   "optimizer": "adam",
+   "learning_rate": 0.05,
+   "shots": 0,
+   "entangler": "ring",
+   "data_reuploading": true,
+   "readout": "zall",
+   "train_quantum": true
+  },
+  "eligible": true,
+  "val_mean": 0.75415879578208,
+  "val_std": 0.022430606338519374,
+  "experiment_ids": [
+   "V3-tex8c-vqc__814af668a9__s0",
+   "V3-tex8c-vqc__814af668a9__s1",
+   "V3-tex8c-vqc__814af668a9__s2"
+  ]
+ },
+ "candidates": [
+  {
+   "config_key": "V3-tex8c-vqc__640bebf229",
+   "params": {
+    "layers": 2,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "readout": "diag6",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 2,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "readout": "diag6",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.5928162388503315,
+   "val_std": 0.010180938034776425,
+   "experiment_ids": [
+    "V3-tex8c-vqc__640bebf229__s0",
+    "V3-tex8c-vqc__640bebf229__s1",
+    "V3-tex8c-vqc__640bebf229__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-vqc__dda5bb199b",
+   "params": {
+    "layers": 4,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "readout": "diag6",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 4,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "readout": "diag6",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.6765850926583573,
+   "val_std": 0.007417651943314931,
+   "experiment_ids": [
+    "V3-tex8c-vqc__dda5bb199b__s0",
+    "V3-tex8c-vqc__dda5bb199b__s1",
+    "V3-tex8c-vqc__dda5bb199b__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-vqc__814af668a9",
+   "params": {
+    "layers": 2,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "readout": "zall",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 2,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "readout": "zall",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.75415879578208,
+   "val_std": 0.022430606338519374,
+   "experiment_ids": [
+    "V3-tex8c-vqc__814af668a9__s0",
+    "V3-tex8c-vqc__814af668a9__s1",
+    "V3-tex8c-vqc__814af668a9__s2"
+   ]
+  },
+  {
+   "config_key": "V3-tex8c-vqc__c65d7cbdae",
+   "params": {
+    "layers": 4,
+    "optimizer": "adam",
+    "entangler": "ring",
+    "reupload": true,
+    "readout": "zall",
+    "train_quantum": true,
+    "lr": 0.05,
+    "epochs": 120,
+    "patience": 15
+   },
+   "quantum": {
+    "n_qubits": 8,
+    "n_layers": 4,
+    "optimizer": "adam",
+    "learning_rate": 0.05,
+    "shots": 0,
+    "entangler": "ring",
+    "data_reuploading": true,
+    "readout": "zall",
+    "train_quantum": true
+   },
+   "eligible": true,
+   "val_mean": 0.6670730900445679,
+   "val_std": 0.024960659545111372,
+   "experiment_ids": [
+    "V3-tex8c-vqc__c65d7cbdae__s0",
+    "V3-tex8c-vqc__c65d7cbdae__s1",
+    "V3-tex8c-vqc__c65d7cbdae__s2"
+   ]
+  }
+ ]
+}
