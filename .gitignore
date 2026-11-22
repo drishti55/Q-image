@@ -1,0 +1,42 @@
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific caches/temp
+*.log
+scratch/
+
+# Large / regenerable research artefacts (kept locally, not in git)
+results/qml_v*/cache/
+results/qml_v*/experiments/*/model/
+*.npz
+*.joblib
+*.zip
+results/qml_v2/logs/historical_verification.jsonl
+# NEU-DET: the 1,800 images are committed (needed by the hosted demo); the XML annotations are not used
+NEU-DET/*/annotations/
+# V2 / V3 per-run folders are summarised in results/qml_v{2,3}/aggregates and reports (regenerable with scripts/)
+results/qml_v2/experiments/
+results/qml_v3/experiments/
