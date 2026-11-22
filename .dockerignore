@@ -1,0 +1,17 @@
+.git
+.venv
+venv
+**/__pycache__
+**/.pytest_cache
+**/.DS_Store
+frontend/node_modules
+frontend/dist
+research_paper_visuals
+research_paper_visuals.zip
+Final_Publication_Assets
+paper
+docs
+diag.pdf
+*.pdf
+results/qml_v*/cache
+NEU-DET/*/annotations

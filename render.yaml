@@ -1,0 +1,13 @@
+# Render Blueprint: New → Blueprint → pick this repository.
+services:
+  - type: web
+    name: q-imagelab
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    branch: main
+    healthCheckPath: /api/v2/health
+    autoDeploy: true
+    envVars:
+      - key: QIL_LITE
+        value: "1"

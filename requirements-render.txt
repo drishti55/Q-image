@@ -1,0 +1,18 @@
+# Hosted demo (Render free, 512 MB): the server's runtime dependencies, pinned to the versions the results were
+# produced with (.venv). PyTorch is not installed: the CNN studio and hybrid pipeline are off in lite mode (QIL_LITE=1).
+# scikit-learn must match exactly so the frozen SVM checkpoints load.
+qiskit==2.5.2
+qiskit-aer==0.17.2
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.1
+scikit-image==0.26.0
+pandas==3.0.6
+pillow==12.3.0
+matplotlib==3.11.2
+joblib==1.6.0
+fastapi==0.142.2
+uvicorn==0.54.0
+python-multipart==0.0.32
+tabulate==0.10.0
+tqdm==4.70.1
